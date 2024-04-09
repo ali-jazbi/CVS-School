@@ -1,0 +1,546 @@
+
+/* NOTE Login & Register Stye */
+
+.Sign-Pages article{
+    padding-top: 20px;
+    width: 100%;
+    height: 550px;
+    z-index: -2;  
+    }
+    .Sign-Pages p {
+    color: #b3b3b3;
+    font-weight: 300; }
+    .Sign-Pages a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease; }
+    .Sign-Pages a:hover {
+        text-decoration: none !important; }
+    
+    .Sign-Pages .content {
+    padding: 7rem 0; 
+    }
+    .Sign-Pages h2 {
+    font-size: 20px;
+    }
+    /* Change the white to any color */
+    .Sign-Pages input:-webkit-autofill,
+    .Sign-Pages input:-webkit-autofill:hover, 
+    .Sign-Pages input:-webkit-autofill:focus, 
+    .Sign-Pages input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #ECF3F0 inset !important;
+    }
+    
+    @media (max-width: 991.98px) {
+    .Sign-Pages .content .bg {
+        height: 500px; 
+    } 
+    .Sign-Pages article{
+        height: auto;
+    }
+    .Sign-Pages footer{
+        margin-top: auto;
+    }
+    }
+    
+    .Sign-Pages .content .contents, .content .bg {
+    width: 50%; }
+    @media (max-width: 1199.98px) {
+        .Sign-Pages .content .contents, .content .bg {
+        width: 100%; } }
+    .Sign-Pages .content .contents .form-group, .content .bg .form-group {
+        overflow: hidden;
+        margin-bottom: 0;
+        padding: 15px 15px;
+        border-bottom: none;
+        position: relative;
+        background: #d7ffec2a;
+        border-bottom: 1px solid #e6edf1;
+    }
+    .Sign-Pages .eye-icon{
+        margin-right: 85% !important;
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s all ease-in-out;
+    }
+    .Sign-Pages .eye-icon i{
+        font-size: larger;
+    }
+        .Sign-Pages .content .contents .form-group label, .Sign-Pages .content .bg .form-group label {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: .3s all ease;
+        -o-transition: .3s all ease;
+        transition: .3s all ease; }
+        .Sign-Pages .content .contents .form-group input, .Sign-Pages .content .bg .form-group input {
+        background: transparent; }
+        .Sign-Pages .content .contents .form-group.first, .Sign-Pages .content .bg .form-group.first {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px; }
+        .Sign-Pages .content .contents .form-group.last, .Sign-Pages .content .bg .form-group.last {
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px; }
+        .Sign-Pages .content .contents .form-group label, .Sign-Pages .content .bg .form-group label {
+        font-size: 12px;
+        display: block;
+        margin-bottom: 0;
+        color: #b3b3b3; }
+        .Sign-Pages .content .contents .form-group.focus, .Sign-Pages .content .bg .form-group.focus {
+        background: #fff; }
+        .Sign-Pages .content .contents .form-group.field--not-empty label:not(:last-child), .Sign-Pages .content .bg .form-group.field--not-empty label:not(:last-child) {
+        margin-top: -20px; }
+        .Sign-Pages .content .contents .form-group.field--not-empty label:last-child, .Sign-Pages .content .bg .form-group.field--not-empty label:last-child {
+            opacity: 1;
+            visibility: visible; }
+    .Sign-Pages .content .contents .form-control, .Sign-Pages .content .bg .form-control {
+        border: none;
+        padding: 0;
+        font-size: 16px;
+        border-radius: 0; }
+        .Sign-Pages .content .contents .form-control:active, .Sign-Pages .content .contents .form-control:focus, .Sign-Pages .content .bg .form-control:active, .Sign-Pages .content .bg .form-control:focus {
+        outline: none;
+        -webkit-box-shadow: none;
+        box-shadow: none; }
+    
+    .Sign-Pages .content .bg {
+    background-size: cover;
+    background-position: center; }
+    
+    .Sign-Pages .content a {
+    color: #888;
+    text-decoration: underline; }
+    
+    .Sign-Pages .content .btn {
+    height: 54px;
+    padding-left: 30px;
+    padding-right: 30px; }
+    
+    .Sign-Pages .content .forgot-pass {
+    position: relative;
+    top: 2px;
+    font-size: 14px; }
+    .Sign-Pages .social-login{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    .Sign-Pages .social-login a {
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: inline-block; }
+    .Sign-Pages .social-login a span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+    .Sign-Pages .social-login a:hover {
+        color: #fff; }
+    .Sign-Pages .social-login a.facebook {
+        background: #3b5998; }
+        .Sign-Pages .social-login a.facebook:hover {
+        background: #344e86; }
+    .Sign-Pages .social-login a.twitter {
+        background: #1da1f2; }
+        .Sign-Pages .social-login a.twitter:hover {
+        background: #0d95e8; }
+    .Sign-Pages .social-login a.google {
+        background: #ea4335; }
+        .Sign-Pages .social-login a.google:hover {
+        background: #e82e1e; } 
+    .Sign-Pages .check {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+            appearance: none;
+    background-color: #bbb;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer;
+    }
+    
+    .Sign-Pages .check::before {
+    content: '';
+    position: absolute;
+    border: solid #fff;
+    display: block;
+    width: .3em;
+    height: .6em;
+    border-width: 0 .2em .2em 0;
+    z-index: 1;
+    opacity: 0;
+    right: calc(60% - .3em);
+    top: calc(65% - .6em);
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    -webkit-transform-origin: center center;
+        -ms-transform-origin: center center;
+            transform-origin: center center;
+    }
+    
+    .Sign-Pages .check:checked {
+    -webkit-animation: a .3s ease-in forwards;
+    animation: a .3s ease-in forwards;
+    background-color: rgb(120, 190, 120);
+    }
+    
+    .Sign-Pages .check:checked::before {
+    opacity: 1;
+    -webkit-transform: rotate(405deg);
+        -ms-transform: rotate(405deg);
+            transform: rotate(405deg);
+    }
+    
+    @-webkit-keyframes a {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1) rotateY(0deg);
+                transform: scale(1) rotateY(0deg);
+    }
+    
+    50% {
+        opacity: 0;
+        -webkit-transform: scale(.8) rotateY(180deg);
+                transform: scale(.8) rotateY(180deg);
+    }
+    
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1) rotateY(360deg);
+                transform: scale(1) rotateY(360deg);
+    }
+    }
+    
+    @keyframes a {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1) rotateY(0deg);
+                transform: scale(1) rotateY(0deg);
+    }
+    
+    50% {
+        opacity: 0;
+        -webkit-transform: scale(.8) rotateY(180deg);
+                transform: scale(.8) rotateY(180deg);
+    }
+    
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1) rotateY(360deg);
+                transform: scale(1) rotateY(360deg);
+    }
+    }
+    .Sign-Pages article .signIN {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #008545;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 17px;
+    padding: 7px;
+    width: 100%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    }
+    
+    .Sign-Pages article .signIN span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    }
+    
+    .Sign-Pages article .signIN span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -15px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    }
+    .Sign-Pages article .signIN:hover{
+    background-color: #004f29;
+    }
+    .Sign-Pages article .signIN:hover span {
+    padding-left: 15px;
+    }
+    
+    .Sign-Pages article .signIN:hover span:after {
+    opacity: 1;
+    left: 0;
+    }
+    .Sign-Pages .forgot-pass{
+        text-decoration: none !important;
+        position: relative;
+        transition: color 0.3s;
+    }
+    .Sign-Pages .contents h3{
+        font-size: 22px;
+    }
+    .Sign-Pages .forgot-pass:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #008545;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s;
+    }
+    
+    .Sign-Pages .forgot-pass:hover {
+        color: #008545;
+    }
+    
+    .Sign-Pages .forgot-pass:hover:before {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+    .Sign-Pages .register a{
+        border-radius: 0;
+    }
+    .Sign-Pages .register button{
+        color: #616161;
+        text-decoration: none;
+        font-size: 15px;
+        border: none;
+        background: none;
+        font-weight: 600;
+        cursor: pointer;
+        transition:.5s all ease-in-out;
+    }
+    .Sign-Pages .register button a{
+        color: #008545;
+        display: inline;
+    }
+    .Sign-Pages .register button a:hover{
+        color: #008545;
+    }
+    .Sign-Pages .register button::before {
+        margin-left: auto;
+    }
+    
+    .Sign-Pages .register button::after, .Sign-Pages .register button::before {
+        content: '';
+        width: 0%;
+        height: 2px;
+        background: #008545;
+        display: block;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+    }
+    
+    .Sign-Pages .register button:hover::after, .Sign-Pages button:hover::before {
+        width: 100%;
+    }
+    .Sign-Pages .register button:hover{
+        color: #008545;
+    }
+    
+    /* NOTE Mobile Size */
+    @media (max-width:762px){
+      article{
+        width: 100%;
+        height: 750px;
+        margin-top: -0% !important;
+      }
+      .content{
+        padding-top: 15% !important;
+      }
+      .vector-animated{
+        display:flex;
+        justify-content: center;
+      }
+      lottie-player{
+        width: 250px !important;
+        height: auto !important;
+      }
+      .contents h3{
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      .contents .fs-7{
+        text-align: center;
+        font-size: 11px;
+      }
+      .contents form .signIN{
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 98%;
+      }
+      .contents form .text-left{
+        text-align: center;
+        font-size: 13px;
+        margin-top: 50px !important;
+      }
+      .contents form .social-login{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+      }
+      .contents form .social-login a{
+        margin:0 10px 0 10px;
+      }
+      .contents form .social-login .register button{
+        margin-top: 40px;
+        color: #008545 !important;
+      }
+      .contents form .forgot-check{
+        padding: 10px;
+      }
+      .contents form .forgot-check label{
+          font-size: 14px;
+          padding-top: 6px !important;
+      }
+      .contents form .forgot-check .check{
+        width: 15px;
+        height: 15px;
+        margin-top: 6px !important;
+      }
+      .contents form .forgot-check .check::before{
+        width: .3em;
+        height: .5em;
+        border-width: 0 .2em .2em 0;
+        right: calc(65% - .3em);
+        top: calc(80% - .6em);
+      }
+      .contents form .forgot-check .forgot-pass{
+        font-size: 14px;
+      }
+      
+    }
+    /* NOTE Tablet size */
+    @media (min-width:763px) and (max-width:1024px){
+      article{
+        width: 100%;
+        height: 900px;
+      }
+      .content{
+        margin-top: -8%;
+      }
+      .vector-animated{
+        width: 100%;
+        display:flex;
+        justify-content: center;
+      }
+      lottie-player{
+        width: 360px !important;
+        height: auto !important;
+      }
+      .contents h3{
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      .contents .fs-7{
+        text-align: center;
+        font-size: 15px;
+      }
+      .contents form .signIN{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 98%;
+      }
+      .contents form .text-left{
+        text-align: center;
+        font-size: 15px;
+        margin-top: 50px !important;
+      }
+      .eye-icon{
+        margin-right: 90% !important;
+      }
+      .contents form .social-login{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+      }
+      .contents form .social-login a{
+        margin:0 10px 0 10px;
+      }
+      .contents form .social-login .register button{
+        margin-top: 40px;
+        font-size:17px;
+        color: #008545 !important;
+      }
+      .contents form .forgot-check{
+        padding: 10px;
+      }
+      .contents form .forgot-check label{
+          font-size: 15px;
+          padding-top: 6px !important;
+      }
+      .contents form .forgot-check .check{
+        width: 15px;
+        height: 15px;
+        margin-top: 6px !important;
+      }
+      .contents form .forgot-check .check::before{
+        width: .3em;
+        height: .5em;
+        border-width: 0 .2em .2em 0;
+        right: calc(65% - .3em);
+        top: calc(80% - .6em);
+      }
+      .contents form .forgot-check .forgot-pass{
+        font-size: 15px;
+      }
+    }
+    
+    .text-divider {
+      color: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .text-divider::before, .text-divider::after {
+      content: "";
+      display: block;
+      height: 0.09em;
+      width: 25vw;
+      margin: 10px;
+    }
+    .text-divider::before {
+      background: linear-gradient(to right, #004f29, white);
+      margin-right: 4vh;
+    }
+    .text-divider::after {
+      background: linear-gradient(to left, #004f29, white);
+      margin-left: 4vh;
+    }
+    /* END Login and Register Style */

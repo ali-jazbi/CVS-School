@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Ali Jazbi">
+        <meta http-equiv='cache-control' content='no-cache'>
+        <meta http-equiv='expires' content='0'>
+        <meta http-equiv='pragma' content='no-cache'>
+        <link rel="shortcut icon" href="./icon/informatics-website-favicon-color.ico" type="image/x-icon">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="./plugins/Bootstrap/bootstrap.rtl.min.css">
+        <!-- Bootstrap Icon -->
+        <link rel="stylesheet" href="./plugins/Bootstrap/bootstrap-icons/bootstrap-icons.css">
+        <!-- Costomized Styles -->
+        <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
+        <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">    
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/team.css">
+        <title>هنرستان انفورماتیک</title>
+    </head>
+    <body>        
+
+        <!--NOTE Back to top button -->
+        <a href="#">
+        <button
+        type="button"
+        class="btn btn-danger btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+        <i class="bi bi-arrow-up"></i>
+        </button>
+        </a>
+
+        <main>
+            <header>     
+                <!-- SECTION PC NAVBAR -->
+                <nav id="navbar_top" class="pc-navbar d-none d-lg-flex navbar navbar-expand-lg">
+                    <div class="container-fluid w-100 d-flex justify-content-center">
+                        <div class="d-flex align-items-center">
+                            <a class="navbar-brand" href="./index.html"><img src="./icon/logo-no-background.png" alt=""></a>
+                            <ul class="navbar-nav ms-auto d-flex align-items-center">
+                                <li class="nav-item"><a style="color:black" class="nav-link" href="./index.html">خانه</a></li>
+                                <li onmouseover="hoverMENU()" onmouseout="unhoverMENU()" class="nav-item hoverFullMenu">
+                                <div  class="full-drop-menu">
+                                    <div style="width:1100px;margin-top:45px;margin-left: 250px;" class="container-fluid">
+                                        <div class="row w-100">
+                                            <div class="col-8">
+                                                <div class="row w-100">
+                                                <div class="col-4 d-flex flex-column">
+                                                    <div class="boxLink">
+                                                            <div class="row d-flex align-items-center h-100">
+                                                                <div class="col-2 d-flex justify-content-center">
+                                                                    <img width="30px" src="./icon/navbar-icon/1svg.png" alt="">
+                                                                </div>
+                                                                <div dir="ltr" align="left" class="col-10">
+                                                                    <div class="h6">Flexi</div>
+                                                                    <span>A FREE Digital Tutor for Every Student</span>
+                                                            </div>
+                                                            </div>
+                                                    </div>
+                                                    <div class="boxLink">
+                                                        <div class="row d-flex align-items-center h-100">
+                                                            <div class="col-2 d-flex justify-content-center">
+                                                                <img width="21px" src="./icon/navbar-icon/2.png" alt="">
+                                                            </div>
+                                                            <div dir="ltr" align="left" class="col-10">
+                                                                <div class="h6">
+                                                                FlexBooks 2.0</div>
+                                                                <span>
+                                                                digital textbooks in a new, platform</span>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="boxLink">
+                                                        <div class="row d-flex align-items-center h-100">
+                                                            <div class="col-2  d-flex justify-content-center">
+                                                                <img width="21px" src="./icon/navbar-icon/3.png" alt="">
+                                                            </div>
+                                                            <div dir="ltr" align="left" class="col-10">
+                                                                <div class="h6">FlexBooks</div>
+                                                                <span>
+                                                                Customizable, digital textbooks</span>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="boxLink">
+                                                        <div class="row d-flex align-items-center h-100">
+                                                            <div class="col-2  d-flex justify-content-center">
+                                                                <img width="30px" src="./icon/navbar-icon/4.png" alt="">
+                                                            </div>
+                                                            <div dir="ltr" align="left" class="col-10">
+                                                                <div class="h6">Schools</div>
+                                                                <span>
+                                                                FlexBooks from schools and districts near you</span>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 d-flex flex-column">
+                                                    <div class="boxLink">
+                                                        <div class="row d-flex align-items-center h-100">
+                                                            <div class="col-2">
+                                                                <img width="30px" src="./icon/navbar-icon/5.png" alt="">
+                                                            </div>
+                                                            <div dir="ltr" align="left" class="col-10">
+                                                                <div class="h6">Study Guides</div>
+                                                                <span>
+                                                                Quick review with information for concept</span>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="boxLink">
+                                                        <div class="row d-flex align-items-center h-100">
+                                                            <div class="col-2">
+                                                                <img width="25px" src="./icon/navbar-icon/6.png" alt="">
+                                                            </div>
+                                                            <div dir="ltr" align="left" class="col-10">
+                                                                <div class="h6">Adaptive Practice</div>
+                                                                <span>
+                                                                Building knowledge at each student’s skill level</span>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="boxLink">
+                                                        <div class="row d-flex align-items-center h-100">
+                                                            <div class="col-2">
+                                                                <img width="30px" src="./icon/navbar-icon/7.png" alt="">
+                                                            </div>
+                                                            <div dir="ltr" align="left" class="col-10">
+                                                                <div class="h6">Simulations</div>
+                                                                <span>
+                                                                Interactive Physics & Chemistry Simulations</span>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="boxLink">
+                                                        <div class="row d-flex align-items-center h-100">
+                                                            <div class="col-2">
+                                                                <img width="30px" src="./icon/navbar-icon/8.png" alt="">
+                                                            </div>
+                                                            <div dir="ltr" align="left" class="col-10">
+                                                                <div class="h6">PLIX</div>
+                                                                <span>
+                                                                Play. Learn. Interact. eXplore.</span>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 d-flex flex-column">
+                                                    <div class="boxLink">
+                                                        <div class="row d-flex align-items-center h-100">
+                                                            <div class="col-2">
+                                                                <img width="25px" src="./icon/navbar-icon/9.png" alt="">
+                                                            </div>
+                                                            <div dir="ltr" align="left" class="col-10">
+                                                                <div class="h6">CCSS Math</div>
+                                                                <span>
+                                                                Concepts and FlexBooks aligned to Common Core</span>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="boxLink">
+                                                        <div class="row d-flex align-items-center h-100">
+                                                            <div class="col-2">
+                                                                <img width="27px" src="./icon/navbar-icon/10.png" alt="">
+                                                            </div>
+                                                            <div dir="ltr" align="left" class="col-10">
+                                                                <div class="h6">NGSS</div>
+                                                                <span>
+                                                                Concepts aligned to Next Generation Science</span>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="boxLink">
+                                                        <div class="row d-flex align-items-center h-100">
+                                                            <div class="col-2">
+                                                                <img width="30px" src="./icon/navbar-icon/11.png" alt="">
+                                                            </div>
+                                                            <div dir="ltr" align="left" class="col-10">
+                                                                <div class="h6">Certified Educator</div>
+                                                                <span>
+                                                                Stand out as an educator Become CK-12 Certified</span>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="boxLink">
+                                                        <div class="row d-flex align-items-center h-100">
+                                                            <div class="col-2">
+                                                                <img width="30px" src="./icon/navbar-icon/12.png" alt="">
+                                                            </div>
+                                                            <div dir="ltr" align="left" class="col-10">
+                                                                <div class="h6">Webinars</div>
+                                                                <span>
+                                                                Live and archived sessions to learn</span>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="row">
+                                                <div class="col-6 fullnavbar-links">
+                                                    <h5>منابع آموزشی</h5>
+                                                    <a class="mt-3 fs-6 d-block" href="#">کتاب آموزشی</a>
+                                                    <a class="mt-3 fs-6 d-block" href="#">ویدیو آموزشی</a>
+                                                    <a class="mt-3 fs-6 d-block" href="#"> کلاس آنلاین</a>
+                                                    <a class="mt-3 fs-6 d-block" href="#">مقالات آموزشی</a>
+                                                </div>
+                                                <div class="col-6">
+                                                    <lottie-player src="./plugins/animated-icon/gif1.json"  background="transparent"  speed="1"  style="width: 300px; height: 130%;" loop  autoplay></lottie-player>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span style="color:#303132be">موضوعات</span><i class="ms-2 bi bi-chevron-down"></i></li>
+                                <li class="nav-item"><a style="color:#303132be" class="nav-link" href="./contact.html">ارتباط ما</a></li>
+                                <li class="nav-item"><a style="color:#303132be" class="nav-link" href="./about.html">درباره ما</a></li>
+                            </ul> 
+                        </div>
+                        <div class="w-100 d-flex align-items-center">
+                            <div class="switch-version-btn d-none d-lg-flex ms-auto">
+                            <!-- <button type="button">
+                                <a href="#">نسخه هنرآموز</a><i class="fas fa-chalkboard-teacher"></i>
+                            </button> -->
+                            </div>
+                            <div class="input-group d-none d-lg-flex">
+                            <button type="button" data-bs-toggle="dropdown" aria-expanded="false" ><i class="bi bi-filter"></i></button>
+                            <ul dir="ltr" class="dropdown-menu">
+                                <li class="dropend-item">
+                                <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                    <i class="bi bi-chevron-left"></i><span class="bg-transparent">کامپیوتر</span>
+                                </a>
+                                <div class="dropend-box">
+                                    <ul>
+                                    <li class="mt-"><a href="#">پایه دهم</a></li>
+                                    <li><a href="#">پایه یازدهم</a></li>
+                                    <li><a href="#">پایه دوازدهم</a></li>
+                                    </ul>
+                                </div>
+                                </li>
+                                <li class="dropend-item"><a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                    <i class="bi bi-chevron-left"></i><span class="bg-transparent">انیمیشن</span>
+                                    </a>
+                                    <div style="top:54px" class="dropend-box">
+                                    <ul>
+                                        <li class="mt-"><a href="#">پایه دهم</a></li>
+                                        <li><a href="#">پایه یازدهم</a></li>
+                                        <li><a href="#">پایه دوازدهم</a></li>
+                                    </ul>
+                                    </div>
+                                </li>
+                                <li class="dropend-item"><a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                    <i class="bi bi-chevron-left"></i><span class="bg-transparent">نقشه کشی</span>
+                                    </a>
+                                    <div style="top:105px" class="dropend-box">
+                                    <ul>
+                                    <li class="mt-"><a href="#">پایه دهم</a></li>
+                                    <li><a href="#">پایه یازدهم</a></li>
+                                    <li><a href="#">پایه دوازدهم</a></li>
+                                    </ul>
+                                </div>
+                                </li>
+                                <li class="dropend-item"><a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                    <i class="bi bi-chevron-left"></i><span class="bg-transparent">حسابداری</span>
+                                    </a>
+                                    <div style="top:156px" class="dropend-box">
+                                    <ul>
+                                    <li class="mt-"><a href="#">پایه دهم</a></li>
+                                    <li><a href="#">پایه یازدهم</a></li>
+                                    <li><a href="#">پایه دوازدهم</a></li>
+                                    </ul>
+                                </div>
+                                </li>
+                            </ul>
+                            <input type="search" class="form-control" placeholder="چه چیزی میخواهید بیاموزید؟" aria-label="Search" aria-describedby="search-addon" />
+                            <span class="input-group-text -0" id="search-addon">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            </div>
+                            <ul class="navbar-nav d-flex align-items-center">
+                            <li style="border-left: 1px solid rgba(14, 14, 14, 0.308);width:30px;height:45px"><a class="nav-link" href="#"></a></li>
+                            <li><a class="nav-link" href="./login.html" target="_blank">
+                                <button class="signIN">ورود</button>
+                            </a></li>
+                            <li><a class="nav-link" href="./register.html" target="_blank">
+                                <button class="signUP">ثبت نام</button>
+                            </a></li>
+                            </ul>
+                        </div>
+                        <div class="collapse navbar-collapse" id="main_nav">
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- SECTION Mobile NAVBAR -->
+                <nav class="mobile-navbar d-flex d-lg-none">
+                    <div class="container">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="row d-flex align-items-center">
+                                <button onclick="hoverMENU()" class="btn-open" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                <i class="bi bi-list"></i>
+                                </button>
+                                <div class="box">
+                                    <form name="search">
+                                        <input type="text" placeholder="چه چیزی میخواهید بیاموزید؟" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
+                                    </form>
+                                    <i class="bi bi-search"></i>
+                                </div>
+                            </div>
+                            <div class="logo-brand">
+                                <a href="./index.html"><img src="./icon/logo-no-background.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>      
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                                <a href="./index.html"><img width="100px" src="./icon/logo-no-background.png" alt=""></a></h5>
+                            <button onclick="unhoverMENU()" type="button" class="btn-close me-1" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body w-100">
+                        <div class="loginBTN">
+                            <button><a href="./login.html">ورود</a></button>
+                            <button><a href="./register.html">ثبت نام</a></button>
+                        </div>
+                        <div class="dropdown-mobile">
+                            <label for="touch"><span>کامپیوتر<i class="fas fa-chevron-down"></i></span></label>               
+                            <input type="checkbox" id="touch"> 
+                            <ul class="slide">
+                                <li><a href="#">دهم</a></li> 
+                                <li><a href="#">یازدهم</a></li>
+                                <li><a href="#">دوازدهم</a></li>
+                                <li><a style="color:#008545" href="#">درباره این رشته بیشتر بدانید!</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown-mobile">
+                            <label for="touch1"><span>انیمیشن<i class="fas fa-chevron-down"></i></span></label>               
+                            <input type="checkbox" id="touch1"> 
+                            <ul class="slide">
+                                <li><a href="#">دهم</a></li> 
+                                <li><a href="#">یازدهم</a></li>
+                                <li><a href="#">دوازدهم</a></li>
+                                <li><a style="color:#008545" href="#">درباره این رشته بیشتر بدانید!</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown-mobile">
+                            <label for="touch2"><span>نقشه کشی<i class="fas fa-chevron-down"></i></span></label>               
+                            <input type="checkbox" id="touch2"> 
+                            <ul class="slide">
+                                <li><a href="#">دهم</a></li> 
+                                <li><a href="#">یازدهم</a></li>
+                                <li><a href="#">دوازدهم</a></li>
+                                <li><a style="color:#008545" href="#">درباره این رشته بیشتر بدانید!</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown-mobile">
+                            <label for="touch3"><span>حسابداری<i class="fas fa-chevron-down"></i></span></label>               
+                            <input type="checkbox" id="touch3"> 
+                            <ul class="slide">
+                                <li><a href="#">دهم</a></li> 
+                                <li><a href="#">یازدهم</a></li>
+                                <li><a href="#">دوازدهم</a></li>
+                                <li><a style="color:#008545" href="#">درباره این رشته بیشتر بدانید!</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown-mobile">
+                            <label for="touch4"><span>امور اداری<i class="fas fa-chevron-down"></i></span></label>               
+                            <input type="checkbox" id="touch4"> 
+                            <ul class="slide">
+                            <li><a href="#">دهم</a></li> 
+                            <li><a href="#">یازدهم</a></li>
+                            <li><a href="#">دوازدهم</a></li>
+                            <li><a style="color:#008545" href="#">درباره این بخش بیشتر بدانید!</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown-mobile">
+                            <label for="touch5"><span>امور آموزشی<i class="fas fa-chevron-down"></i></span></label>               
+                            <input type="checkbox" id="touch5"> 
+                            <ul class="slide">
+                            <li><a href="#">دهم</a></li> 
+                            <li><a href="#">یازدهم</a></li>
+                            <li><a href="#">دوازدهم</a></li>
+                            <li><a style="color:#008545" href="#">درباره این بخش بیشتر بدانید!</a></li>
+                            </ul>
+                        </div>
+                        <ul>
+                            <li><a href="#">نسخه هنرآموز<i style="color:#008545" class="ms-2 fas fa-chalkboard-teacher"></i></a></li>
+                            <li><a href="#">مدیریت هنرستان<i style="color:#180439" class="ms-2 fas fa-user-tie"></i></a></li>
+                            <li><a href="./about.html">درباره هنرستان<i style="color:#036572" class="ms-2 fas fa-school"></i></a></li>
+                            <li><a href="./contact.html">ارتباط با هنرستان<i style="color:#720356" class="ms-2 fas fa-address-book"></i></a></li>
+
+                        </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="scroll-progress">
+                    <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                </div>
+            </header>
+            
+            <article>
+                <!-- SECTION MAIN BANNER AREA START -->
+                <div style="background: url('../images/banner/image.jpg') no-repeat 50% 50%;background-size: cover;" class="page-banner-area page-contact" id="page-banner">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
+                            <div class="banner-content content-padding">
+                                <h1 class="text-white">تیم فنی و اداری</h1>
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است</p>
+                            </div>
+                            <div class="banner-links">
+                                <span><a href="./index.html">خانه</a> / کادر هنرستان</span>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--MAIN HEADER AREA END -->                
+
+                <!-- SECTION STAFF TEAM START -->
+                <section class="staff-team-section">
+                    <div class="divider-h1">
+                        <span></span><span>کادر اداری</span><span></span>
+                    </div>
+                    <div class="container">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img src="./images/team/محمدنژاد.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="h4 card-text text-center">آقای محمدنژاد</p>
+                                        <p class="text-muted text-center">موسس هنرستان</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img src="./images/team/قنواتیان.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="h4 card-text text-center">آقای قنواتیان</p>
+                                        <p class="text-muted text-center">مدیر هنرستان</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img src="./images/team/ابره دری.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="h4 card-text text-center">آقای ابره دری</p>
+                                        <p class="text-muted text-center">حسابداری</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img src="./images/team/میرزاحسین.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="h4 card-text text-center">آقای میرزاحسین</p>
+                                        <p class="text-muted text-center">معاونت آموزشی</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img src="./images/team/عماد قنواتیان.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="h4 card-text text-center">آقای عماد قنواتیان</p>
+                                        <p class="text-muted text-center">معاونت IT</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img src="./images/team/تراب نژاد.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="h4 card-text text-center">آقای تراب نژاد</p>
+                                        <p class="text-muted text-center">معاونت انضباطی</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img src="./images/team/سروش.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="h4 card-text text-center">آقای سروش</p>
+                                        <p class="text-muted text-center">معاونت پرورشی</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- END STAFF TEAM -->
+
+                <!-- SECTION TEACHERS  START -->
+                <section class="teachers-section">
+                    <div class="divider-h1">
+                        <span></span><span>کادر آموزشی</span><span></span>
+                    </div>
+                    <div id="myBtnContainer">
+                        <div class="row justify-content-center">
+                            <div class="col-6 w-auto"><button role="button" data-filter="all" class="btn active" onclick="filterSelection('all')">همه</button></div>
+                            <div class="col-6 w-auto"><button class="btn" onclick="filterSelection('computer-filter')"> کامپیوتر</button></div>
+                            <div class="col-6 w-auto"><button class="btn" onclick="filterSelection('anime-filter')"> انیمیشن</button></div>
+                            <div class="col-6 w-auto"><button class="btn" onclick="filterSelection('drawing-filter')"> نقشه کشی</button></div>
+                            <div class="col-6 w-auto"><button class="btn" onclick="filterSelection('calculate-filter')"> عمومی</button></div>
+                        </div>
+                    </div>
+                    
+                    <div class="container mt-5">
+                        <div class="row d-flex justify-content-center">
+                            <div class="filterDiv computer-filter scale-in-center">
+                                <div class="filter-image">
+                                    <img src="./images/team/وثوق۱.jpg" alt="">
+                                </div>
+                                <h5>آقای وثوقی</h5>
+                                <span>هنرآموز کامپیوتر</span>
+                            </div>
+                            <div class="filterDiv anime-filter scale-in-center">
+                                <div class="filter-image">
+                                    <img src="./images/team/حمید برزو.jpg" alt="">
+                                </div>
+                                <h5>آقای برزو</h5>
+                                <span>هنرآموز انیمیشن</span>
+                            </div>
+                            <div class="filterDiv computer-filter scale-in-center">
+                                <div class="filter-image">
+                                    <img src="./images/team/ناصری.jpg" alt="">
+                                </div>
+                                <h5>آقای ناصری</h5>
+                                <span>هنرآموز کامپیوتر</span>
+                            </div>
+                            <div class="filterDiv drawing-filter scale-in-center">
+                                <div class="filter-image">
+                                    <img src="./images/team/ضیابری.jpg" alt="">
+                                </div>
+                                <h5>آقای ضیابری</h5>
+                                <span>هنرآموز نقشه کشی</span>
+                            </div>
+                            <div class="filterDiv calculate-filter scale-in-center">
+                                <div class="filter-image">
+                                    <img src="./images/team/قاضوی.jpg" alt="">
+                                </div>
+                                <h5>آقای قاضوی</h5>
+                                <span>مدرس شیمی</span>
+                            </div>
+                            <div class="filterDiv computer-filter scale-in-center">
+                                <div class="filter-image">
+                                    <img src="./images/team/خادمزاده.jpg" alt="">
+                                </div>
+                                <h5>آقای خادمزاده</h5>
+                                <span>هنرآموز کامپیوتر</span>
+                            </div>
+                            <div class="filterDiv calculate-filter scale-in-center">
+                                <div class="filter-image">
+                                    <img src="./images/team/بابایی.jpg" alt="">
+                                </div>
+                                <h5>آقای بابایی</h5>
+                                <span>مدرس ادبیات</span>
+                            </div>
+                            <div class="filterDiv calculate-filter scale-in-center">
+                                <div class="filter-image">
+                                    <img src="./images/team/جلالی.jpg" alt="">
+                                </div>
+                                <h5>آقای جلالی</h5>
+                                <span>مدرس عربی</span>
+                            </div>
+                            <div class="filterDiv calculate-filter scale-in-center">
+                                <div class="filter-image">
+                                    <img src="./images/team/مینایی.jpg" alt="">
+                                </div>
+                                <h5>آقای مینایی</h5>
+                                <span>مدرس سلامت و بهداشت</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+                <!--  END TEACHERS  -->
+            </article>
+            <!-- SECTION Footer -->
+            <footer class="main-footer bg-dark text-white">
+                <div class="container d-flex flex-column align-items-center">
+                  <div class="row pt-5">
+                    <div class="col-md-4 d-flex flex-column align-items-center">
+                      <h5 class="font-weight-bold">هنرستان</h5>
+                      <ul class="list-unstyled text-center">
+                        <li class="mt-3"><a class="footer-text font-size-18" href="./about.html">درباره ما</a></li>
+                        <li class="mt-2"><a class="footer-text font-size-18" href="./contact.html">تماس با ما</a></li>
+                        <li class="mt-2"><a class="footer-text font-size-18" href="./team.html">کادر هنرستان</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-4 d-flex flex-column align-items-center">
+                      <h5 class="font-weight-bold">منابع</h5>
+                      <ul class="list-unstyled text-center">
+                        <li class="mt-3"><a class="footer-text font-size-18" href="http://chap.sch.ir/">کتب درسی</a></li>
+                        <li class="mt-2"><a class="footer-text font-size-18" href="https://www.roshd.ir/">
+                          شبکه ملی رشد</a></li>
+                          <li class="mt-2"><a class="footer-text font-size-18" href="https://medu.gov.ir/">وزارت آموزش و پرورش</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-4 d-flex flex-column align-items-center">
+                      <h5 class="font-weight-bold">آموزش</h5>
+                      <ul class="list-unstyled text-center">
+                        <li class="mt-3"><a class="footer-text font-size-18" href="https://7ganj.ir/">کتابخانه مجازی</a></li>
+                        <li class="mt-2"><a class="footer-text font-size-18" href="https://www.tebyan.net/">موسسه فرهنگی تبیان</a></li>
+                        <li class="mt-2"><a class="footer-text font-size-18" href="https://bpj.iau.ir/">باشگاه پژوهشگران جوان</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-md-4 d-none d-md-block">
+                      <div class="d-flex justify-content-center align-items-end">
+                        <a href="https://www.aparat.com/isitschool">
+                          <i style="height:30px;display:flex;align-items:center">
+                            <img src="./icon/aparat-custom.svg" alt="">
+                          </i>
+                        </a>
+                        <a href="https://t.me/isitschool_info"><i class="fab fa-telegram mr-3"></i></a>
+                        <a href="https://instagram.com/isit.school?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram mr-3"></i></a>
+                        <a href="https://www.namasha.com/isitschool"><i class="fab fa-youtube"></i></a>
+                      </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <a href="#">
+                        <img src="./icon/logo-no-background-1.png" alt="Informatics Logo">
+                      </a>
+                    </div>
+                    <div class="d-md-none">
+                      <div class="d-flex justify-content-center mb-3">
+                        <a href="https://www.aparat.com/isitschool"><i class="fab"><img src="./icon/aparat.png" alt=""></i></a>
+                        <a href="https://t.me/isitschool_info"><i class="fab fa-telegram fa-2x mr-3"></i></a>
+                        <a href="https://instagram.com/isit.school?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram fa-2x mr-3"></i></a>
+                        <a href="https://www.namasha.com/isitschool"><i class="fab fa-youtube fa-2x"></i></a>
+                      </div>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                      <p dir="ltr" class="footer-text">‌Back-End Developed by
+                      <span><a href="https://t.me/vossoughi2022?text=Your%20pre-written%20message">Mr.Vossoughi</a></span>
+                      </>
+                      <p dir="ltr" class="footer-text">&copy; Front-End Designed and Developed by <span><a href="https://zil.ink/alijazbi">Ali Jazbi</a></span></>
+                    </div>
+                  </div>
+                </div>
+              </footer>  
+        </main>
+
+            
+
+
+        
+        <script src="./plugins/jquery/jquery.min.js"></script>
+        <script src="./plugins/Bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="./plugins/fontawesome/script.js"></script>
+        <script src="./plugins/scrolls-main/scrolls.min.js"></script>
+        <script src="./plugins/animated-icon/lotiePlayer.js"></script>
+        <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+        <script src="plugins/shuffle/shuffle.min.js"></script>
+        <script src="./script/finisher-header.es5.min.js" type="text/javascript"></script>
+        <script src="./script/progress.js"></script>
+        <script src="./script/scroll-fade-animation.js"></script>
+        <script src="./script/style-header.js"></script>
+        <script src="./script/fixed-menu-lg.js"></script>
+        <script src="./script/main.js"></script>
+        <script src="./script/team.js"></script>
+        <!-- <script src="./script/loader.js"></script> -->
+    </body>
+</html>
