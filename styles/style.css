@@ -737,6 +737,33 @@ body{
         margin-bottom: 5px; 
     }
 }
+
+/* Modal */
+.modal .row{
+    margin-bottom: 40px;
+}
+
+.modal label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.modal input{
+    margin-top: 10px;
+}
+.modal input, select {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #cccccc9c;
+}
+.toast-body a{
+    text-decoration: none !important;
+    transition: all ease-in-out .3s;
+}
+.toast-body a:hover{
+    color: #03391f !important;
+}
 /* pc navbar End */
 
 
@@ -1465,6 +1492,7 @@ body{
     text-align: center;
     text-transform: uppercase;
 }
+
 .school-body .text-school button:hover .circle{
     display:block !important;
     width: 100% !important;

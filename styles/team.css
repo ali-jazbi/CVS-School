@@ -94,7 +94,6 @@ transition: .3s all ease-in-out;
     height: 265px;
     transition: all .3s ease-in-out;
 }
-
 .teachers-section .filterDiv:hover{
     box-shadow: 0px 5px 5px rgb(230, 230, 230);
 }

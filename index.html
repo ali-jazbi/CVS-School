@@ -18,7 +18,18 @@
     <title>هنرستان انفورماتیک</title>
   </head>
   <body>
-    
+    <!-- NOTE Live Toast -->
+    <div class="toast-container position-fixed bottom-0 start-0 p-3">
+      <div id="liveToast" class="toast" role="alert" aria-live="assertive">
+        <div class="toast-header">
+          <strong class="me-auto"><i class="bi bi-pen pe-2"></i>اطلاعیه</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          <a class="text-success-emphasis" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">برای تکمیل فرم پیش ثبت نام کلیک کنید</a>
+        </div>
+      </div>
+    </div>
     <!-- NOTE Website Loader -->
     <!-- <div class="loader">
         <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="200px" viewBox="0 0 200 200" class="pencil">
@@ -251,6 +262,7 @@
                             </div>
                           </div>
                           <span style="color:#303132be">موضوعات</span><i class="ms-2 bi bi-chevron-down"></i></li>
+                          <li class="nav-item"><a style="color:#303132be" class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal"> ثبت نام </a></li>
                         <li class="nav-item"><a style="color:#303132be" class="nav-link" href="./contact.html">ارتباط ما</a></li>
                         <li class="nav-item"><a style="color:#303132be" class="nav-link" href="./about.html">درباره ما</a></li>
                       </ul> 
@@ -321,7 +333,7 @@
                         <button class="signIN">ورود</button>
                       </a></li>
                       <li><a class="nav-link" href="./register.html" target="_blank">
-                        <button class="signUP">ثبت نام</button>
+                        <button class="signUP">عضویت</button>
                       </a></li>
                     </ul>
                 </div>
@@ -329,7 +341,61 @@
                 </div>
             </div>
           </nav>
-
+          <!-- NOTE Registration Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">پیش ثبت نام</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h5 class="text-center">اطلاعات هنرجو</h5>
+                  <hr class="mb-4">
+                  <form action="#">
+                    <div class="row">
+                        <label for="fname">نام:</label>
+                        <input type="text" id="fname" name="fname">
+                    </div>
+                    <div class="row">
+                        <label for="lname">نام خانوادگی:</label>
+                        <input type="text" id="lname" name="lname">
+                    </div>
+                    <div class="row">
+                        <label for="ssn">شماره ملی:</label>
+                        <input type="text" id="ssn" name="ssn">
+                    </div>
+                    <div class="row">
+                        <label for="birthdate">تاریخ تولد:</label>
+                        <input type="date" id="birthdate" name="birthdate">
+                    </div>
+                    <div class="row">
+                        <label for="gender">جنسیت:</label>
+                        <select id="gender" name="gender">
+                            <option value="">انتخاب کنید</option>
+                            <option value="male">مرد</option>
+                            <option value="female">زن</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <label for="ethnicity">رشته:</label>
+                        <select id="ethnicity" name="ethnicity">
+                            <option value="">انتخاب کنید</option>
+                            <option value="persian">کامپیوتر</option>
+                            <option value="kurd">حسابداری</option>
+                            <option value="azari">معماری</option>
+                            <option value="other">سایر</option>
+                        </select>
+                    </div>
+                </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+                  <button type="button" class="btn btn-success">ثبت اطلاعات</button>
+                </div>
+              </div>
+            </div>
+          </div>
           <!-- SECTION Mobile NAVBAR -->
           <nav class="mobile-navbar d-flex d-lg-none">
               <div class="container">
@@ -500,6 +566,7 @@
       <div class="d-none d-lg-flex hr-fixed">
         <div class="divider div-transparent div-dot"></div>
       </div>
+      
       <!-- SECTION Main Body -->
       <article id="school-body" class="school-body">
           <section>
@@ -510,7 +577,7 @@
                       </div>
                   </div>
                   <div dir="rtl" class="col-12 col-lg-6 appear">
-                      <div class="text-school mt-4 mt-lg-0 ">
+                      <div class="text-school mt-4 mt-lg-0">
                           <h1>ﺍﻳﺠﺎﺩ محیطی ﻣﻨﺎﺳﺐ ﺟﻬﺖ ارزیابی های ﻣﺴﺘﻤﺮ ﻭ ﻣﺘﻨﺎﺳﺐ ﺑﺎ ﺍﺳﺘﻌﺪﺍﺩ ﻭ ﭘﻴﺸﺮﻓﺖ <span>فرزند هایتان</span></h1>
                           <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع </p>
                           <button class="learn-more">
@@ -526,22 +593,22 @@
 
           <section>
             <div dir="ltr" class="row w-100 d-flex justify-content-between">
+              <div dir="rtl" class="col-12 col-lg-6 appear">
+                <div class="text-school mt-4 mt-lg-0 ">
+                    <h1>ﺗﺮﻭﻳﺞ یادگیری تجربی پژوهش محوری ﻭ ﺩﺍﻧﺶﺁﻣﻮﺯ محوری ﺩﺭ فرآیندهای آموزشی <span> هنرجویان</span></h1>
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع </p>
+                    <button class="learn-more">
+                      <span class="circle" aria-hidden="true">
+                      <span class="icon arrow"></span>
+                      </span>
+                      <span class="button-text">بیشتر بدانید</span>
+                    </button>
+                </div>
+            </div>
               <div class="col-12 col-lg-6 appear">
                 <div class="img-school">
                     <img src="./images/study.jpeg" alt="learning">
                 </div>
-              </div>
-              <div dir="rtl" class="col-12 col-lg-6 appear">
-                  <div class="text-school mt-4 mt-lg-0 ">
-                      <h1>ﺗﺮﻭﻳﺞ یادگیری تجربی پژوهش محوری ﻭ ﺩﺍﻧﺶﺁﻣﻮﺯ محوری ﺩﺭ فرآیندهای آموزشی <span> هنرجویان</span></h1>
-                      <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع </p>
-                      <button class="learn-more">
-                        <span class="circle" aria-hidden="true">
-                        <span class="icon arrow"></span>
-                        </span>
-                        <span class="button-text">بیشتر بدانید</span>
-                      </button>
-                  </div>
               </div>
           </div>
           </section>
@@ -571,29 +638,28 @@
 
           <section>
             <div dir="ltr" class="row w-100 d-flex justify-content-between">
+              <div dir="rtl" class="col-12 col-lg-6 appear">
+                <div class="text-school mt-4 mt-lg-0">
+                    <h1>بهره گیری از قابلیت های پیشرفته وب برای ﺗﻮﺳﻌﻪ محتوای<span> آموزشی</span></h1>
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع </p>
+                    <button class="learn-more">
+                      <span class="circle" aria-hidden="true">
+                      <span class="icon arrow"></span>
+                      </span>
+                      <span class="button-text">بیشتر بدانید</span>
+                    </button>
+                </div>
+              </div>
               <div class="col-12 col-lg-6 appear">
                 <div class="img-school">
                     <img src="./images/web.jpg" alt="learning">
                 </div>
               </div>
-              <div dir="rtl" class="col-12 col-lg-6 appear">
-                  <div class="text-school mt-4 mt-lg-0">
-                      <h1>بهره گیری از قابلیت های پیشرفته وب برای ﺗﻮﺳﻌﻪ محتوای<span> آموزشی</span></h1>
-                      <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع </p>
-                      <button class="learn-more">
-                        <span class="circle" aria-hidden="true">
-                        <span class="icon arrow"></span>
-                        </span>
-                        <span class="button-text">بیشتر بدانید</span>
-                      </button>
-                  </div>
-              </div>
-          </div>
+            </div>
           </section>
       </article>
       <!-- END ARTICLE -->
       
-
       <!-- SECTION 3 Cards -->
       <article class="section-cards">
           <section class="cards-section-title">
@@ -658,51 +724,51 @@
       </article>
 
       <!-- SECTION Footer -->
-      <footer class="main-footer bg-secondary text-white">
+      <footer class="main-footer bg-dark bg-opacity-75 text-white">
         <div class="container d-flex flex-column align-items-center">
           <div class="row pt-5">
-            <div class="col-md-3 col-6 d-flex flex-column align-items-center">
+            <div class="col-3 d-flex flex-column align-items-center">
               <h5 class="font-weight-bold">هنرستان</h5>
               <ul class="list-unstyled text-center">
-                <li class="mt-3"><a class="footer-text font-size-18" href="./about.html">درباره ما</a></li>
-                <li class="mt-2"><a class="footer-text font-size-18" href="./contact.html">تماس با ما</a></li>
-                <li class="mt-2"><a class="footer-text font-size-18" href="./team.html">کادر هنرستان</a></li>
+                <li class="mt-3"><a class="footer-text font-size-18 text-light text-opacity-75" href="./about.html">درباره ما</a></li>
+                <li class="mt-2"><a class="footer-text font-size-18 text-light text-opacity-75" href="./contact.html">تماس با ما</a></li>
+                <li class="mt-2"><a class="footer-text font-size-18 text-light text-opacity-75" href="./team.html">کادر هنرستان</a></li>
               </ul>
             </div>
-            <div class="col-md-3 col-6 d-flex flex-column align-items-center">
+            <div class="col-3 d-flex flex-column align-items-center">
               <h5 class="font-weight-bold">منابع</h5>
               <ul class="list-unstyled text-center">
-                <li class="mt-3"><a class="footer-text font-size-18" href="http://chap.sch.ir/">کتب درسی</a></li>
-                <li class="mt-2"><a class="footer-text font-size-18" href="https://www.roshd.ir/">
+                <li class="mt-3"><a class="footer-text font-size-18 text-light text-opacity-75" href="http://chap.sch.ir/">کتب درسی</a></li>
+                <li class="mt-2"><a class="footer-text font-size-18 text-light text-opacity-75" href="https://www.roshd.ir/">
                   شبکه ملی رشد</a></li>
-                  <li class="mt-2"><a class="footer-text font-size-18" href="https://medu.gov.ir/">وزارت آموزش و پرورش</a></li>
+                  <li class="mt-2"><a class="footer-text font-size-18 text-light text-opacity-75" href="https://medu.gov.ir/">وزارت آموزش و پرورش</a></li>
               </ul>
             </div>
-            <div class="col-md-3 col-6 d-flex flex-column align-items-center">
+            <div class="col-3 d-flex flex-column align-items-center">
               <h5 class="font-weight-bold">آموزش</h5>
               <ul class="list-unstyled text-center">
-                <li class="mt-3"><a class="footer-text font-size-18" href="https://7ganj.ir/">کتابخانه مجازی</a></li>
-                <li class="mt-2"><a class="footer-text font-size-18" href="https://www.tebyan.net/">موسسه فرهنگی تبیان</a></li>
-                <li class="mt-2"><a class="footer-text font-size-18" href="https://bpj.iau.ir/">باشگاه پژوهشگران جوان</a></li>
+                <li class="mt-3"><a class="footer-text font-size-18 text-light text-opacity-75" href="https://7ganj.ir/">کتابخانه مجازی</a></li>
+                <li class="mt-2"><a class="footer-text font-size-18 text-light text-opacity-75" href="https://www.tebyan.net/">موسسه فرهنگی تبیان</a></li>
+                <li class="mt-2"><a class="footer-text font-size-18 text-light text-opacity-75" href="https://bpj.iau.ir/">باشگاه پژوهشگران جوان</a></li>
               </ul>
             </div>
-            <div class="col-md-3 col-6 d-flex flex-column align-items-center">
+            <div class="col-3 d-flex flex-column align-items-center">
               <h5 class="font-weight-bold">آموزش</h5>
               <ul class="list-unstyled text-center">
-                <li class="mt-3"><a class="footer-text font-size-18" href="https://7ganj.ir/">کتابخانه مجازی</a></li>
-                <li class="mt-2"><a class="footer-text font-size-18" href="https://www.tebyan.net/">موسسه فرهنگی تبیان</a></li>
-                <li class="mt-2"><a class="footer-text font-size-18" href="https://bpj.iau.ir/">باشگاه پژوهشگران جوان</a></li>
+                <li class="mt-3"><a class="footer-text font-size-18 text-light text-opacity-75" href="https://7ganj.ir/">کتابخانه مجازی</a></li>
+                <li class="mt-2"><a class="footer-text font-size-18 text-light text-opacity-75" href="https://www.tebyan.net/">موسسه فرهنگی تبیان</a></li>
+                <li class="mt-2"><a class="footer-text font-size-18 text-light text-opacity-75" href="https://bpj.iau.ir/">باشگاه پژوهشگران جوان</a></li>
               </ul>
             </div>
           </div>
           <hr>
-          <div class="row pt-5">
-            <div class="col-6 text-md-start">
-              <p dir="ltr" class="footer-text">‌Back-End Developed by
-              <span><a href="https://t.me/vossoughi2022?text=Your%20pre-written%20message">Mr.Vossoughi</a></span>
+          <div class="row mt-4">
+            <div class="col-6 text-light-emphasis">
+              <p class="footer-text">‌Back-End Developed by
+              <span><a href="https://t.me/vossoughi2024?text=Your%20pre-written%20message">Mr.Vossoughi</a></span>
               </>
             </div>
-            <div class="col-6">
+            <div class="col-6 text-light-emphasis">
               <p dir="ltr" class="footer-text">&copy; Front-End Designed and Developed by <span><a href="https://zil.ink/alijazbi">Ali Jazbi</a></span></>
             </div>
           </div>
