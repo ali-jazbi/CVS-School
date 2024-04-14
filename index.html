@@ -83,7 +83,7 @@
           <nav id="navbar_top" class="pc-navbar d-none d-lg-flex navbar navbar-expand-lg">
             <div class="container-fluid w-100 d-flex justify-content-center">
                 <div class="d-flex align-items-center">
-                      <a class="navbar-brand" href="#"><img src="./icon/logo-no-background.png" alt=""></a>
+                      <a class="navbar-brand" href="#"><img src="./icon/school logo.png" alt=""></a>
                       <ul class="navbar-nav ms-auto d-flex align-items-center">
                         <li class="nav-item"><a style="color:black" class="nav-link" href="#">خانه</a></li>
                         <li onmouseover="hoverMENU()" onmouseout="unhoverMENU()" class="nav-item hoverFullMenu">
@@ -412,19 +412,22 @@
                         </div>
                       </div>
                       <div class="logo-brand">
-                          <img src="./icon/logo-no-background.png" alt="">
+                          <img src="./icon/school logo.png" alt="">
                       </div>
                   </div>
               </div>      
               <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasExampleLabel"><img width="100px" src="./icon/logo-no-background.png" alt=""></h5>
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel"><img width="90px" src="./icon/school logo.png" alt=""></h5>
                     <button onclick="unhoverMENU()" type="button" class="btn-close me-1" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body w-100">
                   <div class="loginBTN">
                     <button><a href="./login.html">ورود</a></button>
-                    <button><a href="./register.html">ثبت نام</a></button>
+                    <button><a href="./register.html">عضویت</a></button>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                      <a class="pre-registration" data-bs-toggle="modal" data-bs-target="#exampleModal"><span>پیش ثبت نام</span></a>
                   </div>
                   <div class="dropdown-mobile">
                       <label for="touch"><span>کامپیوتر<i class="fas fa-chevron-down"></i></span></label>               
@@ -592,7 +595,12 @@
           </section>
 
           <section>
-            <div dir="ltr" class="row w-100 d-flex justify-content-between">
+            <div dir="rtl" class="row w-100 d-flex justify-content-between">
+              <div class="col-12 col-lg-6 appear">
+                <div class="img-school">
+                    <img src="./images/study.jpeg" alt="learning">
+                </div>
+              </div>
               <div dir="rtl" class="col-12 col-lg-6 appear">
                 <div class="text-school mt-4 mt-lg-0 ">
                     <h1>ﺗﺮﻭﻳﺞ یادگیری تجربی پژوهش محوری ﻭ ﺩﺍﻧﺶﺁﻣﻮﺯ محوری ﺩﺭ فرآیندهای آموزشی <span> هنرجویان</span></h1>
@@ -605,11 +613,6 @@
                     </button>
                 </div>
             </div>
-              <div class="col-12 col-lg-6 appear">
-                <div class="img-school">
-                    <img src="./images/study.jpeg" alt="learning">
-                </div>
-              </div>
           </div>
           </section>
           
@@ -637,7 +640,12 @@
           </section>
 
           <section>
-            <div dir="ltr" class="row w-100 d-flex justify-content-between">
+            <div dir="rtl" class="row w-100 d-flex justify-content-between">
+              <div class="col-12 col-lg-6 appear">
+                <div class="img-school">
+                    <img src="./images/web.jpg" alt="learning">
+                </div>
+              </div>
               <div dir="rtl" class="col-12 col-lg-6 appear">
                 <div class="text-school mt-4 mt-lg-0">
                     <h1>بهره گیری از قابلیت های پیشرفته وب برای ﺗﻮﺳﻌﻪ محتوای<span> آموزشی</span></h1>
@@ -650,11 +658,7 @@
                     </button>
                 </div>
               </div>
-              <div class="col-12 col-lg-6 appear">
-                <div class="img-school">
-                    <img src="./images/web.jpg" alt="learning">
-                </div>
-              </div>
+
             </div>
           </section>
       </article>
@@ -727,7 +731,7 @@
       <footer class="main-footer bg-dark bg-opacity-75 text-white">
         <div class="container d-flex flex-column align-items-center">
           <div class="row pt-5">
-            <div class="col-3 d-flex flex-column align-items-center">
+            <div class="col-12 col-lg-3 d-flex flex-column align-items-center">
               <h5 class="font-weight-bold">هنرستان</h5>
               <ul class="list-unstyled text-center">
                 <li class="mt-3"><a class="footer-text font-size-18 text-light text-opacity-75" href="./about.html">درباره ما</a></li>
@@ -735,7 +739,7 @@
                 <li class="mt-2"><a class="footer-text font-size-18 text-light text-opacity-75" href="./team.html">کادر هنرستان</a></li>
               </ul>
             </div>
-            <div class="col-3 d-flex flex-column align-items-center">
+            <div class="col-12 col-lg-3 d-flex flex-column align-items-center">
               <h5 class="font-weight-bold">منابع</h5>
               <ul class="list-unstyled text-center">
                 <li class="mt-3"><a class="footer-text font-size-18 text-light text-opacity-75" href="http://chap.sch.ir/">کتب درسی</a></li>
@@ -744,7 +748,7 @@
                   <li class="mt-2"><a class="footer-text font-size-18 text-light text-opacity-75" href="https://medu.gov.ir/">وزارت آموزش و پرورش</a></li>
               </ul>
             </div>
-            <div class="col-3 d-flex flex-column align-items-center">
+            <div class="col-12 col-lg-3 d-flex flex-column align-items-center">
               <h5 class="font-weight-bold">آموزش</h5>
               <ul class="list-unstyled text-center">
                 <li class="mt-3"><a class="footer-text font-size-18 text-light text-opacity-75" href="https://7ganj.ir/">کتابخانه مجازی</a></li>
@@ -752,7 +756,7 @@
                 <li class="mt-2"><a class="footer-text font-size-18 text-light text-opacity-75" href="https://bpj.iau.ir/">باشگاه پژوهشگران جوان</a></li>
               </ul>
             </div>
-            <div class="col-3 d-flex flex-column align-items-center">
+            <div class="col-12 col-lg-3 d-flex flex-column align-items-center">
               <h5 class="font-weight-bold">آموزش</h5>
               <ul class="list-unstyled text-center">
                 <li class="mt-3"><a class="footer-text font-size-18 text-light text-opacity-75" href="https://7ganj.ir/">کتابخانه مجازی</a></li>
@@ -763,12 +767,12 @@
           </div>
           <hr>
           <div class="row mt-4">
-            <div class="col-6 text-light-emphasis">
+            <div class="col-12 col-lg-6 text-light-emphasis">
               <p class="footer-text">‌Back-End Developed by
               <span><a href="https://t.me/vossoughi2024?text=Your%20pre-written%20message">Mr.Vossoughi</a></span>
               </>
             </div>
-            <div class="col-6 text-light-emphasis">
+            <div class="col-12 col-lg-6 text-light-emphasis">
               <p dir="ltr" class="footer-text">&copy; Front-End Designed and Developed by <span><a href="https://zil.ink/alijazbi">Ali Jazbi</a></span></>
             </div>
           </div>

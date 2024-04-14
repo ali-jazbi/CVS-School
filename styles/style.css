@@ -509,9 +509,14 @@ body{
     transition: all .3s ease-in-out;
     z-index: 99;
 }
+.pc-navbar .navbar-brand{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .pc-navbar .navbar-brand img{
-    width: 150px;
-    margin-bottom: 5px;  
+    width: 160px;
 }
 .offcanvas{
     width: 100% !important;
@@ -734,7 +739,6 @@ body{
 @media(max-width:992px){
     .pc-navbar .navbar-brand img{
         width: 110px;
-        margin-bottom: 5px; 
     }
 }
 
@@ -779,7 +783,7 @@ body{
     z-index: 99;
 }
 .mobile-navbar .logo-brand img{
-    width: 100px;
+    width: 120px;
 }
 .mobile-navbar .btn-open{
     height: 20px;
@@ -879,6 +883,56 @@ body{
 .mobile-navbar .offcanvas .loginBTN button a{
     color: rgb(255, 255, 255);
     text-decoration: none;
+}
+.pre-registration {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    color: white;
+    margin: 0 auto;
+    position: relative;
+    text-decoration: none;
+    font-weight: 60;
+    overflow: hidden;
+    padding: 2px;
+    isolation: isolate;
+    text-align: center;
+}
+.pre-registration::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 100%;
+    background: linear-gradient(115deg, #d1d1d1, #02367b, #a7bfde);
+    background-size: 25% 100%;
+    animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop
+        2.75s linear infinite;
+    animation-play-state: running;
+    translate: -5% 0%;
+    transition: translate 0.25s ease-out;
+}
+
+.pre-registration:hover::before {
+    animation-play-state: running;
+    transition-duration: 0.75s;
+    translate: 0% 0%;
+}
+
+@keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
+    to {
+        transform: translateX(-25%);
+    }
+}
+
+.pre-registration span {
+    position: relative;
+    display: block;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    background: #008545;
+    height: 100%;
 }
 .mobile-navbar .offcanvas ul{
     overflow: hidden !important;
