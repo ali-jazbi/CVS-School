@@ -9,14 +9,14 @@ body{
     width:100%;
     height: auto;
     background-color:#f1f1f1;
-    font-family: vazir,sans-serif;
+    font-family: yekan-bakh-bold,sans-serif;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
 }
 @font-face {
-    font-family: vazir;
-    src: url("../font/vazir.ttf");
+    font-family: yekan-bakh-bold;
+    src: url("../font/YekanBakh-Bold.ttf");
 }
 
 /* NOTE custom scroll bar css */ 
@@ -160,7 +160,7 @@ body{
     padding: 0 10px 0 0;
     text-decoration: none;
     line-height: 40px;
-    font-size: 13px;
+    font-size: 12px;
     text-transform: uppercase;
     font-weight: bold;
     color: #999;
