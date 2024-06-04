@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+body{
+    width:100%;
+    height: auto;
+    background-color:#f1f1f1;
+    font-family: vazir,sans-serif;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: vazir;
+    src: url("../font/vazir.ttf");
+}
+
+/* NOTE custom scroll bar css */ 
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #008545;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #004d28;
+}
+
+/** START SEARCH FORM AND DROPDOWN */
+
+/* removing default style of button */
+.search-bar .form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+  }
+  /* styling of whole input container */
+.search-bar .form {
+    --timing: 0.3s;
+    --width-of-input: 200px;
+    --height-of-input: 40px;
+    --border-height: 2px;
+    --input-bg: #d4d4d44f;
+    --border-color: #3FBB0E;
+    --border-radius: 10px;
+    --after-border-radius: 1px;
+    position: relative;
+    width: var(--width-of-input);
+    height: var(--height-of-input);
+    display: flex;
+    align-items: center;
+    padding-inline: 0.8em;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg,#fff);
+  }
+  /* styling of Input */
+ .search-bar .input {
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+  }
+  /* styling of animated border */
+ .search-bar .form:before {
+    content: "";
+    position: absolute;
+    background: var(--border-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: var(--border-height);
+    right: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+  }
+  /* Hover on Input */
+ .search-bar .form:focus-within {
+    border-radius: var(--after-border-radius);
+  }
+  
+ .search-bar input:focus {
+    outline: none;
+  }
+  /* here is code of animated border */
+ .search-bar .form:focus-within:before {
+    transform: scale(1);
+  }
+  /* styling of close button */
+  /* == you can click the close button to remove text == */
+ .search-bar .reset {
+    border: none;
+    background: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* close button shown when typing */
+ .search-bar input:not(:placeholder-shown) ~ .reset {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* sizing svg icons */
+ .search-bar .form svg {
+    width: 17px;
+    margin-top: 0px;
+  }
+  .search-bar .form ::placeholder{
+    font-size: 12px;
+    color: #00000043;
+  }
+
+  /* start dropdown */
+  .dropdown {
+    width: 170px;
+    display: inline-block;
+    position: relative;
+  }
+  .dropdown.toggle > input {
+    display: none;
+    
+  }
+  .dropdown > a, .dropdown.toggle > label {
+    border-radius: 2px;
+    box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);    cursor: pointer !important;
+
+  }
+  .dropdown > a::after, .dropdown.toggle > label::after {
+    content: "";
+    float: right;
+    margin: 15px 0 0 10px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 9px solid #CCC;
+  }
+  .dropdown ul {
+    list-style-type: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0px 6px 5px -5px rgba(0,0,0,0.3);
+    overflow: hidden;
+  }
+  .dropdown a, .dropdown.toggle > label {
+    display: block;
+    padding: 0 10px 0 0;
+    text-decoration: none;
+    line-height: 40px;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #999;
+    background-color: #FFF;
+    transition: all ease-in-out .1s;
+  }
+  .dropdown li {
+    height: 0;
+    overflow: hidden;
+    transition: all ease-in-out .3s;
+  }
+  .dropdown li:first-child a {
+    border-radius: 2px 0px 0 2px;
+  }
+  .dropdown li:last-child a {
+    border-radius: 0 2px 2px 0;
+  }
+  .dropdown li:first-child a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #FFF;
+    margin: -10px 30px 0 0px;
+  }
+  .dropdown a:hover, .dropdown.toggle > label:hover, .dropdown.toggle > input:checked ~ label {
+    background-color: #EEE;
+    color: #666;
+  }
+  .dropdown > a:hover::after, .dropdown.toggle > label:hover::after, .dropdown.toggle > input:checked ~ label::after {
+    border-top-color: #AAA;
+  }
+  .dropdown li:first-child a:hover::before {
+    border-bottom-color: #EEE;
+  }
+  .dropdown.hover:hover li, .dropdown.toggle > input:checked ~ ul li {          
+    height: 40px;
+  }
+  .dropdown.hover:hover li:first-child, .dropdown.toggle > input:checked ~ ul li:first-child {
+    padding-top: 15px;
+    padding-bottom: 40px;
+  }
+  .dropdown.hover:hover .dropdown > a::after, 
+.dropdown.toggle > input:checked ~ label::after {
+  transform: rotate(180deg);
+}
+
+.dropdown > a::after, .dropdown.toggle > label::after {
+  transition: transform 0.1s;
+}
+/*? END SEARCH FORM AND DROPDOWN */
+
