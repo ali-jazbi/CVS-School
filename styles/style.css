@@ -142,7 +142,7 @@ a:hover{
   }
   .dropdown > a, .dropdown.toggle > label {
     border-radius: 2px;
-    box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);    cursor: pointer !important;
+    box-shadow: 0 6px 5px -5px rgba(0, 0, 0, 0.057);    cursor: pointer !important;
 
   }
   .dropdown > a::after, .dropdown.toggle > label::after {
