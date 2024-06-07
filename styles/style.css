@@ -33,7 +33,16 @@ body{
     background: #004d28;
 }
 
-/** START SEARCH FORM AND DROPDOWN */
+/* NOTE Public Style */
+a{
+  font-size: 15px !important;
+  transition: all ease-in-out .2s !important;
+}
+a:hover{
+  color: #3FBB0E !important;
+}
+/** START Navbar */
+/* Start Searchbar */
 
 /* removing default style of button */
 .search-bar .form button {
@@ -119,6 +128,7 @@ body{
     font-size: 12px;
     color: #00000043;
   }
+  /* End Searchbar */
 
   /* start dropdown */
   .dropdown {
@@ -211,8 +221,16 @@ body{
   transform: rotate(180deg);
 }
 
-.dropdown > a::after, .dropdown.toggle > label::after {
-  transition: transform 0.1s;
+.dropdown.toggle > input:checked ~ a::after,
+.dropdown.toggle > input:checked ~ label::after {
+  border-top-color: #147d14; /* Green color for active shadow */
+  transform: rotate(180deg);
 }
-/*? END SEARCH FORM AND DROPDOWN */
+.dropdown.toggle > input:checked ~ a,
+.dropdown.toggle > input:checked ~ label {
+    box-shadow: 0 6px 5px -5px rgba(20, 125, 20, 0.3); /* Green color for active shadow */
+}
+/* End DropDown */
+
+/*? END Navbar */
 
