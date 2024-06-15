@@ -7,8 +7,8 @@
 }
 body{
     width:100%;
-    height: auto;
-    background-color:#f1f1f1;
+    height: 2000px;
+    background-color:#ffffff;
     font-family: yekan-bakh-bold,sans-serif;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
@@ -18,7 +18,10 @@ body{
     font-family: yekan-bakh-bold;
     src: url("../font/YekanBakh-Bold.ttf");
 }
-
+@font-face {
+  font-family: yekan-bakh-ExtraBold;
+  src: url("../font/YekanBakh-ExtraBold.ttf");
+}
 /* NOTE custom scroll bar css */ 
 ::-webkit-scrollbar {
     width: 10px;
@@ -135,6 +138,7 @@ a:hover{
     width: 170px;
     display: inline-block;
     position: relative;
+    z-index: 999999999;
   }
   .dropdown.toggle > input {
     display: none;
@@ -234,3 +238,113 @@ a:hover{
 
 /*? END Navbar */
 
+/** Banner */
+
+.banner{
+  width: 100%;
+  height: 90vh;
+  overflow: hidden; /* پنهان کردن بخش‌های اضافی عکس */
+  position: relative;
+}
+.banner img{
+    width: 90%;
+    position: absolute;
+    top: -45px;
+    left: 0px;
+    z-index: -1;
+}
+.banner img:nth-child(2){
+  width: 100%;
+  z-index: -2;
+  animation: gentleMove 12s ease-in-out infinite;
+}
+@keyframes gentleMove {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(4deg);
+  }
+  50% {
+    transform: translateY(5px) rotate(-2deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(4deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1) 100%);
+}
+.banner video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.banner-title{
+  width: 60%;
+  padding: 20px 170px;
+}
+.banner-title h1{
+  font-size: 65px;
+  font-family: yekan-bakh-ExtraBold;
+  line-height: 2;
+}
+.cta {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  font-size: 17px;
+  padding-left: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 130%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  right: 0;
+  background-color: #000000;
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom right;
+}
