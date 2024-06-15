@@ -295,9 +295,18 @@ a:hover{
   padding: 20px 170px;
 }
 .banner-title h1{
-  font-size: 65px;
+  font-size: 55px;
   font-family: yekan-bakh-ExtraBold;
   line-height: 2;
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+.banner-title p{
+  text-align: justify;
+  line-height: 2.3;
+  font-size: 14px;
+  padding-left: 20%;
+  color: #666;
 }
 .cta {
   border: none;
