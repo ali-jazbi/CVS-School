@@ -301,6 +301,8 @@ a:hover{
   margin-top: 5%;
   margin-bottom: 3%;
 }
+/* add hover */
+
 .banner-title p{
   text-align: justify;
   line-height: 2.3;
@@ -358,3 +360,104 @@ a:hover{
   transform: scaleX(1);
   transform-origin: bottom right;
 }
+/* end Banner */
+
+/* Start Accordion */
+.Course-list{
+  width: 100%;
+  margin-top: 20vh;
+}
+.Course-list .container {
+  width: 75%;
+}
+.Course-list .container .col-lg-4{
+  padding: 30px 0px;
+}
+.Course-list-bg{
+  background-color: #F5F5F5;
+}
+.accordion .accordion-item {
+  border: none;
+  background-color: #F5F5F5;
+}
+.accordion .accordion-item button[aria-expanded=true] {
+  border-bottom: 1px solid #05b3b3;
+}
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 60%;
+  padding: 1.5em 0;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: 1px solid #cecece;
+}
+.accordion button:hover, .accordion button:focus {
+  cursor: pointer;
+  color: #05b3b3;
+}
+.accordion button:hover::after, .accordion button:focus::after {
+  cursor: pointer;
+  color: #05b3b3;
+  border-bottom: 1px solid #004d28;
+}
+.accordion button .accordion-title {
+  padding: 1.5em 1.5em 1em 0;
+  font-size: 20px;
+}
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 26px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 22px;
+}
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border: solid currentColor;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: all 0.3s ease-in-out;
+}
+.accordion button[aria-expanded=true] .icon::before {
+  transform: rotate(-135deg);
+}
+.accordion button[aria-expanded=true] {
+  color: #05b3b3;
+}
+.accordion button[aria-expanded=true] .icon::after {
+  width: 0;
+}
+.accordion button[aria-expanded=true] + .accordion-content {
+  opacity: 1;
+  max-height: 10rem;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content {
+  width: 55%;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 1em 0;
+}
+/* End Accordion */
