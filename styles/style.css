@@ -387,7 +387,7 @@ a:hover{
   position: relative;
   display: block;
   text-align: left;
-  width: 60%;
+  width: 80%;
   padding: 1.5em 0;
   color: #7288a2;
   font-size: 1.15rem;
@@ -408,7 +408,7 @@ a:hover{
 }
 .accordion button .accordion-title {
   padding: 1.5em 1.5em 1em 0;
-  font-size: 20px;
+  font-size: 18px;
 }
 .accordion button .icon {
   display: inline-block;
@@ -448,7 +448,7 @@ a:hover{
   will-change: opacity, max-height;
 }
 .accordion .accordion-content {
-  width: 55%;
+  width: 65%;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -456,7 +456,7 @@ a:hover{
   will-change: opacity, max-height;
 }
 .accordion .accordion-content p {
-  font-size: 1rem;
+  font-size: .95rem;
   font-weight: 300;
   margin: 1em 0;
 }
