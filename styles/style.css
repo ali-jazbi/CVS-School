@@ -7,12 +7,20 @@
 }
 body{
     width:100%;
-    height: 2000px;
+    height: 3000px;
     background-color:#ffffff;
     font-family: yekan-bakh-bold,sans-serif;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+}
+@font-face {
+  font-family: yekan-bakh-Regular;
+  src: url("../font/YekanBakh-Regular.ttf");
+}
+@font-face {
+  font-family: yekan-bakh-SemiBold;
+  src: url("../font/YekanBakh-SemiBold.ttf");
 }
 @font-face {
     font-family: yekan-bakh-bold;
@@ -40,9 +48,16 @@ body{
 a{
   font-size: 15px !important;
   transition: all ease-in-out .2s !important;
+  text-decoration: none !important;
 }
 a:hover{
   color: #3FBB0E !important;
+}
+.text-icon-color{
+  color: #3FBB0E;
+}
+.background-icon-color{
+  background-color: #3FBB0E;
 }
 /** START Navbar */
 /* Start Searchbar */
@@ -460,4 +475,135 @@ a:hover{
   font-weight: 300;
   margin: 1em 0;
 }
+.course-list-btn .btn{
+  background-color: #05b3b3;
+  margin-top: -18px;
+}
 /* End Accordion */
+
+/* Start Feauters */
+.features{
+  margin-top: 90px;
+}
+.features .features-icon img{
+  width: 180px;
+}
+.features span{     
+  background: linear-gradient(to left, #05b3b3, #0be4e4 100%);
+  background-position: 0 89%;
+  background-size: 100% 4px;
+  background-repeat: repeat-x; 
+}
+.features p span{     
+  background-size: 100% 1.8px;
+
+}
+.features h3{
+  font-size: 35px;
+}
+.features h4{
+  font-family: yekan-bakh-semiBold;
+}
+.features p{
+  font-family: yekan-bakh-regular;
+  font-size: 14px;
+}
+/* End Feauters */
+
+/* Start Points */
+.points{
+  margin-top: 90px;
+  padding: 0 17% 0 10%;
+}
+.points h3{
+  font-size: 35px;
+}
+.points h4{
+  font-size: 33px;
+}
+.points p{
+  font-family: yekan-bakh-regular;
+  font-size: 18px;
+}
+.points h5{
+  font-family: yekan-bakh-regular;
+}
+.points h4 span{
+  position: relative;
+  display: inline-block;
+  padding: 0 4px;
+    background-color: transparent;
+}
+.points h4 span::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -2px;
+  right: -7px;
+  bottom: 0;
+  background: linear-gradient(to left, #05b3b351 0%, #05b3b318 100%); /* گرادیان فید از راست به چپ */
+  z-index: -1;
+  /* transform: rotate(-1deg); */
+  transform-origin: left bottom;
+  border-radius: 8px; /* لبه‌ها نرم‌تر می‌شوند */
+  padding: 4px 0;
+  box-shadow: 
+      -1px 1px 0px rgba(205, 234, 233, 0.9),
+      2px -1px 0px rgba(205, 234, 233, 0.7),
+      -2px -2px 0px rgba(205, 234, 233, 0.6),
+      2px 3px 0px rgba(205, 234, 233, 0.5),
+      -3px 2px 0px rgba(205, 234, 233, 0.4);
+  filter: blur(0.4px);
+  clip-path: polygon(5% 0%, 95% 10%, 95% 90%, 5% 100%, 0% 50%);
+  transition: all 0.3s ease-in-out;
+}
+/* From Uiverse.io by Cksunandh */ 
+.tooltip-container {
+  width: max-content;
+  color: #ffffff;
+  background: #05b3b3;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 17px;
+  padding: 0.5em 1.8em;
+  border-radius: 50px;
+}
+.tooltip-container:hover{
+  background-color: #038989;
+}
+.tooltip {
+  background-color: #05b3b3;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5em 1em;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  border-radius: 50px;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.tooltip::before {
+  background-color: #05b3b3;
+  position: absolute;
+  content: "";
+  height: 0.6em;
+  width: 0.6em;
+  bottom: -0.2em;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+}
+
+.tooltip-container:hover .tooltip {
+  top: -100%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* End Points */
+
