@@ -513,7 +513,13 @@ a:hover{
 /* Start Points */
 .points{
   margin-top: 90px;
+}
+.points .row{
   padding: 0 17% 0 10%;
+  margin-bottom: 70px;
+}
+.points .row:nth-child(2){
+  padding: 0 10%;
 }
 .points h3{
   font-size: 35px;
@@ -528,13 +534,13 @@ a:hover{
 .points h5{
   font-family: yekan-bakh-regular;
 }
-.points h4 span{
+.points h4 span , .bold-title{
   position: relative;
   display: inline-block;
   padding: 0 4px;
     background-color: transparent;
 }
-.points h4 span::before{
+.points h4 span::before , .bold-title{
   content: '';
   position: absolute;
   top: 0;
@@ -557,8 +563,7 @@ a:hover{
   clip-path: polygon(5% 0%, 95% 10%, 95% 90%, 5% 100%, 0% 50%);
   transition: all 0.3s ease-in-out;
 }
-/* From Uiverse.io by Cksunandh */ 
-.tooltip-container {
+.points .tooltip-container {
   width: max-content;
   color: #ffffff;
   background: #05b3b3;
@@ -569,10 +574,10 @@ a:hover{
   padding: 0.5em 1.8em;
   border-radius: 50px;
 }
-.tooltip-container:hover{
+.points .tooltip-container:hover{
   background-color: #038989;
 }
-.tooltip {
+.points .tooltip {
   background-color: #05b3b3;
   position: absolute;
   top: 0;
@@ -587,7 +592,7 @@ a:hover{
   font-size: 12px;
 }
 
-.tooltip::before {
+.points .tooltip::before {
   background-color: #05b3b3;
   position: absolute;
   content: "";
@@ -598,12 +603,19 @@ a:hover{
   transform: translate(-50%) rotate(45deg);
 }
 
-.tooltip-container:hover .tooltip {
+.points .tooltip-container:hover .tooltip {
   top: -100%;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
+.points{
+  background-image: url('../images/wave-haikei.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position:0 116vh;
+  
 
+}
 /* End Points */
 
