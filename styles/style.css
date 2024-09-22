@@ -534,13 +534,13 @@ a:hover{
 .points h5{
   font-family: yekan-bakh-regular;
 }
-.points h4 span , .bold-title{
+.points h4 span{
   position: relative;
   display: inline-block;
   padding: 0 4px;
     background-color: transparent;
 }
-.points h4 span::before , .bold-title{
+.points h4 span::before{
   content: '';
   position: absolute;
   top: 0;
@@ -563,6 +563,24 @@ a:hover{
   clip-path: polygon(5% 0%, 95% 10%, 95% 90%, 5% 100%, 0% 50%);
   transition: all 0.3s ease-in-out;
 }
+.points .row:nth-child(3) h4 span {
+  position: relative;
+  z-index: 1;
+}
+
+.points .row:nth-child(3) h4 span::before {
+  content: "";
+  position: absolute;
+  left: 7%;
+  top: 30%;
+  width: 100%;
+  height: 24px;
+  transform: skew(-12deg);
+  background: #05b3b351;
+  z-index: -1;
+}
+
+    
 .points .tooltip-container {
   width: max-content;
   color: #ffffff;
@@ -614,8 +632,29 @@ a:hover{
   background-repeat: no-repeat;
   background-size: 100%;
   background-position:0 116vh;
-  
-
 }
 /* End Points */
+
+/* Start Quete */
+.quote{
+  margin-top: -11vh !important;
+  width: 100%;
+  height: 450px;
+  background-color: #05B3B3;
+}
+.quote p{
+  font-family: yekan-bakh-SemiBold;
+}
+.quote img{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(202, 202, 202, 0.63);
+  box-shadow: 0 10px 30px rgba(84, 84, 84, 0.2), 0 6px 20px rgba(84, 84, 84, 0.19);
+}
+.quote span{
+  color: #e8e8e8;
+}
+/* End Quete */
 
