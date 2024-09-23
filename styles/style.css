@@ -7,7 +7,6 @@
 }
 body{
     width:100%;
-    height: 3000px;
     background-color:#ffffff;
     font-family: yekan-bakh-bold,sans-serif;
     scroll-behavior: smooth;
@@ -658,6 +657,158 @@ a:hover{
   color: #e8e8e8;
 }
 /* End Quete */
+
+/** END MASTERPAGE  */
+
+/** START COURSE PAGE */
+.course-banner{
+  width: 100%;
+  height: 420px;
+  background-color: #012451;
+}
+.course-banner p{
+  text-align: justify;
+  padding-left: 200px;
+  font-family: yekan-bakh-regular;
+}
+.course-banner h2 span{
+  font-family: yekan-bakh-Bold;
+  position: relative;
+  z-index: 1;
+}
+.course-banner h2 span::before {
+  content: "";
+  position: absolute;
+  left: 0%;
+  top: 70%;
+  width: 100%;
+  height: 5px;
+  transform: skew(-12deg);
+  background: #05b3b3;
+  z-index: -1;
+}
+.course-banner span{
+  font-family: yekan-bakh-regular;
+}
+.course-banner span a{
+  font-family: yekan-bakh-Bold;
+  color: #baf5d8;
+}
+/* From Uiverse.io by JaydipPrajapati1910 */ 
+.button {
+  --width: 380px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 165px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #05b3b3;
+  --tooltip-color: #fff;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: relative;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: yekan-bakh-SemiBold;
+  transition: background 0.3s;
+}
+
+.button::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: #005a5a;
+  font-size: 0.9rem;
+  color: #fff;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #005a5a;
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button::after,.button::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: yekan-bakh-Bold;
+}
+
+.button-wrapper,.text,.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0
+}
+
+.text,.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button:hover {
+  background: #014949;
+}
+
+.button:hover .text {
+  top: -100%;
+}
+
+.button:hover .icon {
+  top: 0;
+}
+
+.button:hover:before,.button:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+
+
+
 /* Start Footer */
 .bg-footer {
   width: 100%;
