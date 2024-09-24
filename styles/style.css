@@ -694,8 +694,7 @@ a:hover{
   font-family: yekan-bakh-Bold;
   color: #baf5d8;
 }
-/* From Uiverse.io by JaydipPrajapati1910 */ 
-.button {
+.course-banner .button {
   --width: 380px;
   --height: 35px;
   --tooltip-height: 35px;
@@ -713,7 +712,7 @@ a:hover{
   transition: background 0.3s;
 }
 
-.button::before {
+.course-banner .button::before {
   position: absolute;
   content: attr(data-tooltip);
   width: var(--tooltip-width);
@@ -727,7 +726,7 @@ a:hover{
   left: calc(50% - var(--tooltip-width) / 2);
 }
 
-.button::after {
+.course-banner .button::after {
   position: absolute;
   content: '';
   width: 0;
@@ -738,20 +737,20 @@ a:hover{
   bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
 }
 
-.button::after,.button::before {
+.course-banner .button::after,.button::before {
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s;
 }
 
-.text {
+.course-banner .text {
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: yekan-bakh-Bold;
 }
 
-.button-wrapper,.text,.icon {
+.course-banner .button-wrapper,.text,.icon {
   overflow: hidden;
   position: absolute;
   width: 100%;
@@ -760,15 +759,15 @@ a:hover{
   color: #fff;
 }
 
-.text {
+.course-banner .text {
   top: 0
 }
 
-.text,.icon {
+.course-banner .text,.icon {
   transition: top 0.5s;
 }
 
-.icon {
+.course-banner .icon {
   color: #fff;
   top: 100%;
   display: flex;
@@ -776,33 +775,33 @@ a:hover{
   justify-content: center;
 }
 
-.icon svg {
+.course-banner .icon svg {
   width: 24px;
   height: 24px;
 }
 
-.button:hover {
+.course-banner .button:hover {
   background: #014949;
 }
 
-.button:hover .text {
+.course-banner .button:hover .text {
   top: -100%;
 }
 
-.button:hover .icon {
+.course-banner .button:hover .icon {
   top: 0;
 }
 
-.button:hover:before,.button:hover:after {
+.course-banner .button:hover:before,.button:hover:after {
   opacity: 1;
   visibility: visible;
 }
 
-.button:hover:after {
+.course-banner .button:hover:after {
   bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
 }
 
-.button:hover:before {
+.course-banner .button:hover:before {
   bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
 }
 
