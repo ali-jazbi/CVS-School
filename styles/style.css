@@ -806,6 +806,77 @@ a:hover{
 }
 
 
+.course-roadmap .container{
+  padding: 70px 130px;
+}
+.course-roadmap h3{
+  font-family: yekan-bakh-SemiBold;
+}
+.course-roadmap i{
+  font-size: 27px;
+  color: #05B3B3;
+  margin-right: 10px;
+}
+.course-roadmap .row:nth-child(2) i{
+  font-size: 20px;
+  margin-top: 1.9px;
+}
+.course-roadmap .row:nth-child(3) i{
+  font-size: 20px;
+}
+.course-roadmap .row:nth-child(3) p{
+  font-family: yekan-bakh-SemiBold;
+  line-height: 1;
+}
+.course-roadmap .row:last-child{
+  margin-top: 100px;
+}
+.course-roadmap .row:last-child .teacher{
+  width: 100%;
+  height: 260px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.course-roadmap .row:last-child .teacher .image-container{
+  position: relative;
+  display:flex;
+  align-items: center;
+}
+.course-roadmap .row:last-child .teacher .image-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60%; /* Adjust this value to control the height of the fade */
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255, 255, 255, 0.961) 100%);
+  pointer-events: none;
+}
+.course-roadmap .row:last-child .teacher img{
+  width: 70%;
+  margin-right: 40px;
+}
+.course-roadmap .row:last-child span{
+  color: grey;
+}
+.course-roadmap .row:last-child p{
+  font-family: yekan-bakh-regular;
+  font-size: 14px;
+}
+.course-roadmap .description p{
+  font-family: yekan-bakh-regular !important;
+  line-height: 2 !important;
+
+}
+.course-roadmap span{
+  font-family: yekan-bakh-SemiBold;
+}
+.course-roadmap p{
+  font-family: yekan-bakh-regular;
+  text-align: justify;
+  line-height: 2;
+}
+/** END COURSE PAGE */
+
 
 
 /* Start Footer */
