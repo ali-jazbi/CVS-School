@@ -40,32 +40,32 @@ let passwordInput = document.querySelector("#password-input");
 
 // نمایش آیکون هنگام تایپ
 passwordInput.addEventListener("input", function () {
-    if (this.value.length > 0) {
-        togglePassword.style.display = 'inline'; // نمایش آیکون
-    } else {
-        togglePassword.style.display = 'none';  // مخفی کردن آیکون اگر فیلد خالی شد
-    }
+  if (this.value.length > 0) {
+    togglePassword.style.display = "inline"; // نمایش آیکون
+  } else {
+    togglePassword.style.display = "none"; // مخفی کردن آیکون اگر فیلد خالی شد
+  }
 });
 
 // مخفی کردن آیکون هنگام ترک فیلد اگر فیلد خالی باشد
 passwordInput.addEventListener("blur", function () {
-    if (this.value.length === 0) {
-        togglePassword.style.display = 'none'; // مخفی کردن آیکون
-    }
+  if (this.value.length === 0) {
+    togglePassword.style.display = "none"; // مخفی کردن آیکون
+  }
 });
 
 // تغییر حالت نمایش رمز عبور و تغییر آیکون
 togglePassword.addEventListener("click", function () {
-    const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
-    passwordInput.setAttribute("type", type);
+  const type =
+    passwordInput.getAttribute("type") === "password" ? "text" : "password";
+  passwordInput.setAttribute("type", type);
 
-    // تغییر کلاس آیکون
-    if (type === "text") {
-        this.classList.remove("bi-eye-fill");        // حذف آیکون چشم
-        this.classList.add("bi-eye-slash-fill"); // اضافه کردن آیکون چشم خط خورده
-    } else {
-        this.classList.remove("bi-eye-slash-fill"); // حذف آیکون چشم خط خورده
-        this.classList.add("bi-eye-fill");              // اضافه کردن آیکون چشم
-    }
+  // تغییر کلاس آیکون
+  if (type === "text") {
+    this.classList.remove("bi-eye-fill"); // حذف آیکون چشم
+    this.classList.add("bi-eye-slash-fill"); // اضافه کردن آیکون چشم خط خورده
+  } else {
+    this.classList.remove("bi-eye-slash-fill"); // حذف آیکون چشم خط خورده
+    this.classList.add("bi-eye-fill"); // اضافه کردن آیکون چشم
+  }
 });
-
