@@ -24,16 +24,66 @@
             <div class="container d-flex justify-content-center">
                 <ul class="navbar-nav w-25">
                 <li class="nav-item me-5">
-                    <a class="nav-link active" aria-current="page" href="#">خانه</a>
+                    <a class="nav-link active" aria-current="page" href="./index.html">خانه</a>
                 </li>
                 <li class="nav-item me-5">
-                    <a class="nav-link" href="#">ورود</a>
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">ورود</a>
                 </li>
                 <li class="nav-item me-5">
-                    <a class="nav-link" href="#">ثبت نام</a>
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">ثبت نام</a>
                 </li>
                 </ul>
-                <a class="navbar-brand w-50 d-flex justify-content-center" href="#">
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog  modal-xl">
+                        <div class="modal-content">
+                        <button type="button" class="btn-close btn-close-white text-white" data-bs-dismiss="modal" aria-label="Close">
+                        </button>
+                        <div class="modal-body">
+                            <div class="main-form">
+                                <div class="container a-container" id="a-container">
+                                    <form class="form" id="a-form" method="" action="">
+                                        <h2 class="form_title title">ساخت اکانت</h2>
+                                        <input class="form__input" type="text" name="name" placeholder="نام کامل">
+                                        <input class="form__input" type="text" placeholder="ایمیل">
+                                        <div class="password-wrapper">
+                                            <input type="password" class="form__input" id="password-input" placeholder="رمز عبور">
+                                            <i class="bi bi-eye-fill eye-icon" id="toggle-password"></i>
+                                        </div>                                         
+                                        <button class="form__button button submit">ثبت نام</button>
+                                    </form>
+                                </div>
+                                <div class="container b-container" id="b-container">
+                                    <form class="form" id="b-form" method="" action="">
+                                        <h2 class="form_title title">ورود به اکانت</h2>
+                                        <input class="form__input" type="text" placeholder="ایمیل">
+                                        <div class="password-wrapper">
+                                            <input type="password" class="form__input" id="password-input" placeholder="رمز عبور">
+                                            <i class="bi bi-eye-fill eye-icon" id="toggle-password"></i>
+                                        </div>                                                     
+                                        <a class="form__link">فراموشی رمز عبور</a>
+                                        <button class="form__button button submit">ورود</button>
+                                    </form>
+                                </div>
+                                <div class="switch" id="switch-cnt">
+                                    <div class="switch__circle"></div>
+                                    <div class="switch__circle switch__circle--t"></div>
+                                    <div class="switch__container" id="switch-c1">
+                                    <h2 class="switch__title title">خوش آمدید!</h2>
+                                    <p class="switch__description description">اگر قبلا در سایت ما ثبت نام کرده اید می‌توانید وارد حساب خود شوید.</p>
+                                    <button class="switch__button button switch-btn">ورود</button>
+                                    </div>
+                                    <div class="switch__container is-hidden" id="switch-c2">
+                                        <h2 class="switch__title title">شروعی تازه</h2>
+                                        <p class="switch__description description">برای شروع اطلاعات خود را وارد نمایید</p>
+                                        <button class="switch__button button switch-btn">ثبت نام</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="navbar-brand w-50 d-flex justify-content-center" href="./index.html">
                 <img class="ms-2" src="./icon/logo1.svg" width="160" alt="">
                 </a>
                 <div class="search-bar d-flex align-items-center w-25">
@@ -358,5 +408,6 @@
     <script src="./plugins/fontawesome/script.js"></script>
     <script src="./scripts/dropdown.js"></script>
     <script src="./scripts/accordion.js"></script>
+    <script src="./scripts/pop-up-form.js"></script>
 </body>
 </html>
