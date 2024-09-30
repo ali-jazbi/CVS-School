@@ -18,184 +18,187 @@
     <title>CVS School</title>
   </head>
   <body>
-    <main class="d-none d-lg-block">
+    <main>
       <!-- Navbar -->
       <header>
-        <nav class="navbar navbar-expand-lg bg-white">
-        <div class="container d-flex justify-content-center">
-            <ul class="navbar-nav d-flex align-items-center">
-              <li class="nav-item me-5">
-                  <a class="nav-link active" aria-current="page" href="./index.html">خانه</a>
-              </li>
-              <li class="nav-item me-5">
-                  <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">ورود / ثبت نام</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                  <i class="fas fa-shopping-cart fs-5"></i>
-                </a>
-              </li>
-            </ul>
-            <div class="login-modal modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog  modal-xl">
-                    <div class="modal-content">
-                    <button type="button" class="btn-close btn-close-white text-white" data-bs-dismiss="modal" aria-label="Close">
-                    </button>
-                    <div class="modal-body">
-                        <div class="main-form">
-                            <div class="container a-container" id="a-container">
-                                <form class="form" id="a-form" method="" action="">
-                                    <h2 class="form_title title">ساخت اکانت</h2>
-                                    <input class="form__input" type="text" name="name" placeholder="نام کامل">
-                                    <input class="form__input" type="text" placeholder="ایمیل">
-                                    <div class="password-wrapper">
-                                        <input type="password" class="form__input" id="password-input" placeholder="رمز عبور">
-                                        <i class="bi bi-eye-fill eye-icon" id="toggle-password"></i>
-                                    </div>                                         
-                                    <button class="form__button button submit">ثبت نام</button>
-                                </form>
-                            </div>
-                            <div class="container b-container" id="b-container">
-                                <form class="form" id="b-form" method="" action="">
-                                    <h2 class="form_title title">ورود به اکانت</h2>
-                                    <input class="form__input" type="text" placeholder="ایمیل">
-                                    <div class="password-wrapper">
-                                        <input type="password" class="form__input" id="password-input" placeholder="رمز عبور">
-                                        <i class="bi bi-eye-fill eye-icon" id="toggle-password"></i>
-                                    </div>                                                     
-                                    <a class="form__link">فراموشی رمز عبور</a>
-                                    <button class="form__button button submit">ورود</button>
-                                </form>
-                            </div>
-                            <div class="switch" id="switch-cnt">
-                                <div class="switch__circle"></div>
-                                <div class="switch__circle switch__circle--t"></div>
-                                <div class="switch__container" id="switch-c1">
-                                <h2 class="switch__title title">خوش آمدید!</h2>
-                                <p class="switch__description description">اگر قبلا در سایت ما ثبت نام کرده اید می‌توانید وارد حساب خود شوید.</p>
-                                <button class="switch__button button switch-btn">ورود</button>
-                                </div>
-                                <div class="switch__container is-hidden" id="switch-c2">
-                                    <h2 class="switch__title title">شروعی تازه</h2>
-                                    <p class="switch__description description">برای شروع اطلاعات خود را وارد نمایید</p>
-                                    <button class="switch__button button switch-btn">ثبت نام</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="shop-modal modal-lg modal fade overflow-hidden" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="btn-close btn-close-white text-white" data-bs-dismiss="modal" aria-label="Close">
-                    </div>
-                  <div dir="ltr" class="modal-body">
-                    <div class="card card-registration card-registration-2 w-100">
-                      <div class="card-body p-0">
-                        <div class="row g-0">
-                          <div dir="rtl" class="col-lg-4 bg-body-tertiary">
-                            <div class="p-5 px-4">
-                              <h4 class="fw-bold mb-5 mt-2 pt-1">صورت حساب</h4>
-                              <hr class="my-4">
-            
-                              <div class="d-flex justify-content-between mb-4">
-                                <h6 class="text-uppercase">۳ آیتم</h6>
-                                <h6>100,000 تومان</h6>
+        <!-- Nav For PC -->
+        <nav class="navbar navbar-expand-lg bg-white d-none d-lg-block">
+          <div class="container d-flex justify-content-center">
+              <ul class="navbar-nav d-flex align-items-center">
+                <li class="nav-item me-5">
+                    <a class="nav-link active" aria-current="page" href="./index.html">خانه</a>
+                </li>
+                <li class="nav-item me-5">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">ورود / ثبت نام</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <i class="fas fa-shopping-cart fs-5"></i>
+                  </a>
+                </li>
+              </ul>
+              <div class="login-modal modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog  modal-xl">
+                      <div class="modal-content">
+                      <button type="button" class="btn-close btn-close-white text-white" data-bs-dismiss="modal" aria-label="Close">
+                      </button>
+                      <div class="modal-body">
+                          <div class="main-form">
+                              <div class="container a-container" id="a-container">
+                                  <form class="form" id="a-form" method="" action="">
+                                      <h2 class="form_title title">ساخت اکانت</h2>
+                                      <input class="form__input" type="text" name="name" placeholder="نام کامل">
+                                      <input class="form__input" type="text" placeholder="ایمیل">
+                                      <div class="password-wrapper">
+                                          <input type="password" class="form__input" id="password-input" placeholder="رمز عبور">
+                                          <i class="bi bi-eye-fill eye-icon" id="toggle-password"></i>
+                                      </div>                                         
+                                      <button class="form__button button submit">ثبت نام</button>
+                                  </form>
                               </div>
-            
-                              <h6 class="text-uppercase mb-3">روش پرداخت</h6>
-            
-                              <div class="mb-4 pb-2 d-flex justify-content-end">
-                                <select data-mdb-select-init>
-                                  <option value="1">بانک ملت</option>
-                                  <option value="2">بانک سامان</option>
-                                  <option value="3">زرین پال</option>
-                                </select>
+                              <div class="container b-container" id="b-container">
+                                  <form class="form" id="b-form" method="" action="">
+                                      <h2 class="form_title title">ورود به اکانت</h2>
+                                      <input class="form__input" type="text" placeholder="ایمیل">
+                                      <div class="password-wrapper">
+                                          <input type="password" class="form__input" id="password-input" placeholder="رمز عبور">
+                                          <i class="bi bi-eye-fill eye-icon" id="toggle-password"></i>
+                                      </div>                                                     
+                                      <a class="form__link">فراموشی رمز عبور</a>
+                                      <button class="form__button button submit">ورود</button>
+                                  </form>
                               </div>
-            
-                              <hr class="my-4">
-            
-                              <div class="d-flex flex-column justify-content-between mb-5">
-                                <h5 class="text-uppercase">جمع خرید</h5>
-                                <h5 class="text-end">100,000 تومان</h5>
+                              <div class="switch" id="switch-cnt">
+                                  <div class="switch__circle"></div>
+                                  <div class="switch__circle switch__circle--t"></div>
+                                  <div class="switch__container" id="switch-c1">
+                                  <h2 class="switch__title title">خوش آمدید!</h2>
+                                  <p class="switch__description description">اگر قبلا در سایت ما ثبت نام کرده اید می‌توانید وارد حساب خود شوید.</p>
+                                  <button class="switch__button button switch-btn">ورود</button>
+                                  </div>
+                                  <div class="switch__container is-hidden" id="switch-c2">
+                                      <h2 class="switch__title title">شروعی تازه</h2>
+                                      <p class="switch__description description">برای شروع اطلاعات خود را وارد نمایید</p>
+                                      <button class="switch__button button switch-btn">ثبت نام</button>
+                                  </div>
                               </div>
-                              <div class="d-flex justify-content-center">
-                                <button type="button" class="btn btn-success btn-md">پرداخت نهایی</button>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="shop-modal modal-lg modal fade overflow-hidden" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close btn-close-white text-white" data-bs-dismiss="modal" aria-label="Close">
+                      </div>
+                    <div dir="ltr" class="modal-body">
+                      <div class="card card-registration card-registration-2 w-100">
+                        <div class="card-body p-0">
+                          <div class="row g-0">
+                            <div dir="rtl" class="col-lg-4 bg-body-tertiary">
+                              <div class="p-5 px-4">
+                                <h4 class="fw-bold mb-5 mt-2 pt-1">صورت حساب</h4>
+                                <hr class="my-4">
+              
+                                <div class="d-flex justify-content-between mb-4">
+                                  <h6 class="text-uppercase">۳ آیتم</h6>
+                                  <h6>100,000 تومان</h6>
+                                </div>
+              
+                                <h6 class="text-uppercase mb-3">روش پرداخت</h6>
+              
+                                <div class="mb-4 pb-2 d-flex justify-content-end">
+                                  <select data-mdb-select-init>
+                                    <option value="1">بانک ملت</option>
+                                    <option value="2">بانک سامان</option>
+                                    <option value="3">زرین پال</option>
+                                  </select>
+                                </div>
+              
+                                <hr class="my-4">
+              
+                                <div class="d-flex flex-column justify-content-between mb-5">
+                                  <h5 class="text-uppercase">جمع خرید</h5>
+                                  <h5 class="text-end">100,000 تومان</h5>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                  <button type="button" class="btn btn-success btn-md">پرداخت نهایی</button>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div dir="rtl" class="col-lg-8">
-                            <div class="p-5">
-                              <div class="d-flex justify-content-between align-items-center mb-5">
-                                <h2 class="fw-bold mb-0">سبد خرید</h2>
-                                <h6 class="mb-0 text-muted">۳ آیتم</h6>
-                              </div>
-                              <hr class="my-4">
-            
-                              <div class="row mb-4 d-flex justify-content-between align-items-center">
-                                <div class="col-md-2 col-lg-2">
-                                  <img
-                                    src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="Cotton T-shirt">
+                            <div dir="rtl" class="col-lg-8">
+                              <div class="p-5">
+                                <div class="d-flex justify-content-between align-items-center mb-5">
+                                  <h2 class="fw-bold mb-0">سبد خرید</h2>
+                                  <h6 class="mb-0 text-muted">۳ آیتم</h6>
                                 </div>
-                                <div class="col-md-3 col-lg-5 ps-4">
-                                  <h6 class="text-muted">دوره</h6>
-                                  <h6 class="mb-0">جامع JS</h6> 
+                                <hr class="my-4">
+              
+                                <div class="row mb-4 d-flex justify-content-between align-items-center">
+                                  <div class="col-md-2 col-lg-2">
+                                    <img
+                                      src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="Cotton T-shirt">
+                                  </div>
+                                  <div class="col-md-3 col-lg-5 ps-4">
+                                    <h6 class="text-muted">دوره</h6>
+                                    <h6 class="mb-0">جامع JS</h6> 
+                                  </div>
+                                  <div class="col-md-3 col-lg-4">
+                                    <h6 class="mb-0">50,000T</h6>
+                                  </div>
+                                  <div class="col-md-1 col-lg-1 text-end">
+                                    <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                                  </div>
                                 </div>
-                                <div class="col-md-3 col-lg-4">
-                                  <h6 class="mb-0">50,000T</h6>
+              
+                                <hr class="my-4">
+              
+                                <div class="row mb-4 d-flex justify-content-between align-items-center">
+                                  <div class="col-md-2 col-lg-2">
+                                    <img
+                                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR4BphhDn5xXu5MHIL87KbVXC9LNcEm4YNXw&s" alt="Cotton T-shirt">
+                                  </div>
+                                  <div class="col-md-3 col-lg-5 ps-4">
+                                    <h6 class="text-muted">دوره</h6>
+                                    <h6 class="mb-0">C++ پیشرفته</h6> 
+                                  </div>
+                                  <div class="col-md-3 col-lg-4">
+                                    <h6 class="mb-0">25,000T</h6>
+                                  </div>
+                                  <div class="col-md-1 col-lg-1 text-end">
+                                    <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                                  </div>
                                 </div>
-                                <div class="col-md-1 col-lg-1 text-end">
-                                  <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+              
+                                <hr class="my-4">
+              
+                                <div class="row mb-4 d-flex justify-content-between align-items-center">
+                                  <div class="col-md-2 col-lg-2">
+                                    <img
+                                      src="https://cdn.freebiesupply.com/logos/large/2x/python-5-logo-svg-vector.svg" alt="Cotton T-shirt">
+                                  </div>
+                                  <div class="col-md-3 col-lg-5 ps-4">
+                                    <h6 class="text-muted">دوره</h6>
+                                    <h6 class="mb-0">جامع Python</h6> 
+                                  </div>
+                                  <div class="col-md-3 col-lg-4">
+                                    <h6 class="mb-0">25,000T</h6>
+                                  </div>
+                                  <div class="col-md-1 col-lg-1 text-end">
+                                    <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                                  </div>
                                 </div>
-                              </div>
-            
-                              <hr class="my-4">
-            
-                              <div class="row mb-4 d-flex justify-content-between align-items-center">
-                                <div class="col-md-2 col-lg-2">
-                                  <img
-                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR4BphhDn5xXu5MHIL87KbVXC9LNcEm4YNXw&s" alt="Cotton T-shirt">
+              
+                                <hr class="my-2">
+              
+                                <div class="pt-5">
+                                  <h6 class="mb-0"><a href="#!" data-bs-dismiss="modal" aria-label="Close" class="text-body"><i
+                                        class="fas fa-long-arrow-alt-left me-2"></i>برگشت به خرید</a></h6>
                                 </div>
-                                <div class="col-md-3 col-lg-5 ps-4">
-                                  <h6 class="text-muted">دوره</h6>
-                                  <h6 class="mb-0">C++ پیشرفته</h6> 
-                                </div>
-                                <div class="col-md-3 col-lg-4">
-                                  <h6 class="mb-0">25,000T</h6>
-                                </div>
-                                <div class="col-md-1 col-lg-1 text-end">
-                                  <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
-                                </div>
-                              </div>
-            
-                              <hr class="my-4">
-            
-                              <div class="row mb-4 d-flex justify-content-between align-items-center">
-                                <div class="col-md-2 col-lg-2">
-                                  <img
-                                    src="https://cdn.freebiesupply.com/logos/large/2x/python-5-logo-svg-vector.svg" alt="Cotton T-shirt">
-                                </div>
-                                <div class="col-md-3 col-lg-5 ps-4">
-                                  <h6 class="text-muted">دوره</h6>
-                                  <h6 class="mb-0">جامع Python</h6> 
-                                </div>
-                                <div class="col-md-3 col-lg-4">
-                                  <h6 class="mb-0">25,000T</h6>
-                                </div>
-                                <div class="col-md-1 col-lg-1 text-end">
-                                  <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
-                                </div>
-                              </div>
-            
-                              <hr class="my-2">
-            
-                              <div class="pt-5">
-                                <h6 class="mb-0"><a href="#!" data-bs-dismiss="modal" aria-label="Close" class="text-body"><i
-                                      class="fas fa-long-arrow-alt-left me-2"></i>برگشت به خرید</a></h6>
                               </div>
                             </div>
                           </div>
@@ -205,38 +208,42 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <a class="navbar-brand w-50 d-flex justify-content-center" href="./index.html">
-            <img class="ms-2" src="./icon/logo1.svg" width="160" alt="">
-            </a>
-            <div class="search-bar d-flex align-items-center w-25">
-            <form class="form">
-                <button>
-                    <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
-                        <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                </button>
-                <input class="input" placeholder="جستجو ..." required="" type="text">
-                <button class="reset" type="reset">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </form>
-            <div class="dropdown toggle ms-4">
-                <input id="t1" type="checkbox">
-                <label for="t1">دوره های آموزشی</label>
-                <ul>
-                <li><a href="./js.html">Javascript</a></li>
-                <li><a href="#">C#</a></li>
-                <li><a href="#">HTML</a></li>
-                <li><a href="#">CSS</a></li>
-                <li><a href="#">Bootstrap</a></li>
-                </ul>
-            </div>
+              <a class="navbar-brand w-50 d-flex justify-content-center" href="./index.html">
+              <img class="ms-2" src="./icon/logo1.svg" width="160" alt="">
+              </a>
+              <div class="search-bar d-flex align-items-center w-25">
+              <form class="form">
+                  <button>
+                      <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+                          <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                  </button>
+                  <input class="input" placeholder="جستجو ..." required="" type="text">
+                  <button class="reset" type="reset">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                      </svg>
+                  </button>
+              </form>
+              <div class="dropdown toggle ms-4">
+                  <input id="t1" type="checkbox">
+                  <label for="t1">دوره های آموزشی</label>
+                  <ul>
+                  <li><a href="./js.html">Javascript</a></li>
+                  <li><a href="#">C#</a></li>
+                  <li><a href="#">HTML</a></li>
+                  <li><a href="#">CSS</a></li>
+                  <li><a href="#">Bootstrap</a></li>
+                  </ul>
+              </div>
 
-            </div>
-        </div>
+              </div>
+          </div>
+        </nav>
+
+        <!-- Nav For Mobile And Tablet -->
+        <nav class="d-lg-none">
+
         </nav>
       </header>
       
@@ -247,8 +254,9 @@
           مرورگر شما از تگ ویدیو پشتیبانی نمی‌کند.
         </video> -->
         <div class="banner-title">
-          <img src="./images/guy.png" alt="">
-          <img src="./images/shape.png" alt="">
+          <img class="d-none d-lg-block" src="./images/guy.png" alt="">
+          <img class="d-lg-none" src="./images/minimal-banner.png" alt="">
+          <img class="d-none d-lg-block" src="./images/shape.png" alt="">
           <h1>همه چیز از یک خط <br>کد <i class="bi bi-code-slash"></i> شروع میشود</h1>
           <p>
             ما یک مؤسسه آموزشی حرفه ای هستیم که مأموریت داریم آموزش‌های تخصصی کامپیوتر و برنامه‌نویسی را به صورت رایگان و با کیفیت بالا به همه علاقه‌مندان این حوزه در هر جای ایران ارائه دهیم.
@@ -268,14 +276,14 @@
               d="M38,0l1.455,1.455-5.506,5.506H76V9.039H33.948l5.507,5.506L38,16l-8-8Z"
               transform="translate(-30)"
             ></path>
-          </svg>
+            </svg>
           </button>
           
         </div>
       </div>
 
       <!-- Course-list -->
-      <div class="Course-list" dir="ltr">
+      <!-- <div class="Course-list" dir="ltr">
         <div class="container">
         <div class="row">
           <div class="col-lg-4 Course-list-bg">
@@ -380,10 +388,10 @@
           </div>
         </div>
       </div>
-      </div>
+      </div> -->
 
       <!-- features -->
-      <div class="features d-flex flex-column align-items-center">
+      <!-- <div class="features d-flex flex-column align-items-center">
         <div class="features-title d-flex justify-content-center">
             <h3>چرا <span>CVS SCHOOL</span> را انتخاب کنیم؟</h3>
         </div>
@@ -424,10 +432,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       
       <!-- Points and detailes -->
-      <div class="points">
+      <!-- <div class="points">
         <div class="row w-100">
           <div class="col-lg-6 d-flex flex-column justify-content-center">
               <h5 class="text-secondary">یادگیرندگان و دانش‌آموزان</h5>
@@ -504,10 +512,10 @@
             <img src="./icon/point3.svg" alt="">
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Quote Sentence -->
-      <div class="quote d-flex flex-column align-items-center justify-content-center text-center">
+      <!-- <div class="quote d-flex flex-column align-items-center justify-content-center text-center">
         <p class="w-50 fs-4 text-light lh-lg mt-3">
           "هر کسی می تواند کدی بنویسد که کامپیوتر آن را بفهمد اما برنامه نویسان واقعی کدی را می نویسند که انسان بتواند آن را درک کند"
         </p>
@@ -519,7 +527,7 @@
           - Chief Scientist of Thoughtworks -
         </span>
       </div>
-      <div class="blur-divider"></div>
+      <div class="blur-divider"></div> -->
 
       <!-- Footer Section  -->
       <footer class="footer text-dark bg-light">
@@ -559,7 +567,6 @@
         <div class="bg-footer"></div>
       </footer>
     </main>
-    <h1 dir="ltr" class="d-lg-none text-center px-5 pt-5">Mobile Designing In Progress...</h1>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./plugins/jquery/jquery.min.js"></script>
     <script src="./plugins/fontawesome/script.js"></script>
