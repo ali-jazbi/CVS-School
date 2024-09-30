@@ -148,15 +148,15 @@ a:hover{
   /* End Searchbar */
 
 /* Start Login Form */
-.modal{
+.login-modal{
   overflow: hidden;
 }
-.modal-body{
+.login-modal .modal-body{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.modal-content{
+.login-modal .modal-content{
   background-color: transparent;
   border: none;
 }
@@ -406,6 +406,45 @@ a:hover{
   }
 }
   /* End Login Form/ */
+
+  /* Start Shopping Cart */
+  .shop-modal .modal-header{
+    padding: 0px 0 10px 0 !important;
+    border: none;
+    position: relative;
+  }
+  .shop-modal .modal-header button{
+    position: absolute;
+    right: 0;
+  }
+  .shop-modal .modal-content{
+    background-color: transparent;
+    border: none;
+  }
+  .shop-modal .modal-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }   
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+    .shop-modal img{
+      width: 50px;
+      height: 50px;
+      border: 2px solid #05b3b33a;
+      /* simple box shadow */
+      box-shadow: 4px 4px 6px #d1d9e6, -4px -4px 6px #f9f9f9;
+      border-radius: 50% !important;
+    }
+  /* End Shopping Cart */
 
   /* start dropdown */
   .dropdown {
@@ -997,7 +1036,7 @@ a:hover{
   bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
 }
 
-.course-banner .button::after,.button::before {
+.course-banner .button::after,.course-banner .button::before {
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s;
@@ -1010,7 +1049,7 @@ a:hover{
   font-family: yekan-bakh-Bold;
 }
 
-.course-banner .button-wrapper,.text,.icon {
+.course-banner .button-wrapper,.course-banner .text,.course-banner .icon {
   overflow: hidden;
   position: absolute;
   width: 100%;
@@ -1023,7 +1062,7 @@ a:hover{
   top: 0
 }
 
-.course-banner .text,.icon {
+.course-banner .text,.course-banner .icon {
   transition: top 0.5s;
 }
 
@@ -1052,7 +1091,7 @@ a:hover{
   top: 0;
 }
 
-.course-banner .button:hover:before,.button:hover:after {
+.course-banner .button:hover:before,.course-banner .button:hover:after {
   opacity: 1;
   visibility: visible;
 }

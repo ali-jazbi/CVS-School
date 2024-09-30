@@ -22,15 +22,20 @@
         <header>
             <nav class="navbar navbar-expand-lg bg-white">
             <div class="container d-flex justify-content-center">
-                <ul class="navbar-nav w-25">
-                <li class="nav-item me-5">
-                    <a class="nav-link active" aria-current="page" href="./index.html">خانه</a>
-                </li>
-                <li class="nav-item me-5">
-                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">ورود / ثبت نام</a>
-                </li>
+                <ul class="navbar-nav d-flex align-items-center">
+                  <li class="nav-item me-5">
+                      <a class="nav-link active" aria-current="page" href="./index.html">خانه</a>
+                  </li>
+                  <li class="nav-item me-5">
+                      <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">ورود / ثبت نام</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                      <i class="fas fa-shopping-cart fs-5"></i>
+                    </a>
+                  </li>
                 </ul>
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="login-modal modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog  modal-xl">
                         <div class="modal-content">
                         <button type="button" class="btn-close btn-close-white text-white" data-bs-dismiss="modal" aria-label="Close">
@@ -80,6 +85,126 @@
                         </div>
                     </div>
                 </div>
+    
+                <div class="shop-modal modal-lg modal fade overflow-hidden" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="btn-close btn-close-white text-white" data-bs-dismiss="modal" aria-label="Close">
+                        </div>
+                      <div dir="ltr" class="modal-body">
+                        <div class="card card-registration card-registration-2 w-100">
+                          <div class="card-body p-0">
+                            <div class="row g-0">
+                              <div dir="rtl" class="col-lg-4 bg-body-tertiary">
+                                <div class="p-5 px-4">
+                                  <h4 class="fw-bold mb-5 mt-2 pt-1">صورت حساب</h4>
+                                  <hr class="my-4">
+                
+                                  <div class="d-flex justify-content-between mb-4">
+                                    <h6 class="text-uppercase">۳ آیتم</h6>
+                                    <h6>100,000 تومان</h6>
+                                  </div>
+                
+                                  <h6 class="text-uppercase mb-3">روش پرداخت</h6>
+                
+                                  <div class="mb-4 pb-2 d-flex justify-content-end">
+                                    <select data-mdb-select-init>
+                                      <option value="1">بانک ملت</option>
+                                      <option value="2">بانک سامان</option>
+                                      <option value="3">زرین پال</option>
+                                    </select>
+                                  </div>
+                
+                                  <hr class="my-4">
+                
+                                  <div class="d-flex flex-column justify-content-between mb-5">
+                                    <h5 class="text-uppercase">جمع خرید</h5>
+                                    <h5 class="text-end">100,000 تومان</h5>
+                                  </div>
+                                  <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-success btn-md">پرداخت نهایی</button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div dir="rtl" class="col-lg-8">
+                                <div class="p-5">
+                                  <div class="d-flex justify-content-between align-items-center mb-5">
+                                    <h2 class="fw-bold mb-0">سبد خرید</h2>
+                                    <h6 class="mb-0 text-muted">۳ آیتم</h6>
+                                  </div>
+                                  <hr class="my-4">
+                
+                                  <div class="row mb-4 d-flex justify-content-between align-items-center">
+                                    <div class="col-md-2 col-lg-2">
+                                      <img
+                                        src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="Cotton T-shirt">
+                                    </div>
+                                    <div class="col-md-3 col-lg-5 ps-4">
+                                      <h6 class="text-muted">دوره</h6>
+                                      <h6 class="mb-0">جامع JS</h6> 
+                                    </div>
+                                    <div class="col-md-3 col-lg-4">
+                                      <h6 class="mb-0">50,000T</h6>
+                                    </div>
+                                    <div class="col-md-1 col-lg-1 text-end">
+                                      <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                                    </div>
+                                  </div>
+                
+                                  <hr class="my-4">
+                
+                                  <div class="row mb-4 d-flex justify-content-between align-items-center">
+                                    <div class="col-md-2 col-lg-2">
+                                      <img
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR4BphhDn5xXu5MHIL87KbVXC9LNcEm4YNXw&s" alt="Cotton T-shirt">
+                                    </div>
+                                    <div class="col-md-3 col-lg-5 ps-4">
+                                      <h6 class="text-muted">دوره</h6>
+                                      <h6 class="mb-0">C++ پیشرفته</h6> 
+                                    </div>
+                                    <div class="col-md-3 col-lg-4">
+                                      <h6 class="mb-0">25,000T</h6>
+                                    </div>
+                                    <div class="col-md-1 col-lg-1 text-end">
+                                      <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                                    </div>
+                                  </div>
+                
+                                  <hr class="my-4">
+                
+                                  <div class="row mb-4 d-flex justify-content-between align-items-center">
+                                    <div class="col-md-2 col-lg-2">
+                                      <img
+                                        src="https://cdn.freebiesupply.com/logos/large/2x/python-5-logo-svg-vector.svg" alt="Cotton T-shirt">
+                                    </div>
+                                    <div class="col-md-3 col-lg-5 ps-4">
+                                      <h6 class="text-muted">دوره</h6>
+                                      <h6 class="mb-0">جامع Python</h6> 
+                                    </div>
+                                    <div class="col-md-3 col-lg-4">
+                                      <h6 class="mb-0">25,000T</h6>
+                                    </div>
+                                    <div class="col-md-1 col-lg-1 text-end">
+                                      <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                                    </div>
+                                  </div>
+                
+                                  <hr class="my-2">
+                
+                                  <div class="pt-5">
+                                    <h6 class="mb-0"><a href="#!" data-bs-dismiss="modal" aria-label="Close" class="text-body"><i
+                                          class="fas fa-long-arrow-alt-left me-2"></i>برگشت به خرید</a></h6>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <a class="navbar-brand w-50 d-flex justify-content-center" href="./index.html">
                 <img class="ms-2" src="./icon/logo1.svg" width="160" alt="">
                 </a>
@@ -101,14 +226,14 @@
                     <input id="t1" type="checkbox">
                     <label for="t1">دوره های آموزشی</label>
                     <ul>
-                    <li><a href="#">Javascript</a></li>
+                    <li><a href="./js.html">Javascript</a></li>
                     <li><a href="#">C#</a></li>
                     <li><a href="#">HTML</a></li>
                     <li><a href="#">CSS</a></li>
                     <li><a href="#">Bootstrap</a></li>
                     </ul>
                 </div>
-
+    
                 </div>
             </div>
             </nav>
