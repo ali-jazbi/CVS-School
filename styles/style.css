@@ -712,6 +712,7 @@ a:hover{
     height: 20px !important;
   }
 }
+
 /* end Banner */
 
 /* Start Accordion */
@@ -1336,6 +1337,42 @@ footer .social-icons a:hover {
 
 footer img{
   width: 70%;
+}
+
+@media (max-width: 1024px) {
+  footer {
+    height: 630px !important;
+    position: relative !important;
+  }
+  footer .col-12{
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+  }
+  footer .contact-info{
+    width: 90% !important;
+  }
+  footer img{
+    width: 50%;
+    margin-top: 10px;
+  }
+  footer h2 {
+    font-size: 20px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+  /* استایل دکمه */
+  footer .custom-btn {
+    width: 130px;
+    height: 30px;
+    margin: 0 0 20px 0;
+  }
+  footer .bg-footer{
+    width: 100%;
+    height: 750px !important;
+  }
 }
 /* End Footer */
 
