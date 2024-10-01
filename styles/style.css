@@ -846,6 +846,22 @@ a:hover{
   font-family: yekan-bakh-regular;
   font-size: 14px;
 }
+
+@media (max-width: 1024px) {
+  .features h3{
+    font-size: 22px;
+  }
+  .features h4{
+    font-size: 20px;
+    white-space: nowrap;
+  }
+  .features p{
+    font-size: 12px;
+  }
+  .features .features-icon img{
+    width: 120px;
+  }
+}
 /* End Feauters */
 
 /* Start Points */
