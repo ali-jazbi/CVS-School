@@ -867,6 +867,11 @@ a:hover{
 /* Start Points */
 .points{
   margin-top: 90px;
+  background-image: url('../images/wave-haikei.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position:0 100%;
+  margin: 0 !important;
 }
 .points .row{
   padding: 0 17% 0 10%;
@@ -981,11 +986,38 @@ a:hover{
   visibility: visible;
   pointer-events: auto;
 }
-.points{
-  background-image: url('../images/wave-haikei.svg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position:0 116vh;
+@media (max-width: 1024px) {
+  .points {
+    background-position:0 100%;
+  }
+  .points .row{
+    margin-bottom: 75px;
+  }
+  .points .row:nth-child(1) , .points .row:nth-child(4), .points .row:nth-child(3){
+    flex-direction: column-reverse;
+  }
+  .points .flex-column{
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .points img{
+    width: 100%;
+  }
+  .points h4{
+    font-size: 25px;
+  }
+  .points p{
+    font-size: 15px;
+  }
+  .points h5{
+    font-size: 16px;
+  }
+  .points .tooltip-container{
+    font-size: 14px;
+  }
+  .points .row:last-child a{
+    margin-bottom: 80px !important;
+  }
 }
 /* End Points */
 
@@ -1010,6 +1042,22 @@ a:hover{
 }
 .quote span{
   color: #e8e8e8;
+}
+
+@media (max-width: 1024px) {
+  .quote{
+    height: 600px;
+  }
+  .quote p{
+    font-size: 20px !important;
+  }
+  .quote img{
+    width: 100px;
+    height: 100px;
+  }
+  .quote span{
+    font-size: 15px !important;
+  }
 }
 /* End Quete */
 
