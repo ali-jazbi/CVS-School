@@ -147,6 +147,98 @@ a:hover{
   }
   /* End Searchbar */
 
+/* START Navbar MOBILE */
+.nav-mobile{
+  width: 100%;
+  height: 60px;
+  box-shadow: 0px 0px 8px 0px #0000001a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-mobile .offcanvas{
+  width: 65%;
+}
+.nav-mobile .offcanvas .offcanvas-header{
+  box-shadow: 0px 0px 4px 0px #00000062;
+  padding-right: 0;
+}
+.nav-mobile .offcanvas a{
+  color: black;
+  font-family: Yekan-bakh-SemiBold;
+  font-size: 14px !important;
+  margin-bottom: 12px;
+}
+
+.nav-mobile .container {
+  position: relative;
+  --size-button: 30px;
+  color: white;
+}
+
+.nav-mobile .input {
+  padding-right: var(--size-button); /* از سمت راست padding اضافه شده است */
+  height: var(--size-button);
+  font-size: 12px;
+  border: none;
+  color: #fff;
+  outline: none;
+  width: var(--size-button);
+  transition: all ease 0.3s;
+  background-color: #038989;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.nav-mobile .input:focus,
+.nav-mobile .input:not(:invalid) {
+  width: 135px;
+  cursor: text;
+}
+/* change placeholder font size */
+.nav-mobile .input::-webkit-input-placeholder {
+  font-size: 12px;
+  color: rgb(239, 239, 239);
+}
+.nav-mobile .input:focus + .nav-mobile .icon,
+.nav-mobile .input:not(:invalid) + .nav-mobile .icon {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.nav-mobile .container .icon {
+  position: absolute;
+  width: var(--size-button);
+  height: var(--size-button);
+  bottom: 5px;
+  right: 6%;
+  padding: 8px;
+  pointer-events: none;
+}
+
+.nav-mobile .container .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-mobile .clear-icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 5px;
+  right: 55%; 
+  padding: 8px;
+  cursor: pointer;
+}
+
+.nav-mobile .clear-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* END Navbar MOBILE */
+
 /* Start Login Form */
 .login-modal{
   overflow: hidden;
