@@ -276,12 +276,12 @@ a:hover{
 }
 @media (max-width: 1000px) {
   .main-form {
-    transform: scale(0.6);
+    transform: scale(0.8);
   }
 }
 @media (max-width: 800px) {
   .main-form {
-    transform: scale(0.5);
+    transform: scale(0.7);
   }
 }
 @media (max-width: 600px) {
@@ -499,6 +499,57 @@ a:hover{
     width: 500px;
   }
 }
+@media (max-width: 762px) {
+  .main-form {
+    width: 100%;
+    min-width: auto;
+    height: 80vh;
+    min-height: auto;
+    padding: 20px;
+    transform: scale(1);
+    overflow-y: auto;
+  }
+  .form_title{
+    font-size: 25px !important;
+  }
+  .main-form .container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  .main-form .form__input[type="password"] {
+    width: 100%; /* عرض کامل */
+  }
+  
+  .main-form .a-container,
+  .main-form .b-container {
+    left: 0;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .main-form .switch {
+    display: none;
+  }
+  .main-form .is-txr,
+  .main-form .is-txl {
+    left: 0;
+    transform: none;
+  }
+
+  .main-form .is-hidden {
+    display: none;
+  }
+
+  .main-form .form__input {
+    width: 100%;
+  }
+
+  .main-form .button {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
   /* End Login Form/ */
 
   /* Start Shopping Cart */
@@ -538,6 +589,20 @@ a:hover{
       box-shadow: 4px 4px 6px #d1d9e6, -4px -4px 6px #f9f9f9;
       border-radius: 50% !important;
     }
+  @media (max-width: 762px) {
+    .shop-modal{
+      margin-top: 30px;
+      overflow-y: auto !important;
+    }
+    .shop-modal .row:first-child{
+      flex-direction: column-reverse;
+    }
+  }
+  @media (min-width:762px) and (max-width: 1024px) {
+    .shop-modal{
+      overflow-y: auto !important;
+    }
+  }
   /* End Shopping Cart */
 
   /* start dropdown */
