@@ -185,11 +185,13 @@ a:hover{
   outline: none;
   width: var(--size-button);
   transition: all ease 0.3s;
-  background-color: #038989;
+  background-color: #03898942;
   border-radius: 50px;
   cursor: pointer;
 }
-
+.nav-mobile .input:focus {
+  background-color: #038989 !important;
+}
 .nav-mobile .input:focus,
 .nav-mobile .input:not(:invalid) {
   width: 135px;
