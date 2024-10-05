@@ -1366,7 +1366,60 @@ a:hover{
 .course-banner .button:hover:before {
   bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
 }
-
+@media (max-width: 1024px) {
+  .course-banner .row:nth-child(1){
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .course-banner video{
+    margin-top: 30px;
+    width: 90%;
+  }
+  .course-banner p{
+    padding-left: 0;
+  }
+  .course-banner{
+    height: 850px;
+  }
+  .course-banner h2{
+    font-size: 30px;
+  }
+  .course-banner p{
+    font-size: 14px;
+  }
+  .course-banner .button{
+    width: 90%;
+    margin-inline: auto;
+  }
+  .course-banner .col-12{
+    padding: 0;
+  }
+  .course-banner .col-12:nth-last-child(2){
+    width: 90%;
+  }
+  .course-banner .d-flex{
+    width: 100%;
+  }
+  .course-banner span{
+    justify-content: center;
+  }
+  .course-banner h2{
+    margin-top: 50px !important;
+    font-size: 20px;
+  }
+  .course-banner .w-lg-75{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .course-banner .w-lg-75 div{
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+  .course-banner .w-lg-75 span , .course-banner .w-lg-75 a{
+    font-size: 16px !important;
+  }
+}
 
 .course-roadmap .container{
   padding: 70px 130px;
