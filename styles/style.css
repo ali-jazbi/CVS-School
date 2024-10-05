@@ -1373,7 +1373,7 @@ a:hover{
   }
   .course-banner video{
     margin-top: 30px;
-    width: 90%;
+    width: 85%;
   }
   .course-banner p{
     padding-left: 0;
@@ -1388,14 +1388,14 @@ a:hover{
     font-size: 14px;
   }
   .course-banner .button{
-    width: 90%;
+    width: 85%;
     margin-inline: auto;
   }
   .course-banner .col-12{
     padding: 0;
   }
   .course-banner .col-12:nth-last-child(2){
-    width: 90%;
+    width: 85%;
   }
   .course-banner .d-flex{
     width: 100%;
@@ -1489,6 +1489,40 @@ a:hover{
   font-family: yekan-bakh-regular;
   text-align: justify;
   line-height: 2;
+}
+@media (max-width: 1024px) {
+  .course-roadmap .container{
+    padding: 70px 30px;
+  }
+  .course-roadmap i{
+    font-size: 20px;
+  }
+  .course-roadmap p{
+    font-size: 13px;
+    padding-left: 10px;
+    line-height: 1.6 !important;
+  }
+  .course-roadmap .row .teacher{
+    text-align: center;
+    height:75vh !important;
+    flex-direction: column;
+  }
+  .course-roadmap .row .teacher p{
+    text-align: center;
+    padding-inline: 30px;
+  }
+  .course-roadmap .row .image-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .course-roadmap .row .teacher-title{
+    text-align: center !important;
+  }
+  .course-roadmap .row .image-container img{
+    margin: 0 !important;
+    width: 60% !important;
+  }
 }
 /** END COURSE PAGE */
 
