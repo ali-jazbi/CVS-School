@@ -870,6 +870,10 @@ a:hover{
     width: 20px !important;
     height: 20px !important;
   }
+  .banner .banner-title img:nth-child(2){
+    /* change src image */
+    
+  }
 }
 
 /* end Banner */
