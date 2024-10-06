@@ -870,10 +870,6 @@ a:hover{
     width: 20px !important;
     height: 20px !important;
   }
-  .banner .banner-title img:nth-child(2){
-    /* change src image */
-    
-  }
 }
 
 /* end Banner */
@@ -1369,6 +1365,9 @@ a:hover{
 
 .course-banner .button:hover:before {
   bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+.course-banner .w-lg-75{
+  width: 75% !important;
 }
 @media (max-width: 1024px) {
   .course-banner .row:nth-child(1){
