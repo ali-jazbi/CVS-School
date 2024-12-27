@@ -178,7 +178,7 @@ a:hover {
 	transition: all 0.3s ease;
 }
 .mega-menu .mega-section {
-	box-shadow: 0 10px 30px rgba(185, 185, 185, 0.559);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.288);
 	border-radius: 10px;
 	background-color: white;
 	padding: 0;
@@ -556,7 +556,9 @@ a:hover {
 .main-form .is-gx {
 	animation: is-gx 1.25s;
 }
-
+.navbar-brand img {
+	filter: drop-shadow(0 0 0.75rem rgba(90, 220, 20, 0.221)) !important;
+}
 @keyframes is-gx {
 	0%,
 	10%,
