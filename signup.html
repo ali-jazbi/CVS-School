@@ -24,7 +24,8 @@
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 		<!-- Costomized Styles -->
 		<link rel="stylesheet" href="./styles/style.css" />
-		<title>CVS School</title>
+		<link rel="stylesheet" href="./styles/signup.css" />
+		<title>Sign Up</title>
 	</head>
 	<body>
 		<main>
@@ -43,13 +44,7 @@
 								>
 							</li>
 							<li class="nav-item me-5">
-								<a
-									class="nav-link"
-									href="#"
-									data-bs-toggle="modal"
-									data-bs-target="#exampleModal"
-									>ورود / ثبت نام</a
-								>
+								<a class="nav-link" href="#">ورود / ثبت نام</a>
 							</li>
 							<li class="nav-item">
 								<div class="dropdown toggle">
@@ -94,7 +89,7 @@
 													</div>
 													<div
 														class="col-6 mega-menu-section">
-														<h6>کلاس کنکور</h6>
+														<h6>مشاوره کنکور</h6>
 														<div
 															class="d-flex flex-column apps-section">
 															<a
@@ -176,84 +171,6 @@
 						</div>
 					</div>
 				</nav>
-
-				<div
-					class="login-modal modal fade"
-					id="exampleModal"
-					tabindex="-1"
-					aria-labelledby="exampleModalLabel"
-					aria-hidden="true">
-					<div class="modal-dialog modal-xl">
-						<div class="modal-content">
-							<button
-								type="button"
-								class="btn-close btn-close-white text-white"
-								data-bs-dismiss="modal"
-								aria-label="Close"></button>
-							<div class="modal-body">
-								<div class="main-form">
-									<div
-										class="container b-container"
-										id="b-container">
-										<form
-											class="form"
-											id="b-form"
-											method=""
-											action="">
-											<h2 class="form_title title">
-												ورود به اکانت
-											</h2>
-											<input
-												class="form__input"
-												type="text"
-												placeholder="ایمیل" />
-											<div class="password-wrapper">
-												<input
-													type="password"
-													class="form__input"
-													id="password-input"
-													placeholder="رمز عبور" />
-												<i
-													class="bi bi-eye-fill eye-icon"
-													id="toggle-password"></i>
-											</div>
-											<a class="form__link"
-												>فراموشی رمز عبور</a
-											>
-											<button
-												class="form__button button submit">
-												ورود
-											</button>
-										</form>
-									</div>
-									<div class="switch" id="switch-cnt">
-										<div class="switch__circle"></div>
-										<div
-											class="switch__circle switch__circle--t"></div>
-										<div
-											class="switch__container"
-											id="switch-c1">
-											<h2 class="switch__title title">
-												شروعی تازه !
-											</h2>
-											<p
-												class="switch__description description">
-												برای شروع اطلاعات خود را وارد
-												نمایید
-											</p>
-											<a href="./signup.html">
-												<button
-													class="switch__button button switch-btn">
-													ثبت نام
-												</button>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 				<div
 					class="shop-modal modal-lg modal fade overflow-hidden"
 					id="staticBackdrop"
@@ -655,6 +572,157 @@
 					</div>
 				</nav>
 			</header>
+			<!-- Main Section -->
+			<section>
+				<div class="register-form">
+					<div class="overlay" id="overlay">
+						<div class="sign-in" id="sign-in">
+							<h1>ورود به اکانت</h1>
+							<p>اگر در سایت اکانت دارید از این بخش وارد شوید</p>
+							<button
+								class="switch-button"
+								id="slide-right-button">
+								ورود
+							</button>
+						</div>
+						<div class="sign-up" id="sign-up">
+							<h1>شروعی تازه‌!</h1>
+							<p>
+								اگر در وبسایت ثبت نام نکرده اید از این بخش
+								اطلاعات خود را تکمیل کنید
+							</p>
+							<button
+								class="switch-button"
+								id="slide-left-button">
+								ثبت نام
+							</button>
+						</div>
+					</div>
+					<div class="form">
+						<div class="sign-in" id="sign-in-info">
+							<h1>ورود</h1>
+							<div class="social-media-buttons">
+								<div class="icon">
+									<svg viewBox="0 0 24 24">
+										<path
+											fill="#000000"
+											d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" />
+									</svg>
+								</div>
+								<div class="icon">
+									<svg viewBox="0 0 24 24">
+										<path
+											fill="#000000"
+											d="M23,11H21V9H19V11H17V13H19V15H21V13H23M8,11V13.4H12C11.8,14.4 10.8,16.4 8,16.4C5.6,16.4 3.7,14.4 3.7,12C3.7,9.6 5.6,7.6 8,7.6C9.4,7.6 10.3,8.2 10.8,8.7L12.7,6.9C11.5,5.7 9.9,5 8,5C4.1,5 1,8.1 1,12C1,15.9 4.1,19 8,19C12,19 14.7,16.2 14.7,12.2C14.7,11.7 14.7,11.4 14.6,11H8Z" />
+									</svg>
+								</div>
+								<div class="icon">
+									<svg viewBox="0 0 24 24">
+										<path
+											fill="#000000"
+											d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z" />
+									</svg>
+								</div>
+							</div>
+							<p class="small">
+								یا از ایمیل خود برای ورود استفاده کنید؛
+							</p>
+							<form id="sign-in-form">
+								<input type="email" placeholder="Email" />
+								<div class="password-input-wrapper">
+									<input
+										type="password"
+										id="sign-in-password"
+										placeholder="رمز عبور" />
+									<span
+										class="password-toggle"
+										id="sign-in-password-toggle">
+										<svg
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round">
+											<path
+												d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+											<circle
+												cx="12"
+												cy="12"
+												r="3"></circle>
+										</svg>
+									</span>
+								</div>
+								<p class="forgot-password">
+									پسوورد خود را فراموش کردید؟
+								</p>
+								<button class="control-button in">ورود</button>
+							</form>
+						</div>
+						<div class="sign-up" id="sign-up-info">
+							<h1>ساخت اکانت</h1>
+							<div class="social-media-buttons">
+								<div class="icon">
+									<svg viewBox="0 0 24 24">
+										<path
+											fill="#000000"
+											d="M17,2V2H17V6H15C14.31,6 14,6.81 14,7.5V10H14L17,10V14H14V22H10V14H7V10H10V6A4,4 0 0,1 14,2H17Z" />
+									</svg>
+								</div>
+								<div class="icon">
+									<svg viewBox="0 0 24 24">
+										<path
+											fill="#000000"
+											d="M23,11H21V9H19V11H17V13H19V15H21V13H23M8,11V13.4H12C11.8,14.4 10.8,16.4 8,16.4C5.6,16.4 3.7,14.4 3.7,12C3.7,9.6 5.6,7.6 8,7.6C9.4,7.6 10.3,8.2 10.8,8.7L12.7,6.9C11.5,5.7 9.9,5 8,5C4.1,5 1,8.1 1,12C1,15.9 4.1,19 8,19C12,19 14.7,16.2 14.7,12.2C14.7,11.7 14.7,11.4 14.6,11H8Z" />
+									</svg>
+								</div>
+								<div class="icon">
+									<svg viewBox="0 0 24 24">
+										<path
+											fill="#000000"
+											d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z" />
+									</svg>
+								</div>
+							</div>
+							<p class="small">
+								یا از ایمیل خود برای ثبت نام استفاده کنید؛
+							</p>
+							<form id="sign-up-form">
+								<input type="text" placeholder="نام کامل" />
+								<input type="email" placeholder="ایمیل" />
+								<div class="password-input-wrapper">
+									<input
+										type="password"
+										id="sign-up-password"
+										placeholder="رمز عبور" />
+									<span
+										class="password-toggle"
+										id="sign-up-password-toggle">
+										<svg
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round">
+											<path
+												d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+											<circle
+												cx="12"
+												cy="12"
+												r="3"></circle>
+										</svg>
+									</span>
+								</div>
+								<button class="control-button up">
+									ثبت نام
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- END Main Section -->
 			<!-- Footer Section  -->
 			<footer class="footer text-dark bg-light">
 				<div class="container px-3">
@@ -725,5 +793,6 @@
 		<script src="./scripts/dropdown.js"></script>
 		<script src="./scripts/megamenu.js"></script>
 		<script src="./scripts/accordion.js"></script>
+		<script src="./scripts/register.js"></script>
 	</body>
 </html>
