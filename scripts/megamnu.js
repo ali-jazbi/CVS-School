@@ -1,26 +1,3 @@
-const loadComponent = (url, targetId, callback) => {
-	fetch(url)
-		.then((response) => {
-			if (!response.ok) throw new Error("خطا در بارگذاری فایل");
-			return response.text();
-		})
-		.then((data) => {
-			document.getElementById(targetId).innerHTML = data;
-			if (callback) callback(); // اجرای کالبک پس از بارگذاری
-		})
-		.catch((error) => console.error("خطا:", error));
-};
-
-// بارگذاری هدر و اجرای اسکریپت مگا منو
-loadComponent("../header.html", "header", () => {
-	// اجرای اسکریپت مگا منو پس از بارگذاری هدر
-	initMegaMenu(); // تابع مربوط به مگا منو
-});
-
-// بارگذاری فوتر
-loadComponent("../footer.html", "footer");
-
-// تابع مگا منو
 const initMegaMenu = () => {
 	// Define images for each section
 	const sectionImages = {
@@ -61,3 +38,4 @@ const initMegaMenu = () => {
 			});
 		});
 };
+initMegaMenu();
