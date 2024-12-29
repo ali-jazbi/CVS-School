@@ -10,18 +10,19 @@ class ShoppingCart {
 		console.log("Initializing ShoppingCart");
 		this.cartItems = document.getElementById("cartItems");
 		this.totalPrice = document.getElementById("totalPrice");
-		this.cartCount = document.getElementById("cartCount");
+		this.cartCountElements = document.querySelectorAll(".cartCount");
 		this.checkoutBtn = document.getElementById("checkoutBtn");
 
 		if (
 			!this.cartItems ||
 			!this.totalPrice ||
-			!this.cartCount ||
+			this.cartCountElements.length === 0 ||
 			!this.checkoutBtn
 		) {
 			console.error("One or more required elements not found");
 			return;
 		}
+
 
 		this.checkoutBtn.addEventListener("click", () => this.checkout());
 
@@ -30,19 +31,19 @@ class ShoppingCart {
 			id: 1,
 			title: "دوره جامع JavaScript",
 			price: 50000,
-			image: "/placeholder.svg",
+			image: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
 		});
 		this.addItem({
 			id: 2,
 			title: "دوره پیشرفته ++C",
 			price: 25000,
-			image: "/placeholder.svg",
+			image: "https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.png",
 		});
 		this.addItem({
 			id: 3,
 			title: "دوره جامع Python",
 			price: 25000,
-			image: "/placeholder.svg",
+			image: "https://cdn.iconscout.com/icon/free/png-256/free-python-logo-icon-download-in-svg-png-gif-file-formats--programming-language-logos-icons-1720083.png?f=webp",
 		});
 
 		console.log("ShoppingCart initialized successfully");
@@ -84,7 +85,9 @@ class ShoppingCart {
 			(sum, item) => sum + item.quantity,
 			0
 		);
-		this.cartCount.textContent = totalItems;
+		this.cartCountElements.forEach(element => {
+			element.textContent = totalItems;
+		});
 
 		// بروزرسانی لیست محصولات
 		this.cartItems.innerHTML = this.items
@@ -103,18 +106,8 @@ class ShoppingCart {
                                 <div class="card-body">
                                     <h5 class="card-title">${item.title}</h5>
                                     <p class="card-text">${item.price.toLocaleString()} تومان</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group" role="group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="cart.updateQuantity(${
-												item.id
-											}, -1)">-</button>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary" disabled>${
-												item.quantity
-											}</button>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="cart.updateQuantity(${
-												item.id
-											}, 1)">+</button>
-                                        </div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                       
                                         <button type="button" class="btn btn-sm btn-danger" onclick="cart.removeItem(${
 											item.id
 										})">حذف</button>
