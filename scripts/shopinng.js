@@ -1,15 +1,27 @@
 class ShoppingCart {
 	constructor() {
+		console.log("ShoppingCart constructor called");
 		this.items = [];
 		this.total = 0;
 		this.init();
 	}
 
 	init() {
+		console.log("Initializing ShoppingCart");
 		this.cartItems = document.getElementById("cartItems");
 		this.totalPrice = document.getElementById("totalPrice");
 		this.cartCount = document.getElementById("cartCount");
 		this.checkoutBtn = document.getElementById("checkoutBtn");
+
+		if (
+			!this.cartItems ||
+			!this.totalPrice ||
+			!this.cartCount ||
+			!this.checkoutBtn
+		) {
+			console.error("One or more required elements not found");
+			return;
+		}
 
 		this.checkoutBtn.addEventListener("click", () => this.checkout());
 
@@ -32,6 +44,8 @@ class ShoppingCart {
 			price: 25000,
 			image: "/placeholder.svg",
 		});
+
+		console.log("ShoppingCart initialized successfully");
 	}
 
 	addItem(item) {
@@ -64,6 +78,7 @@ class ShoppingCart {
 	}
 
 	updateCart() {
+		console.log("Updating cart");
 		// بروزرسانی تعداد آیتم‌ها
 		const totalItems = this.items.reduce(
 			(sum, item) => sum + item.quantity,
@@ -75,38 +90,40 @@ class ShoppingCart {
 		this.cartItems.innerHTML = this.items
 			.map(
 				(item) => `
-        <div class="card mb-3">
-            <div class="row g-0">
-                <div class="col-4">
-                    <img src="${
-						item.image
-					}" class="img-fluid rounded-start" alt="${item.title}">
-                </div>
-                <div class="col-8">
-                    <div class="card-body">
-                        <h5 class="card-title">${item.title}</h5>
-                        <p class="card-text">${item.price.toLocaleString()} تومان</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="cart.updateQuantity(${
-									item.id
-								}, -1)">-</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary" disabled>${
-									item.quantity
-								}</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="cart.updateQuantity(${
-									item.id
-								}, 1)">+</button>
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-4">
+                                <img src="${
+									item.image
+								}" class="img-fluid rounded-start" alt="${
+					item.title
+				}">
                             </div>
-                            <button type="button" class="btn btn-sm btn-danger" onclick="cart.removeItem(${
-								item.id
-							})">حذف</button>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">${item.title}</h5>
+                                    <p class="card-text">${item.price.toLocaleString()} تومان</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group" role="group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="cart.updateQuantity(${
+												item.id
+											}, -1)">-</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary" disabled>${
+												item.quantity
+											}</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="cart.updateQuantity(${
+												item.id
+											}, 1)">+</button>
+                                        </div>
+                                        <button type="button" class="btn btn-sm btn-danger" onclick="cart.removeItem(${
+											item.id
+										})">حذف</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    `
+                `
 			)
 			.join("");
 
@@ -128,5 +145,23 @@ class ShoppingCart {
 	}
 }
 
-// ایجاد نمونه از کلاس سبد خرید
-const cart = new ShoppingCart();
+// اطمینان از اجرای کد پس از بارگذاری کامل DOM
+document.addEventListener("DOMContentLoaded", () => {
+	console.log("DOM fully loaded");
+	window.cart = new ShoppingCart();
+});
+
+// اطمینان از اجرای کد حتی اگر DOMContentLoaded قبلاً رخ داده باشد
+if (document.readyState === "loading") {
+	document.addEventListener("DOMContentLoaded", () => {
+		console.log("DOM loaded (from readyState check)");
+		if (!window.cart) {
+			window.cart = new ShoppingCart();
+		}
+	});
+} else {
+	console.log("DOM already loaded (from readyState check)");
+	if (!window.cart) {
+		window.cart = new ShoppingCart();
+	}
+}

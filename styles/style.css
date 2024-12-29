@@ -629,6 +629,15 @@ a:hover {
 	height: 60px;
 	object-fit: cover;
 }
+.small-badge {
+	background-color: #018787c8;
+	font-size: 0.9rem;
+	padding: 0.25em 0.4em;
+	min-width: 19px;
+	height: 19px;
+	line-height: 1;
+	color: white;
+}
 /* End Shopping Cart */
 
 /* start dropdown */
