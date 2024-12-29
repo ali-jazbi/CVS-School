@@ -10,13 +10,13 @@ class ShoppingCart {
 		console.log("Initializing ShoppingCart");
 		this.cartItems = document.getElementById("cartItems");
 		this.totalPrice = document.getElementById("totalPrice");
-		this.cartCount = document.querySelector(".cartCount");
+		this.cartCounts = document.querySelectorAll(".cartCount");
 		this.checkoutBtn = document.getElementById("checkoutBtn");
 
 		if (
 			!this.cartItems ||
 			!this.totalPrice ||
-			!this.cartCount ||
+			!this.cartCounts.length ||
 			!this.checkoutBtn
 		) {
 			console.error("One or more required elements not found");
@@ -79,50 +79,57 @@ class ShoppingCart {
 
 	updateCart() {
 		console.log("Updating cart");
-		// بروزرسانی تعداد آیتم‌ها
+		// محاسبه تعداد کل آیتم‌ها
 		const totalItems = this.items.reduce(
 			(sum, item) => sum + item.quantity,
 			0
 		);
-		this.cartCount.textContent = totalItems;
 
-		// بروزرسانی لیست محصولات
-		this.cartItems.innerHTML = this.items
-			.map(
-				(item) => `
-                    <div class="card mb-3">
-                        <div class="row g-0">
-                            <div class="col-4">
-                                <img src="${
-									item.image
-								}" class="img-fluid rounded-start" alt="${
-					item.title
-				}">
-                            </div>
-                            <div class="col-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">${item.title}</h5>
-                                    <p class="card-text">${item.price.toLocaleString()} تومان</p>
-                                    <div class="d-flex justify-content-end align-items-center">
-                                       
-                                        <button type="button" class="btn btn-sm btn-danger" onclick="cart.removeItem(${
-											item.id
-										})">حذف</button>
-                                    </div>
+		// فقط به‌روزرسانی تعداد در عناصر .cartCount
+		this.cartCounts.forEach((cartCount) => {
+			if (cartCount.textContent !== totalItems.toString()) {
+				cartCount.textContent = totalItems;
+			}
+		});
+
+		// بازسازی لیست محصولات فقط در صورت تغییر
+		if (this.cartItems.dataset.renderedItems !== totalItems.toString()) {
+			const fragment = document.createDocumentFragment();
+			this.items.forEach((item) => {
+				const card = document.createElement("div");
+				card.className = "card mb-3";
+				card.innerHTML = `
+                    <div class="row g-0">
+                        <div class="col-4">
+                            <img src="${item.image}" class="img-fluid rounded-start" alt="${item.title}">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">${item.title}</h5>
+                                <p class="card-text">${item.price.toLocaleString()} تومان</p>
+                                <div class="d-flex justify-content-end align-items-center">
+                                    <button type="button" class="btn btn-sm btn-danger" onclick="cart.removeItem(${item.id})">حذف</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                `
-			)
-			.join("");
+                `;
+				fragment.appendChild(card);
+			});
+			this.cartItems.innerHTML = ""; // پاک کردن محتوای قبلی
+			this.cartItems.appendChild(fragment);
+			this.cartItems.dataset.renderedItems = totalItems.toString();
+		}
 
-		// بروزرسانی جمع کل
-		this.total = this.items.reduce(
+		// به‌روزرسانی جمع کل فقط در صورت تغییر
+		const newTotal = this.items.reduce(
 			(sum, item) => sum + item.price * item.quantity,
 			0
 		);
-		this.totalPrice.textContent = `${this.total.toLocaleString()} تومان`;
+		if (this.total !== newTotal) {
+			this.total = newTotal;
+			this.totalPrice.textContent = `${this.total.toLocaleString()} تومان`;
+		}
 	}
 
 	checkout() {
