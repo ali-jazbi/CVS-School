@@ -718,6 +718,55 @@ a:hover {
 	font-size: 18px;
 	color: #333;
 }
+/* ...existing code... */
+
+/* Start Shopping Cart */
+@media (max-width: 762px) {
+	.cart-item img {
+		width: 50px;
+		height: 50px;
+	}
+
+	.small-badge {
+		font-size: 0.8rem;
+		padding: 0.2em 0.3em;
+		min-width: 16px;
+		height: 16px;
+	}
+
+	#cartItems .card {
+		flex-direction: column;
+	}
+
+	#cartItems .card img {
+		width: ۵0%;
+		border-radius: 12px 12px 0 0;
+	}
+
+	#cartItems .card .card-body {
+		padding: 12px;
+	}
+
+	#cartItems .card .card-title {
+		font-size: 16px;
+	}
+
+	#cartItems .card .card-text {
+		font-size: 12px;
+	}
+
+	#cartItems .btn-danger {
+		font-size: 12px;
+		padding: 4px 8px;
+	}
+
+	#totalPrice {
+		font-size: 16px;
+	}
+}
+/* End Shopping Cart */
+
+/* ...existing code... */
 /* End Shopping Cart */
 
 /* start dropdown */
