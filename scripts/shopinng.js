@@ -10,19 +10,18 @@ class ShoppingCart {
 		console.log("Initializing ShoppingCart");
 		this.cartItems = document.getElementById("cartItems");
 		this.totalPrice = document.getElementById("totalPrice");
-		this.cartCountElements = document.querySelectorAll(".cartCount");
+		this.cartCount = document.querySelector(".cartCount");
 		this.checkoutBtn = document.getElementById("checkoutBtn");
 
 		if (
 			!this.cartItems ||
 			!this.totalPrice ||
-			this.cartCountElements.length === 0 ||
+			!this.cartCount ||
 			!this.checkoutBtn
 		) {
 			console.error("One or more required elements not found");
 			return;
 		}
-
 
 		this.checkoutBtn.addEventListener("click", () => this.checkout());
 
@@ -85,9 +84,7 @@ class ShoppingCart {
 			(sum, item) => sum + item.quantity,
 			0
 		);
-		this.cartCountElements.forEach(element => {
-			element.textContent = totalItems;
-		});
+		this.cartCount.textContent = totalItems;
 
 		// بروزرسانی لیست محصولات
 		this.cartItems.innerHTML = this.items
