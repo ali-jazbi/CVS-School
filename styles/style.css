@@ -13,6 +13,13 @@ body {
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
 }
+:root {
+	--primary-color: #0052cc;
+	--text-primary: #333;
+	--text-secondary: #666;
+	--background-light: #f8f9fa;
+	--border-color: #e1e4e8;
+}
 @font-face {
 	font-family: yekan-bakh-Regular;
 	src: url("../font/YekanBakh-Regular.ttf");
@@ -1610,6 +1617,140 @@ a:hover {
 	font-family: yekan-bakh-regular;
 	text-align: justify;
 	line-height: 2;
+}
+
+.reviews-container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.reviews-header {
+	margin-bottom: 2rem;
+}
+
+.reviews-title {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+.overall-rating {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.rating-number {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.total-reviews {
+	color: var(--text-secondary);
+	font-size: 0.9rem;
+}
+
+.rating-bars {
+	margin-bottom: 2rem;
+}
+
+.rating-bar {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.5rem;
+}
+
+.star-label {
+	width: 60px;
+	font-size: 0.9rem;
+}
+
+.progress-bar {
+	flex-grow: 1;
+	height: 8px;
+	background-color: var(--background-light);
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.progress-fill {
+	height: 100%;
+	background-color: var(--primary-color);
+	transition: width 0.3s ease;
+}
+
+.percentage {
+	width: 60px;
+	text-align: right;
+	font-size: 0.9rem;
+	color: var(--text-secondary);
+}
+
+.review-list {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.review-card {
+	padding: 1.5rem;
+	border: 1px solid var(--border-color);
+	border-radius: 8px;
+	transition: box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.review-header {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: var(--primary-color);
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+}
+
+.review-info {
+	flex-grow: 1;
+}
+
+.reviewer-name {
+	font-weight: 600;
+	margin-bottom: 0.25rem;
+}
+
+.review-date {
+	font-size: 0.9rem;
+	color: var(--text-secondary);
+}
+
+.stars {
+	color: #ffc107;
+	font-size: 0.9rem;
+}
+
+.review-content {
+	line-height: 1.5;
+	color: var(--text-secondary);
+}
+
+.showing-text {
+	color: var(--text-secondary);
+	font-size: 0.9rem;
+	margin-bottom: 1rem;
 }
 @media (max-width: 1024px) {
 	.course-roadmap .container {
