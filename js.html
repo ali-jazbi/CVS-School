@@ -500,10 +500,10 @@
 										>پشتیبانی دائمی
 									</span>
 									<span
-										class="d-flex align-items-center pe-3 pe-lg-0">
-										<i
-											class="bi bi-file-earmark-code pe-2 pt-1"></i>
-										تمرین های تخصصی
+										class="d-flex align-items-center ps-3 ps-lg-0">
+										<span id="studentCounter">0</span
+										>&nbsp;دانشجو
+										<i class="bi bi-people-fill ps-2"></i>
 									</span>
 								</div>
 							</div>
@@ -789,7 +789,7 @@
 					<!-- نظرات به صورت پویا در اینجا اضافه می‌شوند -->
 				</div>
 			</div>
-			
+
 			<!-- Footer Section  -->
 			<!-- Footer Section  -->
 			<footer class="footer text-dark bg-light">
@@ -862,5 +862,29 @@
 		<script src="./scripts/dropdown.js"></script>
 		<script src="./scripts/megamnu.js"></script>
 		<script src="./scripts/accordion.js"></script>
+		<script>
+			function animateCounter(elementId, finalValue, duration) {
+				let current = 0;
+				const element = document.getElementById(elementId);
+				const step = finalValue / (duration / 16); // 16ms is roughly 60fps
+
+				function updateCounter() {
+					current += step;
+					if (current < finalValue) {
+						element.textContent = Math.round(current);
+						requestAnimationFrame(updateCounter);
+					} else {
+						element.textContent = finalValue;
+					}
+				}
+
+				updateCounter();
+			}
+
+			// Start the animation when the page loads
+			window.addEventListener("load", () => {
+				animateCounter("studentCounter", 120, 2000); // 120 students, 2 seconds duration
+			});
+		</script>
 	</body>
 </html>
