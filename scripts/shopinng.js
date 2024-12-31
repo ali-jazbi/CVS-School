@@ -97,23 +97,19 @@ class ShoppingCart {
 			const fragment = document.createDocumentFragment();
 			this.items.forEach((item) => {
 				const card = document.createElement("div");
-				card.className = "card mb-3";
+				card.className = "cart-item";
 				card.innerHTML = `
-                    <div class="row g-0">
-                        <div class="col-4">
-                            <img src="${item.image}" class="img-fluid rounded-start" alt="${item.title}">
-                        </div>
-                        <div class="col-8">
-                            <div class="card-body">
-                                <h5 class="card-title">${item.title}</h5>
-                                <p class="card-text">${item.price.toLocaleString()} تومان</p>
-                                <div class="d-flex justify-content-end align-items-center">
-                                    <button type="button" class="btn btn-sm btn-danger" onclick="cart.removeItem(${item.id})">حذف</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
+					<div class="cart-item-image">
+						<img src="${item.image}" alt="${item.title}">
+					</div>
+					<div class="cart-item-details">
+						<h3 class="cart-item-title">${item.title}</h3>
+						<p class="cart-item-price">${item.price.toLocaleString()} تومان</p>
+					</div>
+					<button class="cart-item-remove" onclick="cart.removeItem(${
+						item.id
+					})">×</button>
+				`;
 				fragment.appendChild(card);
 			});
 			this.cartItems.innerHTML = ""; // پاک کردن محتوای قبلی
