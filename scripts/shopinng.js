@@ -98,18 +98,30 @@ class ShoppingCart {
 			this.items.forEach((item) => {
 				const card = document.createElement("div");
 				card.className = "cart-item";
+				card.style.display = "flex";
+				card.style.alignItems = "center";
+				card.style.justifyContent = "space-between";
+				card.style.padding = "15px";
+				card.style.marginBottom = "10px";
+				card.style.backgroundColor = "#ffffff";
+				card.style.borderRadius = "5px";
 				card.innerHTML = `
-					<div class="cart-item-image">
-						<img src="${item.image}" alt="${item.title}">
-					</div>
-					<div class="cart-item-details">
-						<h3 class="cart-item-title">${item.title}</h3>
-						<p class="cart-item-price">${item.price.toLocaleString()} تومان</p>
-					</div>
-					<button class="cart-item-remove" onclick="cart.removeItem(${
+                 <div class="cart-item-details" style="display: flex; align-items: center;justify-content: space-between;">
+				 <div class="cart-item-info" style="display: flex; align-items: center;">
+				  <img src="${item.image}" alt="${
+					item.title
+				}" class="cart-item-icon" style="width: 30px; height: 30px; margin-right: 10px;">
+                     <h3 class="cart-item-title" style="margin: 0; font-size: 14px;">${
+							item.title
+						}</h3>
+				 </div>
+                    
+                     <p class="cart-item-price" style="margin: 0 0px 0 15px; font-size: 11px;">${item.price.toLocaleString()} تومان</p>
+                 </div>
+                 <button class="cart-item-remove" onclick="cart.removeItem(${
 						item.id
-					})">×</button>
-				`;
+					})" style="background: none; border: none; font-size: 18px; cursor: pointer;">×</button>
+             `;
 				fragment.appendChild(card);
 			});
 			this.cartItems.innerHTML = ""; // پاک کردن محتوای قبلی
