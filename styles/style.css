@@ -1731,6 +1731,84 @@ a:hover {
 	text-align: justify;
 	line-height: 2;
 }
+.pre-course-banner .card {
+	width: 100%;
+	height: 265px;
+	padding: 0.8em;
+	background: #f5f5f5;
+	position: relative;
+	overflow: visible;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.pre-course-banner .card-img {
+	background-color: #018787;
+	height: 60%;
+	width: 100%;
+	border-radius: 0.5rem;
+	transition: 0.3s ease;
+	display: flex;
+	justify-content: center;
+}
+.pre-course-banner .card-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 0.5rem;
+}
+.pre-course-banner .card-info {
+	padding-top: 5%;
+	text-align: center;
+}
+
+.pre-course-banner svg {
+	width: 20px;
+	height: 20px;
+}
+
+.pre-course-banner .card-footer {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 1px solid #ddd;
+	margin-top: -10px !important;
+}
+
+/*Text*/
+.pre-course-banner .text-title {
+	font-weight: 900;
+	font-size: 1.2em;
+	line-height: 1.5;
+}
+
+.pre-course-banner .text-body {
+	font-size: 0.9em;
+}
+
+/*Button*/
+.pre-course-banner .card-button {
+	border: 1px solid #252525;
+	display: flex;
+	padding: 0.3em;
+	cursor: pointer;
+	border-radius: 50px;
+	transition: 0.3s ease-in-out;
+}
+
+/*Hover*/
+.pre-course-banner .card-img:hover {
+	transform: translateY(-15%);
+	box-shadow: rgba(63, 204, 226, 0.096) 0px 13px 47px -5px,
+		rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+}
+
+.pre-course-banner .card-button:hover {
+	border: 1px solid #05b3b3;
+	background-color: #05b3b3;
+	fill: #ffffff; /* This will change the fill color of the SVG */
+	stroke: #ffffff;
+}
 
 .reviews-container {
 	max-width: 1000px;
@@ -1994,7 +2072,6 @@ footer .contact-info a {
 	color: #7e7e7e !important;
 	text-decoration: none;
 	font-weight: bold;
-	font-family: "Times New Roman", Times, serif;
 	transition: all ease-in-out 0.15s !important;
 }
 
