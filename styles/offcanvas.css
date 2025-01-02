@@ -1,0 +1,125 @@
+.custom-offcanvas {
+	width: 280px;
+	color: rgb(8, 8, 8);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.custom-offcanvas-header {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+}
+.custom-offcanvas-title {
+	font-weight: bold;
+	font-size: 1.5rem;
+	margin: 0;
+}
+.custom-btn-close {
+	filter: invert(1) grayscale(100%) brightness(200%);
+}
+.custom-nav-link {
+	color: rgba(255, 255, 255, 0.8);
+	transition: all 0.3s ease;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	padding: 10px 15px;
+}
+.custom-nav-link:hover,
+.custom-nav-link:focus {
+	background-color: rgba(255, 255, 255, 0.1);
+	color: white;
+	transform: translateX(-5px);
+}
+.custom-nav-link i {
+	margin-left: 10px;
+	width: 20px;
+	text-align: center;
+}
+.custom-sub-menu {
+	display: none;
+	animation: customFadeIn 0.5s ease;
+}
+@keyframes customFadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.custom-back-to-main {
+    background-color: transparent;
+	color: rgb(71, 64, 64);
+	border: none;
+	border-radius: 5px;
+	padding: 6px 5px;
+	margin-top: 15px;
+    font-size: 13px;
+	transition: all 0.3s ease;
+    border-bottom: 2px solid gray;
+}
+.custom-back-to-main:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+	transform: translateX(-5px);
+}
+.custom-menu-toggle-btn {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 1050;
+	background-color: #4a90e2;
+	color: white;
+	border: none;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	font-size: 1.5rem;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+}
+.custom-menu-toggle-btn:hover {
+	background-color: #f39c12;
+	transform: rotate(90deg);
+}
+.custom-search-container {
+	display: flex;
+	align-items: center;
+	position: relative;
+	width: 32px;
+	overflow: hidden;
+	transition: width 0.3s ease;
+}
+.custom-search-container.active {
+	width: 200px;
+}
+.custom-search-input {
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: none;
+	border-radius: 20px;
+	color: white;
+	padding: 5px 30px 5px 10px;
+	transition: all 0.3s ease;
+}
+.custom-search-icon,
+.custom-clear-icon {
+	background: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+}
+.custom-clear-icon {
+	display: none;
+	position: absolute;
+	right: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+	font-size: 1rem;
+}

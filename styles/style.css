@@ -800,7 +800,7 @@ a:hover {
 	object-fit: cover;
 	border-radius: 12px 0 0 12px;
 }
-.cart-item-price{
+.cart-item-price {
 	color: #666666a9 !important;
 }
 #cartItems .card .card-body {
@@ -918,7 +918,7 @@ a:hover {
 	border-bottom: 2px solid #05b3b300;
 }
 .dropdown.toggle > label:hover,
-.nav-item:last-child:hover {
+.dropdown .nav-item:last-child:hover {
 	border-bottom: 2px solid #05b3b3;
 }
 .dropdown label:hover,
@@ -1796,7 +1796,7 @@ a:hover {
 .percentage {
 	width: 60px;
 	text-align: right;
-	font-size: .9rem;
+	font-size: 0.9rem;
 	color: var(--text-secondary);
 }
 
@@ -1868,7 +1868,7 @@ a:hover {
 	margin-bottom: 1rem;
 }
 @media (max-width: 1024px) {
-	.reviews-container{
+	.reviews-container {
 		padding: 0 20px;
 	}
 	.course-roadmap .container {

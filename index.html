@@ -24,6 +24,7 @@
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 		<!-- Costomized Styles -->
 		<link rel="stylesheet" href="./styles/style.css" />
+		<link rel="stylesheet" href="./styles/offcanvas.css" />
 		<title>CVS School</title>
 	</head>
 	<body>
@@ -226,7 +227,7 @@
 						class="fs-1 d-flex align-items-center h-75 pt-2 ps-4 bg-transparent"
 						type="button"
 						data-bs-toggle="offcanvas"
-						data-bs-target="#offcanvasExample"
+						data-bs-target="#customOffcanvasMenu"
 						aria-controls="offcanvasExample">
 						<i class="bi bi-list pt-1"></i>
 					</button>
@@ -261,10 +262,9 @@
 						</a>
 					</div>
 					<div
-						class="offcanvas offcanvas-start"
+						class="offcanvas offcanvas-start custom-offcanvas"
 						tabindex="-1"
-						id="offcanvasExample"
-						aria-labelledby="offcanvasExampleLabel">
+						id="customOffcanvasMenu">
 						<div class="offcanvas-header">
 							<div class="container">
 								<input
@@ -309,30 +309,35 @@
 											fill="currentColor"></path>
 									</svg>
 								</div>
+								<script>
+									const input =
+										document.getElementById("searchInput");
+									const clearButton =
+										document.getElementById("clearButton");
+
+									input.addEventListener(
+										"input",
+										function () {
+											if (input.value.length > 0) {
+												clearButton.style.display =
+													"block";
+											} else {
+												clearButton.style.display =
+													"none";
+											}
+										}
+									);
+
+									clearButton.addEventListener(
+										"click",
+										function () {
+											input.value = "";
+											clearButton.style.display = "none";
+											input.focus();
+										}
+									);
+								</script>
 							</div>
-							<script>
-								const input =
-									document.getElementById("searchInput");
-								const clearButton =
-									document.getElementById("clearButton");
-
-								input.addEventListener("input", function () {
-									if (input.value.length > 0) {
-										clearButton.style.display = "block";
-									} else {
-										clearButton.style.display = "none";
-									}
-								});
-
-								clearButton.addEventListener(
-									"click",
-									function () {
-										input.value = "";
-										clearButton.style.display = "none";
-										input.focus();
-									}
-								);
-							</script>
 
 							<button
 								type="button"
@@ -340,11 +345,11 @@
 								data-bs-dismiss="offcanvas"
 								aria-label="Close"></button>
 						</div>
-						<div class="offcanvas-body p-0 pt-3">
-							<ul class="nav flex-column">
+						<div class="offcanvas-body">
+							<ul class="nav flex-column custom-main-menu">
 								<li class="nav-item mt-2">
 									<a
-										class="nav-link active"
+										class="nav-link active custom-nav-link"
 										aria-current="page"
 										href="#">
 										<i
@@ -353,43 +358,160 @@
 									>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#">
+									<a
+										class="nav-link custom-nav-link"
+										href="#"
+										data-submenu="customHtml">
 										<i class="fab fa-html5 fs-6 pe-2"></i
 										>HTML
 									</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#">
+									<a
+										class="nav-link custom-nav-link"
+										href="#">
 										<i class="fab fa-css3-alt fs-6 pe-2"></i
 										>CSS
 									</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#">
+									<a
+										class="nav-link custom-nav-link"
+										href="#">
 										<i
 											class="fab fa-bootstrap fs-6 pe-2"></i
 										>Bootstrap
 									</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="./js.html">
+									<a
+										class="nav-link custom-nav-link"
+										href="./js.html">
 										<i
 											class="fab fa-js-square fs-6 pe-2"></i
 										>Javascript
 									</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#">
+									<a
+										class="nav-link custom-nav-link"
+										href="#">
 										<i class="fab fa-php fs-6 pe-2"></i>PHP
 									</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#">
+									<a
+										class="nav-link custom-nav-link"
+										href="#">
 										<i class="fab fa-java fs-6 pe-2"></i
 										>Java
 									</a>
 								</li>
 							</ul>
+							<div class="custom-sub-menu" id="customHtml">
+								<h6 class="custom-submenu-title mb-3">HTML</h6>
+								<ul class="nav flex-column custom-main-menu">
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-book me-2"></i
+											>مقدمه HTML</a
+										>
+									</li>
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i
+												class="bi bi-code-slash me-2"></i
+											>تگ‌های HTML</a
+										>
+									</li>
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i
+												class="bi bi-input-cursor-text me-2"></i
+											>فرم‌های HTML</a
+										>
+									</li>
+								</ul>
+								<button class="custom-back-to-main">
+									<i class="bi bi-arrow-right me-2"></i>بازگشت
+									به منوی اصلی
+								</button>
+							</div>
+							<div class="custom-sub-menu" id="customCss">
+								<h6 class="mb-3">CSS</h6>
+								<ul class="nav flex-column">
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-palette me-2"></i
+											>مقدمه CSS</a
+										>
+									</li>
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-magic me-2"></i
+											>سلکتورها</a
+										>
+									</li>
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-film me-2"></i
+											>انیمیشن‌ها</a
+										>
+									</li>
+								</ul>
+								<button class="custom-back-to-main">
+									<i class="bi bi-arrow-right me-2"></i>بازگشت
+									به منوی اصلی
+								</button>
+							</div>
+							<div class="custom-sub-menu" id="customJs">
+								<h6 class="custom-submenu-title mb-3">
+									JavaScript
+								</h6>
+								<ul class="nav flex-column">
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i
+												class="bi bi-file-earmark-text me-2"></i
+											>مقدمه JavaScript</a
+										>
+									</li>
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-diagram-2 me-2"></i
+											>توابع</a
+										>
+									</li>
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-lightning me-2"></i
+											>رویدادها</a
+										>
+									</li>
+								</ul>
+								<button class="custom-back-to-main">
+									<i class="bi bi-arrow-right me-2"></i>بازگشت
+									به منوی اصلی
+								</button>
+							</div>
 						</div>
 					</div>
 				</nav>
@@ -990,6 +1112,7 @@
 		<script src="./scripts/accordion.js"></script>
 		<script src="./scripts/megamnu.js"></script>
 		<script src="./scripts/conversation.js"></script>
+		<script src="./scripts/offcanvas.js"></script>
 		<script>
 			window.si =
 				window.si ||
