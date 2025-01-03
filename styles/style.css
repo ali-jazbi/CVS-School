@@ -1097,10 +1097,272 @@ a:hover {
 
 /* end Banner */
 
+/* Start Group Filter */
+.Course-group {
+	display: flex;
+	justify-content: center;
+}
+.Course-group .wrapper {
+	width: 90%;
+	max-width: 1200px;
+	border-radius: 15px;
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	padding: 2em;
+}
+
+.Course-group .button-group {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: end;
+	gap: 10px;
+	margin-bottom: 2em;
+	border-bottom: 2px solid rgba(185, 185, 185, 0.342);
+	padding: 0px 0px;
+}
+.Course-group .button {
+	padding: 0.55em 1em;
+	background-color: transparent;
+	border-bottom: 5px solid transparent;
+	color: #005a5a;
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+	transition: all 0.3s ease-in-out;
+	font-family: yekan-bakh-regular;
+	margin-bottom: -2px;
+}
+.Course-group .divider {
+	width: 18%;
+	height: 3px;
+	background-color: #009688;
+}
+.Course-group .button:hover,
+.Course-group .button.active {
+	border-bottom: 5px solid #05b3b3;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Course-group .slider2 {
+	margin-bottom: 2em;
+}
+
+.Course-group .slide {
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+}
+
+.Course-group .slide img {
+	width: 100%;
+	border-radius: 10px;
+	transition: transform 0.3s ease;
+}
+.Course-group .slick-prev:before,
+.Course-group .slick-next:before {
+	color: #05b3b3;
+}
+.Course-group .card {
+	width: 100%;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 14px -2px #6f6e6e55;
+	transition: 0.2s ease-in-out;
+}
+
+.Course-group .card:hover {
+	cursor: pointer;
+	box-shadow: 0px 0px 14px -2px #6f6e6ed3;
+}
+
+.Course-group .card .img {
+	width: 100%;
+	height: 20vh;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background: linear-gradient(#05b3b3, #9198e5);
+	display: flex;
+	align-items: top;
+	justify-content: right;
+	position: relative;
+}
+.Course-group .card .img img {
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	object-fit: cover;
+	border-radius: 0;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.Course-group .card .save {
+	transition: 0.2s ease-in-out;
+	border-radius: 10px;
+	margin: 10px;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	background-color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+}
+
+.Course-group .card .save svg {
+	transition: all 0.2s ease-in-out;
+	width: 15px;
+	height: 15px;
+}
+
+.Course-group .card .save:hover svg {
+	fill: #05b3b3 !important;
+}
+
+.Course-group .card .text {
+	padding: 23px 20px 10px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: space-around;
+}
+
+.Course-group .card .text .h3 {
+	font-size: 17px !important;
+	font-weight: 600;
+	color: black;
+	text-align: center;
+}
+
+.Course-group .card .text .p {
+	color: #999999;
+	font-size: 13px;
+	margin: 0px;
+	text-align: center;
+	padding: 5px;
+}
+
+.Course-group .card .icon-box {
+	margin: 10px;
+	padding: 12px;
+	background-color: #7980c5;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.Course-group .card .icon-box .span {
+	font-size: small;
+	font-weight: 500;
+	color: #fff;
+}
+.cartBtn {
+	width: 95%;
+	height: 40px;
+	border: none;
+	border-radius: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 7px;
+	color: white;
+	font-weight: 500;
+	position: relative;
+	border-radius: 10px;
+	background-color: #05b3b3;
+	box-shadow: 0 20px 30px -7px rgba(27, 27, 27, 0.112);
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	overflow: hidden;
+}
+.cartBtn:hover {
+	background-color: #017373;
+}
+.cartBtn .cart {
+	z-index: 2;
+}
+
+.cartBtn:active {
+	transform: scale(0.96);
+}
+
+.cartBtn .product {
+	position: absolute;
+	width: 12px;
+	border-radius: 3px;
+	content: "";
+	left: 13%;
+	bottom: 18px;
+	opacity: 0;
+	z-index: 1;
+	fill: rgb(211, 211, 211);
+}
+.cartBtn span {
+	font-size: 14px !important;
+}
+.cartBtn:hover .product {
+	animation: slide-in-top 1.2s cubic-bezier(0.55, 0.46, 0.45, 0.94) both;
+}
+@keyframes slide-in-top {
+	0% {
+		transform: translateY(-50px);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(0) rotate(-130deg);
+		opacity: 1;
+	}
+}
+
+.cartBtn:hover .cart {
+	animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-in-left {
+	0% {
+		transform: translateX(-10px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@media (max-width: 768px) {
+	.Course-group .wrapper {
+		width: 95%;
+		padding: 1em;
+	}
+
+	.Course-group .button {
+		font-size: 0.9em;
+		padding: 0.6em 1.2em;
+	}
+	.Course-group .button-group {
+		justify-content: center;
+	}
+	.divider-main {
+		margin-top: 50px;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.Course-group .slide{
+		display: flex;
+		justify-content: center;
+	}
+	.Course-group .slide .card{
+		width: 80%;
+	}
+}
+/* END Group Filter */
+
 /* Start Accordion */
 .Course-list {
 	width: 100%;
-	margin-top: 20vh;
+	margin-top: 10vh;
 }
 .Course-list .container {
 	/* width: 75%; */
@@ -1822,7 +2084,7 @@ a:hover {
 .pre-course-banner .button:hover {
 	background: #025c5c;
 }
-.pre-course-banner a:hover{
+.pre-course-banner a:hover {
 	color: inherit !important;
 }
 @keyframes float {

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+			rel="stylesheet" />
+		<style>
+			body {
+				background: #eee;
+				font-family: sans-serif;
+				font-size: 1rem;
+				color: #000;
+				margin: 0;
+				padding: 0;
+			}
+			.categories {
+				text-align: center;
+			}
+			.categories span {
+				padding: 10px 32px;
+				cursor: pointer;
+			}
+			.categories span.active {
+				font-weight: bold;
+			}
+			.swiper-container {
+				width: 100%;
+				height: auto;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.non-swiper-slide {
+				display: none !important;
+			}
+			.swiper-slide {
+				display: block;
+				text-align: center;
+				font-size: 2rem;
+				background: #fff;
+				height: 80vh;
+
+				/* Center slide text vertically */
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="categories">
+			<span data-filter="all">All</span>
+			<span data-filter="fruit">Fruit</span>
+			<span data-filter="veggie">Veggie</span>
+		</p>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" data-filter="fruit">Apple</div>
+				<div class="swiper-slide" data-filter="fruit">Grape</div>
+				<div class="swiper-slide" data-filter="veggie">Green bean</div>
+				<div class="swiper-slide" data-filter="veggie">veggie 1</div>
+				<div class="swiper-slide" data-filter="veggie">veggie 2</div>
+				<div class="swiper-slide" data-filter="fruit">Pear</div>
+				<div class="swiper-slide" data-filter="fruit">Pumpkin</div>
+				<div class="swiper-slide" data-filter="veggie">Radish</div>
+				<div class="swiper-slide" data-filter="fruit">Watermelon</div>
+				<div class="swiper-slide" data-filter="fruit">Lemon</div>
+				<div class="swiper-slide" data-filter="fruit">Strawberry</div>
+			</div>
+
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+
+			<!-- If we need navigation buttons -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+
+			<!-- If we need scrollbar -->
+			<!--     <div class="swiper-scrollbar"></div> -->
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.1.0/swiper-bundle.min.js"></script>
+		<script>
+			const config = {
+				pagination: ".swiper-pagination",
+				slidesPerView: 1,
+				slidesPerColumn: 1,
+				paginationClickable: true,
+				spaceBetween: 20,
+				loop: true,
+				autoHeight: false,
+				centerInsufficientSlides: true,
+				centeredSlidesBounds: true,
+				cssMode: false,
+				mousewheel: true,
+				keyboard: true,
+				breakpoints: {
+					0: {
+						slidesPerView: 1,
+						slidesPerGroup: 1,
+						slidesPerColumn: 1,
+						spaceBetween: 20,
+					},
+					768: {
+						slidesPerView: 3,
+						slidesPerGroup: 3,
+						slidesPerColumn: 1,
+						spaceBetween: 30,
+					},
+					960: {
+						slidesPerView: 4,
+						slidesPerGroup: 4,
+						slidesPerColumn: 1,
+						spaceBetween: 40,
+					},
+				},
+				// If we need pagination
+				pagination: {
+					el: ".swiper-pagination",
+					type: "fraction",
+				},
+				// Navigation arrows
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+
+				// And if we need scrollbar
+				// scrollbar: {
+				//   el: '.swiper-scrollbar',
+				// },
+			};
+			var swiper = new Swiper(".swiper-container", config);
+			const filters = document.querySelectorAll(".categories span");
+			function updateFilter(activeFilter) {
+				const filters = document.querySelectorAll(".categories span");
+				if (!activeFilter) {
+					filters[0].classList.add("active");
+					activeFilter = filters[0];
+				}
+				const filter = activeFilter.innerText.toLowerCase();
+				Array.prototype.forEach.call(filters, function (el) {
+					if (el === activeFilter) {
+						el.classList.add("active");
+					} else {
+						el.classList.remove("active");
+					}
+				});
+			}
+			Array.prototype.forEach.call(filters, function (_filter) {
+				_filter.addEventListener("click", function (e) {
+					const self = e.target;
+					const filter = self
+						.getAttribute("data-filter")
+						.toLowerCase();
+					updateFilter(self);
+					console.log("filter:", filter);
+					if (filter == "all") {
+						Array.prototype.forEach.call(
+							document.querySelectorAll(
+								".swiper-container [data-filter]"
+							),
+							function (_item) {
+								_item.classList.remove("non-swiper-slide");
+								_item.classList.add("swiper-slide");
+							}
+						);
+						swiper.destroy();
+						swiper = new Swiper(".swiper-container", config);
+					} else {
+						Array.prototype.forEach.call(
+							document.querySelectorAll(
+								".swiper-container [data-filter]:not([data-filter='" +
+									filter +
+									"'])"
+							),
+							(el) => {
+								el.classList.add("non-swiper-slide");
+								el.classList.remove("swiper-slide");
+								el.removeAttribute("style");
+							}
+						);
+						Array.prototype.forEach.call(
+							document.querySelectorAll(
+								".swiper-container [data-filter='" +
+									filter +
+									"']"
+							),
+							(el) => {
+								el.classList.remove("non-swiper-slide");
+								el.classList.add("swiper-slide");
+								el.removeAttribute("style");
+							}
+						);
+						swiper.destroy();
+						swiper = new Swiper(".swiper-container", config);
+					}
+				});
+			});
+			updateFilter(null);
+		</script>
+	</body>
+</html>
