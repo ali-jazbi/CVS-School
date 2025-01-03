@@ -1343,6 +1343,12 @@ a:hover {
 	}
 	.Course-group .button-group {
 		justify-content: center;
+		flex-wrap: nowrap;
+	}
+	.Course-group .button-group button{
+		padding: 0.6em 1em;
+		font-size: 9px !important;
+		white-space: nowrap;
 	}
 	.divider-main {
 		margin-top: 50px;
@@ -1363,9 +1369,6 @@ a:hover {
 .Course-list {
 	width: 100%;
 	margin-top: 10vh;
-}
-.Course-list .container {
-	/* width: 75%; */
 }
 .Course-list .container .col-lg-4 {
 	padding: 30px 0px;
