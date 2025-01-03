@@ -130,7 +130,6 @@
 .course-header {
 	display: flex;
 	align-items: center;
-	margin-bottom: 1rem;
 }
 
 .course-icon {
@@ -219,7 +218,10 @@
 	font-weight: 600;
 	transition: all 0.3s ease;
 }
-
+.course-card .btn:hover{
+	background: var(--secondary-color);
+	color: white;
+}
 .btn-primary:hover {
 	background: var(--secondary-color);
 	transform: translateY(-2px);
