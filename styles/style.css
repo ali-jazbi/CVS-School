@@ -1344,10 +1344,12 @@ a:hover {
 	.Course-group .button-group {
 		justify-content: center;
 		flex-wrap: nowrap;
+		overflow-x:scroll;
+		overflow-y:hidden;
 	}
 	.Course-group .button-group button{
 		padding: 0.6em 1em;
-		font-size: 9px !important;
+		font-size: 12px !important;
 		white-space: nowrap;
 	}
 	.divider-main {
