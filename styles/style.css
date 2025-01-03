@@ -1353,7 +1353,7 @@ a:hover {
 		scrollbar-width: thin;
 		-webkit-overflow-scrolling: touch;
 		padding-bottom: 18px;
-		padding-left: 10px; /* اضافه کردن پدینگ از سمت چپ */
+		padding-left: 30px; /* اضافه کردن پدینگ از سمت چپ */
 		margin-bottom: 10px; /* اضافه کردن مارجین پایین */
 	}
 
@@ -1374,7 +1374,6 @@ a:hover {
 
 	/* اضافه کردن فاصله بین دکمه‌ها و تنظیم اندازه */
 	.Course-group .button-group .button {
-		margin-right: 10px;
 		flex: 0 0 auto;
 		white-space: nowrap;
 		padding: 8px 15px;
