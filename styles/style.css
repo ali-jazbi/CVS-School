@@ -1388,7 +1388,7 @@ a:hover {
 
 	/* اضافه کردن استایل هاور برای دکمه‌ها */
 	.Course-group .button-group .button:hover {
-		transition: background-color 0.3s ease;
+		transition: all 0.3s ease-in-out;
 	}
 	.Course-group .button-group button {
 		padding: 0.6em 1em;
