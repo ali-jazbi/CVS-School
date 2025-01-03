@@ -206,8 +206,15 @@ a:hover {
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
+.mega-menu-link {
+	border-bottom: 2px solid #c6c6c6 !important;
+	transition: all ease-in-out 0.2s;
+	width: 80% !important;
+}
 .mega-menu-link:hover {
 	color: #008545 !important;
+	border-bottom: 2px solid #05b3b3 !important;
+	color: #05b3b3 !important;
 }
 
 .mega-menu-section h6 {
@@ -230,7 +237,7 @@ a:hover {
 	align-items: center;
 }
 .nav-mobile .offcanvas {
-	width: 65%;
+	width: 75%;
 }
 .nav-mobile .offcanvas .offcanvas-header {
 	box-shadow: 0px 0px 4px 0px #00000062;
@@ -286,7 +293,6 @@ a:hover {
 	width: var(--size-button);
 	height: var(--size-button);
 	bottom: 5px;
-	right: 6%;
 	padding: 8px;
 	pointer-events: none;
 }
@@ -301,7 +307,7 @@ a:hover {
 	width: 30px;
 	height: 30px;
 	bottom: 5px;
-	right: 55%;
+	right: 46%;
 	padding: 8px;
 	cursor: pointer;
 }
@@ -329,6 +335,16 @@ a:hover {
 	min-width: 11px;
 	height: 12px;
 	color: white !important;
+}
+.nav-mobile .custom-nav-link {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	box-shadow: 0px 3px 1px 0px #76767621;
+	margin-bottom: 30px !important;
+}
+.nav-mobile .bi-chevron-left {
+	padding-right: 20px !important;
 }
 /* END Navbar MOBILE */
 
@@ -1124,7 +1140,6 @@ a:hover {
 .Course-group .button {
 	padding: 0.55em 1em;
 	background-color: transparent;
-	border-bottom: 5px solid transparent;
 	color: #005a5a;
 	border: none;
 	border-radius: 5px;
@@ -1132,6 +1147,8 @@ a:hover {
 	transition: all 0.3s ease-in-out;
 	font-family: yekan-bakh-regular;
 	margin-bottom: -2px;
+	border-bottom: 5px solid transparent;
+	box-shadow: 0 4px 6px white;
 }
 .Course-group .divider {
 	width: 18%;
