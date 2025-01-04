@@ -247,7 +247,6 @@ a:hover {
 	color: black;
 	font-family: Yekan-bakh-SemiBold;
 	font-size: 14px !important;
-	margin-bottom: 12px;
 }
 
 .nav-mobile .container {
@@ -336,15 +335,21 @@ a:hover {
 	height: 12px;
 	color: white !important;
 }
-.nav-mobile .custom-nav-link {
+.nav-mobile .custom-nav-link , .custom-sub-menu div {
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
 	box-shadow: 0px 3px 1px 0px #76767621;
-	margin-bottom: 30px !important;
+	margin-bottom: 17px !important;
+	height: 30px;
+}
+.nav-mobile .custom-nav-link div, .custom-main-menu .nav-item .nav-link {
+	font-size: 12px !important;
+	color: #646464 !important;
 }
 .nav-mobile .bi-chevron-left {
 	padding-right: 20px !important;
+	font-size: 11px;
 }
 /* END Navbar MOBILE */
 
