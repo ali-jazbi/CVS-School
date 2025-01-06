@@ -335,7 +335,8 @@ a:hover {
 	height: 12px;
 	color: white !important;
 }
-.nav-mobile .custom-nav-link , .custom-sub-menu div {
+.nav-mobile .custom-nav-link,
+.custom-sub-menu div {
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
@@ -343,7 +344,8 @@ a:hover {
 	margin-bottom: 17px !important;
 	height: 30px;
 }
-.nav-mobile .custom-nav-link div, .custom-main-menu .nav-item .nav-link {
+.nav-mobile .custom-nav-link div,
+.custom-main-menu .nav-item .nav-link {
 	font-size: 12px !important;
 	color: #646464 !important;
 }
@@ -1188,170 +1190,66 @@ a:hover {
 	color: #05b3b3;
 }
 .Course-group .card {
-	width: 100%;
-	background: white;
-	border-radius: 10px;
-	box-shadow: 0px 0px 14px -2px #6f6e6e55;
-	transition: 0.2s ease-in-out;
+	width: 300px;
+	font-size: 14px;
 }
-
-.Course-group .card:hover {
-	cursor: pointer;
-	box-shadow: 0px 0px 14px -2px #6f6e6ed3;
+.Course-group .card .card-title {
+	font-size: 18px;
 }
-
-.Course-group .card .img {
-	width: 100%;
-	height: 20vh;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	background: linear-gradient(#05b3b3, #9198e5);
-	display: flex;
-	align-items: top;
-	justify-content: right;
-	position: relative;
-}
-.Course-group .card .img img {
-	width: 100%;
-	height: 100%;
-	z-index: 1;
+.Course-group .card-img-top {
+	height: 150px;
 	object-fit: cover;
-	border-radius: 0;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
 }
-.Course-group .card .save {
-	transition: 0.2s ease-in-out;
-	border-radius: 10px;
-	margin: 10px;
-	width: 30px;
-	height: 30px;
+.Course-group .action-buttons {
 	position: absolute;
-	background-color: #ffffff;
+	bottom: -20px;
+	left: 16px;
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: 2;
+	gap: 8px;
 }
-
-.Course-group .card .save svg {
-	transition: all 0.2s ease-in-out;
-	width: 15px;
-	height: 15px;
-}
-
-.Course-group .card .save:hover svg {
-	fill: #05b3b3 !important;
-}
-
-.Course-group .card .text {
-	padding: 23px 20px 10px 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: space-around;
-}
-
-.Course-group .card .text .h3 {
-	font-size: 17px !important;
-	font-weight: 600;
-	color: black;
-	text-align: center;
-}
-
-.Course-group .card .text .p {
-	color: #999999;
-	font-size: 13px;
-	margin: 0px;
-	text-align: center;
-	padding: 5px;
-}
-
-.Course-group .card .icon-box {
-	margin: 10px;
-	padding: 12px;
-	background-color: #7980c5;
-	border-radius: 10px;
-	text-align: center;
-}
-
-.Course-group .card .icon-box .span {
-	font-size: small;
-	font-weight: 500;
-	color: #fff;
-}
-.cartBtn {
-	width: 95%;
+.Course-group .action-btn {
+	width: 40px;
 	height: 40px;
-	border: none;
-	border-radius: 0px;
+	border-radius: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 7px;
-	color: white;
-	font-weight: 500;
-	position: relative;
-	border-radius: 10px;
-	background-color: #05b3b3;
-	box-shadow: 0 20px 30px -7px rgba(27, 27, 27, 0.112);
+	transition: transform 0.2s;
+}
+.Course-group .action-btn {
+	background-color: #05b3b3 !important;
+	color: white !important;
+}
+.Course-group .action-btn:hover {
+	transform: translateY(-2px);
+}
+.Course-group .social-btn {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.2s;
+}
+.Course-group .social-btn:hover {
+	transform: scale(1.1);
+}
+.Course-group .button-card button {
+	padding: 0.2em 1.5em;
+}
+.Course-group .button-card button:first-child {
+	background-color: #05b3b3 !important;
+	color: white !important;
 	transition: all 0.3s ease-in-out;
-	cursor: pointer;
-	overflow: hidden;
+	width: 65%;
+	font-size: 14px;
 }
-.cartBtn:hover {
-	background-color: #017373;
+.Course-group .button-card button:first-child:hover {
+	background-color: #007777 !important;
 }
-.cartBtn .cart {
-	z-index: 2;
-}
-
-.cartBtn:active {
-	transform: scale(0.96);
-}
-
-.cartBtn .product {
-	position: absolute;
-	width: 12px;
-	border-radius: 3px;
-	content: "";
-	left: 13%;
-	bottom: 18px;
-	opacity: 0;
-	z-index: 1;
-	fill: rgb(211, 211, 211);
-}
-.cartBtn span {
-	font-size: 14px !important;
-}
-.cartBtn:hover .product {
-	animation: slide-in-top 1.2s cubic-bezier(0.55, 0.46, 0.45, 0.94) both;
-}
-@keyframes slide-in-top {
-	0% {
-		transform: translateY(-50px);
-		opacity: 1;
-	}
-
-	100% {
-		transform: translateY(0) rotate(-130deg);
-		opacity: 1;
-	}
-}
-
-.cartBtn:hover .cart {
-	animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@keyframes slide-in-left {
-	0% {
-		transform: translateX(-10px);
-		opacity: 0;
-	}
-
-	100% {
-		transform: translateX(0);
-		opacity: 1;
-	}
+.Course-group .card-title {
+	line-height: 2;
 }
 @media (max-width: 768px) {
 	.Course-group .wrapper {

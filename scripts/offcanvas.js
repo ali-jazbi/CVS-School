@@ -35,6 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
  * @listens DOMContentLoaded
  * @returns {void}
  */
+const tooltipTriggerList = document.querySelectorAll(
+	'[data-bs-toggle="tooltip"]'
+);
+const tooltipList = [...tooltipTriggerList].map(
+	(tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+);
 document.addEventListener("DOMContentLoaded", function () {
 	const menuLinks = document.querySelectorAll(".custom-nav-link");
 	const mainMenu = document.querySelector(".custom-main-menu");
