@@ -1356,6 +1356,37 @@
 							</div>
 						</div>
 					</div>
+					<script>
+						document.addEventListener("DOMContentLoaded", () => {
+							const modal = document.getElementById("shareModal");
+							const shareLinkInput = document.getElementById("shareLink");
+
+							modal.addEventListener("show.bs.modal", (event) => {
+								const button = event.relatedTarget;
+								const cardId = button.getAttribute("data-card-id");
+								shareLinkInput.value = `https://example.com/course/${cardId}`;
+							});
+						});
+
+						function copyLink() {
+							const shareLinkInput = document.getElementById("shareLink");
+							shareLinkInput.select();
+							document.execCommand("copy");
+							alert("لینک کپی شد!");
+						}
+
+						function shareOnTelegram() {
+							const shareLink = document.getElementById("shareLink").value;
+							const telegramUrl = `https://t.me/share/url?url=${encodeURIComponent(shareLink)}`;
+							window.open(telegramUrl, '_blank');
+						}
+
+						function shareOnWhatsApp() {
+							const shareLink = document.getElementById("shareLink").value;
+							const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareLink)}`;
+							window.open(whatsappUrl, '_blank');
+						}
+					</script>
 			</div>
 			<!-- Course-list -->
 			<div class="Course-list" dir="ltr">
@@ -1936,25 +1967,7 @@
 				});
 			});
 		</script>
-		<script>
-			document.addEventListener("DOMContentLoaded", () => {
-				const modal = document.getElementById("shareModal");
-				const shareLinkInput = document.getElementById("shareLink");
 
-				modal.addEventListener("show.bs.modal", (event) => {
-					const button = event.relatedTarget;
-					const cardId = button.getAttribute("data-card-id");
-					shareLinkInput.value = `https://example.com/course/${cardId}`;
-				});
-			});
-
-			function copyLink() {
-				const shareLinkInput = document.getElementById("shareLink");
-				shareLinkInput.select();
-				document.execCommand("copy");
-				alert("لینک کپی شد!");
-			}
-		</script>
 		<script src="./plugins/fontawesome/script.js"></script>
 		<script src="./scripts/shopinng.js"></script>
 		<script src="./scripts/dropdown.js"></script>
