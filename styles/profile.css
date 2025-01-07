@@ -277,7 +277,10 @@
 	border-radius: 2px;
 }
 
-@media (max-width: 762px) {
+@media (max-width: 1024px) {
+	.col-12{
+		margin-bottom: 20px;
+	}
 	.profile-row {
 		height: auto;
 		padding: 1rem;
