@@ -1172,7 +1172,6 @@ a:hover {
 .Course-group .slider2 {
 	margin-bottom: 2em;
 }
-
 .Course-group .slide {
 	padding: 10px;
 	display: flex;
@@ -1185,12 +1184,41 @@ a:hover {
 	border-radius: 10px;
 	transition: transform 0.3s ease;
 }
+
 .Course-group .slick-prev:before,
 .Course-group .slick-next:before {
 	color: #05b3b3;
 }
+.slick-prev:before,
+.slick-next:before {
+	font-size: 30px;
+	opacity: 1;
+	color: white;
+}
+
+/* استایل برای نقطه‌های نشانگر */
+.slick-dots {
+	bottom: -30px;
+}
+.slick-dots li {
+	padding: 0 20px;
+}
+.slick-dots li button:before {
+	content: "";
+	width: 40px;
+	height: 5px;
+	background-color: #ccc;
+	opacity: 0.5;
+	border-radius: 10px !important;
+}
+
+.slick-dots li.slick-active button:before {
+	background-color: #05b3b3;
+	opacity: 1;
+}
+
 .Course-group .card {
-	width: 300px;
+	width: 250px;
 	font-size: 14px;
 }
 .Course-group .card .card-title {
@@ -1208,24 +1236,28 @@ a:hover {
 	gap: 8px;
 }
 .Course-group .action-btn {
-	width: 40px;
-	height: 40px;
+	width: 35px;
+	height: 35px;
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	transition: transform 0.2s;
 }
-.Course-group .action-btn {
+.Course-group .action-btn:first-child {
 	background-color: #05b3b3 !important;
+	color: white !important;
+}
+.Course-group .action-btn:last-child {
+	background-color: #8bb5bd !important;
 	color: white !important;
 }
 .Course-group .action-btn:hover {
 	transform: translateY(-2px);
 }
 .Course-group .social-btn {
-	width: 48px;
-	height: 48px;
+	width: 38px;
+	height: 38px;
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
@@ -1325,6 +1357,17 @@ a:hover {
 	}
 	.Course-group .slide .card {
 		width: 80%;
+	}
+	.Course-group .slick-prev{
+		right: -10px !important;
+	}
+	.Course-group .slick-next{
+		left: -5px !important;
+	}
+}
+@media (min-width: 1024px) {
+	.Course-group .slick-prev {
+		right: -45px !important;
 	}
 }
 /* END Group Filter */
