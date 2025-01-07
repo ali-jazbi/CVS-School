@@ -1358,10 +1358,10 @@ a:hover {
 	.Course-group .slide .card {
 		width: 80%;
 	}
-	.Course-group .slick-prev{
+	.Course-group .slick-prev {
 		right: -10px !important;
 	}
-	.Course-group .slick-next{
+	.Course-group .slick-next {
 		left: -5px !important;
 	}
 }
@@ -1377,8 +1377,9 @@ a:hover {
 	width: 100%;
 	margin-top: 10vh;
 }
+
 .Course-list .container .col-lg-4 {
-	padding: 30px 0px;
+	padding: 30px 0px 70px;
 }
 .Course-list-bg {
 	background-color: #f5f5f5;
@@ -1386,6 +1387,7 @@ a:hover {
 .accordion .accordion-item {
 	border: none;
 	background-color: #f5f5f5;
+	width: 80%;
 }
 .accordion .accordion-item button[aria-expanded="true"] {
 	border-bottom: 1px solid #05b3b3;
@@ -1394,7 +1396,7 @@ a:hover {
 	position: relative;
 	display: block;
 	text-align: left;
-	width: 80%;
+	width: 100%;
 	padding: 2em 0 0.4em 0;
 	color: #7288a2;
 	font-size: 1.15rem;
@@ -1457,17 +1459,46 @@ a:hover {
 	will-change: opacity, max-height;
 }
 .accordion .accordion-content {
-	width: 65%;
+	width: 300px;
 	opacity: 0;
 	max-height: 0;
 	overflow: hidden;
+	display: flex;
+	justify-content: center;
 	transition: opacity 200ms linear, max-height 200ms linear;
 	will-change: opacity, max-height;
 }
-.accordion .accordion-content p {
-	font-size: 0.95rem;
-	font-weight: 300;
-	margin: 1em 0;
+.accordion .accordion-content ul {
+	width: 100%;
+	padding: 10px 0;
+	overflow-y: auto;
+}
+.accordion .accordion-content ul::-webkit-scrollbar {
+	width: 6px; /* Adjust the width for a lighter appearance */
+}
+
+.accordion .accordion-content ul::-webkit-scrollbar-thumb {
+	background-color: rgba(5, 179, 179, 0.3); /* Lighter color for the thumb */
+	border-radius: 3px;
+}
+
+.accordion .accordion-content ul::-webkit-scrollbar-track {
+	background-color: rgba(0, 0, 0, 0.05); /* Lighter color for the track */
+	border-radius: 3px;
+}
+.accordion .accordion-content ul {
+	width: 100%;
+	padding: 10px 0;
+	margin-top: 10px;
+}
+.accordion .accordion-content ul li {
+	font-size: 14px;
+	margin-bottom: 10px;
+	color: rgb(76, 76, 76);
+}
+.accordion .accordion-content ul li i {
+	color: #05b3b368;
+	font-size: 11px;
 }
 .course-list-btn .btn {
 	background-color: #05b3b3;
