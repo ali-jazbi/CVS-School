@@ -1228,14 +1228,22 @@ a:hover {
 	height: 150px;
 	object-fit: cover;
 }
-.Course-group .action-buttons {
+.Course-group .action-buttons,
+.course-banner .action-buttons {
 	position: absolute;
 	bottom: -20px;
 	left: 16px;
 	display: flex;
 	gap: 8px;
 }
-.Course-group .action-btn {
+.course-banner .action-buttons {
+	position: static;
+}
+.bi-suit-heart-fill {
+	color: red;
+}
+.Course-group .action-btn,
+.course-banner .action-btn {
 	width: 35px;
 	height: 35px;
 	border-radius: 50%;
@@ -1252,8 +1260,14 @@ a:hover {
 	background-color: #8bb5bd !important;
 	color: white !important;
 }
-.Course-group .action-btn:hover {
+.Course-group .action-btn:hover,
+.course-banner .action-btn:hover {
 	transform: translateY(-2px);
+}
+.course-banner .action-btn {
+	background: transparent;
+	border: 1px solid #8bb5bd00;
+	color: white;
 }
 .Course-group .social-btn {
 	width: 38px;
