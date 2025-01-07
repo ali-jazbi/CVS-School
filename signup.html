@@ -542,6 +542,13 @@
 			<!-- Main Section -->
 			<section>
 				<div class="register-form">
+					<div
+						class="d-flex d-md-none justify-content-evenly switch-buttons">
+						<button class="btn login-switch-btn active">
+							ورود
+						</button>
+						<button class="btn signup-switch-btn">ثبت نام</button>
+					</div>
 					<div class="overlay" id="overlay">
 						<div class="sign-in" id="sign-in">
 							<h1>ورود به اکانت</h1>
@@ -688,6 +695,34 @@
 						</div>
 					</div>
 				</div>
+				<script>
+					document.addEventListener("DOMContentLoaded", function () {
+						if (window.innerWidth < 768) {
+							const signInButton =
+								document.querySelector(".login-switch-btn");
+							const signUpButton =
+								document.querySelector(".signup-switch-btn");
+							const signInForm =
+								document.getElementById("sign-in-info");
+							const signUpForm =
+								document.getElementById("sign-up-info");
+
+							signInButton.addEventListener("click", function () {
+								signInForm.classList.remove("d-none");
+								signUpForm.classList.add("d-none");
+								signInButton.classList.add("active");
+								signUpButton.classList.remove("active");
+							});
+
+							signUpButton.addEventListener("click", function () {
+								signUpForm.classList.remove("d-none");
+								signInForm.classList.add("d-none");
+								signUpButton.classList.add("active");
+								signInButton.classList.remove("active");
+							});
+						}
+					});
+				</script>
 			</section>
 			<!-- END Main Section -->
 			<!-- Footer Section  -->

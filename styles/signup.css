@@ -454,13 +454,28 @@ section {
 	}
 }
 @media (max-width: 762px) {
+	section {
+		background: white;
+	}
+	.switch-buttons {
+		background-color: white;
+		padding: 10px;
+		margin-bottom: 10px;
+		border-top-right-radius: 10px;
+		border-top-left-radius: 10px;
+	}
 	.register-form {
 		width: 90%;
 		height: auto;
 		min-height: var(--form-height);
-		margin: 20px auto;
 	}
-
+	.btn.active {
+		background-color: #05b3b3; /* رنگ سبز */
+		color: #fff; /* رنگ متن سفید */
+		font-weight: bold; /* ضخیم‌تر شدن متن */
+		transform: scale(1.05); /* کمی بزرگتر شدن دکمه */
+		transition: all 0.3s ease; /* انیمیشن برای تغییرات */
+	}
 	.register-form .overlay {
 		display: none; /* مخفی کردن overlay در حالت موبایل */
 	}
@@ -468,12 +483,12 @@ section {
 	.register-form .form .sign-in,
 	.register-form .form .sign-up {
 		width: 100%;
-		padding: 30px;
+		padding: 0px 30px;
 		position: absolute;
-		top: 0;
+		top: 0px;
 		left: 0;
 		right: 0;
-		height: 100%;
+		height: 90%;
 		transition: transform 0.5s ease-in-out;
 		background: #fff;
 		border-radius: 10px;
@@ -487,13 +502,13 @@ section {
 
 	.register-form .form .sign-up {
 		display: flex;
-		transform: translateY(100%);
+		transform: translateY(0);
 		z-index: 1;
 	}
 
 	/* حالت نمایش فرم ثبت نام */
 	.register-form.sign-up-mode .form .sign-in {
-		transform: translateY(-100%);
+		transform: translateY(0);
 		z-index: 1;
 	}
 
