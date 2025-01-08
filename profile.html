@@ -581,37 +581,177 @@
 					<div class="col-12 col-lg-3 d-flex justify-content-center">
 						<div class="glass-card content-card">
 							<div id="coursesContent">
-								<h3 class="section-title">آموزش های من</h3>
-								<div
-									class="course-card d-flex justify-content-between align-items-center">
-									<div class="course-header">
-										<div class="course-icon">
-											<i class="fab fa-python"></i>
+								<h3 class="section-title mb-2">آموزش های من</h3>
+								<div class="myCourse">
+									<div
+										class="course-card d-flex justify-content-between align-items-center">
+										<div class="course-header">
+											<div class="course-icon">
+												<i class="fab fa-python"></i>
+											</div>
+											<div>
+												<h5 class="mb-1">
+													دوره پایتون
+												</h5>
+												<small class="text-muted"
+													>24 جلسه - 8 ساعت</small
+												>
+											</div>
 										</div>
-										<div>
-											<h5 class="mb-1">دوره پایتون</h5>
-											<small class="text-muted"
-												>24 جلسه - 8 ساعت</small
-											>
-										</div>
+										<button
+											class="btn show-license"
+											data-license="9876-5432-1098-7654">
+											لایسنس
+										</button>
 									</div>
-									<button class="btn">مشاهده دوره</button>
-								</div>
 
-								<div
-									class="course-card d-flex justify-content-center align-items-center">
-									<div class="course-header">
-										<div class="course-icon">
-											<i class="fab fa-js"></i>
+									<div
+										class="course-card d-flex justify-content-center align-items-center">
+										<div class="course-header">
+											<div class="course-icon">
+												<i class="fab fa-js"></i>
+											</div>
+											<div>
+												<h5>دوره جاوااسکریپت</h5>
+												<small class="text-muted"
+													>32 جلسه - 12 ساعت</small
+												>
+											</div>
 										</div>
-										<div>
-											<h5>دوره جاوااسکریپت</h5>
-											<small class="text-muted"
-												>32 جلسه - 12 ساعت</small
-											>
+										<button
+											class="btn show-license"
+											data-license="9876-5432-1098-7654">
+											لایسنس
+										</button>
+									</div>
+									<div
+										class="course-card d-flex justify-content-between align-items-center">
+										<div class="course-header">
+											<div class="course-icon">
+												<i class="fab fa-java"></i>
+											</div>
+											<div>
+												<h5 class="mb-1">دوره جاوا</h5>
+												<small class="text-muted"
+													>24 جلسه - 8 ساعت</small
+												>
+											</div>
+										</div>
+										<button
+											class="btn show-license"
+											data-license="9876-5432-1098-7654">
+											لایسنس
+										</button>
+									</div>
+
+									<div
+										class="course-card d-flex justify-content-center align-items-center">
+										<div class="course-header">
+											<div class="course-icon">
+												<i class="fab fa-bootstrap"></i>
+											</div>
+											<div>
+												<h5>دوره بوت استرپ</h5>
+												<small class="text-muted"
+													>32 جلسه - 12 ساعت</small
+												>
+											</div>
+										</div>
+										<button
+											class="btn show-license"
+											data-license="9876-5432-1098-7654">
+											لایسنس
+										</button>
+									</div>
+								</div>
+								<h3 class="section-title mt-3 mb-2">
+									ذخیره های من
+								</h3>
+								<div class="myCourse">
+									<div
+										class="course-card d-flex justify-content-between align-items-center">
+										<div class="course-header">
+											<div class="course-icon">
+												<i class="fab fa-python"></i>
+											</div>
+											<h5 class="mb-1">دوره پایتون</h5>
+										</div>
+										<button class="btn">مشاهده</button>
+									</div>
+
+									<div
+										class="course-card d-flex justify-content-center align-items-center">
+										<div class="course-header">
+											<div class="course-icon">
+												<i class="fab fa-js"></i>
+											</div>
+											<h5 class="mb-1">
+												دوره جاوااسکریپت
+											</h5>
+										</div>
+										<button class="btn">مشاهده</button>
+									</div>
+									<div
+										class="course-card d-flex justify-content-between align-items-center">
+										<div class="course-header">
+											<div class="course-icon">
+												<i class="fab fa-java"></i>
+											</div>
+											<h5 class="mb-1">دوره جاوا</h5>
+										</div>
+										<button class="btn">مشاهده</button>
+									</div>
+
+									<div
+										class="course-card d-flex justify-content-center align-items-center">
+										<div class="course-header">
+											<div class="course-icon">
+												<i class="fab fa-bootstrap"></i>
+											</div>
+											<h5>دوره بوت استرپ</h5>
+										</div>
+										<button class="btn">مشاهده</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Modal for License -->
+						<div
+							class="modal fade"
+							id="licenseModal"
+							tabindex="-1"
+							aria-labelledby="licenseModalLabel"
+							aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h6
+											class="modal-title"
+											id="licenseModalLabel">
+											کد لایسنس
+										</h6>
+										<button
+											type="button"
+											class="btn-close"
+											data-bs-dismiss="modal"
+											aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<div class="input-group">
+											<input
+												type="text"
+												class="form-control"
+												id="licenseCode"
+												readonly />
+											<button
+												class="btn btn-outline-success"
+												type="button"
+												id="copyLicense">
+												<i class="fas fa-copy"></i>
+											</button>
 										</div>
 									</div>
-									<button class="btn">مشاهده دوره</button>
 								</div>
 							</div>
 						</div>

@@ -28,7 +28,14 @@ document
 document.addEventListener("DOMContentLoaded", function () {
 	const amountButtons = document.querySelectorAll(".amount-btn");
 	const customAmountInput = document.getElementById("customAmount");
+	const showLicenseButtons = document.querySelectorAll(".show-license");
+	const licenseModal = new bootstrap.Modal(
+		document.getElementById("licenseModal")
+	);
+	const licenseCodeInput = document.getElementById("licenseCode");
+	const copyLicenseButton = document.getElementById("copyLicense");
 
+	// کد مربوط به دکمه‌های مبلغ
 	amountButtons.forEach((button) => {
 		button.addEventListener("click", function () {
 			const isActive = this.classList.contains("active");
@@ -50,5 +57,20 @@ document.addEventListener("DOMContentLoaded", function () {
 	customAmountInput.addEventListener("focus", function () {
 		// Deactivate all buttons when custom input is focused
 		amountButtons.forEach((btn) => btn.classList.remove("active"));
+	});
+
+	// کد جدید برای نمایش و کپی کردن لایسنس
+	showLicenseButtons.forEach((button) => {
+		button.addEventListener("click", function () {
+			const license = this.getAttribute("data-license");
+			licenseCodeInput.value = license;
+			licenseModal.show();
+		});
+	});
+
+	copyLicenseButton.addEventListener("click", function () {
+		licenseCodeInput.select();
+		document.execCommand("copy");
+		alert("کد لایسنس کپی شد!");
 	});
 });

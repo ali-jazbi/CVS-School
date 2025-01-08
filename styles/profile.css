@@ -127,10 +127,14 @@
 .course-card {
 	border: none;
 	transition: all 0.3s ease;
-	box-shadow: 0 10px 10px rgba(198, 198, 198, 0.221);
-	margin-bottom: 20px;
+	box-shadow: 0 5px 10px rgba(198, 198, 198, 0.221);
+	margin-bottom: 10px;
 	padding: 10px;
 	border-radius: 5px;
+}
+.myCourse:last-child .course-card {
+	margin-bottom: 0 !important;
+	box-shadow: 0 3px 1px rgba(198, 198, 198, 0.221);
 }
 .course-card h5 {
 	font-size: 12px;
@@ -217,7 +221,7 @@
 		transform: rotate(360deg);
 	}
 }
-.btn-group{
+.btn-group {
 	height: 80px;
 }
 .amount-btn {
@@ -228,9 +232,9 @@
 	border: 1px solid #05b3b3;
 	color: #04646477;
 }
-.amount-btn:hover{
+.amount-btn:hover {
 	background-color: #05b3b3;
-    color: white;
+	color: white;
 }
 .amount-btn.active {
 	background-color: #099191;
@@ -268,6 +272,8 @@
 	white-space: nowrap;
 	height: 30px;
 	transition: all 0.3s ease;
+	display: flex;
+	justify-content: center;
 }
 .course-card .btn:hover {
 	background: var(--secondary-color);
@@ -299,6 +305,59 @@
 	border-radius: 2px;
 }
 
+.show-license:hover {
+	background-color: #099191;
+}
+
+#licenseCode {
+	font-size: 0.7em;
+	letter-spacing: 2px;
+}
+
+#copyLicense {
+	cursor: pointer;
+}
+.modal .input-group input {
+	border-radius: 0.5rem;
+	padding: 0.15rem 1rem;
+	font-size: 12px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	background: rgba(255, 255, 255, 0.9);
+}
+.modal button:last-child .fa-copy {
+	font-size: 12px;
+}
+.myCourse {
+	max-height: 28vh; /* افزایش حداکثر ارتفاع */
+	padding: 10px;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 10px; /* فاصله بین کارت‌ها */
+}
+
+.myCourse::-webkit-scrollbar {
+	width: 3px;
+}
+
+.myCourse::-webkit-scrollbar-thumb {
+	background-color: rgba(5, 179, 179, 0.3);
+}
+
+.myCourse::-webkit-scrollbar-track {
+	background-color: rgba(58, 59, 59, 0.05);
+	border-radius: 3px;
+}
+.myCourse:last-child {
+	margin-top: 0 !important;
+	padding-top: 0 !;
+}
+#coursesContent .section-title:last-child {
+	background-color: red;
+}
+.myCourse:last-child .btn {
+	border-bottom: 1px solid #05b3b3;
+}
 @media (max-width: 1024px) {
 	.col-12 {
 		margin-bottom: 20px;
