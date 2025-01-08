@@ -217,7 +217,29 @@
 		transform: rotate(360deg);
 	}
 }
+.btn-group{
+	height: 80px;
+}
+.amount-btn {
+	width: 40%;
+	height: 100%;
+	white-space: nowrap;
+	font-size: 11px;
+	border: 1px solid #05b3b3;
+	color: #04646477;
+}
+.amount-btn:hover{
+	background-color: #05b3b3;
+    color: white;
+}
+.amount-btn.active {
+	background-color: #099191;
+	color: white;
+}
 
+.amount-btn:focus {
+	box-shadow: none;
+}
 .form-control {
 	border-radius: 0.5rem;
 	padding: 0.75rem 1rem;
@@ -278,7 +300,7 @@
 }
 
 @media (max-width: 1024px) {
-	.col-12{
+	.col-12 {
 		margin-bottom: 20px;
 	}
 	.profile-row {

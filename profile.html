@@ -630,22 +630,49 @@
 									</div>
 									<form class="mt-4">
 										<div class="mb-4">
+											<div
+												class="btn-group w-100 mb-4 d-flex flex-column justify-content-between"
+												role="group"
+												aria-label="مبالغ پیش‌فرض">
+												<div
+													class="d-flex justify-content-evenly">
+													<button
+														type="button"
+														class="btn amount-btn"
+														data-amount="500000">
+														۵۰۰ هزار تومان
+													</button>
+													<button
+														type="button"
+														class="btn amount-btn"
+														data-amount="1000000">
+														۱ میلیون تومان
+													</button>
+												</div>
+												<div
+													class="d-flex justify-content-evenly">
+													<button
+														type="button"
+														class="btn amount-btn"
+														data-amount="1500000">
+														۱.۵ میلیون تومان
+													</button>
+													<button
+														type="button"
+														class="btn amount-btn"
+														data-amount="2000000">
+														۲ میلیون تومان
+													</button>
+												</div>
+											</div>
 											<label class="form-label"
 												>مبلغ شارژ (تومان)</label
 											>
 											<input
 												type="number"
 												class="form-control"
-												placeholder="مبلغ را وارد کنید" />
-										</div>
-										<div class="mb-4">
-											<label class="form-label"
-												>شماره کارت</label
-											>
-											<input
-												type="text"
-												class="form-control"
-												placeholder="شماره کارت را وارد کنید" />
+												id="customAmount"
+												placeholder="مبلغ دلخواه را وارد کنید" />
 										</div>
 										<button
 											type="submit"
