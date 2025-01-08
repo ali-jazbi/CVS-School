@@ -2,7 +2,8 @@ const initMegaMenu = () => {
 	// Define images for each section
 	const sectionImages = {
 		web: "https://itspectrumsolutions.com/wp-content/uploads/2024/04/1_pE2fOVDikEUwiQJlh4ggzg.jpeg",
-		apps: "https://cdn.nody.ir/files/2021/11/02/nody-%D8%B9%DA%A9%D8%B3-%D8%A7%D8%B2-%DA%A9%D9%84%D8%A7%D8%B3-%DA%A9%D9%86%DA%A9%D9%88%D8%B1-1635835098.jpg",
+		apps: "https://www.avanse.com/blogs/images/Website%20Blog%20Image%20(43).png",
+		school: "https://img.pikbest.com/wp/202348/online-education-course-promo-illustration-of-3d-rendered-laptop-computer-showcasing-the-concept-e-learning-or-through-an_9782686.jpg!bw700"
 	};
 
 	// Add hover events for services section
@@ -35,6 +36,16 @@ const initMegaMenu = () => {
 				document.getElementById(
 					"menuImage"
 				).style.backgroundImage = `url('${sectionImages.apps}')`;
+			});
+		});
+	// Add hover events for apps section
+	document
+		.querySelectorAll(".school-section .mega-menu-link")
+		.forEach((link) => {
+			link.addEventListener("mouseenter", () => {
+				document.getElementById(
+					"menuImage"
+				).style.backgroundImage = `url('${sectionImages.school}')`;
 			});
 		});
 };

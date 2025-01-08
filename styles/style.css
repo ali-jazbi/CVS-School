@@ -172,15 +172,15 @@ a:hover {
 
 /* Start Megamenu */
 .mega-menu {
-	width: 700px;
+	width: 1200px;
 	height: max-content;
 	position: absolute;
 	left: 0;
-	right: 0;
+	right: -140%;
 	padding: 2rem 0;
 	background: transparent;
-	opacity: 0;
-	visibility: hidden;
+	opacity: 1;
+	visibility: visible;
 	transform: translateY(-20px);
 	transition: all 0.3s ease;
 }
@@ -203,17 +203,67 @@ a:hover {
 	background-size: cover;
 	background-position: center;
 	transition: background-image 0.3s ease;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
 }
 .mega-menu-link {
-	border-bottom: 2px solid #c6c6c6 !important;
+	border-bottom: 1px solid #c6c6c67d !important;
 	transition: all ease-in-out 0.2s;
 	width: 80% !important;
+	font-size: 12px !important;
+}
+.mega-menu-link .dropdown-item{
+	font-size: 12px !important;
+}
+.school-section .dropdown {
+    position: relative;
+}
+
+.school-section .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1000;
+    display: none;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: right;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 0.25rem;
+}
+
+.school-section .dropdown-menu.show {
+    display: block;
+}
+
+.school-section .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+	بخدف
+}
+
+.school-section .dropdown-item:hover, .school-section .dropdown-item:focus {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #f8f9fa;
 }
 .mega-menu-link:hover {
 	color: #008545 !important;
-	border-bottom: 2px solid #05b3b3 !important;
+	border-color: #05b3b3 !important;
 	color: #05b3b3 !important;
 }
 
@@ -221,6 +271,7 @@ a:hover {
 	color: #008545;
 	font-weight: 600;
 	margin-bottom: 1rem;
+	font-size: 14px;
 }
 /* Default image */
 .mega-menu-img {
