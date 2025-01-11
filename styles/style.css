@@ -22,19 +22,19 @@ body {
 }
 @font-face {
 	font-family: yekan-bakh-Regular;
-	src: url("../font/YekanBakh-Regular.ttf");
+	src: url('../font/YekanBakh-Regular.ttf');
 }
 @font-face {
 	font-family: yekan-bakh-SemiBold;
-	src: url("../font/YekanBakh-SemiBold.ttf");
+	src: url('../font/YekanBakh-SemiBold.ttf');
 }
 @font-face {
 	font-family: yekan-bakh-bold;
-	src: url("../font/YekanBakh-Bold.ttf");
+	src: url('../font/YekanBakh-Bold.ttf');
 }
 @font-face {
 	font-family: yekan-bakh-ExtraBold;
-	src: url("../font/YekanBakh-ExtraBold.ttf");
+	src: url('../font/YekanBakh-ExtraBold.ttf');
 }
 /* NOTE custom scroll bar css */
 ::-webkit-scrollbar {
@@ -106,7 +106,7 @@ a:hover {
 }
 /* styling of animated border */
 .search-bar .form:before {
-	content: "";
+	content: '';
 	position: absolute;
 	background: var(--border-color);
 	transform: scaleX(0);
@@ -176,11 +176,11 @@ a:hover {
 	height: max-content;
 	position: absolute;
 	left: 0;
-	right: -140%;
+	right: -200% !important;
 	padding: 2rem 0;
 	background: transparent;
-	opacity: 1;
-	visibility: visible;
+	opacity: 0;
+	visibility: hidden;
 	transform: translateY(-20px);
 	transition: all 0.3s ease;
 }
@@ -206,60 +206,136 @@ a:hover {
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 }
+.badge-container {
+	width: 40px;
+	height: 20px;
+	animation: pulse 2s infinite;
+	/* rotate badge */
+}
+.badge {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #22c55e;
+	border-radius: 10px;
+	transform: rotate(-20deg);
+	position: relative;
+	filter: drop-shadow(0 0 10px rgba(34, 197, 94, 0.3));
+}
+
+.badge::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background: radial-gradient(
+		circle at center,
+		rgba(255, 255, 255, 0.2) 0%,
+		transparent 70%
+	);
+}
+
+.text {
+	color: white;
+	font-family: yekan-bakh-ExtraBold;
+	font-size: 8px;
+	font-weight: 900;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	letter-spacing: 1px;
+	position: relative;
+}
+
+.glow {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	filter: blur(10px);
+	background-color: #22c55e;
+	opacity: 0;
+	animation: glow 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes glow {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 0;
+	}
+}
 .mega-menu-link {
 	border-bottom: 1px solid #c6c6c67d !important;
 	transition: all ease-in-out 0.2s;
 	width: 80% !important;
 	font-size: 12px !important;
 }
-.mega-menu-link .dropdown-item{
+.mega-menu-link .dropdown-item {
 	font-size: 12px !important;
 }
 .school-section .dropdown {
-    position: relative;
+	position: relative;
 }
 
 .school-section .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    z-index: 1000;
-    display: none;
-    min-width: 10rem;
-    padding: 0.5rem 0;
-    margin: 0.125rem 0 0;
-    font-size: 1rem;
-    color: #212529;
-    text-align: right;
-    list-style: none;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: 0.25rem;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	z-index: 1000;
+	display: none;
+	min-width: 10rem;
+	padding: 0.5rem 0;
+	margin: 0.125rem 0 0;
+	font-size: 1rem;
+	color: #212529;
+	text-align: right;
+	list-style: none;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 0.25rem;
 }
 
 .school-section .dropdown-menu.show {
-    display: block;
+	display: block;
 }
 
 .school-section .dropdown-item {
-    display: block;
-    width: 100%;
-    padding: 0.25rem 1.5rem;
-    clear: both;
-    font-weight: 400;
-    color: #212529;
-    text-align: inherit;
-    white-space: nowrap;
-    background-color: transparent;
-    border: 0;
-	بخدف
+	display: block;
+	width: 100%;
+	padding: 0.25rem 1.5rem;
+	clear: both;
+	font-weight: 400;
+	color: #212529;
+	text-align: inherit;
+	white-space: nowrap;
+	background-color: transparent;
+	border: 0;
 }
 
-.school-section .dropdown-item:hover, .school-section .dropdown-item:focus {
-    color: #16181b;
-    text-decoration: none;
-    background-color: #f8f9fa;
+.school-section .dropdown-item:hover,
+.school-section .dropdown-item:focus {
+	color: #16181b;
+	text-decoration: none;
+	background-color: #f8f9fa;
 }
 .mega-menu-link:hover {
 	color: #008545 !important;
@@ -275,7 +351,7 @@ a:hover {
 }
 /* Default image */
 .mega-menu-img {
-	background-image: url("https://itspectrumsolutions.com/wp-content/uploads/2024/04/1_pE2fOVDikEUwiQJlh4ggzg.jpeg");
+	background-image: url('https://itspectrumsolutions.com/wp-content/uploads/2024/04/1_pE2fOVDikEUwiQJlh4ggzg.jpeg');
 }
 /* End Megamenu */
 /* START Navbar MOBILE */
@@ -797,7 +873,7 @@ a:hover {
 		height: auto;
 		padding: 20px;
 	}
-	.main-form .form__input[type="password"] {
+	.main-form .form__input[type='password'] {
 		width: 100%; /* عرض کامل */
 	}
 
@@ -1041,7 +1117,7 @@ a:hover {
 	}
 }
 .banner::after {
-	content: "";
+	content: '';
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1112,7 +1188,7 @@ a:hover {
 }
 
 .hover-underline-animation:after {
-	content: "";
+	content: '';
 	position: absolute;
 	width: 130%;
 	transform: scaleX(0);
@@ -1255,7 +1331,7 @@ a:hover {
 	padding: 0 20px;
 }
 .slick-dots li button:before {
-	content: "";
+	content: '';
 	width: 40px;
 	height: 5px;
 	background-color: #ccc;
@@ -1454,7 +1530,7 @@ a:hover {
 	background-color: #f5f5f5;
 	width: 80%;
 }
-.accordion .accordion-item button[aria-expanded="true"] {
+.accordion .accordion-item button[aria-expanded='true'] {
 	border-bottom: 1px solid #05b3b3;
 }
 .accordion button {
@@ -1498,7 +1574,7 @@ a:hover {
 .accordion button .icon::before {
 	display: block;
 	position: absolute;
-	content: "";
+	content: '';
 	top: 5px;
 	left: 5px;
 	width: 10px;
@@ -1508,16 +1584,16 @@ a:hover {
 	transform: rotate(45deg);
 	transition: all 0.3s ease-in-out;
 }
-.accordion button[aria-expanded="true"] .icon::before {
+.accordion button[aria-expanded='true'] .icon::before {
 	transform: rotate(-135deg);
 }
-.accordion button[aria-expanded="true"] {
+.accordion button[aria-expanded='true'] {
 	color: #05b3b3;
 }
-.accordion button[aria-expanded="true"] .icon::after {
+.accordion button[aria-expanded='true'] .icon::after {
 	width: 0;
 }
-.accordion button[aria-expanded="true"] + .accordion-content {
+.accordion button[aria-expanded='true'] + .accordion-content {
 	opacity: 1;
 	max-height: 10rem;
 	transition: all 200ms linear;
@@ -1618,7 +1694,7 @@ a:hover {
 /* Start Points */
 .points {
 	margin-top: 90px;
-	background-image: url("../images/wave-haikei.svg");
+	background-image: url('../images/wave-haikei.svg');
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: 0 100%;
@@ -1651,7 +1727,7 @@ a:hover {
 	background-color: transparent;
 }
 .points h4 span::before {
-	content: "";
+	content: '';
 	position: absolute;
 	top: 0;
 	left: -2px;
@@ -1682,7 +1758,7 @@ a:hover {
 }
 
 .points .row:nth-child(3) h4 span::before {
-	content: "";
+	content: '';
 	position: absolute;
 	left: 7%;
 	top: 30%;
@@ -1725,7 +1801,7 @@ a:hover {
 .points .tooltip::before {
 	background-color: #05b3b3;
 	position: absolute;
-	content: "";
+	content: '';
 	height: 0.6em;
 	width: 0.6em;
 	bottom: -0.2em;
@@ -1836,7 +1912,7 @@ a:hover {
 	z-index: 1;
 }
 .course-banner h2 span::before {
-	content: "";
+	content: '';
 	position: absolute;
 	left: 0%;
 	top: 70%;
@@ -1887,7 +1963,7 @@ a:hover {
 
 .course-banner .button::after {
 	position: absolute;
-	content: "";
+	content: '';
 	width: 0;
 	height: 0;
 	border: 10px solid transparent;
@@ -2063,7 +2139,7 @@ a:hover {
 	align-items: center;
 }
 .course-roadmap .row:last-child .teacher .image-container::after {
-	content: "";
+	content: '';
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -2387,7 +2463,7 @@ a:hover {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	background-image: url("../images/layered-peaks-haikei.svg");
+	background-image: url('../images/layered-peaks-haikei.svg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: bottom;

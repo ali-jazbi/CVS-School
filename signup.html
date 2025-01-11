@@ -1,13 +1,25 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html
+	lang="fa"
+	dir="rtl">
 	<head>
 		<!-- Required meta tags -->
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="author" content="Ali Jazbi" />
-		<meta http-equiv="cache-control" content="no-cache" />
-		<meta http-equiv="expires" content="0" />
-		<meta http-equiv="pragma" content="no-cache" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1" />
+		<meta
+			name="author"
+			content="Ali Jazbi" />
+		<meta
+			http-equiv="cache-control"
+			content="no-cache" />
+		<meta
+			http-equiv="expires"
+			content="0" />
+		<meta
+			http-equiv="pragma"
+			content="no-cache" />
 		<link
 			rel="shortcut icon"
 			href="./icon/orange brown minimalist school logo (1).svg"
@@ -23,9 +35,15 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 		<!-- Costomized Styles -->
-		<link rel="stylesheet" href="./styles/style.css" />
-		<link rel="stylesheet" href="./styles/offcanvas.css" />
-		<link rel="stylesheet" href="./styles/signup.css" />
+		<link
+			rel="stylesheet"
+			href="./styles/style.css" />
+		<link
+			rel="stylesheet"
+			href="./styles/offcanvas.css" />
+		<link
+			rel="stylesheet"
+			href="./styles/signup.css" />
 		<title>Sign Up</title>
 	</head>
 	<body>
@@ -45,7 +63,9 @@
 								>
 							</li>
 							<li class="nav-item me-5">
-								<a class="nav-link" href="./signup.html"
+								<a
+									class="nav-link"
+									href="./signup.html"
 									>ورود / ثبت نام</a
 								>
 							</li>
@@ -79,10 +99,25 @@
 																>بک اند</a
 															>
 															<a
-																href="#"
-																class="mega-menu-link text-decoration-none text-dark mb-2"
-																>هوش مصنوعی</a
-															>
+																href="./ai.html"
+																class="mega-menu-link text-decoration-none text-dark mb-2 position-relative">
+																هوش مصنوعی
+																<span
+																	class="free-badge position-absolute">
+																	<div
+																		class="badge-container">
+																		<div
+																			class="glow"></div>
+																		<div
+																			class="badge">
+																			<div
+																				class="text">
+																				رایگان
+																			</div>
+																		</div>
+																	</div>
+																</span>
+															</a>
 														</div>
 													</div>
 													<div
@@ -178,7 +213,9 @@
 							</li>
 						</ul>
 						<div class="d-flex justify-content-center">
-							<a class="navbar-brand" href="./index.html">
+							<a
+								class="navbar-brand"
+								href="./index.html">
 								<img
 									class="me-5"
 									src="./icon/logo1.svg"
@@ -211,7 +248,9 @@
 										placeholder="جستجو ..."
 										required=""
 										type="text" />
-									<button class="reset" type="reset">
+									<button
+										class="reset"
+										type="reset">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											class="h-6 w-6"
@@ -247,7 +286,9 @@
 					id="cartOffcanvas"
 					aria-labelledby="cartOffcanvasLabel">
 					<div class="offcanvas-header">
-						<h5 class="offcanvas-title" id="cartOffcanvasLabel">
+						<h5
+							class="offcanvas-title"
+							id="cartOffcanvasLabel">
 							سبد خرید
 						</h5>
 						<button
@@ -264,7 +305,9 @@
 							<div
 								class="d-flex justify-content-between align-items-center mb-2">
 								<span>جمع کل:</span>
-								<span id="totalPrice" class="fw-bold"
+								<span
+									id="totalPrice"
+									class="fw-bold"
 									>0 تومان</span
 								>
 							</div>
@@ -295,7 +338,9 @@
 						aria-controls="offcanvasExample">
 						<i class="bi bi-list pt-1"></i>
 					</button>
-					<a class="navbar-brand pe-2" href="./index.html">
+					<a
+						class="navbar-brand pe-2"
+						href="./index.html">
 						<img
 							class="ms-2"
 							src="./icon/logo1.svg"
@@ -375,28 +420,28 @@
 								</div>
 								<script>
 									const input =
-										document.getElementById("searchInput");
+										document.getElementById('searchInput');
 									const clearButton =
-										document.getElementById("clearButton");
+										document.getElementById('clearButton');
 
 									input.addEventListener(
-										"input",
+										'input',
 										function () {
 											if (input.value.length > 0) {
 												clearButton.style.display =
-													"block";
+													'block';
 											} else {
 												clearButton.style.display =
-													"none";
+													'none';
 											}
 										}
 									);
 
 									clearButton.addEventListener(
-										"click",
+										'click',
 										function () {
-											input.value = "";
-											clearButton.style.display = "none";
+											input.value = '';
+											clearButton.style.display = 'none';
 											input.focus();
 										}
 									);
@@ -493,7 +538,9 @@
 									</a>
 								</li>
 							</ul>
-							<div class="custom-sub-menu" id="customHtml">
+							<div
+								class="custom-sub-menu"
+								id="customHtml">
 								<h6 class="custom-submenu-title mb-3">HTML</h6>
 								<ul class="nav flex-column custom-main-menu">
 									<li class="nav-item">
@@ -528,7 +575,9 @@
 									به منوی اصلی
 								</button>
 							</div>
-							<div class="custom-sub-menu" id="customCss">
+							<div
+								class="custom-sub-menu"
+								id="customCss">
 								<h6 class="mb-3">CSS</h6>
 								<ul class="nav flex-column">
 									<li class="nav-item">
@@ -561,7 +610,9 @@
 									به منوی اصلی
 								</button>
 							</div>
-							<div class="custom-sub-menu" id="customJs">
+							<div
+								class="custom-sub-menu"
+								id="customJs">
 								<h6 class="custom-submenu-title mb-3">
 									JavaScript
 								</h6>
@@ -612,8 +663,12 @@
 						</button>
 						<button class="btn signup-switch-btn">ثبت نام</button>
 					</div>
-					<div class="overlay" id="overlay">
-						<div class="sign-in" id="sign-in">
+					<div
+						class="overlay"
+						id="overlay">
+						<div
+							class="sign-in"
+							id="sign-in">
 							<h1>ورود به اکانت</h1>
 							<p>اگر در سایت اکانت دارید از این بخش وارد شوید</p>
 							<button
@@ -622,7 +677,9 @@
 								ورود
 							</button>
 						</div>
-						<div class="sign-up" id="sign-up">
+						<div
+							class="sign-up"
+							id="sign-up">
 							<h1>شروعی تازه‌!</h1>
 							<p>
 								اگر در وبسایت ثبت نام نکرده اید از این بخش
@@ -636,7 +693,9 @@
 						</div>
 					</div>
 					<div class="form">
-						<div class="sign-in" id="sign-in-info">
+						<div
+							class="sign-in"
+							id="sign-in-info">
 							<h1>ورود</h1>
 							<div class="social-media-buttons">
 								<div class="icon">
@@ -665,7 +724,9 @@
 								یا از ایمیل خود برای ورود استفاده کنید؛
 							</p>
 							<form id="sign-in-form">
-								<input type="email" placeholder="Email" />
+								<input
+									type="email"
+									placeholder="Email" />
 								<div class="password-input-wrapper">
 									<input
 										type="password"
@@ -696,7 +757,9 @@
 								<button class="control-button in">ورود</button>
 							</form>
 						</div>
-						<div class="sign-up" id="sign-up-info">
+						<div
+							class="sign-up"
+							id="sign-up-info">
 							<h1>ساخت اکانت</h1>
 							<div class="social-media-buttons">
 								<div class="icon">
@@ -725,8 +788,12 @@
 								یا از ایمیل خود برای ثبت نام استفاده کنید؛
 							</p>
 							<form id="sign-up-form">
-								<input type="text" placeholder="نام کامل" />
-								<input type="email" placeholder="ایمیل" />
+								<input
+									type="text"
+									placeholder="نام کامل" />
+								<input
+									type="email"
+									placeholder="ایمیل" />
 								<div class="password-input-wrapper">
 									<input
 										type="password"
@@ -759,29 +826,29 @@
 					</div>
 				</div>
 				<script>
-					document.addEventListener("DOMContentLoaded", function () {
+					document.addEventListener('DOMContentLoaded', function () {
 						if (window.innerWidth < 768) {
 							const signInButton =
-								document.querySelector(".login-switch-btn");
+								document.querySelector('.login-switch-btn');
 							const signUpButton =
-								document.querySelector(".signup-switch-btn");
+								document.querySelector('.signup-switch-btn');
 							const signInForm =
-								document.getElementById("sign-in-info");
+								document.getElementById('sign-in-info');
 							const signUpForm =
-								document.getElementById("sign-up-info");
+								document.getElementById('sign-up-info');
 
-							signInButton.addEventListener("click", function () {
-								signInForm.classList.remove("d-none");
-								signUpForm.classList.add("d-none");
-								signInButton.classList.add("active");
-								signUpButton.classList.remove("active");
+							signInButton.addEventListener('click', function () {
+								signInForm.classList.remove('d-none');
+								signUpForm.classList.add('d-none');
+								signInButton.classList.add('active');
+								signUpButton.classList.remove('active');
 							});
 
-							signUpButton.addEventListener("click", function () {
-								signUpForm.classList.remove("d-none");
-								signInForm.classList.add("d-none");
-								signUpButton.classList.add("active");
-								signInButton.classList.remove("active");
+							signUpButton.addEventListener('click', function () {
+								signUpForm.classList.remove('d-none');
+								signInForm.classList.add('d-none');
+								signUpButton.classList.add('active');
+								signInButton.classList.remove('active');
 							});
 						}
 					});
@@ -808,7 +875,9 @@
 						</div>
 						<div
 							class="col-12 col-lg-4 d-none d-lg-flex justify-content-center align-items-center">
-							<img src="./icon/logo.svg" alt="" />
+							<img
+								src="./icon/logo.svg"
+								alt="" />
 						</div>
 						<div
 							class="col-12 col-lg-4 d-flex flex-column justify-content-center align-items-end">
@@ -831,7 +900,9 @@
 							</div>
 							<div
 								class="col-12 d-lg-none mt-4 justify-content-center align-items-center">
-								<img src="./icon/logo.svg" alt="" />
+								<img
+									src="./icon/logo.svg"
+									alt="" />
 							</div>
 							<div
 								class="social-icons mt-5 w-75 d-flex justify-content-between">
@@ -868,6 +939,8 @@
 					(window.siq = window.siq || []).push(arguments);
 				};
 		</script>
-		<script defer src="/_vercel/speed-insights/script.js"></script>
+		<script
+			defer
+			src="/_vercel/speed-insights/script.js"></script>
 	</body>
 </html>
