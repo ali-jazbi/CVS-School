@@ -288,54 +288,92 @@ a:hover {
 	width: 80% !important;
 	font-size: 13px !important;
 }
-.mega-menu-link .dropdown-item {
-	font-size: 14px !important;
+.mega-menu-link .c {
+	height: max-content;
 }
-.school-section .dropdown {
-	position: relative;
-}
-
-.school-section .dropdown-menu {
+.mega-menu-link .c input {
 	position: absolute;
-	top: 100%;
-	right: 0;
-	z-index: 1000;
-	display: none;
-	min-width: 10rem;
-	padding: 0.5rem 0;
-	margin: 0.125rem 0 0;
-	font-size: 1rem;
-	color: #212529;
-	text-align: right;
-	list-style: none;
-	background-color: #fff;
-	background-clip: padding-box;
-	border: 1px solid rgba(0, 0, 0, 0.15);
-	border-radius: 0.25rem;
-}
-
-.school-section .dropdown-menu.show {
-	display: block;
-}
-
-.school-section .dropdown-item {
-	display: block;
+	left: 0;
+	top: 0;
+	height: 100%;
 	width: 100%;
-	padding: 0.25rem 1.5rem;
-	clear: both;
-	font-weight: 400;
-	color: #212529;
-	text-align: inherit;
-	white-space: nowrap;
-	background-color: transparent;
-	border: 0;
+	opacity: 0;
+	visibility: hidden;
 }
-
-.school-section .dropdown-item:hover,
-.school-section .dropdown-item:focus {
-	color: #16181b;
+.mega-menu-link .c h1 {
+	font-size: 1em;
+	position: relative;
+	margin: 0;
+}
+.mega-menu-link .c label::after {
+	content: '';
+	display: inline-block;
+	border: 4px solid transparent;
+	border-right: 6px solid rgb(14, 14, 14);
+	margin-right: 8px;
+	transition: all 0.3s ease;
+}
+.mega-menu-link .c label {
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding: 0.5em;
+}
+.mega-menu-link .c div.p {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease-in-out;
+	background-color: white;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	position: absolute;
+	width: 100%;
+}
+.mega-menu-link .c div.p ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.mega-menu-link .c div.p ul li {
+	margin-bottom: 2px;
+	transition: all 0.2s ease;
+	height: 40px;
+}
+.mega-menu-link .c div.p ul li:hover {
+	background-color: #f3f3f3;
+}
+.mega-menu-link .c div.p ul li a {
+	width: 100%;
+	color: #05b3b3;
 	text-decoration: none;
-	background-color: #f8f9fa;
+	transition: all 0.2s ease;
+	cursor: pointer;
+	height: auto !important;
+	padding-right: 10px;
+	font-size: 10px !important;
+}
+.mega-menu-link .c div.p ul li a:hover {
+	color: #008545;
+}
+.mega-menu-link .c input:checked ~ h1 label {
+	color: #05b3b3 !important;
+}
+.mega-menu-link .c input:checked ~ h1 label::after {
+	transform: rotate(-90deg);
+	border-right: 6px solid #05b3b3;
+	margin-right: 8px;
+}
+.mega-menu-link .c input:checked ~ h1 ~ div.p {
+	max-height: 200px;
+}
+.mega-menu-link .c a {
+	color: #05b3b3;
+	text-decoration: none;
+	transition: color 0.2s ease;
+	cursor: pointer;
+}
+.mega-menu-link .c a:hover {
+	color: #05b3b3;
 }
 .mega-menu-link:hover {
 	color: #008545 !important;
@@ -1631,11 +1669,12 @@ a:hover {
 	padding: 10px 0;
 	margin-top: 10px;
 }
-.accordion .accordion-content ul li a{
+.accordion .accordion-content ul li a {
 	font-size: 15px !important;
 	margin-bottom: 10px;
 	color: rgb(76, 76, 76);
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .accordion .accordion-content ul li i {
 	color: #05b3b368;
@@ -1744,10 +1783,8 @@ a:hover {
 	border-radius: 8px; /* لبه‌ها نرم‌تر می‌شوند */
 	padding: 4px 0;
 	box-shadow: -1px 1px 0px rgba(205, 234, 233, 0.9),
-		2px -1px 0px rgba(205, 234, 233, 0.7),
-		-2px -2px 0px rgba(205, 234, 233, 0.6),
-		2px 3px 0px rgba(205, 234, 233, 0.5),
-		-3px 2px 0px rgba(205, 234, 233, 0.4);
+		2px -1px 0px rgba(205, 234, 233, 0.7), -2px -2px 0px rgba(205, 234, 233, 0.6),
+		2px 3px 0px rgba(205, 234, 233, 0.5), -3px 2px 0px rgba(205, 234, 233, 0.4);
 	filter: blur(0.4px);
 	clip-path: polygon(5% 0%, 95% 10%, 95% 90%, 5% 100%, 0% 50%);
 	transition: all 0.3s ease-in-out;
@@ -2756,7 +2793,7 @@ a:hover {
 	}
 
 	.course-lecture__title {
-		font-size: .65rem !important;
+		font-size: 0.65rem !important;
 	}
 
 	.course-lecture__duration {
@@ -2798,7 +2835,6 @@ a:hover {
 	.playlist-duration {
 		font-size: 0.7rem;
 	}
-	
 }
 @media (max-width: 1024px) {
 	.reviews-container {
