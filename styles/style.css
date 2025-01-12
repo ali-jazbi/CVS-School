@@ -2609,14 +2609,33 @@ a:hover {
 }
 
 .course-section--active .course-icon--arrow::before {
-	transform: rotate(-135deg);
+	transform: rotate(135deg);
 }
 
 .course-icon--play {
 	color: #4f46e5;
 	font-size: 1rem;
 }
+.course-section__content {
+	max-height: 0;
+	overflow: hidden;
+	transition: all ease-out 0.5s;
+	opacity: 0;
+}
 
+.course-section--active .course-section__content {
+	max-height: 1000px;
+	opacity: 1;
+	transition: all ease-in 0.5s;
+}
+
+.course-section__header .course-icon {
+	transition: transform 0.5s ease;
+}
+
+.course-section--active .course-section__header .course-icon {
+	transform: rotate(90deg);
+}
 /* Modal Styles */
 .video-modal .modal-dialog {
 	max-width: 900px;
