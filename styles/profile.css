@@ -32,7 +32,7 @@
 	border-radius: 1.5rem;
 }
 .profile-header::before {
-	content: "";
+	content: '';
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -199,7 +199,7 @@
 }
 
 .balance-card::before {
-	content: "";
+	content: '';
 	position: absolute;
 	top: -50%;
 	left: -50%;
@@ -295,7 +295,7 @@
 }
 
 .section-title::after {
-	content: "";
+	content: '';
 	position: absolute;
 	top: 50%;
 	left: 0;
@@ -406,18 +406,23 @@
 
 	.course-card {
 		margin-bottom: 15px;
+		padding: 0px;
+		height: 100px;
+		background-color: #e4ecef82;
+		flex-direction: row;
+		align-items: center !important;
 	}
-
 	.course-header {
-		flex-direction: column;
-		align-items: flex-start;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		height: 100%;
+		margin: 0 !important;
+		padding: 10px 0;
 	}
-
 	.course-icon {
-		margin-bottom: 0.5rem;
 		margin-left: 0;
 	}
-
 	.balance-card {
 		padding: 0.6rem;
 	}
@@ -443,6 +448,15 @@
 
 	.form-control {
 		padding: 0.5rem;
+	}
+	#coursesContent .myCourse {
+		box-shadow: 0 5px 10px rgba(198, 198, 198, 0.467);
+		margin-bottom: 50px !important;
+		border-bottom: 1px solid #05b3b3;
+	}
+	#coursesContent .myCourse:last-child .course-card {
+		margin-bottom: 10px !important;
+		padding: 10px !important;
 	}
 }
 
