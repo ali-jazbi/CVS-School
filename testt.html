@@ -5,62 +5,414 @@
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
-		<title>Microsoft Project Card</title>
+		<title>Document</title>
 		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-			rel="stylesheet" />
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 		<style>
-			.course-card {
-				max-width: 300px;
-				border: 1px solid #ddd;
-				border-radius: 10px;
-				overflow: hidden;
-				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-			}
-			.course-card img {
+			.new-course-group {
 				width: 100%;
 				height: auto;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				margin-top: 100px;
 			}
-			.course-card .card-body {
-				padding: 15px;
+
+			.new-course-group .container {
+				width: 100%;
+				margin: 0 auto;
+				padding: 1.5rem;
+				overflow-y: auto;
+				background-color: #f8f9fa;
+				max-height: 100vh;
+				border-radius: 0.5rem;
+				overflow-y: hidden;
 			}
-			.course-card .price {
-				font-size: 1.2rem;
-				font-weight: bold;
-				color: #d9534f;
+
+			.new-course-group .accordion {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
 			}
-			.course-card .discount {
-				text-decoration: line-through;
-				color: #999;
-				margin-left: 10px;
+
+			.new-course-group .accordion-item {
+				background-color: #ffffff;
+				border-radius: 0.5rem;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+				margin-bottom: 1rem;
+				transition: all 0.3s ease;
 			}
-			.course-card .badge {
-				background-color: #d9534f;
-				color: #fff;
+
+			.new-course-group .accordion-item:hover {
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+			}
+
+			.new-course-group .accordion-item hr {
+				border: none;
+				height: 1px;
+				background-color: rgba(0, 0, 0, 0.1);
+				margin: 0;
+			}
+
+			.new-course-group .accordion-link {
+				font-size: 1.4rem;
+				color: #333333;
+				text-decoration: none;
+				background-color: #ffffff;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 1.2rem;
+				transition: background-color 0.3s ease;
+			}
+
+			.new-course-group .accordion-link:hover {
+				background-color: #f8f9fa;
+			}
+
+			.new-course-group .accordion-link h3 {
+				font-weight: 600;
+				font-size: 1rem;
+				margin: 0;
+				margin-left: 30px;
+			}
+
+			.new-course-group .accordion-link i {
+				color: #05b3b3;
+				padding: 0.5rem;
+				transition: transform 0.3s ease;
+			}
+
+			.new-course-group .accordion-link ul {
+				display: flex;
+				align-items: center;
+				list-style-type: none;
+				margin: 0 0 0 1rem;
+				padding: 0;
+			}
+
+			.new-course-group .accordion-link li {
+				font-size: 0.6rem;
+				color: #959393;
+				padding: 0.2rem 0.5rem;
+				background-color: #f0f0f0;
+				border-radius: 1rem;
+				margin-left: 0.5rem;
+			}
+			.new-course-group .accordion-link .free-tag {
+				background-color: #05b3b3;
+				color: white;
+				padding: 0.2rem 0.5rem;
+				border-radius: 1rem;
+				font-size: 0.7rem;
+			}
+			.new-course-group .accordion-link div {
+				display: flex;
+				align-items: center;
+			}
+
+			.new-course-group .accordion-link .ion-md-arrow-down {
+				display: none;
+			}
+
+			.new-course-group .answer {
+				max-height: 0;
+				overflow: hidden;
+				position: relative;
+				background-color: #ffffff;
+				transition: max-height 0.5s ease, opacity 0.5s ease;
+				opacity: 0;
+			}
+
+			.new-course-group .answer p {
+				color: #333333;
 				font-size: 0.8rem;
+				line-height: 1.6;
+				padding: 1.5rem;
+				margin: 0;
+			}
+
+			.new-course-group .accordion-item.active .answer {
+				max-height: 30rem;
+				opacity: 1;
+			}
+
+			.new-course-group
+				.accordion-item.active
+				.accordion-link
+				.ion-md-arrow-forward {
+				display: none;
+			}
+
+			.new-course-group .accordion-item.active .accordion-link .ion-md-arrow-down {
+				display: block;
+			}
+
+			.new-course-group .accordion-item.active .accordion-link {
+				background-color: #f8f9fa;
+			}
+			.swiper {
+				width: 400px;
+				height: 230px;
+			}
+			@media (max-width: 762px) {
+				.swiper {
+					width: 180px;
+					height: 100px;
+				}
+			}
+			.swiper-slide {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 18px;
+				font-size: 22px;
+				font-weight: bold;
+				color: #fff;
+			}
+
+			.swiper-slide:nth-child(1n) {
+				background-color: rgb(206, 17, 17);
+			}
+
+			.swiper-slide:nth-child(2n) {
+				background-color: rgb(0, 140, 255);
+			}
+
+			.swiper-slide:nth-child(3n) {
+				background-color: rgb(10, 184, 111);
+			}
+
+			.swiper-slide:nth-child(4n) {
+				background-color: rgb(211, 122, 7);
+			}
+
+			.swiper-slide:nth-child(5n) {
+				background-color: rgb(118, 163, 12);
+			}
+
+			.swiper-slide:nth-child(6n) {
+				background-color: rgb(180, 10, 47);
+			}
+
+			.swiper-slide:nth-child(7n) {
+				background-color: rgb(35, 99, 19);
+			}
+
+			.swiper-slide:nth-child(8n) {
+				background-color: rgb(0, 68, 255);
+			}
+
+			.swiper-slide:nth-child(9n) {
+				background-color: rgb(218, 12, 218);
+			}
+
+			.swiper-slide:nth-child(10n) {
+				background-color: rgb(54, 94, 77);
+			}
+			@media (max-width: 762px) {
+				.new-course-group {
+					margin-top: 50px;
+				}
+
+				.new-course-group .container {
+					padding: 1rem 0 !important;
+					/* width: 90% !; */
+				}
+
+				.new-course-group .accordion-item {
+					width: 100%;
+				}
+
+				.new-course-group .accordion-link {
+					font-size: 1.2rem;
+					padding: 1rem;
+				}
+
+				.new-course-group .accordion-link h3 {
+					font-size: 0.9rem;
+					margin-left: 15px;
+				}
+
+				.new-course-group .accordion-link ul {
+					display: none;
+				}
+
+				.new-course-group .answer p {
+					font-size: 0.75rem;
+					padding: 1rem;
+				}
+
+				.new-course-group .accordion-item.active .answer {
+					max-height: 40rem;
+				}
 			}
 		</style>
 	</head>
 	<body>
-		<div class="container mt-5">
-			<div class="course-card">
-				<img
-					src="https://via.placeholder.com/300x150"
-					alt="Microsoft Project 2019" />
-				<div class="card-body">
-					<h5 class="card-title">
-						آموزش مایکروسافت پروجکت MSP یا Microsoft Project 2019
-					</h5>
-					<p class="card-text">مدرس: مسعود امینی</p>
-					<p class="card-text"><i class="bi bi-clock"></i> 6 ساعت</p>
-					<div class="d-flex align-items-center">
-						<span class="price">۳۵۷,۰۰۰ تومان</span>
-						<span class="discount">۱,۱۹۰,۰۰۰ تومان</span>
-						<span class="badge ms-auto">%70 تخفیف</span>
+		<div class="accordion">
+			<div
+				class="accordion-item"
+				id="question1">
+				<a class="accordion-link">
+					<div class="flex">
+						<h3>برندسازی</h3>
+						<ul>
+							<li class="free-tag">#رایگان</li>
+							<li>#اسکچ</li>
+							<li>#ادوبی</li>
+							<li>#اینویژن</li>
+							<li>#پروتوپای</li>
+						</ul>
+					</div>
+					<i class="icon ion-md-arrow-forward"></i>
+					<i class="icon ion-md-arrow-down"></i>
+				</a>
+				<div class="answer">
+					<p>
+						برندسازی یک سیستم برای تولید و تجارت اکثریتی از نرم‌افزارهای مورد نیاز
+						برای هوشمندان و تکنولوژی‌های جدید است. طراحی تجربه کاربری و رابط کاربری
+						این است که به شما امکان می‌دهد به طور متعارف و روزمه‌ای تغییرات را در
+						سیستم‌های دیجیتالی و برنامه‌نویسی و تکنولوژی‌های جدید ایجاد کن
+					</p>
+					<div class="swiper mySwiper mb-5">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">Slide 1</div>
+							<div class="swiper-slide">Slide 2</div>
+							<div class="swiper-slide">Slide 3</div>
+							<div class="swiper-slide">Slide 4</div>
+							<div class="swiper-slide">Slide 5</div>
+							<div class="swiper-slide">Slide 6</div>
+							<div class="swiper-slide">Slide 7</div>
+							<div class="swiper-slide">Slide 8</div>
+							<div class="swiper-slide">Slide 9</div>
+						</div>
 					</div>
 				</div>
+				<hr />
+			</div>
+			<div
+				class="accordion-item"
+				id="question2">
+				<a class="accordion-link">
+					<div class="flex">
+						<h3>طراحی تجربه کاربری/رابط کاربری</h3>
+						<ul>
+							<li class="include-money">#شامل هزینه</li>
+							<li>#اسکچ</li>
+							<li>#ادوبی</li>
+							<li>#اینویژن</li>
+							<li>#پروتوپای</li>
+						</ul>
+					</div>
+					<i class="icon ion-md-arrow-forward"></i>
+					<i class="icon ion-md-arrow-down"></i>
+				</a>
+				<div class="answer">
+					<p>
+						لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+						طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
+						که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف
+						بهبود ابزارهای کاربردی می باشد.
+					</p>
+				</div>
+				<hr />
+			</div>
+			<div class="accordion-item">
+				<a
+					class="accordion-link"
+					href="#question3">
+					<div class="flex">
+						<h3>توسعه فرانت‌اند</h3>
+						<ul>
+							<li>#فیگما</li>
+							<li>#اسکچ</li>
+							<li>#ادوبی</li>
+							<li>#اینویژن</li>
+							<li>#پروتوپای</li>
+						</ul>
+					</div>
+					<i class="icon ion-md-arrow-forward"></i>
+					<i class="icon ion-md-arrow-down"></i>
+				</a>
+				<div class="answer">
+					<p>
+						لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+						طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
+						که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف
+						بهبود ابزارهای کاربردی می باشد.
+					</p>
+				</div>
+				<hr />
+			</div>
+			<div
+				class="accordion-item"
+				id="question4">
+				<a class="accordion-link">
+					<div>
+						<h3>توسعه بک‌اند</h3>
+						<ul>
+							<li>#فیگما</li>
+							<li>#اسکچ</li>
+							<li>#ادوبی</li>
+							<li>#اینویژن</li>
+							<li>#پروتوپای</li>
+						</ul>
+					</div>
+					<i class="icon ion-md-arrow-forward"></i>
+					<i class="icon ion-md-arrow-down"></i>
+				</a>
+				<div class="answer">
+					<p>
+						لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+						طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
+						که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف
+						بهبود ابزارهای کاربردی می باشد.
+					</p>
+				</div>
+				<hr />
 			</div>
 		</div>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				const accordionLinks = document.querySelectorAll(
+					'.new-course-group .accordion-link'
+				);
+
+				accordionLinks.forEach((link) => {
+					link.addEventListener('click', function (e) {
+						e.preventDefault();
+
+						const accordionItem = this.parentElement;
+						const isActive = accordionItem.classList.contains('active');
+
+						// بستن همه آیتم‌های باز
+						document
+							.querySelectorAll('.new-course-group .accordion-item')
+							.forEach((item) => {
+								item.classList.remove('active');
+							});
+
+						// اگر آیتم کلیک شده قبلاً باز نبوده، آن را باز کن
+						if (!isActive) {
+							accordionItem.classList.add('active');
+						}
+					});
+				});
+			});
+		</script>
+		<!-- Swiper JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+		<!-- Initialize Swiper -->
+		<script>
+			var swiper = new Swiper('.mySwiper', {
+				effect: 'cards',
+				grabCursor: true,
+			});
+		</script>
 	</body>
 </html>

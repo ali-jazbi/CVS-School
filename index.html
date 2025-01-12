@@ -40,6 +40,13 @@
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+		<link
+			href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 		<!-- Costomized Styles -->
 		<link
 			rel="stylesheet"
@@ -1424,8 +1431,8 @@
 			</div>
 
 			<!-- Course Group -->
-			<div class="Course-group">
-				<div class="wrapper">
+			<!-- <div class="Course-group"> -->
+			<!-- <div class="wrapper">
 					<div
 						class="divider-main d-flex justify-content-between align-items-center mb-5">
 						<h3>دوره های منتخب</h3>
@@ -2120,10 +2127,10 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 
-				<!-- Share Modal -->
-				<script>
+			<!-- Share Modal -->
+			<!-- <script>
 					function toggleBookmark(button) {
 						const icon = button.querySelector('i');
 						if (icon.classList.contains('bi-bookmark-plus')) {
@@ -2134,8 +2141,8 @@
 							icon.classList.add('bi-bookmark-plus');
 						}
 					}
-				</script>
-				<div
+				</script> -->
+			<!-- <div
 					class="modal fade"
 					id="shareModal"
 					tabindex="-1"
@@ -2233,8 +2240,212 @@
 						)}`;
 						window.open(whatsappUrl, '_blank');
 					}
-				</script>
-			</div>
+				</script> -->
+			<!-- </div> -->
+
+			<!-- new Course Group -->
+			<section class="new-course-group">
+				<div class="container">
+					<div class="filter-buttons">
+						<button
+							class="filter-btn active"
+							data-filter="all">
+							همه
+						</button>
+						<button
+							class="filter-btn"
+							data-filter="branding">
+							برندسازی
+						</button>
+						<button
+							class="filter-btn"
+							data-filter="ui-ux">
+							طراحی UI/UX
+						</button>
+						<button
+							class="filter-btn"
+							data-filter="frontend">
+							فرانت‌اند
+						</button>
+						<button
+							class="filter-btn"
+							data-filter="backend">
+							بک‌اند
+						</button>
+					</div>
+					<div class="accordion">
+						<div
+							class="accordion-item"
+							data-category="branding">
+							<a class="accordion-link">
+								<div class="flex">
+									<h3>برندسازی</h3>
+									<ul>
+										<li class="free-tag">#رایگان</li>
+										<li>#اسکچ</li>
+										<li>#ادوبی</li>
+										<li>#اینویژن</li>
+										<li>#پروتوپای</li>
+									</ul>
+								</div>
+								<i class="icon ion-md-arrow-forward"></i>
+								<i class="icon ion-md-arrow-down"></i>
+							</a>
+							<div class="answer">
+								<p>
+									برندسازی یک سیستم برای تولید و تجارت اکثریتی از نرم‌افزارهای مورد نیاز
+									برای هوشمندان و تکنولوژی‌های جدید است. طراحی تجربه کاربری و رابط کاربری
+									این است که به شما امکان می‌دهد به طور متعارف و روزمه‌ای تغییرات را در
+									سیستم‌های دیجیتالی و برنامه‌نویسی و تکنولوژی‌های جدید ایجاد کن
+								</p>
+								<div class="swiper mySwiper mb-5">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">Slide 1</div>
+										<div class="swiper-slide">Slide 2</div>
+										<div class="swiper-slide">Slide 3</div>
+										<div class="swiper-slide">Slide 4</div>
+										<div class="swiper-slide">Slide 5</div>
+										<div class="swiper-slide">Slide 6</div>
+										<div class="swiper-slide">Slide 7</div>
+										<div class="swiper-slide">Slide 8</div>
+										<div class="swiper-slide">Slide 9</div>
+									</div>
+								</div>
+							</div>
+							<hr />
+						</div>
+						<div
+							class="accordion-item"
+							data-category="ui-ux">
+							<a class="accordion-link">
+								<div class="flex">
+									<h3>طراحی تجربه کاربری/رابط کاربری</h3>
+									<ul>
+										<li class="include-money">#شامل هزینه</li>
+										<li>#اسکچ</li>
+										<li>#ادوبی</li>
+										<li>#اینویژن</li>
+										<li>#پروتوپای</li>
+									</ul>
+								</div>
+								<i class="icon ion-md-arrow-forward"></i>
+								<i class="icon ion-md-arrow-down"></i>
+							</a>
+							<div class="answer">
+								<p>
+									لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+									از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
+									سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+									متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+								</p>
+							</div>
+							<hr />
+						</div>
+						<div
+							class="accordion-item"
+							data-category="frontend">
+							<a class="accordion-link">
+								<div class="flex">
+									<h3>توسعه فرانت‌اند</h3>
+									<ul>
+										<li>#فیگما</li>
+										<li>#اسکچ</li>
+										<li>#ادوبی</li>
+										<li>#اینویژن</li>
+										<li>#پروتوپای</li>
+									</ul>
+								</div>
+								<i class="icon ion-md-arrow-forward"></i>
+								<i class="icon ion-md-arrow-down"></i>
+							</a>
+							<div class="answer">
+								<p>
+									لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+									از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
+									سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+									متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+								</p>
+							</div>
+							<hr />
+						</div>
+						<div
+							class="accordion-item"
+							data-category="backend">
+							<a class="accordion-link">
+								<div>
+									<h3>توسعه بک‌اند</h3>
+									<ul>
+										<li>#فیگما</li>
+										<li>#اسکچ</li>
+										<li>#ادوبی</li>
+										<li>#اینویژن</li>
+										<li>#پروتوپای</li>
+									</ul>
+								</div>
+								<i class="icon ion-md-arrow-forward"></i>
+								<i class="icon ion-md-arrow-down"></i>
+							</a>
+							<div class="answer">
+								<p>
+									لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+									از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
+									سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+									متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+								</p>
+							</div>
+							<hr />
+						</div>
+					</div>
+				</div>
+			</section>
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
+					const accordionLinks = document.querySelectorAll(
+						'.new-course-group .accordion-link'
+					);
+					const filterButtons = document.querySelectorAll('.filter-btn');
+					const accordionItems = document.querySelectorAll('.accordion-item');
+					accordionLinks.forEach((link) => {
+						link.addEventListener('click', function (e) {
+							e.preventDefault();
+
+							const accordionItem = this.parentElement;
+							const isActive = accordionItem.classList.contains('active');
+
+							// بستن همه آیتم‌های باز
+							document
+								.querySelectorAll('.new-course-group .accordion-item')
+								.forEach((item) => {
+									item.classList.remove('active');
+								});
+
+							// اگر آیتم کلیک شده قبلاً باز نبوده، آن را باز کن
+							if (!isActive) {
+								accordionItem.classList.add('active');
+							}
+						});
+					});
+					// Filter functionality
+					filterButtons.forEach((button) => {
+						button.addEventListener('click', () => {
+							const filter = button.getAttribute('data-filter');
+
+							// Update active button
+							filterButtons.forEach((btn) => btn.classList.remove('active'));
+							button.classList.add('active');
+
+							// Filter accordion items
+							accordionItems.forEach((item) => {
+								if (filter === 'all' || item.getAttribute('data-category') === filter) {
+									item.classList.remove('hidden');
+								} else {
+									item.classList.add('hidden');
+								}
+							});
+						});
+					});
+				});
+			</script>
 			<!-- features -->
 			<div class="features d-flex flex-column align-items-center">
 				<div class="features-title d-flex justify-content-center">
@@ -2466,7 +2677,19 @@
 			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 			crossorigin="anonymous"></script>
 		<script src="./plugins/jquery/jquery.min.js"></script>
+
+		<!-- Swiper JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+		<!-- Initialize Swiper -->
+		<script>
+			var swiper = new Swiper('.mySwiper', {
+				effect: 'cards',
+				grabCursor: true,
+			});
+		</script>
 		<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 		<script>
 			$(document).ready(function () {
 				$('.slider2').slick({
