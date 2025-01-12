@@ -2982,7 +2982,13 @@ a:hover {
 	max-height: 250px;
 	overflow-y: auto;
 }
-
+.video-description {
+	padding: 15px;
+	background-color: #c2d6e985;
+	border-top: 1px solid #dee2e6;
+	font-size: 14px;
+	line-height: 1.5;
+}
 .playlist-item {
 	display: flex;
 	align-items: center;
