@@ -286,7 +286,10 @@ a:hover {
 	border-bottom: 1px solid #c6c6c67d !important;
 	transition: all ease-in-out 0.2s;
 	width: 80% !important;
+	height: 40px;
 	font-size: 13px !important;
+	display: flex;
+	align-items: center;
 }
 .mega-menu-link .c {
 	height: max-content;
@@ -384,7 +387,7 @@ a:hover {
 .mega-menu-section h6 {
 	color: #008545;
 	font-weight: 600;
-	margin-bottom: 1rem;
+	margin-bottom: 1rem !important;
 	font-size: 14px;
 }
 /* Default image */
