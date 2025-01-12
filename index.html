@@ -2404,7 +2404,9 @@
 						'.new-course-group .accordion-link'
 					);
 					const filterButtons = document.querySelectorAll('.filter-btn');
-					const accordionItems = document.querySelectorAll('.accordion-item');
+					const accordionItems = document.querySelectorAll(
+						'.new-course-group .accordion-item'
+					);
 					accordionLinks.forEach((link) => {
 						link.addEventListener('click', function (e) {
 							e.preventDefault();
