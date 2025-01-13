@@ -312,6 +312,11 @@
 	padding: 0.8rem;
 	border-radius: 2px;
 	box-shadow: 0 3px 2px rgba(175, 174, 174, 0.245);
+	border-top: 2px solid rgba(152, 188, 193, 0.299);
+}
+.col-12:nth-child(2) .myCourse {
+	border: 2px solid rgba(152, 188, 193, 0.299);
+	border-top: 2px solid transparent;
 }
 .section-title::after {
 	content: '';
