@@ -2081,6 +2081,14 @@ a:hover {
 	background-color: #05b3b3;
 	margin-top: -18px;
 }
+@media (max-width: 762px) {
+	.accordion .accordion-content {
+		width: 90%;
+	}
+	.accordion .accordion-content ul:last-child {
+		padding-inline: 20px;
+	}
+}
 /* End Accordion */
 
 /* Start Feauters */
