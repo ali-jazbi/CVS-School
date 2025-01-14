@@ -1908,6 +1908,10 @@ a:hover {
 }
 
 @media (max-width: 762px) {
+	#shareModal .social-btn {
+		width: 30px;
+		height: 30px;
+	}
 	.swiper {
 		width: 90%;
 		height: 25vh;
