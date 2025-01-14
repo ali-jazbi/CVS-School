@@ -1534,6 +1534,7 @@ a:hover {
 		right: -45px !important;
 	}
 } */
+
 .filter-buttons {
 	display: flex;
 	justify-content: center;
@@ -1544,15 +1545,67 @@ a:hover {
 
 .filter-btn {
 	background-color: #f0f0f0;
-	border: none;
-	border-radius: 20px;
-	padding: 10px 20px;
 	font-size: 0.9rem;
 	color: #333;
 	cursor: pointer;
 	transition: all 0.3s ease;
+	padding: 0.25em 1em;
+	color: #005a5a;
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+	transition: all 0.3s ease-in-out;
+	font-family: yekan-bakh-regular;
+	margin-bottom: -2px;
+	border-bottom: 5px solid transparent;
+	box-shadow: 0 4px 6px white;
 }
+@media (max-width: 768px) {
+	.filter-buttons {
+		width: 100%;
+		max-width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		overflow-y: hidden;
+		white-space: nowrap;
+		scrollbar-width: thin;
+		-webkit-overflow-scrolling: touch;
+		padding-bottom: 5px;
+		padding-left: 30px;
+	}
+	.filter-btn {
+		padding: 0.5em 1.5em !important;
+		font-size: 10px !important;
+		white-space: nowrap;
+	}
 
+	.filter-buttons::-webkit-scrollbar {
+		height: 6px !important;
+	}
+
+	.filter-buttons::-webkit-scrollbar-thumb {
+		background-color: rgba(5, 179, 179, 0.5) !important;
+		border-radius: 3px !important;
+	}
+
+	.filter-buttons::-webkit-scrollbar-track {
+		background-color: rgba(0, 0, 0, 0.1) !important;
+		border-radius: 3px !important;
+	}
+
+	.filter-btn {
+		flex: 0 0 auto;
+		white-space: nowrap;
+		padding: 8px 15px;
+		font-size: 14px;
+	}
+
+	.filter-btn:last-child {
+		margin-right: 10px;
+	}
+}
 .filter-btn:hover,
 .filter-btn.active {
 	background-color: #05b3b3;
@@ -1809,7 +1862,7 @@ a:hover {
 @media (max-width: 762px) {
 	.swiper {
 		width: 90%;
-		height: 20vh;
+		height: 25vh;
 		margin: 50px 0 0 0;
 	}
 	.new-course-group {
@@ -1822,7 +1875,7 @@ a:hover {
 	}
 
 	.new-course-group .accordion-item {
-		width: 100%;
+		width: 100% !important;
 	}
 
 	.new-course-group .accordion-link {
