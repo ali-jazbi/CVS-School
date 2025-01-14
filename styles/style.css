@@ -29,6 +29,13 @@ body {
 	font-family: yekan-bakh-ExtraBold;
 	src: url('../font/YekanBakh-ExtraBold.ttf');
 }
+:root {
+	--primary-color: #05b3b3;
+	--text-primary: #333;
+	--text-secondary: #666;
+	--background-light: #f8f9fa;
+	--border-color: #e1e4e8;
+}
 /* NOTE custom scroll bar css */
 ::-webkit-scrollbar {
 	width: 10px;
@@ -1654,7 +1661,47 @@ a:hover {
 	border-radius: 0.5rem;
 	overflow-y: hidden;
 }
-
+.Course-group .action-buttons,
+.course-banner .action-buttons {
+	position: absolute;
+	bottom: -20px;
+	left: 16px;
+	display: flex;
+	gap: 8px;
+}
+.course-banner .action-buttons {
+	position: static;
+}
+.bi-suit-heart-fill {
+	color: red;
+}
+.Course-group .action-btn,
+.course-banner .action-btn {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.2s;
+}
+.Course-group .action-btn:first-child {
+	background-color: #05b3b3 !important;
+	color: white !important;
+}
+.Course-group .action-btn:last-child {
+	background-color: #8bb5bd !important;
+	color: white !important;
+}
+.Course-group .action-btn:hover,
+.course-banner .action-btn:hover {
+	transform: translateY(-2px);
+}
+.course-banner .action-btn {
+	background: transparent;
+	border: 1px solid #8bb5bd00;
+	color: white;
+}
 .new-course-group .accordion {
 	display: flex;
 	flex-direction: column;
@@ -3126,10 +3173,14 @@ a:hover {
 	}
 }
 @media (max-width: 762px) {
+	.course-roadmap {
+		overflow-x: hidden !important;
+	}
 	.course-container {
 		padding: 1rem 0;
+		width: 110%;
+		margin: 0 -21px;
 	}
-
 	.course-wrapper {
 		max-width: 100%;
 	}
@@ -3138,6 +3189,7 @@ a:hover {
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 1rem;
+		padding: 0 20px;
 	}
 
 	.course-header__title {
@@ -3234,7 +3286,7 @@ a:hover {
 		flex-direction: column;
 	}
 	.course-roadmap .row .teacher p {
-		text-align: center;
+		text-align: justify;
 		padding-inline: 30px;
 	}
 	.course-roadmap .row .image-container {
