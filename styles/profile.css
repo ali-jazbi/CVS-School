@@ -4,8 +4,8 @@
 	--gradient-start: #f0f9ff;
 	--gradient-end: #e0f2fe;
 }
-.container {
-	width: 100% !important;
+.container-fluid{
+	width: 90%;
 }
 .profile-row {
 	height: 100vh;
@@ -385,6 +385,9 @@
 	border-bottom: 1px solid #05b3b3;
 }
 @media (max-width: 1024px) {
+	.container-fluid{
+		width: 100%;
+	}
 	.col-12 {
 		margin-bottom: 20px;
 	}
