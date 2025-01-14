@@ -1632,6 +1632,7 @@ a:hover {
 @media (max-width: 762px) {
 	.filter-buttons {
 		flex-wrap: nowrap;
+		padding-inline: 20px;
 	}
 
 	.filter-btn {
@@ -1917,7 +1918,7 @@ a:hover {
 	}
 
 	.new-course-group .container {
-		padding: 1rem;
+		padding: 1rem 0;
 		/* width: 90% !; */
 	}
 
