@@ -1887,6 +1887,10 @@ a:hover {
 	justify-content: center;
 	transition: transform 0.2s;
 }
+#shareModal .social-btn i{
+	color: white;
+	padding-top: 5px;
+}
 #shareModal .social-btn:hover {
 	transform: scale(1.1);
 }
