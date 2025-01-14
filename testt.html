@@ -6,413 +6,278 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 		<style>
-			.new-course-group {
-				width: 100%;
-				height: auto;
+			.mega-menu-link {
+				border-bottom: 1px solid #c6c6c67d !important;
+				transition: all ease-in-out 0.2s;
+				width: 80% !important;
+				height: 40px;
+				font-size: 13px !important;
 				display: flex;
 				align-items: center;
-				justify-content: center;
-				overflow: hidden;
-				margin-top: 100px;
 			}
-
-			.new-course-group .container {
+			.mega-menu-link .c {
+				height: max-content;
+			}
+			.mega-menu-link .c input {
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 100%;
 				width: 100%;
-				margin: 0 auto;
-				padding: 1.5rem;
-				overflow-y: auto;
-				background-color: #f8f9fa;
-				max-height: 100vh;
-				border-radius: 0.5rem;
-				overflow-y: hidden;
+				opacity: 0;
+				visibility: hidden;
 			}
-
-			.new-course-group .accordion {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
+			.mega-menu-link .c h1 {
+				font-size: 1em;
+				position: relative;
+				margin: 0;
 			}
-
-			.new-course-group .accordion-item {
-				background-color: #ffffff;
-				border-radius: 0.5rem;
-				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-				margin-bottom: 1rem;
+			.mega-menu-link .c label::after {
+				content: '';
+				display: inline-block;
+				border: 4px solid transparent;
+				border-right: 6px solid rgb(14, 14, 14);
+				margin-right: 8px;
 				transition: all 0.3s ease;
 			}
-
-			.new-course-group .accordion-item:hover {
-				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-			}
-
-			.new-course-group .accordion-item hr {
-				border: none;
-				height: 1px;
-				background-color: rgba(0, 0, 0, 0.1);
-				margin: 0;
-			}
-
-			.new-course-group .accordion-link {
-				font-size: 1.4rem;
-				color: #333333;
-				text-decoration: none;
-				background-color: #ffffff;
-				width: 100%;
+			.mega-menu-link .c label {
+				cursor: pointer;
+				position: relative;
 				display: flex;
 				align-items: center;
-				justify-content: space-between;
-				padding: 1.2rem;
-				transition: background-color 0.3s ease;
+				padding: 0.5em;
 			}
-
-			.new-course-group .accordion-link:hover {
-				background-color: #f8f9fa;
-			}
-
-			.new-course-group .accordion-link h3 {
-				font-weight: 600;
-				font-size: 1rem;
-				margin: 0;
-				margin-left: 30px;
-			}
-
-			.new-course-group .accordion-link i {
-				color: #05b3b3;
-				padding: 0.5rem;
-				transition: transform 0.3s ease;
-			}
-
-			.new-course-group .accordion-link ul {
-				display: flex;
-				align-items: center;
-				list-style-type: none;
-				margin: 0 0 0 1rem;
-				padding: 0;
-			}
-
-			.new-course-group .accordion-link li {
-				font-size: 0.6rem;
-				color: #959393;
-				padding: 0.2rem 0.5rem;
-				background-color: #f0f0f0;
-				border-radius: 1rem;
-				margin-left: 0.5rem;
-			}
-			.new-course-group .accordion-link .free-tag {
-				background-color: #05b3b3;
-				color: white;
-				padding: 0.2rem 0.5rem;
-				border-radius: 1rem;
-				font-size: 0.7rem;
-			}
-			.new-course-group .accordion-link div {
-				display: flex;
-				align-items: center;
-			}
-
-			.new-course-group .accordion-link .ion-md-arrow-down {
-				display: none;
-			}
-
-			.new-course-group .answer {
+			.mega-menu-link .c div.p {
 				max-height: 0;
 				overflow: hidden;
-				position: relative;
-				background-color: #ffffff;
-				transition: max-height 0.5s ease, opacity 0.5s ease;
-				opacity: 0;
+				transition: max-height 0.3s ease-in-out;
+				background-color: white;
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+				position: absolute;
+				width: 100%;
 			}
-
-			.new-course-group .answer p {
-				color: #333333;
-				font-size: 0.8rem;
-				line-height: 1.6;
-				padding: 1.5rem;
+			.mega-menu-link .c div.p ul {
 				margin: 0;
+				padding: 0;
+				list-style-type: none;
+			}
+			.mega-menu-link .c div.p ul li {
+				margin-bottom: 2px;
+				transition: all 0.2s ease;
+				height: 40px;
+			}
+			.mega-menu-link .c div.p ul li:hover {
+				background-color: #f3f3f3;
+			}
+			.mega-menu-link .c div.p ul li a {
+				width: 100%;
+				color: #05b3b3;
+				text-decoration: none;
+				transition: all 0.2s ease;
+				cursor: pointer;
+				height: auto !important;
+				padding-right: 10px;
+				font-size: 10px !important;
+			}
+			.mega-menu-link .c div.p ul li a:hover {
+				color: #008545;
+			}
+			.mega-menu-link .c input:checked ~ h1 label {
+				color: #05b3b3 !important;
+			}
+			.mega-menu-link .c input:checked ~ h1 label::after {
+				transform: rotate(-90deg);
+				border-right: 6px solid #05b3b3;
+				margin-right: 8px;
+			}
+			.mega-menu-link .c input:checked ~ h1 ~ div.p {
+				max-height: 200px;
+			}
+			.mega-menu-link .c a {
+				color: #05b3b3;
+				text-decoration: none;
+				transition: color 0.2s ease;
+				cursor: pointer;
+			}
+			.mega-menu-link .c a:hover {
+				color: #05b3b3;
+			}
+			.mega-menu-link:hover {
+				color: #008545 !important;
+				border-color: #05b3b3 !important;
+				color: #05b3b3 !important;
 			}
 
-			.new-course-group .accordion-item.active .answer {
-				max-height: 30rem;
-				opacity: 1;
+			.mega-menu-section h6 {
+				color: #008545;
+				font-weight: 600;
+				margin-bottom: 1rem !important;
+				font-size: 14px;
 			}
-
-			.new-course-group
-				.accordion-item.active
-				.accordion-link
-				.ion-md-arrow-forward {
-				display: none;
-			}
-
-			.new-course-group .accordion-item.active .accordion-link .ion-md-arrow-down {
-				display: block;
-			}
-
-			.new-course-group .accordion-item.active .accordion-link {
-				background-color: #f8f9fa;
-			}
-			.swiper {
-				width: 400px;
-				height: 230px;
-			}
-			@media (max-width: 762px) {
-				.swiper {
-					width: 180px;
-					height: 100px;
-				}
-			}
-			.swiper-slide {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				border-radius: 18px;
-				font-size: 22px;
-				font-weight: bold;
-				color: #fff;
-			}
-
-			.swiper-slide:nth-child(1n) {
-				background-color: rgb(206, 17, 17);
-			}
-
-			.swiper-slide:nth-child(2n) {
-				background-color: rgb(0, 140, 255);
-			}
-
-			.swiper-slide:nth-child(3n) {
-				background-color: rgb(10, 184, 111);
-			}
-
-			.swiper-slide:nth-child(4n) {
-				background-color: rgb(211, 122, 7);
-			}
-
-			.swiper-slide:nth-child(5n) {
-				background-color: rgb(118, 163, 12);
-			}
-
-			.swiper-slide:nth-child(6n) {
-				background-color: rgb(180, 10, 47);
-			}
-
-			.swiper-slide:nth-child(7n) {
-				background-color: rgb(35, 99, 19);
-			}
-
-			.swiper-slide:nth-child(8n) {
-				background-color: rgb(0, 68, 255);
-			}
-
-			.swiper-slide:nth-child(9n) {
-				background-color: rgb(218, 12, 218);
-			}
-
-			.swiper-slide:nth-child(10n) {
-				background-color: rgb(54, 94, 77);
-			}
-			@media (max-width: 762px) {
-				.new-course-group {
-					margin-top: 50px;
-				}
-
-				.new-course-group .container {
-					padding: 1rem 0 !important;
-					/* width: 90% !; */
-				}
-
-				.new-course-group .accordion-item {
-					width: 100%;
-				}
-
-				.new-course-group .accordion-link {
-					font-size: 1.2rem;
-					padding: 1rem;
-				}
-
-				.new-course-group .accordion-link h3 {
-					font-size: 0.9rem;
-					margin-left: 15px;
-				}
-
-				.new-course-group .accordion-link ul {
-					display: none;
-				}
-
-				.new-course-group .answer p {
-					font-size: 0.75rem;
-					padding: 1rem;
-				}
-
-				.new-course-group .accordion-item.active .answer {
-					max-height: 40rem;
-				}
+			/* Default image */
+			.mega-menu-img {
+				background-image: url('https://itspectrumsolutions.com/wp-content/uploads/2024/04/1_pE2fOVDikEUwiQJlh4ggzg.jpeg');
 			}
 		</style>
 	</head>
 	<body>
-		<div class="accordion">
-			<div
-				class="accordion-item"
-				id="question1">
-				<a class="accordion-link">
-					<div class="flex">
-						<h3>برندسازی</h3>
-						<ul>
-							<li class="free-tag">#رایگان</li>
-							<li>#اسکچ</li>
-							<li>#ادوبی</li>
-							<li>#اینویژن</li>
-							<li>#پروتوپای</li>
-						</ul>
-					</div>
-					<i class="icon ion-md-arrow-forward"></i>
-					<i class="icon ion-md-arrow-down"></i>
-				</a>
-				<div class="answer">
-					<p>
-						برندسازی یک سیستم برای تولید و تجارت اکثریتی از نرم‌افزارهای مورد نیاز
-						برای هوشمندان و تکنولوژی‌های جدید است. طراحی تجربه کاربری و رابط کاربری
-						این است که به شما امکان می‌دهد به طور متعارف و روزمه‌ای تغییرات را در
-						سیستم‌های دیجیتالی و برنامه‌نویسی و تکنولوژی‌های جدید ایجاد کن
-					</p>
-					<div class="swiper mySwiper mb-5">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">Slide 1</div>
-							<div class="swiper-slide">Slide 2</div>
-							<div class="swiper-slide">Slide 3</div>
-							<div class="swiper-slide">Slide 4</div>
-							<div class="swiper-slide">Slide 5</div>
-							<div class="swiper-slide">Slide 6</div>
-							<div class="swiper-slide">Slide 7</div>
-							<div class="swiper-slide">Slide 8</div>
-							<div class="swiper-slide">Slide 9</div>
+		<div class="mega-menu">
+			<div class="row mega-section">
+				<div class="col-8 p-4">
+					<div class="row">
+						<div class="col-4 mega-menu-section">
+							<h6>برنامه نویسی</h6>
+							<div class="d-flex flex-column web-section">
+								<a
+									href="#"
+									class="mega-menu-link text-decoration-none text-dark mb-2"
+									>فرانت اند</a
+								>
+								<a
+									href="./js.html"
+									class="mega-menu-link text-decoration-none text-dark mb-2"
+									>بک اند</a
+								>
+								<a
+									href="./ai.html"
+									class="mega-menu-link text-decoration-none text-dark mb-2 position-relative">
+									هوش مصنوعی
+									<span class="free-badge position-absolute">
+										<div class="badge-container">
+											<div class="glow"></div>
+											<div class="badge">
+												<div class="text">رایگان</div>
+											</div>
+										</div>
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="col-4 mega-menu-section">
+							<h6>مشاوره کنکور</h6>
+							<div class="d-flex flex-column apps-section">
+								<a
+									href="#"
+									class="mega-menu-link text-decoration-none text-dark mb-2"
+									>دهم</a
+								>
+								<a
+									href="#"
+									class="mega-menu-link text-decoration-none text-dark mb-2"
+									>یازدهم</a
+								>
+								<a
+									href="#"
+									class="mega-menu-link text-decoration-none text-dark mb-2"
+									>دوازدهم</a
+								>
+							</div>
+						</div>
+						<div class="col-4 mega-menu-section">
+							<h6>دروس هنرستان</h6>
+							<div class="d-flex flex-column school-section">
+								<div
+									class="mega-menu-link text-decoration-none text-dark mb-2 position-relative">
+									<div class="c">
+										<input
+											type="checkbox"
+											id="faq-1" />
+										<h1><label for="faq-1">دهم</label></h1>
+										<div class="p">
+											<ul>
+												<li><a href="#">سی شارپ</a></li>
+												<li><a href="#">تولید محتوا</a></li>
+												<li><a href="#">شبکه و نرم افزار</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<script>
+									document.addEventListener('DOMContentLoaded', function () {
+										const accordions = document.querySelectorAll('.mega-menu-link .c');
+
+										document.addEventListener('click', function (event) {
+											accordions.forEach((accordion) => {
+												const input = accordion.querySelector('input[type="checkbox"]');
+												const label = accordion.querySelector('label');
+
+												// اگر کلیک خارج از آکاردئون بود، آن را ببند
+												if (!accordion.contains(event.target) && input.checked) {
+													input.checked = false;
+												}
+
+												// اگر روی لیبل کلیک شد، فقط همان آکاردئون را باز کن و بقیه را ببند
+												if (event.target === label) {
+													accordions.forEach((otherAccordion) => {
+														if (otherAccordion !== accordion) {
+															otherAccordion.querySelector(
+																'input[type="checkbox"]'
+															).checked = false;
+														}
+													});
+												}
+											});
+										});
+									});
+								</script>
+								<a
+									href="#"
+									class="mega-menu-link text-decoration-none text-dark mb-2"
+									>یازدهم</a
+								>
+								<a
+									href="#"
+									class="mega-menu-link text-decoration-none text-dark mb-2"
+									>دوازدهم</a
+								>
+								<script>
+									document.addEventListener('DOMContentLoaded', function () {
+										const accordionToggles = document.querySelectorAll(
+											'.mega-accordion-toggle'
+										);
+
+										accordionToggles.forEach((toggle) => {
+											toggle.addEventListener('click', function () {
+												const accordion = this.closest('.mega-accordion');
+												const content = accordion.querySelector('.mega-accordion-content');
+												const icon = this.querySelector('.bi-chevron-down');
+
+												// Toggle active class
+												accordion.classList.toggle('active');
+
+												// Toggle content visibility
+												if (accordion.classList.contains('active')) {
+													content.style.display = 'flex';
+													icon.style.transform = 'rotate(180deg)';
+												} else {
+													content.style.display = 'none';
+													icon.style.transform = 'rotate(0deg)';
+												}
+
+												// Hide other menu items when accordion is open
+												const otherMenuItems = accordion.parentElement.querySelectorAll(
+													'.mega-menu-link:not(.mega-accordion)'
+												);
+												otherMenuItems.forEach((item) => {
+													item.style.display = accordion.classList.contains('active')
+														? 'none'
+														: 'block';
+												});
+											});
+										});
+									});
+								</script>
+							</div>
 						</div>
 					</div>
 				</div>
-				<hr />
-			</div>
-			<div
-				class="accordion-item"
-				id="question2">
-				<a class="accordion-link">
-					<div class="flex">
-						<h3>طراحی تجربه کاربری/رابط کاربری</h3>
-						<ul>
-							<li class="include-money">#شامل هزینه</li>
-							<li>#اسکچ</li>
-							<li>#ادوبی</li>
-							<li>#اینویژن</li>
-							<li>#پروتوپای</li>
-						</ul>
-					</div>
-					<i class="icon ion-md-arrow-forward"></i>
-					<i class="icon ion-md-arrow-down"></i>
-				</a>
-				<div class="answer">
-					<p>
-						لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
-						طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
-						که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف
-						بهبود ابزارهای کاربردی می باشد.
-					</p>
+				<div class="col-4 p-0">
+					<div
+						id="menuImage"
+						class="mega-menu-img"></div>
 				</div>
-				<hr />
-			</div>
-			<div class="accordion-item">
-				<a
-					class="accordion-link"
-					href="#question3">
-					<div class="flex">
-						<h3>توسعه فرانت‌اند</h3>
-						<ul>
-							<li>#فیگما</li>
-							<li>#اسکچ</li>
-							<li>#ادوبی</li>
-							<li>#اینویژن</li>
-							<li>#پروتوپای</li>
-						</ul>
-					</div>
-					<i class="icon ion-md-arrow-forward"></i>
-					<i class="icon ion-md-arrow-down"></i>
-				</a>
-				<div class="answer">
-					<p>
-						لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
-						طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
-						که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف
-						بهبود ابزارهای کاربردی می باشد.
-					</p>
-				</div>
-				<hr />
-			</div>
-			<div
-				class="accordion-item"
-				id="question4">
-				<a class="accordion-link">
-					<div>
-						<h3>توسعه بک‌اند</h3>
-						<ul>
-							<li>#فیگما</li>
-							<li>#اسکچ</li>
-							<li>#ادوبی</li>
-							<li>#اینویژن</li>
-							<li>#پروتوپای</li>
-						</ul>
-					</div>
-					<i class="icon ion-md-arrow-forward"></i>
-					<i class="icon ion-md-arrow-down"></i>
-				</a>
-				<div class="answer">
-					<p>
-						لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
-						طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
-						که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف
-						بهبود ابزارهای کاربردی می باشد.
-					</p>
-				</div>
-				<hr />
 			</div>
 		</div>
-		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-				const accordionLinks = document.querySelectorAll(
-					'.new-course-group .accordion-link'
-				);
-
-				accordionLinks.forEach((link) => {
-					link.addEventListener('click', function (e) {
-						e.preventDefault();
-
-						const accordionItem = this.parentElement;
-						const isActive = accordionItem.classList.contains('active');
-
-						// بستن همه آیتم‌های باز
-						document
-							.querySelectorAll('.new-course-group .accordion-item')
-							.forEach((item) => {
-								item.classList.remove('active');
-							});
-
-						// اگر آیتم کلیک شده قبلاً باز نبوده، آن را باز کن
-						if (!isActive) {
-							accordionItem.classList.add('active');
-						}
-					});
-				});
-			});
-		</script>
-		<!-- Swiper JS -->
-		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-		<!-- Initialize Swiper -->
-		<script>
-			var swiper = new Swiper('.mySwiper', {
-				effect: 'cards',
-				grabCursor: true,
-			});
-		</script>
 	</body>
 </html>

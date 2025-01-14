@@ -2038,7 +2038,7 @@ a:hover {
 	will-change: opacity, max-height;
 }
 .accordion .accordion-content {
-	width: 350px;
+	width: 340px;
 	opacity: 0;
 	max-height: 0;
 	overflow: hidden;
@@ -2051,7 +2051,7 @@ a:hover {
 	width: 45%;
 	padding: 10px 0;
 	margin-top: 10px;
-	line-height: 2;
+	line-height: 1.3;
 }
 .accordion .accordion-content ul::-webkit-scrollbar {
 	width: 6px; /* Adjust the width for a lighter appearance */
@@ -2065,6 +2065,9 @@ a:hover {
 .accordion .accordion-content ul::-webkit-scrollbar-track {
 	background-color: rgba(0, 0, 0, 0.05); /* Lighter color for the track */
 	border-radius: 3px;
+}
+.accordion .accordion-content ul li{
+	padding: 7px;
 }
 .accordion .accordion-content ul li a {
 	font-size: 15px !important;

@@ -3503,6 +3503,8 @@
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script>
 			var swiper = new Swiper('.mySwiper', {
+				slidesPerView: 1, // پیش‌فرض برای موبایل
+				spaceBetween: 10,
 				pagination: {
 					el: '.swiper-pagination',
 					type: 'progressbar',
@@ -3511,9 +3513,13 @@
 					nextEl: '.swiper-button-next',
 					prevEl: '.swiper-button-prev',
 				},
-				watchOverflow: true,
-				observer: true,
-				observeParents: true,
+				breakpoints: {
+					768: {
+						// برای صفحه‌نمایش‌های بزرگتر از 768px (تبلت و دسکتاپ)
+						slidesPerView: 4,
+						spaceBetween: 20,
+					},
+				},
 			});
 		</script>
 		<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
