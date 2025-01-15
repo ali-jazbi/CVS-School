@@ -657,16 +657,12 @@
 					<div class="col-12 col-lg-4 d-flex justify-content-center">
 						<div class="glass-card content-card">
 							<!-- Profile Header -->
-							<h3 class="section-title">کیف پول من</h3>
-							<div
-								class="profile-header d-flex align-items-center justify-content-between">
-								<img
-									src="https://img.freepik.com/premium-photo/natural-beauty-portrait-woman-autumn-forest_1351942-2475.jpg"
-									alt="تصویر پروفایل"
-									class="profile-avatar object-fit-cover" />
-								<div>
-									<h5>مارال الوند</h5>
-									<p class="text-muted fs-7">توسعه دهنده فول استک</p>
+							<h3 class="section-title">صفحه من</h3>
+							<div class="d-flex flex-column align-items-center mb-3">
+								<div
+									class="profile-header d-flex align-items-center justify-content-between px-4">
+									<h6 class="pt-2">مارال الوند</h6>
+									<p class="text-muted fs-7 pt-3">توسعه دهنده فول استک</p>
 								</div>
 							</div>
 							<!-- Wallet Section -->
@@ -680,10 +676,10 @@
 										<div class="mb-4">
 											<label class="form-label mb-3">مبلغ شارژ (تومان)</label>
 											<div
-												class="btn-group w-100 mb-4 d-flex flex-column justify-content-between"
+												class="btn-group w-100 d-flex flex-column justify-content-between"
 												role="group"
 												aria-label="مبالغ پیش‌فرض">
-												<div class="d-flex justify-content-evenly">
+												<div class="d-flex justify-content-between px-1">
 													<button
 														type="button"
 														class="btn amount-btn"
@@ -696,8 +692,6 @@
 														data-amount="1000000">
 														۱ میلیون تومان
 													</button>
-												</div>
-												<div class="d-flex justify-content-evenly">
 													<button
 														type="button"
 														class="btn amount-btn"
@@ -712,19 +706,20 @@
 													</button>
 												</div>
 											</div>
-
-											<input
-												type="number"
-												class="form-control"
-												id="customAmount"
-												placeholder="مبلغ دلخواه را وارد کنید" />
+											<div class="d-flex walletConfirm">
+												<input
+													type="number"
+													class="form-control w-75"
+													id="customAmount"
+													placeholder="مبلغ دلخواه را وارد کنید" />
+												<button
+													type="submit"
+													class="btn btn-primary w-25 btn-wallet">
+													<i class="fas fa-wallet pe-1"></i>
+													شارژ کیف پول
+												</button>
+											</div>
 										</div>
-										<button
-											type="submit"
-											class="btn btn-primary w-100">
-											<i class="fas fa-wallet me-2"></i>
-											شارژ کیف پول
-										</button>
 									</form>
 								</div>
 							</div>
