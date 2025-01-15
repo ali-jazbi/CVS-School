@@ -341,6 +341,7 @@ a:hover {
 	margin-bottom: 2px;
 	transition: all 0.2s ease;
 	height: 40px;
+	border-bottom: 2px solid #f3f3f3;
 }
 .mega-menu-link .c div.p ul li:hover {
 	background-color: #f3f3f3;
