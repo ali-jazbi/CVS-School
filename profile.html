@@ -604,7 +604,7 @@
 			<div class="container-fluid py-3 px-lg-5">
 				<!-- Courses Section -->
 				<div class="row profile-row">
-					<div class="col-12 col-lg-4 d-flex justify-content-center">
+					<div class="col-12 col-lg-3 d-flex justify-content-center">
 						<div class="glass-card content-card">
 							<!-- Profile Header -->
 							<div class="profile-header">
@@ -636,7 +636,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-12 col-lg-4 d-flex justify-content-center">
+					<div class="col-12 col-lg-3 d-flex justify-content-center">
 						<div class="glass-card content-card">
 							<!-- Wallet Section -->
 							<div id="walletContent">
@@ -700,7 +700,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-12 col-lg-4 d-flex justify-content-center">
+					<div class="col-12 col-lg-3 d-flex justify-content-center">
 						<div class="glass-card content-card">
 							<div id="coursesContent">
 								<h3 class="section-title mb-2">آموزش های من</h3>
@@ -776,6 +776,52 @@
 										</button>
 									</div>
 								</div>
+							</div>
+						</div>
+
+						<!-- Modal for License -->
+						<div
+							class="modal fade"
+							id="licenseModal"
+							tabindex="-1"
+							aria-labelledby="licenseModalLabel"
+							aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h6
+											class="modal-title"
+											id="licenseModalLabel">
+											کد لایسنس
+										</h6>
+										<button
+											type="button"
+											class="btn-close"
+											data-bs-dismiss="modal"
+											aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<div class="input-group">
+											<input
+												type="text"
+												class="form-control"
+												id="licenseCode"
+												readonly />
+											<button
+												class="btn btn-outline-success"
+												type="button"
+												id="copyLicense">
+												<i class="fas fa-copy"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-lg-3 d-flex justify-content-center">
+						<div class="glass-card content-card">
+							<div id="coursesContent">
 								<h3 class="section-title mt-3 mb-2">ذخیره های من</h3>
 								<div class="myCourse">
 									<div

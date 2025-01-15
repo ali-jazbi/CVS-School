@@ -354,9 +354,9 @@
 	font-size: 12px;
 }
 .myCourse {
-	max-height: 28vh; /* افزایش حداکثر ارتفاع */
+	max-height: 100%; /* افزایش حداکثر ارتفاع */
 	padding: 10px;
-	overflow-y: auto;
+	/* overflow-y: auto; */
 	display: flex;
 	flex-direction: column;
 	gap: 10px; /* فاصله بین کارت‌ها */
