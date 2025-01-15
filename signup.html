@@ -133,43 +133,53 @@
 													<div class="col-4 mega-menu-section">
 														<h6>دروس هنرستان</h6>
 														<div class="d-flex flex-column school-section">
-															<div class="dropdown w-100">
-																<a
-																	href="#"
-																	class="mega-menu-link text-decoration-none text-dark mb-2 dropdown-toggle"
-																	id="tenthGradeDropdown"
-																	role="button"
-																	data-bs-toggle="dropdown"
-																	aria-expanded="false">
-																	دهم
-																</a>
-																<ul
-																	class="dropdown-menu dropdown-menu-end"
-																	aria-labelledby="tenthGradeDropdown">
-																	<!-- Dropdown menu links -->
-																	<li>
-																		<a
-																			class="dropdown-item w-100"
-																			href="#"
-																			>درس 1</a
-																		>
-																	</li>
-																	<li>
-																		<a
-																			class="dropdown-item w-100"
-																			href="#"
-																			>درس 2</a
-																		>
-																	</li>
-																	<li>
-																		<a
-																			class="dropdown-item w-100"
-																			href="#"
-																			>درس 3</a
-																		>
-																	</li>
-																</ul>
+															<div
+																class="mega-menu-link text-decoration-none text-dark mb-2 position-relative">
+																<div class="c">
+																	<input
+																		type="checkbox"
+																		id="faq-1" />
+																	<h1><label for="faq-1">دهم</label></h1>
+																	<div class="p">
+																		<ul>
+																			<li><a href="#">سی شارپ</a></li>
+																			<li><a href="#">تولید محتوا</a></li>
+																			<li><a href="#">شبکه و نرم افزار</a></li>
+																		</ul>
+																	</div>
+																</div>
 															</div>
+															<script>
+																document.addEventListener('DOMContentLoaded', function () {
+																	const accordions =
+																		document.querySelectorAll('.mega-menu-link .c');
+
+																	document.addEventListener('click', function (event) {
+																		accordions.forEach((accordion) => {
+																			const input = accordion.querySelector(
+																				'input[type="checkbox"]'
+																			);
+																			const label = accordion.querySelector('label');
+
+																			// اگر کلیک خارج از آکاردئون بود، آن را ببند
+																			if (!accordion.contains(event.target) && input.checked) {
+																				input.checked = false;
+																			}
+
+																			// اگر روی لیبل کلیک شد، فقط همان آکاردئون را باز کن و بقیه را ببند
+																			if (event.target === label) {
+																				accordions.forEach((otherAccordion) => {
+																					if (otherAccordion !== accordion) {
+																						otherAccordion.querySelector(
+																							'input[type="checkbox"]'
+																						).checked = false;
+																					}
+																				});
+																			}
+																		});
+																	});
+																});
+															</script>
 															<a
 																href="#"
 																class="mega-menu-link text-decoration-none text-dark mb-2"
@@ -180,6 +190,46 @@
 																class="mega-menu-link text-decoration-none text-dark mb-2"
 																>دوازدهم</a
 															>
+															<script>
+																document.addEventListener('DOMContentLoaded', function () {
+																	const accordionToggles = document.querySelectorAll(
+																		'.mega-accordion-toggle'
+																	);
+
+																	accordionToggles.forEach((toggle) => {
+																		toggle.addEventListener('click', function () {
+																			const accordion = this.closest('.mega-accordion');
+																			const content = accordion.querySelector(
+																				'.mega-accordion-content'
+																			);
+																			const icon = this.querySelector('.bi-chevron-down');
+
+																			// Toggle active class
+																			accordion.classList.toggle('active');
+
+																			// Toggle content visibility
+																			if (accordion.classList.contains('active')) {
+																				content.style.display = 'flex';
+																				icon.style.transform = 'rotate(180deg)';
+																			} else {
+																				content.style.display = 'none';
+																				icon.style.transform = 'rotate(0deg)';
+																			}
+
+																			// Hide other menu items when accordion is open
+																			const otherMenuItems =
+																				accordion.parentElement.querySelectorAll(
+																					'.mega-menu-link:not(.mega-accordion)'
+																				);
+																			otherMenuItems.forEach((item) => {
+																				item.style.display = accordion.classList.contains('active')
+																					? 'none'
+																					: 'block';
+																			});
+																		});
+																	});
+																});
+															</script>
 														</div>
 													</div>
 												</div>
