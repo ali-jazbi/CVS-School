@@ -1647,6 +1647,9 @@ a:hover {
 		font-weight: bold;
 	}
 }
+.freecourse-banner{
+	background-color: #255047 !important;
+}
 .new-course-group {
 	width: 100%;
 	height: auto;
