@@ -1,0 +1,1959 @@
+<!DOCTYPE html>
+<html
+	lang="fa"
+	dir="rtl">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1" />
+		<meta
+			name="author"
+			content="Ali Jazbi" />
+		<meta
+			http-equiv="cache-control"
+			content="no-cache" />
+		<meta
+			http-equiv="expires"
+			content="0" />
+		<meta
+			http-equiv="pragma"
+			content="no-cache" />
+		<link
+			rel="shortcut icon"
+			href="./icon/orange brown minimalist school logo (1).svg"
+			type="image/x-icon" />
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+			integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb"
+			crossorigin="anonymous" />
+		<!-- Bootstrap Icon -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+		<!-- Costomized Styles -->
+		<link
+			rel="stylesheet"
+			href="./styles/offcanvas.css" />
+		<link
+			rel="stylesheet"
+			href="./styles/style.css" />
+		<title>Artifical Intelegence Course</title>
+	</head>
+	<body>
+		<main>
+			<!-- Navbar -->
+			<header>
+				<!-- Nav For PC -->
+				<nav class="navbar navbar-expand-lg bg-white d-none d-lg-block">
+					<div class="container d-flex justify-content-between">
+						<ul class="navbar-nav d-flex align-items-center">
+							<li class="nav-item me-5">
+								<a
+									class="nav-link active"
+									aria-current="page"
+									href="./index.html"
+									>خانه</a
+								>
+							</li>
+							<li class="nav-item me-5">
+								<a
+									class="nav-link"
+									href="./signup.html"
+									>ورود / ثبت نام</a
+								>
+							</li>
+							<li class="nav-item">
+								<div class="dropdown toggle">
+									<input
+										id="t1"
+										class="d-none"
+										type="checkbox" />
+									<label for="t1"
+										>دوره های آموزشی<i class="bi bi-caret-down-fill ms-2"></i
+									></label>
+									<div class="mega-menu">
+										<div class="row mega-section">
+											<div class="col-8 p-4">
+												<div class="row">
+													<div class="col-4 mega-menu-section">
+														<h6>برنامه نویسی</h6>
+														<div class="d-flex flex-column web-section">
+															<a
+																href="#"
+																class="mega-menu-link text-decoration-none text-dark mb-2"
+																>فرانت اند</a
+															>
+															<a
+																href="./js.html"
+																class="mega-menu-link text-decoration-none text-dark mb-2"
+																>بک اند</a
+															>
+															<a
+																href="./ai.html"
+																class="mega-menu-link text-decoration-none text-dark mb-2 position-relative">
+																هوش مصنوعی
+																<span class="free-badge position-absolute">
+																	<div class="badge-container">
+																		<div class="glow"></div>
+																		<div class="badge">
+																			<div class="text">رایگان</div>
+																		</div>
+																	</div>
+																</span>
+															</a>
+														</div>
+													</div>
+													<div class="col-4 mega-menu-section">
+														<h6>مشاوره کنکور</h6>
+														<div class="d-flex flex-column apps-section">
+															<a
+																href="#"
+																class="mega-menu-link text-decoration-none text-dark mb-2"
+																>دهم</a
+															>
+															<a
+																href="#"
+																class="mega-menu-link text-decoration-none text-dark mb-2"
+																>یازدهم</a
+															>
+															<a
+																href="#"
+																class="mega-menu-link text-decoration-none text-dark mb-2"
+																>دوازدهم</a
+															>
+														</div>
+													</div>
+													<div class="col-4 mega-menu-section">
+														<h6>دروس هنرستان</h6>
+														<div class="d-flex flex-column school-section">
+															<div
+																class="mega-menu-link text-decoration-none text-dark mb-2 position-relative">
+																<div class="c">
+																	<input
+																		type="checkbox"
+																		id="faq-1" />
+																	<h1><label for="faq-1">دهم</label></h1>
+																	<div class="p">
+																		<ul>
+																			<li><a href="#">سی شارپ</a></li>
+																			<li><a href="#">تولید محتوا</a></li>
+																			<li><a href="#">شبکه و نرم افزار</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+															<script>
+																document.addEventListener('DOMContentLoaded', function () {
+																	const accordions =
+																		document.querySelectorAll('.mega-menu-link .c');
+
+																	document.addEventListener('click', function (event) {
+																		accordions.forEach((accordion) => {
+																			const input = accordion.querySelector(
+																				'input[type="checkbox"]'
+																			);
+																			const label = accordion.querySelector('label');
+
+																			// اگر کلیک خارج از آکاردئون بود، آن را ببند
+																			if (!accordion.contains(event.target) && input.checked) {
+																				input.checked = false;
+																			}
+
+																			// اگر روی لیبل کلیک شد، فقط همان آکاردئون را باز کن و بقیه را ببند
+																			if (event.target === label) {
+																				accordions.forEach((otherAccordion) => {
+																					if (otherAccordion !== accordion) {
+																						otherAccordion.querySelector(
+																							'input[type="checkbox"]'
+																						).checked = false;
+																					}
+																				});
+																			}
+																		});
+																	});
+																});
+															</script>
+															<a
+																href="#"
+																class="mega-menu-link text-decoration-none text-dark mb-2"
+																>یازدهم</a
+															>
+															<a
+																href="#"
+																class="mega-menu-link text-decoration-none text-dark mb-2"
+																>دوازدهم</a
+															>
+															<script>
+																document.addEventListener('DOMContentLoaded', function () {
+																	const accordionToggles = document.querySelectorAll(
+																		'.mega-accordion-toggle'
+																	);
+
+																	accordionToggles.forEach((toggle) => {
+																		toggle.addEventListener('click', function () {
+																			const accordion = this.closest('.mega-accordion');
+																			const content = accordion.querySelector(
+																				'.mega-accordion-content'
+																			);
+																			const icon = this.querySelector('.bi-chevron-down');
+
+																			// Toggle active class
+																			accordion.classList.toggle('active');
+
+																			// Toggle content visibility
+																			if (accordion.classList.contains('active')) {
+																				content.style.display = 'flex';
+																				icon.style.transform = 'rotate(180deg)';
+																			} else {
+																				content.style.display = 'none';
+																				icon.style.transform = 'rotate(0deg)';
+																			}
+
+																			// Hide other menu items when accordion is open
+																			const otherMenuItems =
+																				accordion.parentElement.querySelectorAll(
+																					'.mega-menu-link:not(.mega-accordion)'
+																				);
+																			otherMenuItems.forEach((item) => {
+																				item.style.display = accordion.classList.contains('active')
+																					? 'none'
+																					: 'block';
+																			});
+																		});
+																	});
+																});
+															</script>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-4 p-0">
+												<div
+													id="menuImage"
+													class="mega-menu-img"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="d-flex justify-content-center">
+							<a
+								class="navbar-brand"
+								href="./index.html">
+								<img
+									class="me-5"
+									src="./icon/logo1.svg"
+									width="160"
+									alt="" />
+							</a>
+						</div>
+
+						<div class="d-flex align-items-center">
+							<div class="search-bar d-flex align-items-center">
+								<form class="form">
+									<button>
+										<svg
+											width="17"
+											height="16"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+											role="img"
+											aria-labelledby="search">
+											<path
+												d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+												stroke="currentColor"
+												stroke-width="1.333"
+												stroke-linecap="round"
+												stroke-linejoin="round"></path>
+										</svg>
+									</button>
+									<input
+										class="input"
+										placeholder="جستجو ..."
+										required=""
+										type="text" />
+									<button
+										class="reset"
+										type="reset">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											class="h-6 w-6"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke="currentColor"
+											stroke-width="2">
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												d="M6 18L18 6M6 6l12 12"></path>
+										</svg>
+									</button>
+								</form>
+							</div>
+							<a
+								class="nav-link ms-3 sh-card position-relative"
+								href="#"
+								data-bs-toggle="offcanvas"
+								data-bs-target="#cartOffcanvas"
+								aria-controls="cartOffcanvas">
+								<i class="fas fa-shopping-cart"></i>
+								<span
+									class="position-absolute top-0 start-100 translate-middle badge rounded-pill small-badge cartCount">
+								</span>
+							</a>
+						</div>
+					</div>
+				</nav>
+				<div
+					class="offcanvas offcanvas-start"
+					tabindex="-1"
+					id="cartOffcanvas"
+					aria-labelledby="cartOffcanvasLabel">
+					<div class="offcanvas-header">
+						<h5
+							class="offcanvas-title"
+							id="cartOffcanvasLabel">
+							سبد خرید
+						</h5>
+						<button
+							type="button"
+							class="btn-close text-reset"
+							data-bs-dismiss="offcanvas"
+							aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body">
+						<div id="cartItems">
+							<!-- محصولات به صورت داینامیک اینجا اضافه می‌شوند -->
+						</div>
+						<div class="mt-5">
+							<div class="d-flex justify-content-between align-items-center mb-2">
+								<span>جمع کل:</span>
+								<span
+									id="totalPrice"
+									class="fw-bold"
+									>0 تومان</span
+								>
+							</div>
+							<div class="d-grid gap-2">
+								<button
+									class="btn btn-success"
+									id="checkoutBtn">
+									تسویه حساب
+								</button>
+								<button
+									id="clearCart"
+									class="btn btn-outline-secondary"
+									data-bs-dismiss="offcanvas">
+									ادامه خرید
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Nav For Mobile And Tablet -->
+				<nav class="nav-mobile d-lg-none">
+					<button
+						class="fs-1 d-flex align-items-center h-75 pt-2 ps-4 bg-transparent"
+						type="button"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#customOffcanvasMenu"
+						aria-controls="offcanvasExample">
+						<i class="bi bi-list pt-1"></i>
+					</button>
+					<a
+						class="navbar-brand pe-2"
+						href="./index.html">
+						<img
+							class="ms-2"
+							src="./icon/logo1.svg"
+							width="100"
+							alt="" />
+					</a>
+
+					<div class="d-flex pe-3">
+						<a
+							class="nav-link pt-1"
+							href="#"
+							data-bs-toggle="modal"
+							data-bs-target="#exampleModal">
+							<i class="bi bi-person fs-4"></i>
+						</a>
+						<a
+							class="nav-link ms-3 sh-card position-relative pt-1"
+							href="#"
+							data-bs-toggle="offcanvas"
+							data-bs-target="#cartOffcanvas"
+							aria-controls="cartOffcanvas">
+							<i class="bi bi-cart2"></i>
+
+							<span
+								class="position-absolute top-0 start-100 translate-middle badge rounded-pill small-badge cartCount">
+								0
+							</span>
+						</a>
+					</div>
+					<div
+						class="offcanvas offcanvas-start custom-offcanvas"
+						tabindex="-1"
+						id="customOffcanvasMenu">
+						<div class="offcanvas-header">
+							<div class="container">
+								<input
+									type="text"
+									name="text"
+									class="input"
+									required=""
+									placeholder="جستجو..."
+									id="searchInput" />
+								<div class="icon">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="ionicon"
+										viewBox="0 0 512 512">
+										<title>جستجو</title>
+										<path
+											d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"
+											fill="none"
+											stroke="currentColor"
+											stroke-miterlimit="10"
+											stroke-width="32"></path>
+										<path
+											fill="none"
+											stroke="currentColor"
+											stroke-linecap="round"
+											stroke-miterlimit="10"
+											stroke-width="32"
+											d="M338.29 338.29L448 448"></path>
+									</svg>
+								</div>
+								<div
+									class="clear-icon"
+									id="clearButton"
+									style="display: none">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="ionicon"
+										viewBox="0 0 512 512">
+										<title>بستن</title>
+										<path
+											d="M400 145.5L366.5 112 256 222.5 145.5 112 112 145.5 222.5 256 112 366.5 145.5 400 256 289.5 366.5 400 400 366.5 289.5 256 400 145.5z"
+											fill="currentColor"></path>
+									</svg>
+								</div>
+								<script>
+									const input = document.getElementById('searchInput');
+									const clearButton = document.getElementById('clearButton');
+
+									input.addEventListener('input', function () {
+										if (input.value.length > 0) {
+											clearButton.style.display = 'block';
+										} else {
+											clearButton.style.display = 'none';
+										}
+									});
+
+									clearButton.addEventListener('click', function () {
+										input.value = '';
+										clearButton.style.display = 'none';
+										input.focus();
+									});
+								</script>
+							</div>
+
+							<button
+								type="button"
+								class="btn-close"
+								data-bs-dismiss="offcanvas"
+								aria-label="Close"></button>
+						</div>
+						<div class="offcanvas-body">
+							<ul class="nav flex-column custom-main-menu">
+								<li class="nav-item mt-2">
+									<a
+										class="nav-link active custom-nav-link"
+										aria-current="page"
+										href="#">
+										<div class="d-flex align-items-center">
+											<i class="bi bi-house-door-fill fs-6"></i>صفحه اصلی
+										</div>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link custom-nav-link"
+										href="#"
+										data-submenu="customHtml">
+										<div class="d-flex align-items-center">
+											<i class="fab fa-html5 fs-6"></i>HTML
+										</div>
+										<i class="bi bi-chevron-left"></i>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link custom-nav-link"
+										href="#">
+										<div class="d-flex align-items-center">
+											<i class="fab fa-css3-alt fs-6"> </i>
+											CSS
+										</div>
+										<i class="bi bi-chevron-left"></i>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link custom-nav-link"
+										href="#">
+										<div class="d-flex align-items-center">
+											<i class="fab fa-bootstrap fs-6"> </i>
+											Bootstrap
+										</div>
+										<i class="bi bi-chevron-left"></i>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link custom-nav-link"
+										href="./js.html">
+										<div class="d-flex align-items-center">
+											<i class="fab fa-js-square fs-6"></i>
+											Javascript
+										</div>
+										<i class="bi bi-chevron-left"></i>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link custom-nav-link"
+										href="#">
+										<div class="d-flex align-items-center">
+											<i class="fab fa-php fs-6"></i>PHP
+										</div>
+										<i class="bi bi-chevron-left"></i>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link custom-nav-link"
+										href="#">
+										<div class="d-flex align-items-center">
+											<i class="fab fa-java fs-6"> </i>
+											Java
+										</div>
+										<i class="bi bi-chevron-left"></i>
+									</a>
+								</li>
+							</ul>
+							<div
+								class="custom-sub-menu"
+								id="customHtml">
+								<h6 class="custom-submenu-title mb-3">HTML</h6>
+								<ul class="nav flex-column custom-main-menu">
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#">
+											<i class="bi bi-book me-2"></i>مقدمه HTML
+										</a>
+									</li>
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-code-slash me-2"></i>تگ‌های HTML</a
+										>
+									</li>
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-input-cursor-text me-2"></i>فرم‌های HTML</a
+										>
+									</li>
+								</ul>
+								<button class="custom-back-to-main">
+									<i class="bi bi-arrow-right me-2"></i>بازگشت به منوی اصلی
+								</button>
+							</div>
+							<div
+								class="custom-sub-menu"
+								id="customCss">
+								<h6 class="mb-3">CSS</h6>
+								<ul class="nav flex-column">
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-palette me-2"></i>مقدمه CSS</a
+										>
+									</li>
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-magic me-2"></i>سلکتورها</a
+										>
+									</li>
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-film me-2"></i>انیمیشن‌ها</a
+										>
+									</li>
+								</ul>
+								<button class="custom-back-to-main">
+									<i class="bi bi-arrow-right me-2"></i>بازگشت به منوی اصلی
+								</button>
+							</div>
+							<div
+								class="custom-sub-menu"
+								id="customJs">
+								<h6 class="custom-submenu-title mb-3">JavaScript</h6>
+								<ul class="nav flex-column">
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-file-earmark-text me-2"></i>مقدمه JavaScript</a
+										>
+									</li>
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-diagram-2 me-2"></i>توابع</a
+										>
+									</li>
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-lightning me-2"></i>رویدادها</a
+										>
+									</li>
+								</ul>
+								<button class="custom-back-to-main">
+									<i class="bi bi-arrow-right me-2"></i>بازگشت به منوی اصلی
+								</button>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</header>
+
+			<!-- Course Banner -->
+			<div
+				class="course-banner"
+				style="background-color: rgb(3, 8, 34)">
+				<div class="container">
+					<div class="row p-lg-5">
+						<div
+							class="col-12 col-lg-8 text-white d-flex flex-column justify-content-center">
+							<p class="d-none d-lg-block">
+								<a
+									href="#"
+									class="text-white"
+									>برنامه نویسی</a
+								>
+								<span class="text-light text-opacity-75">/</span>
+								<a
+									href="#"
+									class="text-white">
+									هنرستان
+								</a>
+								<span class="text-light text-opacity-75">/</span>
+								<a
+									href="#"
+									class="text-white">
+									دهم
+								</a>
+							</p>
+							<h2 class="mt-3 d-none d-lg-block">
+								دوره های تخصصی
+								<span>دروس دهم</span>
+								<i class="free-badge position-absolute">
+									<div class="badge-container">
+										<div class="glow"></div>
+										<div class="badge">
+											<div class="text">رایگان</div>
+										</div>
+									</div>
+								</i>
+							</h2>
+							<p class="mt-4 mt-lg-3 lh-lg">
+								دوره «مقدماتی تا پیشرفته هوش مصنوعی» به شما کمک می‌کند از اصول اولیه تا
+								مباحث پیشرفته این زبان را به‌طور کامل یاد بگیرید. با تمرکز بر مفاهیمی
+								چون توابع، شی‌گرایی و مدیریت DOM، شما را برای توسعه پروژه‌های واقعی
+								آماده می‌سازد.
+							</p>
+							<div class="d-flex justify-content-between w-lg-75 w-100 mt-3 pe-2">
+								<div style="width: 240px">
+									<span>
+										<i class="bi bi-person-video3 me-2"></i>مدرس دوره :
+										<a href="#"> محمدرضا وثوقی </a>
+									</span>
+								</div>
+								<div style="width: 240px">
+									<span>
+										<i class="bi bi-clock me-2"></i>
+										مدت زمان دوره : ۷۸ ساعت
+									</span>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between w-lg-75 w-100 mt-lg-3 pe-2">
+								<div style="width: 240px">
+									<span>
+										<i class="bi bi-arrow-clockwise pe-2"></i>اخرین آپدیت دوره: 2024
+									</span>
+								</div>
+								<div style="width: 240px">
+									<span>
+										<i class="bi bi-film pe-2"></i>
+										تعداد جلسات دوره: ۲۳۱ جلسه
+									</span>
+								</div>
+							</div>
+						</div>
+						<div
+							class="col-12 col-lg-4 d-flex flex-column justify-content-between align-items-center">
+							<h2 class="mt-3 text-white d-lg-none">
+								دوره مقدماتی تا پیشرفته
+								<span>هوش مصنوعی</span>
+							</h2>
+							<video
+								preload="none"
+								width="380px"
+								controls=""
+								poster="https://bells.sg/wp-content/uploads/2023/11/artificial-intelligence-ChatGPT.jpg"
+								style="border-radius: 10px">
+								<source
+									src="#"
+									type="video/mp4" />
+								Your browser does not support the video tag.
+							</video>
+							<div class="d-flex flex-column mt-3">
+								<a href="#">
+									<div
+										data-tooltip="قیمت : رایگان"
+										class="button text-white">
+										<div class="button-wrapper">
+											<div class="text">ثبت نام در دوره</div>
+											<span class="icon">
+												<svg
+													viewBox="0 0 16 16"
+													class="bi bi-cart2"
+													fill="currentColor"
+													height="16"
+													width="16"
+													xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+												</svg>
+											</span>
+										</div>
+									</div>
+								</a>
+								<div
+									style="font-size: 15px"
+									class="d-flex justify-content-between text-white mt-4 position-relative">
+									<span class="d-flex align-items-center">
+										<i class="bi bi-headset pe-2 pt-1"></i>
+										پشتیبانی دائمی
+									</span>
+									<span class="d-flex align-items-center ps-3 ps-lg-0">
+										<i class="bi bi-people-fill pe-2"></i>
+										<span id="studentCounter">0</span>
+										&nbsp;دانشجو
+									</span>
+									<div
+										class="position-relative d-flex justify-content-end align-items-center">
+										<div class="action-buttons">
+											<button
+												onclick="toggleBookmark(this)"
+												class="btn btn-light action-btn shadow-sm bookmark-btn">
+												<i class="bi bi-suit-heart"></i>
+											</button>
+											<button
+												onclick="toggleBookmark(this)"
+												class="btn btn-light action-btn shadow-sm bookmark-btn">
+												<i class="bi bi-bookmark-plus"></i>
+											</button>
+											<button
+												class="btn action-btn shadow-sm"
+												data-bs-toggle="modal"
+												data-bs-target="#shareModal"
+												data-card-id="1">
+												<i class="bi bi-share"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<script>
+					function toggleBookmark(button) {
+						const icon = button.querySelector('i');
+						if (icon.classList.contains('bi-bookmark-plus')) {
+							icon.classList.remove('bi-bookmark-plus');
+							icon.classList.add('bi-bookmark-check-fill');
+						} else if (icon.classList.contains('bi-bookmark-check-fill')) {
+							icon.classList.remove('bi-bookmark-check-fill');
+							icon.classList.add('bi-bookmark-plus');
+						} else if (icon.classList.contains('bi-suit-heart')) {
+							icon.classList.remove('bi-suit-heart');
+							icon.classList.add('bi-suit-heart-fill');
+						} else if (icon.classList.contains('bi-suit-heart-fill')) {
+							icon.classList.remove('bi-suit-heart-fill');
+							icon.classList.add('bi-suit-heart');
+						}
+					}
+				</script>
+				<div
+					class="modal fade"
+					id="shareModal"
+					tabindex="-1"
+					aria-labelledby="shareModalLabel"
+					aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5
+									class="modal-title"
+									id="shareModalLabel">
+									اشتراک‌گذاری دوره
+								</h5>
+								<button
+									type="button"
+									class="btn-close ms-0 ms-auto"
+									data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<div class="input-group mb-3">
+									<input
+										type="text"
+										class="form-control text-start"
+										id="shareLink"
+										readonly />
+									<button
+										class="btn btn-outline-secondary"
+										type="button"
+										onclick="copyLink()">
+										کپی
+									</button>
+								</div>
+								<div class="d-flex justify-content-evenly">
+									<!-- Telegram -->
+									<button
+										class="btn btn-primary social-btn"
+										onclick="shareOnTelegram()">
+										<i class="bi bi-telegram"></i>
+									</button>
+
+									<!-- WhatsApp -->
+									<button
+										class="btn btn-success social-btn"
+										onclick="shareOnWhatsApp()">
+										<i class="bi bi-whatsapp"></i>
+									</button>
+
+									<!-- Email -->
+									<button
+										class="btn btn-secondary social-btn"
+										onclick="shareViaEmail()">
+										<i class="bi bi-envelope-at-fill"></i>
+									</button>
+
+									<!-- Instagram -->
+									<button
+										class="btn btn-danger social-btn"
+										onclick="shareOnInstagram()">
+										<i class="bi bi-instagram"></i>
+									</button>
+
+									<!-- LinkedIn -->
+									<button
+										class="btn btn-info social-btn"
+										onclick="shareOnLinkedIn()">
+										<i class="bi bi-linkedin"></i>
+									</button>
+
+									<!-- Twitter (X) -->
+									<button
+										class="btn btn-dark social-btn"
+										onclick="shareOnTwitter()">
+										<i class="bi bi-twitter"></i>
+									</button>
+
+									<!-- Facebook -->
+									<button
+										class="btn btn-primary social-btn"
+										onclick="shareOnFacebook()">
+										<i class="bi bi-facebook"></i>
+									</button>
+
+									<!-- SMS -->
+									<button
+										class="btn btn-success social-btn"
+										onclick="shareViaSMS()">
+										<i class="bi bi-chat-dots"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<script>
+					document.addEventListener('DOMContentLoaded', () => {
+						const modal = document.getElementById('shareModal');
+						const shareLinkInput = document.getElementById('shareLink');
+
+						modal.addEventListener('show.bs.modal', (event) => {
+							const button = event.relatedTarget;
+							const cardId = button.getAttribute('data-card-id');
+							shareLinkInput.value = `https://example.com/course/${cardId}`;
+						});
+					});
+
+					function copyLink() {
+						const shareLinkInput = document.getElementById('shareLink');
+						shareLinkInput.select();
+						document.execCommand('copy');
+						alert('لینک کپی شد!');
+					}
+
+					function shareOnTelegram() {
+						const shareLink = document.getElementById('shareLink').value;
+						const telegramUrl = `https://t.me/share/url?url=${encodeURIComponent(
+							shareLink
+						)}`;
+						window.open(telegramUrl, '_blank');
+					}
+
+					function shareOnWhatsApp() {
+						const shareLink = document.getElementById('shareLink').value;
+						const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(
+							shareLink
+						)}`;
+						window.open(whatsappUrl, '_blank');
+					}
+					function shareViaEmail() {
+						const shareLink = document.getElementById('shareLink').value;
+						const subject = encodeURIComponent('Check this out');
+						const body = encodeURIComponent(
+							`I thought you might be interested in this: ${shareLink}`
+						);
+						window.open(`mailto:?subject=${subject}&body=${body}`, '_blank');
+					}
+
+					function shareOnInstagram() {
+						// Instagram doesn't support direct sharing via URL
+						// Open Instagram app/website and let users copy the link
+						const shareLink = document.getElementById('shareLink').value;
+						alert(
+							'برای اشتراک‌گذاری در اینستاگرام، لینک را کپی کنید و در دایرکت به اشتراک بگذارید.'
+						);
+						copyLink();
+					}
+
+					function shareOnLinkedIn() {
+						const shareLink = document.getElementById('shareLink').value;
+						window.open(
+							`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+								shareLink
+							)}`,
+							'_blank'
+						);
+					}
+
+					function shareOnTwitter() {
+						const shareLink = document.getElementById('shareLink').value;
+						const text = encodeURIComponent(
+							`Check out this interesting content: ${shareLink}`
+						);
+						window.open(`https://twitter.com/intent/tweet?text=${text}`, '_blank');
+					}
+
+					function shareOnFacebook() {
+						const shareLink = document.getElementById('shareLink').value;
+						window.open(
+							`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+								shareLink
+							)}`,
+							'_blank'
+						);
+					}
+
+					function shareViaSMS() {
+						const shareLink = document.getElementById('shareLink').value;
+						// Check if device supports SMS URI scheme
+						if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+							window.open(`sms:?body=${encodeURIComponent(shareLink)}`, '_blank');
+						} else {
+							alert('این دستگاه از ارسال پیامک پشتیبانی نمی‌کند.');
+						}
+					}
+				</script>
+			</div>
+
+			<!-- What You Learn -->
+			<div class="course-roadmap">
+				<div class="container">
+					<div
+						class="row border border-2 shadow-sm rounded py-4 d-flex justify-content-around">
+						<div class="col-11 mb-4 ms-lg-4">
+							<h4>شما در این دوره می آموزید:</h4>
+						</div>
+						<div class="col-lg-5 d-flex flex-column">
+							<div class="d-flex">
+								<i class="bi bi-check2-circle"></i>
+								<p class="mt-1 ms-2">
+									از صفر تا سطح پیشرفته هوش مصنوعی را یاد بگیرید و به یک توسعه‌دهنده مدرن
+									و با اعتماد به نفس تبدیل شوید.
+								</p>
+							</div>
+							<div class="d-flex">
+								<i class="bi bi-check2-circle"></i>
+								<p class="mt-1 ms-2">
+									با استفاده از ابزارها و کتابخانه‌های جاوا اسکریپت آماده برای ورود به
+									بازار کار شوید.
+								</p>
+							</div>
+							<div class="d-flex">
+								<i class="bi bi-check2-circle"></i>
+								<p class="mt-1 ms-2">
+									تسلط بر مفاهیم پیچیده اما مهم مانند closures، hoisting و callbacks.
+								</p>
+							</div>
+							<div class="d-flex">
+								<i class="bi bi-check2-circle"></i>
+								<p class="mt-1 ms-2">
+									ساخت برنامه‌های تک‌صفحه‌ای (SPA) با استفاده از کتابخانه‌هایی مانند
+									React و Angular.
+								</p>
+							</div>
+							<div class="d-flex">
+								<i class="bi bi-check2-circle"></i>
+								<p class="mt-1 ms-2">
+									یادگیری ویژگی‌های پیشرفته هوش مصنوعی: Promises، async/await، ES6+
+									syntax، و ...
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-5 d-flex flex-column">
+							<div class="d-flex">
+								<i class="bi bi-check2-circle"></i>
+								<p class="mt-1 ms-2">
+									استفاده از APIهای مرورگر: Fetch API، LocalStorage، و SessionStorage.
+								</p>
+							</div>
+							<div class="d-flex">
+								<i class="bi bi-check2-circle"></i>
+								<p class="mt-1 ms-2">
+									ساخت برنامه‌های واقعی با ویژگی‌هایی مثل احراز هویت، مرتب‌سازی داده‌ها،
+									فیلتر کردن، و مدیریت صفحات.
+								</p>
+							</div>
+							<div class="d-flex">
+								<i class="bi bi-check2-circle"></i>
+								<p class="mt-1 ms-2">
+									بهینه‌سازی عملکرد برنامه‌ها با تکنیک‌هایی مثل Debouncing و Throttling.
+								</p>
+							</div>
+							<div class="d-flex">
+								<i class="bi bi-check2-circle"></i>
+								<p class="mt-1 ms-2">
+									آشنایی با الگوهای طراحی ماژولار و استفاده از ابزارهایی مثل Webpack و
+									Babel برای بهینه‌سازی کد.
+								</p>
+							</div>
+							<div class="d-flex">
+								<i class="bi bi-check2-circle"></i>
+								<p class="mt-1 ms-2">
+									ساخت پروژه‌های واقعی، از جمله دو پروژه بزرگ که نزدیک به شرایط پروژه‌های
+									واقعی خواهند بود.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-5">
+						<h4 class="mb-4">این دوره شامل:</h4>
+						<div class="col-lg-6 d-flex flex-column">
+							<div class="d-flex align-items-center mb-2">
+								<i class="bi bi-play-btn"></i>
+								<span class="ms-3"> 45 ساعت ویدیوی آموزشی </span>
+							</div>
+							<div class="d-flex align-items-center mb-2">
+								<i class="bi bi-file-text"></i>
+								<span class="ms-3"> 9 جزوه آموزشی </span>
+							</div>
+							<div class="d-flex align-items-center mb-2">
+								<i class="bi bi-cloud-arrow-down"></i>
+								<span class="ms-3"> 2 تمرین قابل دانلود </span>
+							</div>
+						</div>
+						<div class="col-lg-6 d-flex flex-column">
+							<div class="d-flex align-items-center mb-2">
+								<i class="bi bi-phone"></i>
+								<span class="ms-3"> قابل دسترسی در دستگاه های مختلف </span>
+							</div>
+							<div class="d-flex align-items-center mb-2">
+								<i class="bi bi-trophy"></i>
+								<span class="ms-3"> مدرک اختصاصی پس از اتمام دوره </span>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-5">
+						<div class="col-12 p-0">
+							<div class="course-container mt-5 mt-lg-0">
+								<div class="course-wrapper">
+									<div class="course-header d-flex flex-column">
+										<div class="d-flex justify-content-between w-100">
+											<h1 class="course-header__title">محتوای دوره</h1>
+											<button class="course-header__expand-btn">نمایش همه بخش‌ها</button>
+										</div>
+										<div class="filter-buttons mb-3 mt-5">
+											<button
+												class="btn btn-outline-success me-2 mb-2 active"
+												data-filter="all">
+												همه
+											</button>
+											<button
+												class="btn btn-outline-success me-2 mb-2"
+												data-filter="beginner">
+												تولید محتوا
+											</button>
+											<button
+												class="btn btn-outline-success me-2 mb-2"
+												data-filter="intermediate">
+												برنامه نویسی مقدماتی سی شارپ
+											</button>
+											<button
+												class="btn btn-outline-success me-2 mb-2"
+												data-filter="advanced">
+												دیتابیس
+											</button>
+											<button
+												class="btn btn-outline-success me-2 mb-2"
+												data-filter="javascript">
+												اکسل
+											</button>
+											<button
+												class="btn btn-outline-success me-2 mb-2"
+												data-filter="react">
+												طراحی وب
+											</button>
+										</div>
+									</div>
+
+									<div class="course-accordion">
+										<div
+											class="course-section course-section--active beginner javascript">
+											<div class="course-section__header">
+												<div class="course-section__title">
+													<span class="course-icon course-icon--arrow"></span>
+													تولید محتوای دهم
+												</div>
+												<div class="course-section__info">۵ درس</div>
+											</div>
+											<div class="course-section__content">
+												<div class="course-lecture">
+													<a
+														href="#"
+														class="course-lecture__title"
+														data-video-id="1"
+														data-bs-toggle="modal"
+														data-bs-target="#videoModal">
+														<span class="course-icon course-icon--play">▶</span>
+														نقشه راه دوره و پروژه‌ها
+													</a>
+													<span class="course-lecture__duration">۰۲:۵۷</span>
+												</div>
+												<div class="course-lecture">
+													<a
+														href="#"
+														class="course-lecture__title"
+														data-video-id="2"
+														data-bs-toggle="modal"
+														data-bs-target="#videoModal">
+														<span class="course-icon course-icon--play">▶</span>
+														ساخت اولین برنامه ری‌اکت
+													</a>
+													<span class="course-lecture__duration">۱۸:۵۲</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="course-section advanced">
+											<div class="course-section__header">
+												<div class="course-section__title">
+													<span class="course-icon course-icon--arrow"></span>
+													برنامه نویسی مقدماتی
+												</div>
+												<div class="course-section__info">۲ درس</div>
+											</div>
+											<div class="course-section__content">
+												<div class="course-lecture">
+													<a
+														href="#"
+														class="course-lecture__title"
+														data-video-id="3"
+														data-bs-toggle="modal"
+														data-bs-target="#videoModal">
+														<span class="course-icon course-icon--play">▶</span>
+														معرفی پروژه‌های بخش
+													</a>
+													<span class="course-lecture__duration">۰۵:۲۴</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="course-section advanced">
+											<div class="course-section__header">
+												<div class="course-section__title">
+													<span class="course-icon course-icon--arrow"></span>
+													آشنایی با JavaScript ضروری برای React
+												</div>
+												<div class="course-section__info">۱۵ درس</div>
+											</div>
+											<div class="course-section__content">
+												<div class="course-lecture">
+													<a
+														href="#"
+														class="course-lecture__title"
+														data-video-id="4"
+														data-bs-toggle="modal"
+														data-bs-target="#videoModal">
+														<span class="course-icon course-icon--play">▶</span>
+														Arrow Functions
+													</a>
+													<span class="course-lecture__duration">۱۲:۳۰</span>
+												</div>
+												<div class="course-lecture">
+													<a
+														href="#"
+														class="course-lecture__title"
+														data-video-id="5"
+														data-bs-toggle="modal"
+														data-bs-target="#videoModal">
+														<span class="course-icon course-icon--play">▶</span>
+														Destructuring
+													</a>
+													<span class="course-lecture__duration">۰۹:۴۵</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="course-section javascript">
+											<div class="course-section__header">
+												<div class="course-section__title">
+													<span class="course-icon course-icon--arrow"></span>
+													کار با Components، Props و JSX
+												</div>
+												<div class="course-section__info">۲۴ درس</div>
+											</div>
+											<div class="course-section__content">
+												<div class="course-lecture">
+													<a
+														href="#"
+														class="course-lecture__title"
+														data-video-id="6"
+														data-bs-toggle="modal"
+														data-bs-target="#videoModal">
+														<span class="course-icon course-icon--play">▶</span>
+														مفهوم Component در React
+													</a>
+													<span class="course-lecture__duration">۱۵:۲۰</span>
+												</div>
+												<div class="course-lecture">
+													<a
+														href="#"
+														class="course-lecture__title"
+														data-video-id="7"
+														data-bs-toggle="modal"
+														data-bs-target="#videoModal">
+														<span class="course-icon course-icon--play">▶</span>
+														کار با Props
+													</a>
+													<span class="course-lecture__duration">۱۸:۴۵</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="course-section javascript">
+											<div class="course-section__header">
+												<div class="course-section__title">
+													<span class="course-icon course-icon--arrow"></span>
+													State، Events و Forms: اجزای تعاملی
+												</div>
+												<div class="course-section__info">۲۱ درس</div>
+											</div>
+											<div class="course-section__content">
+												<div class="course-lecture">
+													<a
+														href="#"
+														class="course-lecture__title"
+														data-video-id="8"
+														data-bs-toggle="modal"
+														data-bs-target="#videoModal">
+														<span class="course-icon course-icon--play">▶</span>
+														مدیریت State در React
+													</a>
+													<span class="course-lecture__duration">۲۰:۱۵</span>
+												</div>
+												<div class="course-lecture">
+													<a
+														href="#"
+														class="course-lecture__title"
+														data-video-id="9"
+														data-bs-toggle="modal"
+														data-bs-target="#videoModal">
+														<span class="course-icon course-icon--play">▶</span>
+														کار با Events در React
+													</a>
+													<span class="course-lecture__duration">۱۶:۳۰</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="course-section javascript">
+											<div class="course-section__header">
+												<div class="course-section__title">
+													<span class="course-icon course-icon--arrow"></span>
+													مدیریت حالت پیشرفته در React
+												</div>
+												<div class="course-section__info">۱۸ درس</div>
+											</div>
+											<div class="course-section__content">
+												<div class="course-lecture">
+													<a
+														href="#"
+														class="course-lecture__title"
+														data-video-id="10"
+														data-bs-toggle="modal"
+														data-bs-target="#videoModal">
+														<span class="course-icon course-icon--play">▶</span>
+														معرفی Redux
+													</a>
+													<span class="course-lecture__duration">۲۵:۱۰</span>
+												</div>
+												<div class="course-lecture">
+													<a
+														href="#"
+														class="course-lecture__title"
+														data-video-id="11"
+														data-bs-toggle="modal"
+														data-bs-target="#videoModal">
+														<span class="course-icon course-icon--play">▶</span>
+														کار با Context API
+													</a>
+													<span class="course-lecture__duration">۲۰:۴۵</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="course-section react">
+											<div class="course-section__header">
+												<div class="course-section__title">
+													<span class="course-icon course-icon--arrow"></span>
+													هوک‌های React
+												</div>
+												<div class="course-section__info">۱۵ درس</div>
+											</div>
+											<div class="course-section__content">
+												<div class="course-lecture">
+													<a
+														href="#"
+														class="course-lecture__title"
+														data-video-id="12"
+														data-bs-toggle="modal"
+														data-bs-target="#videoModal">
+														<span class="course-icon course-icon--play">▶</span>
+														معرفی useState و useEffect
+													</a>
+													<span class="course-lecture__duration">۳۰:۲۰</span>
+												</div>
+												<div class="course-lecture">
+													<a
+														href="#"
+														class="course-lecture__title"
+														data-video-id="13"
+														data-bs-toggle="modal"
+														data-bs-target="#videoModal">
+														<span class="course-icon course-icon--play">▶</span>
+														ساخت هوک‌های سفارشی
+													</a>
+													<span class="course-lecture__duration">۲۵:۵۵</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<script>
+								document.addEventListener('DOMContentLoaded', function () {
+									const filterButtons = document.querySelectorAll(
+										'.filter-buttons button'
+									);
+									const courseCards = document.querySelectorAll('.course-section');
+									let activeFilter = 'all';
+
+									filterButtons.forEach((button) => {
+										button.addEventListener('click', function () {
+											const filter = this.getAttribute('data-filter');
+
+											if (filter === activeFilter) {
+												// اگر دکمه فعلی کلیک شده، آن را غیرفعال کن
+												this.classList.remove('active');
+												activeFilter = 'all';
+											} else {
+												// در غیر این صورت، دکمه قبلی را غیرفعال و این دکمه را فعال کن
+												filterButtons.forEach((btn) => btn.classList.remove('active'));
+												this.classList.add('active');
+												activeFilter = filter;
+											}
+
+											// فیلتر کردن کارت‌های دوره
+											courseCards.forEach((card) => {
+												if (
+													activeFilter === 'all' ||
+													card.classList.contains(activeFilter)
+												) {
+													card.style.display = 'block';
+												} else {
+													card.style.display = 'none';
+												}
+											});
+
+											console.log('Active filter:', activeFilter);
+										});
+									});
+
+									// فعال کردن دکمه "همه" به صورت پیش‌فرض
+									filterButtons[0].classList.add('active');
+								});
+							</script>
+							<script>
+								document.addEventListener('DOMContentLoaded', () => {
+									const sections = document.querySelectorAll('.course-section');
+									const expandAllButton = document.querySelector(
+										'.course-header__expand-btn'
+									);
+									const videoModal = document.getElementById('videoModal');
+									const videoPlayer = document.getElementById('videoPlayer');
+									const playlistContainer = document.querySelector('.video-playlist');
+									let allExpanded = false;
+
+									// Updated video data with section information
+									const videos = [
+										{
+											id: 1,
+											title: 'نقشه راه دوره و پروژه‌ها',
+											duration: '02:57',
+											url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+											section: 'خوش آمدید!',
+											description:
+												'در این ویدیو، نگاهی کلی به محتوای دوره و پروژه‌هایی که در طول دوره خواهیم ساخت خواهیم داشت.',
+										},
+										{
+											id: 2,
+											title: 'ساخت اولین برنامه ری‌اکت',
+											duration: '18:52',
+											url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+											section: 'خوش آمدید!',
+											description:
+												'در این ویدیو، قدم به قدم اولین برنامه ری‌اکت خود را خواهیم ساخت و با مفاهیم اولیه آشنا خواهیم شد.',
+										},
+										{
+											id: 3,
+											title: 'معرفی پروژه‌های بخش',
+											duration: '05:24',
+											url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+											section: 'بخش ۱: مفاهیم پایه ری‌اکت [۴ پروژه]',
+											description:
+												'در این ویدیو، پروژه‌هایی که در بخش مفاهیم پایه ری‌اکت خواهیم ساخت را معرفی می‌کنیم.',
+										},
+										{
+											id: 4,
+											title: 'کار با کامپوننت‌ها',
+											duration: '03:12',
+											url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+											section: 'بخش ۱: مفاهیم پایه ری‌اکت [۴ پروژه]',
+											description:
+												'در این ویدیو، مفهوم کامپوننت در ری‌اکت را بررسی می‌کنیم و نحوه ایجاد و استفاده از آنها را یاد می‌گیریم.',
+										},
+										{
+											id: 5,
+											title: 'مدیریت state',
+											duration: '07:45',
+											url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+											section: 'بخش ۲: کامپوننت‌ها',
+											description:
+												'در این ویدیو، با مفهوم state در ری‌اکت آشنا می‌شویم و نحوه مدیریت آن را در کامپوننت‌ها یاد می‌گیریم.',
+										},
+										{
+											id: 6,
+											title: 'کار با props',
+											duration: '11:22',
+											url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+											section: 'بخش ۲: کامپوننت‌ها',
+											description:
+												'در این ویدیو، مفهوم props در ری‌اکت را بررسی می‌کنیم و یاد می‌گیریم چگونه داده‌ها را بین کامپوننت‌ها منتقل کنیم.',
+										},
+										{
+											id: 7,
+											title: 'مسیریابی در ری‌اکت',
+											duration: '09:01',
+											url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+											section: 'بخش ۳: روتر',
+											description:
+												'در این ویدیو، با مفهوم مسیریابی (routing) در ری‌اکت آشنا می‌شویم و نحوه پیاده‌سازی آن را یاد می‌گیریم.',
+										},
+										{
+											id: 8,
+											title: 'پارامترهای URL',
+											duration: '04:33',
+											url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+											section: 'بخش ۳: روتر',
+											description:
+												'در این ویدیو، نحوه کار با پارامترهای URL در مسیریابی ری‌اکت را بررسی می‌کنیم.',
+										},
+										{
+											id: 9,
+											title: 'استایل‌دهی در ری‌اکت',
+											duration: '06:58',
+											url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+											section: 'بخش ۴: استایلینگ',
+											description:
+												'در این ویدیو، روش‌های مختلف استایل‌دهی در ری‌اکت را بررسی می‌کنیم و با CSS-in-JS آشنا می‌شویم.',
+										},
+										{
+											id: 10,
+											title: 'کار با Styled Components',
+											duration: '15:10',
+											url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+											section: 'بخش ۴: استایلینگ',
+											description:
+												'در این ویدیو، با کتابخانه Styled Components آشنا می‌شویم و نحوه استفاده از آن در پروژه‌های ری‌اکت را یاد می‌گیریم.',
+										},
+									];
+
+									// Accordion functionality
+									sections.forEach((section) => {
+										const header = section.querySelector('.course-section__header');
+										header.addEventListener('click', () => {
+											sections.forEach((s) => {
+												if (s !== section) {
+													s.classList.remove('course-section--active');
+												}
+											});
+											section.classList.toggle('course-section--active');
+										});
+									});
+
+									expandAllButton.addEventListener('click', () => {
+										allExpanded = !allExpanded;
+										sections.forEach((section) => {
+											section.classList.toggle('course-section--active', allExpanded);
+										});
+										expandAllButton.textContent = allExpanded
+											? 'بستن همه بخش‌ها'
+											: 'نمایش همه بخش‌ها';
+									});
+
+									// Video modal functionality
+									function loadVideo(videoId) {
+										const video = videos.find((v) => v.id === parseInt(videoId));
+										if (video) {
+											videoPlayer.src = video.url;
+											document.getElementById('videoModalLabel').textContent = video.title;
+											document.getElementById('videoDescription').textContent =
+												video.description;
+
+											// Update active playlist item and scroll to it
+											const playlistItems =
+												playlistContainer.querySelectorAll('.playlist-item');
+											playlistItems.forEach((item) => {
+												if (item.dataset.videoId === videoId.toString()) {
+													item.classList.add('active');
+													// Scroll the active item into view
+													setTimeout(() => {
+														item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+													}, 100);
+												} else {
+													item.classList.remove('active');
+												}
+											});
+										}
+									}
+
+									// Generate playlist HTML
+									function generatePlaylist() {
+										let currentSection = '';
+										let playlistHTML = '';
+
+										videos.forEach((video) => {
+											if (video.section !== currentSection) {
+												if (currentSection !== '') {
+													playlistHTML += '</div>';
+												}
+												playlistHTML += `
+													<div class="playlist-section">
+														<h6 class="playlist-section-title">${video.section}</h6>
+												`;
+												currentSection = video.section;
+											}
+
+											playlistHTML += `
+												<div class="playlist-item" data-video-id="${video.id}">
+													<img src="/placeholder.svg?height=56&width=100" alt="thumbnail" class="playlist-thumbnail">
+													<div class="playlist-info">
+														<div class="playlist-title">${video.title}</div>
+														<div class="playlist-duration">${video.duration}</div>
+													</div>
+												</div>
+											`;
+										});
+
+										playlistHTML += '</div>'; // Close the last section
+										playlistContainer.innerHTML = playlistHTML;
+
+										// Add click event listeners to playlist items
+										const playlistItems =
+											playlistContainer.querySelectorAll('.playlist-item');
+										playlistItems.forEach((item) => {
+											item.addEventListener('click', () => {
+												const videoId = item.dataset.videoId;
+												loadVideo(videoId);
+											});
+										});
+									}
+
+									// Handle video links in accordion
+									document.querySelectorAll('.course-lecture__title').forEach((link) => {
+										link.addEventListener('click', (e) => {
+											e.preventDefault();
+											const videoId = link.dataset.videoId;
+											loadVideo(videoId);
+										});
+									});
+
+									// Reset video when modal is closed
+									videoModal.addEventListener('hidden.bs.modal', () => {
+										videoPlayer.src = '';
+									});
+
+									// Load first video and generate playlist when modal is shown
+									videoModal.addEventListener('show.bs.modal', (event) => {
+										const button = event.relatedTarget;
+										const videoId = button.dataset.videoId;
+										generatePlaylist();
+										loadVideo(videoId);
+									});
+								});
+							</script>
+						</div>
+						<div class="col-12">
+							<div class="description">
+								<h4 class="mt-5">توضیحات تکمیلی</h4>
+								<p class="mt-3">
+									این دوره آموزشی برای کسانی طراحی شده است که می‌خواهند هوش مصنوعی را از
+									ابتدا تا سطح پیشرفته یاد بگیرند.<br />
+									در طول دوره، دانشجویان ابتدا با مبانی جاوا اسکریپت مانند متغیرها،
+									توابع، حلقه‌ها و شرط‌ها آشنا می‌شوند. سپس به تدریج به سراغ مفاهیم
+									پیچیده‌تری مانند شی‌گرایی، کار با رویدادها، و نحوه تعامل هوش مصنوعی با
+									DOM می‌روند. این دوره به گونه‌ای طراحی شده است که هم برای تازه‌کارها و
+									هم برای کسانی که قصد بهبود و تقویت مهارت‌های خود را دارند، مناسب باشد.
+								</p>
+								<p class="mt-3">
+									علاوه بر مفاهیم پایه، این دوره به دانشجویان کمک می‌کند تا با ابزارها و
+									تکنیک‌های مدرن هوش مصنوعی، از جمله ES6 و نسخه‌های جدیدتر، آشنا شوند. در
+									طول دوره، مواردی مانند async/await، Promises، و مدیریت وضعیت با استفاده
+									از توابع پیشرفته به دقت آموزش داده می‌شوند. همچنین، مفاهیمی مانند
+									ماژول‌بندی، بهینه‌سازی کد و استفاده از API های مختلف مرورگر به طور کامل
+									پوشش داده خواهند شد.
+								</p>
+								<p class="mt-3">
+									در این دوره، دانشجویان مهارت‌های لازم برای ساخت برنامه‌های تک‌صفحه‌ای
+									(SPA) و برنامه‌های پیچیده را کسب خواهند کرد. یکی از ویژگی‌های برجسته
+									این دوره، تمرکز آن بر پروژه‌های عملی است. دانشجویان از طریق انجام
+									پروژه‌های واقعی مانند ساخت برنامه‌های تحت وب با قابلیت احراز هویت،
+									مرتب‌سازی داده‌ها و استفاده از APIها تجربه عملی کسب می‌کنند. این
+									پروژه‌ها نه تنها به درک عمیق‌تر مفاهیم کمک می‌کنند، بلکه نمونه‌هایی
+									ارزشمند برای ارائه در مصاحبه‌های کاری خواهند بود. این دوره تمام ابزارها
+									و مهارت‌هایی که برای موفقیت در دنیای برنامه‌نویسی هوش مصنوعی نیاز دارید
+									را به شما ارائه می‌دهد.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<h4 class="mb-5 teacher-title">مدرس دوره</h4>
+						<div class="teacher d-flex">
+							<div class="col-12 col-lg-4 d-flex">
+								<div class="image-container">
+									<img
+										src="./images/vosooghi-removebg-preview.png"
+										alt="Mr.vosooghi picture" />
+								</div>
+							</div>
+							<div
+								class="col-12 col-lg-8 d-flex flex-column pe-lg-5 justify-content-center">
+								<h5 class="mt-4">محمدرضا وثوقی</h5>
+								<span> Software / Hardware Engineer </span>
+								<p class="mt-4">
+									محمدرضا وثوقی، یک برنامه‌نویس نرم‌افزار و مهندس سخت‌افزار با ۱۵ سال
+									سابقه تدریس در حوزه نرم‌افزار و برنامه‌نویسی است. او با تسلط بر
+									تکنولوژی‌های روز و روش‌های آموزشی نوین، توانسته است به‌خوبی دانش‌آموزان
+									و دانشجویان را در مسیر یادگیری هدایت کند. مهارت‌های او شامل
+									برنامه‌نویسی در زبان‌های مختلف، طراحی سیستم‌های سخت‌افزاری و مشاوره در
+									پروژه‌های فناوری اطلاعات می‌باشد.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Video Modal -->
+			<div
+				class="modal fade video-modal"
+				id="videoModal"
+				tabindex="-1"
+				aria-labelledby="videoModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5
+								class="modal-title"
+								id="videoModalLabel">
+								پیش‌نمایش دوره
+							</h5>
+							<button
+								type="button"
+								class="btn-close"
+								data-bs-dismiss="modal"
+								aria-label="Close"></button>
+						</div>
+						<div class="modal-body p-0">
+							<div class="video-player">
+								<iframe
+									id="videoPlayer"
+									src=""
+									allowfullscreen></iframe>
+							</div>
+							<div
+								id="videoDescription"
+								class="video-description"></div>
+							<div class="video-playlist">
+								<div
+									class="playlist-item active"
+									data-video-id="1">
+									<img
+										src="/placeholder.svg?height=68&width=120"
+										alt="thumbnail"
+										class="playlist-thumbnail" />
+									<div class="playlist-info">
+										<div class="playlist-title">نقشه راه دوره و پروژه‌ها</div>
+										<div class="playlist-duration">۰۲:۵۷</div>
+									</div>
+								</div>
+								<div
+									class="playlist-item"
+									data-video-id="2">
+									<img
+										src="/placeholder.svg?height=68&width=120"
+										alt="thumbnail"
+										class="playlist-thumbnail" />
+									<div class="playlist-info">
+										<div class="playlist-title">ساخت اولین برنامه ری‌اکت</div>
+										<div class="playlist-duration">۱۸:۵۲</div>
+									</div>
+								</div>
+								<div
+									class="playlist-item"
+									data-video-id="3">
+									<img
+										src="/placeholder.svg?height=68&width=120"
+										alt="thumbnail"
+										class="playlist-thumbnail" />
+									<div class="playlist-info">
+										<div class="playlist-title">معرفی پروژه‌های بخش</div>
+										<div class="playlist-duration">۰۵:۲۴</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Comment Section -->
+			<div
+				dir="rtl"
+				class="reviews-container mb-5">
+				<div class="reviews-header">
+					<h2 class="reviews-title">نظرات کاربران</h2>
+					<div class="showing-text">نمایش ۳ از ۴۴۰۹ نظر</div>
+					<div class="overall-rating">
+						<div class="rating-number">۴.۷</div>
+						<div class="stars">★★★★★</div>
+						<div class="total-reviews">۴۴۰۹ نظر</div>
+					</div>
+					<div class="rating-bars">
+						<div class="rating-bar">
+							<div class="star-label">۵ ستاره</div>
+							<div class="progress-bar">
+								<div
+									class="progress-fill"
+									style="width: 75.66%"></div>
+							</div>
+							<div class="percentage">۷۵.۶۶٪</div>
+						</div>
+						<div class="rating-bar">
+							<div class="star-label">۴ ستاره</div>
+							<div class="progress-bar">
+								<div
+									class="progress-fill"
+									style="width: 18.29%"></div>
+							</div>
+							<div class="percentage">۱۸.۲۹٪</div>
+						</div>
+						<div class="rating-bar">
+							<div class="star-label">۳ ستاره</div>
+							<div class="progress-bar">
+								<div
+									class="progress-fill"
+									style="width: 3.89%"></div>
+							</div>
+							<div class="percentage">۳.۸۹٪</div>
+						</div>
+						<div class="rating-bar">
+							<div class="star-label">۲ ستاره</div>
+							<div class="progress-bar">
+								<div
+									class="progress-fill"
+									style="width: 1.12%"></div>
+							</div>
+							<div class="percentage">۱.۱۲٪</div>
+						</div>
+						<div class="rating-bar">
+							<div class="star-label">۱ ستاره</div>
+							<div class="progress-bar">
+								<div
+									class="progress-fill"
+									style="width: 1.01%"></div>
+							</div>
+							<div class="percentage">۱.۰۱٪</div>
+						</div>
+					</div>
+				</div>
+				<div
+					class="review-list"
+					id="reviewList">
+					<!-- نظرات به صورت پویا در اینجا اضافه می‌شوند -->
+				</div>
+			</div>
+
+			<!-- Footer Section  -->
+			<!-- Footer Section  -->
+			<footer class="footer text-dark bg-light">
+				<div class="container px-3">
+					<div class="row">
+						<div class="col-12 col-lg-4 pt-3">
+							<h2>شروع مکالمه</h2>
+							<p class="w-75 lh-lg my-4">
+								هر دوره آموزشی با یک گفتگو آغاز می‌شود. ما خوشحال می شویم درباره نیازهای
+								شما صحبت کنیم. ما همچنین در صورت نیاز، افراد متخصص تیم را برای پشتیبانی
+								بهتر وارد گفتگو می کنیم.
+							</p>
+							<button class="custom-btn btn-2">ارتباط با پشتیبان</button>
+						</div>
+						<div
+							class="col-12 col-lg-4 d-none d-lg-flex justify-content-center align-items-center">
+							<img
+								src="./icon/logo.svg"
+								alt="" />
+						</div>
+						<div
+							class="col-12 col-lg-4 d-flex flex-column justify-content-center align-items-end">
+							<div class="contact-info w-75">
+								<p class="d-flex justify-content-between">
+									<strong>ایمیل:</strong>
+									<a
+										href="mailto:support@cvs-school.com"
+										class="text-white"
+										>support@cvs-school.com</a
+									>
+								</p>
+								<p class="my-3">
+									<strong>تلفن:</strong>
+									<a href="tel:09128431362"> 09128431362 </a>
+								</p>
+								<p><strong>آدرس:</strong>ایران تهران مرزداران</p>
+							</div>
+							<div
+								class="col-12 d-lg-none mt-4 justify-content-center align-items-center">
+								<img
+									src="./icon/logo.svg"
+									alt="" />
+							</div>
+							<div class="social-icons mt-5 w-75 d-flex justify-content-between">
+								<a href="#"><i class="fab fa-twitter"></i></a>
+								<a href="#"><i class="fab fa-facebook-f"></i></a>
+								<a href="#"><i class="fab fa-instagram"></i></a>
+								<a href="#"><i class="fab fa-linkedin-in"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bg-footer"></div>
+			</footer>
+		</main>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"></script>
+		<script src="./plugins/jquery/jquery.min.js"></script>
+		<script src="./plugins/fontawesome/script.js"></script>
+		<script src="./scripts/shopinng.js"></script>
+		<script src="./scripts/comment.js"></script>
+		<script src="./scripts/dropdown.js"></script>
+		<script src="./scripts/megamnu.js"></script>
+		<script src="./scripts/accordion.js"></script>
+		<script src="./scripts/conversation.js"></script>
+		<script src="./scripts/offcanvas.js"></script>
+		<script>
+			function animateCounter(elementId, finalValue, duration) {
+				let current = 0;
+				const element = document.getElementById(elementId);
+				const step = finalValue / (duration / 16); // 16ms is roughly 60fps
+
+				function updateCounter() {
+					current += step;
+					if (current < finalValue) {
+						element.textContent = Math.round(current);
+						requestAnimationFrame(updateCounter);
+					} else {
+						element.textContent = finalValue;
+					}
+				}
+
+				updateCounter();
+			}
+
+			// Start the animation when the page loads
+			window.addEventListener('load', () => {
+				animateCounter('studentCounter', 120, 2000); // 120 students, 2 seconds duration
+			});
+		</script>
+	</body>
+</html>

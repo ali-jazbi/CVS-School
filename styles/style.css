@@ -1550,7 +1550,10 @@ a:hover {
 	gap: 10px;
 	margin-bottom: 20px;
 }
-
+.filter-buttons .btn.active {
+	background-color: #007777 !important;
+	color: white !important;
+}
 .filter-btn {
 	background-color: #f0f0f0;
 	font-size: 0.9rem;
