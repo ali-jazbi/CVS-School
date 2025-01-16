@@ -1854,6 +1854,29 @@ a:hover {
 	height: 100%;
 	object-fit: cover;
 }
+.swiper-slide .overlay-swip {
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	z-index: 1;
+	height: 45px;
+	backdrop-filter: blur(6px) saturate(167%);
+	-webkit-backdrop-filter: blur(6px) saturate(167%);
+	background-color: rgba(208, 205, 205, 0.15);
+	border: 1px solid rgba(209, 213, 219, 0.3);
+	color: rgba(255, 255, 255, 0.679);
+	transition: all 0.3s ease-in-out;
+	opacity: 0.2;
+	visibility: hidden;
+	transform: translateY(40px);
+}
+.swiper-slide:hover .overlay-swip,
+.swiper-slide:focus .overlay-swip {
+	transform: translateY(0px);
+	opacity: 1;
+	color: white;
+	visibility: visible;
+}
 .swiper-pagination-progressbar-fill {
 	border: 5px solid #05b3b3;
 	/* border-radius: 5px; */
@@ -1888,7 +1911,7 @@ a:hover {
 	justify-content: center;
 	transition: transform 0.2s;
 }
-#shareModal .social-btn i{
+#shareModal .social-btn i {
 	color: white;
 	padding-top: 5px;
 }
@@ -2075,7 +2098,7 @@ a:hover {
 	background-color: rgba(0, 0, 0, 0.05); /* Lighter color for the track */
 	border-radius: 3px;
 }
-.accordion .accordion-content ul li{
+.accordion .accordion-content ul li {
 	padding: 7px;
 }
 .accordion .accordion-content ul li a {
