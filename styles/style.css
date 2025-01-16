@@ -1647,8 +1647,32 @@ a:hover {
 		font-weight: bold;
 	}
 }
-.freecourse-banner{
+.freecourse .freecourse-banner {
 	background-color: #255047 !important;
+}
+.freecourse .freecourse-banner .button {
+	background-color: #009788 !important;
+}
+.freecourse .freecourse-banner .button:before {
+	background-color: #009788 !important;
+}
+.freecourse .freecourse-banner .button::after {
+	border-top-color: #007a6e !important;
+}
+.freecourse .container-fluid {
+	width: 70%;
+}
+@media (max-width: 1024px) {
+	.freecourse .course-roadmap {
+		padding: 0 !important;
+	}
+	.freecourse .course-roadmap .container-fluid {
+		width: 95%;
+	}
+	.freecourse .course-roadmap .container-fluid .filter-buttons {
+		width: 100%;
+		padding: 0;
+	}
 }
 .new-course-group {
 	width: 100%;
