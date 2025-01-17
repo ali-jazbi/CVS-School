@@ -244,7 +244,7 @@
 	margin-bottom: 1rem;
 	position: relative;
 	overflow: hidden;
-	font-size: 14px !important;
+	font-size: 12px !important;
 }
 
 .balance-card::before {
@@ -384,7 +384,7 @@
 }
 
 .section-title {
-	font-size: 1.2rem;
+	font-size: 1rem;
 	font-weight: 700;
 	margin-bottom: 1rem;
 	color: #1e293b;
