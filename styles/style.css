@@ -2897,7 +2897,7 @@ a:hover {
 .course-roadmap .row:last-child .teacher {
 	width: 100%;
 	height: 260px;
-	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	box-shadow: rgba(135, 135, 142, 0.2) 0px 7px 10px 0px;
 }
 .course-roadmap .row:last-child .teacher .image-container {
 	position: relative;
