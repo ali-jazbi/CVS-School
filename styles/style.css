@@ -1726,10 +1726,6 @@ a:hover {
 		font-weight: bold;
 	}
 }
-.freecourse .course-container {
-	background-color: #bfbfbf1f;
-	border-radius: 5px;
-}
 .freecourse .freecourse-banner {
 	background-color: #255047 !important;
 }
@@ -1745,7 +1741,15 @@ a:hover {
 .freecourse .container-fluid {
 	width: 70%;
 }
+.freecourse .filter-buttons {
+	height: max-content;
+	border-bottom: 5px solid #9292923c;
+	display: flex;
+	justify-content: space-between !important;
+}
 .freecourse .filter-buttons .filter-btn1 {
+	margin-bottom: 10px;
+	margin: 0 !important;
 	outline: 0;
 	display: inline-flex;
 	align-items: center;
@@ -1767,7 +1771,7 @@ a:hover {
 	opacity: 0.9;
 	position: relative;
 }
-.freecourse .filter-buttons .filter-btn1 i{
+.freecourse .filter-buttons .filter-btn1 i {
 	margin-right: -4px !important;
 }
 .freecourse .filter-buttons .filter-btn1:hover {
@@ -1783,7 +1787,7 @@ a:hover {
 
 .freecourse .filter-buttons .filter-btn1.active {
 	opacity: 1 !important;
-	background: #05b3b3 !important;
+	background: #037979 !important;
 }
 @keyframes ripple {
 	0% {
@@ -1808,9 +1812,13 @@ a:hover {
 .freecourse .Course-list {
 	margin-top: 0 !important;
 }
+.freecourse .accordion-item {
+	background-color: #305757 !important;
+}
 .freecourse .accordion-content {
 	width: 90% !important;
 	flex-direction: row-reverse;
+	background-color: #305757 !important;
 }
 .freecourse .accordion button[aria-expanded='true'] + .accordion-content {
 	max-height: 17rem;
@@ -1821,20 +1829,30 @@ a:hover {
 	flex-direction: column;
 	align-items: end;
 }
+.freecourse .course-section__content {
+	background-color: #004d281b;
+}
 .freecourse .accordion-title,
 .freecourse .accordion-title i {
-	color: rgb(0, 98, 52);
+	color: rgb(255, 255, 255) !important;
 	font-size: 1rem !important;
 }
 .freecourse .accordion-content ul li .free-A-link {
-	font-family: yekan-bakh-regular !important;
+	font-family: yekan-bakh-SemiBold !important;
+	color: white !important;
 	font-size: 13px !important;
 }
-
+.freecourse .accordion-item button[aria-expanded='true'] {
+	border-bottom: 1px solid #01dbdb !important;
+}
+.freecourse .accordion-content ul li .free-A-link:hover {
+	color: #05b3b3 !important;
+}
 .freecourse .accordion-content ul:last-child li:last-child {
 	white-space: nowrap;
 }
 .freecourse .accordion-content ul:last-child li:last-child i {
+	color: #00ffff !important;
 	font-size: 1rem !important;
 }
 .freecourse .accordion button {
@@ -1843,6 +1861,7 @@ a:hover {
 .freecourse .accordion button .icon {
 	left: 0;
 	top: 40px;
+	color: white !important;
 }
 .action-buttons button:first-child:hover {
 	background-color: transparent !important;
@@ -2283,6 +2302,9 @@ a:hover {
 }
 .Course-list-bg {
 	background-color: #f5f5f5;
+}
+.Course-list-bg1 {
+	background-color: #305757;
 }
 .accordion .accordion-item {
 	border: none;
@@ -3237,11 +3259,19 @@ a:hover {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	background: rgba(255, 255, 255, 0.95);
 }
-
+.course-section h6 {
+	background-color: #005a5acf;
+	color: white;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
 .course-section:last-child {
 	border-bottom: none;
 }
-
+.animation-h6 {
+	animation: ripple 1s ease-in-out infinite;
+}
 .course-section__header {
 	padding: 1.25rem;
 	display: flex;
@@ -3249,6 +3279,8 @@ a:hover {
 	align-items: center;
 	cursor: pointer;
 	transition: all 0.3s ease;
+	padding-right: 30px;
+	font-size: 0.9rem;
 }
 
 .course-section__header:hover {
@@ -3260,6 +3292,7 @@ a:hover {
 	align-items: center;
 	gap: 0.75rem;
 	font-weight: 500;
+	color: #4c2586 !important;
 }
 
 .course-section__info {
