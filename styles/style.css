@@ -1944,8 +1944,8 @@ a:hover {
 	}
 	.freecourse .filter-buttons .filter-btn1 {
 		height: 30px !important;
-		max-width: 100px !important;
-		min-width: 100px !important;
+		max-width: 120px !important;
+		min-width: 120px !important;
 		font-size: 10px !important;
 	}
 	.course-section__title_p {
