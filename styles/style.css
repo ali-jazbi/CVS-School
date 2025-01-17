@@ -1747,6 +1747,11 @@ a:hover {
 	display: flex;
 	justify-content: space-between !important;
 }
+@media (max-width: 762px) {
+	.freecourse .filter-buttons {
+		border-bottom: 1px solid transparent;
+	}
+}
 .freecourse .filter-buttons .filter-btn1 {
 	margin-bottom: 10px;
 	margin: 0 !important;
