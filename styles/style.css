@@ -1005,7 +1005,7 @@ a:hover {
 	font-size: 0.8rem;
 	transition: border-color 0.2s;
 }
-.discount-input::placeholder{
+.discount-input::placeholder {
 	color: #0000006e;
 }
 .discount-input:focus {
@@ -1768,9 +1768,16 @@ a:hover {
 	flex-direction: column;
 	align-items: end;
 }
-.freecourse .accordion-content ul li a {
-	font-family: yekan-bakh-regular !important;
+.freecourse .accordion-title,
+.freecourse .accordion-title i {
+	color: rgb(0, 98, 52);
+	font-size: 1rem !important;
 }
+.freecourse .accordion-content ul li .free-A-link {
+	font-family: yekan-bakh-regular !important;
+	font-size: 13px !important;
+}
+
 .freecourse .accordion-content ul:last-child li:last-child {
 	white-space: nowrap;
 }
