@@ -1716,7 +1716,7 @@ a:hover {
 	width: 65%;
 	height: max-content;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-between !important;
 	margin-bottom: -20px !important;
 }
 
@@ -1932,6 +1932,16 @@ a:hover {
 	}
 }
 @media (max-width: 1024px) {
+	.new-course-group .filter-buttons .filter-btn1 {
+		min-width: 120px !important;
+		height: 35px !important;
+		font-size: 10px !important;
+		max-width: 120px !important;
+		margin-left: 10px !important;
+	}
+	.filter-buttons {
+		width: 100% !important;
+	}
 	.filter-icon {
 		display: none;
 		font-size: 14px;
