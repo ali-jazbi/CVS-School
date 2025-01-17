@@ -1743,15 +1743,10 @@ a:hover {
 }
 .freecourse .filter-buttons {
 	height: max-content;
-	border-bottom: 5px solid #9292923c;
 	display: flex;
 	justify-content: space-between !important;
 }
-@media (max-width: 762px) {
-	.freecourse .filter-buttons {
-		border-bottom: 1px solid transparent;
-	}
-}
+
 .freecourse .filter-buttons .filter-btn1 {
 	margin-bottom: 10px;
 	margin: 0 !important;
@@ -1759,7 +1754,7 @@ a:hover {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background: #40b3a282;
+	background: transparent;
 	min-width: 130px !important;
 	max-width: 130px !important;
 	height: 35px;
@@ -1768,13 +1763,14 @@ a:hover {
 	border-radius: 6px;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 	box-sizing: border-box;
-	color: #fff;
+	color: black;
 	font-size: 13px;
 	text-align: center;
 	overflow: hidden;
 	cursor: pointer;
 	opacity: 0.9;
 	position: relative;
+	border-bottom: 2px solid black;
 }
 .freecourse .filter-buttons .filter-btn1 i {
 	margin-right: -4px !important;
@@ -1793,6 +1789,7 @@ a:hover {
 .freecourse .filter-buttons .filter-btn1.active {
 	opacity: 1 !important;
 	background: #037979 !important;
+	color: white;
 }
 @keyframes ripple {
 	0% {
@@ -1834,9 +1831,7 @@ a:hover {
 	flex-direction: column;
 	align-items: end;
 }
-.freecourse .course-section__content {
-	background-color: #004d281b;
-}
+
 .freecourse .accordion-title,
 .freecourse .accordion-title i {
 	color: rgb(255, 255, 255) !important;
@@ -1873,6 +1868,15 @@ a:hover {
 }
 .freecourse .accordion button .icon::before {
 	right: 5px;
+}
+.freecourse .course-section__content .course-lecture__title {
+	font-size: 12px !important;
+}
+.course-section__title_p {
+	font-size: 11px !important;
+	font-weight: bold !important;
+	margin-inline-start: 50px;
+	color: gray;
 }
 .action-btn button:first-child {
 	background-color: red !important;
@@ -3269,6 +3273,7 @@ a:hover {
 	color: white;
 	width: 100%;
 	display: flex;
+	font-size: 14px;
 	justify-content: space-between;
 }
 .course-section:last-child {
