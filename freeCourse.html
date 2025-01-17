@@ -331,13 +331,29 @@
 							<!-- محصولات به صورت داینامیک اینجا اضافه می‌شوند -->
 						</div>
 						<div class="mt-5">
-							<div class="d-flex justify-content-between align-items-center mb-2">
-								<span>جمع کل:</span>
+							<div
+								class="d-flex justify-content-between align-items-center mb-2 cart-summary">
+								<span class="summary-label">جمع کل:</span>
 								<span
 									id="totalPrice"
-									class="fw-bold"
+									class="fw-bold summary-value"
 									>0 تومان</span
 								>
+							</div>
+							<div class="mt-5 mb-3">
+								<div class="discount-form">
+									<input
+										type="text"
+										class="discount-input"
+										placeholder="کد تخفیف خود را وارد کنید"
+										aria-label="کد تخفیف" />
+									<button
+										class="discount-button"
+										type="button"
+										id="apply-discount">
+										اعمال
+									</button>
+								</div>
 							</div>
 							<div class="d-grid gap-2">
 								<button

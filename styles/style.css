@@ -968,6 +968,82 @@ a:hover {
 /* End Login Form/ */
 
 /* Start Shopping Cart */
+/* Start Shopping Cart */
+.cart-summary {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+	padding: 1rem;
+	background-color: #f8f9fa;
+	border-radius: 0.5rem;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.summary-label {
+	font-size: 1rem;
+	color: #333;
+	font-weight: 600;
+}
+
+.summary-value {
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #05b3b3;
+}
+
+.discount-form {
+	display: flex;
+	margin-top: 2rem;
+}
+
+.discount-input {
+	flex-grow: 1;
+	padding: 0.5rem;
+	border: 2px solid #ced4da5b;
+	border-radius: 0 0.5rem 0.5rem 0;
+	font-size: 0.8rem;
+	transition: border-color 0.2s;
+}
+.discount-input::placeholder{
+	color: #0000006e;
+}
+.discount-input:focus {
+	outline: none;
+	border-color: #05b3b3;
+}
+
+.discount-button {
+	padding: 0.3rem 0.7rem;
+	background-color: #05b3b380;
+	color: white;
+	border: none;
+	border-radius: 0.5rem 0 0 0.5rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.discount-button:hover {
+	background-color: #048f8f;
+}
+
+@media (max-width: 576px) {
+	.discount-form {
+		flex-direction: column;
+	}
+
+	.discount-input {
+		border-radius: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.discount-button {
+		border-radius: 0.5rem;
+	}
+}
+/* End Shopping Cart */
 .cart-item-icon {
 	width: 20px !important;
 	height: 20px !important;
@@ -1650,7 +1726,7 @@ a:hover {
 		font-weight: bold;
 	}
 }
-.freecourse .course-container{
+.freecourse .course-container {
 	background-color: #bfbfbf1f;
 	border-radius: 5px;
 }
