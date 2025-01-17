@@ -1770,7 +1770,6 @@ a:hover {
 	cursor: pointer;
 	opacity: 0.9;
 	position: relative;
-	border-bottom: 2px solid black;
 }
 .freecourse .filter-buttons .filter-btn1 i {
 	margin-right: -4px !important;
