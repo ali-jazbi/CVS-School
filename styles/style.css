@@ -1939,6 +1939,14 @@ a:hover {
 	}
 }
 @media (max-width: 1024px) {
+	.course-section__title_p {
+		font-size: 7px !important;
+		font-weight: bold !important;
+		margin-inline-start: 20px;
+		padding-left: 50px;
+		color: gray;
+		text-align: justify;
+	}
 	.freecourse .course-roadmap {
 		padding: 0 !important;
 	}
