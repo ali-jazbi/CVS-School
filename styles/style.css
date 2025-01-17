@@ -1806,6 +1806,7 @@ a:hover {
 }
 .filter-icon {
 	display: none;
+	font-size: 17px;
 	margin-right: 5px;
 	transition: transform 0.3s ease;
 }
@@ -1959,11 +1960,17 @@ a:hover {
 	}
 }
 @media (max-width: 1024px) {
+	.filter-icon {
+		display: none;
+		font-size: 14px;
+		margin-right: 5px;
+		transition: transform 0.3s ease;
+	}
 	.freecourse .filter-buttons {
 		margin-bottom: -30px !important;
 	}
 	.freecourse .filter-buttons .filter-btn1 {
-		height: 30px !important;
+		height: 35px !important;
 		max-width: 120px !important;
 		min-width: 120px !important;
 		font-size: 10px !important;
