@@ -323,8 +323,11 @@ a:hover {
 	align-items: center;
 	padding: 0.5em;
 }
+.mega-menu-link .c div {
+	width: 170px !important;
+}
 .mega-menu-link .c div.p {
-	max-height: 0;
+	max-height: 0px;
 	overflow: hidden;
 	transition: max-height 0.3s ease-in-out;
 	background-color: white;
@@ -1647,6 +1650,10 @@ a:hover {
 		font-weight: bold;
 	}
 }
+.freecourse .course-container{
+	background-color: #bfbfbf1f;
+	border-radius: 5px;
+}
 .freecourse .freecourse-banner {
 	background-color: #255047 !important;
 }
@@ -1661,6 +1668,9 @@ a:hover {
 }
 .freecourse .container-fluid {
 	width: 70%;
+}
+.freecourse .container-fluid:nth-child(2) {
+	width: 80%;
 }
 .freecourse .course-roadmap {
 	margin-top: 0 !important;
@@ -1681,6 +1691,9 @@ a:hover {
 	display: flex;
 	flex-direction: column;
 	align-items: end;
+}
+.freecourse .accordion-content ul li a {
+	font-family: yekan-bakh-regular !important;
 }
 .freecourse .accordion-content ul:last-child li:last-child {
 	white-space: nowrap;
@@ -1764,6 +1777,17 @@ a:hover {
 @media (max-width: 1024px) {
 	.freecourse .course-roadmap {
 		padding: 0 !important;
+	}
+	.freecourse .accordion-content {
+		width: 100% !important;
+		padding: 0 !important;
+	}
+	.freecourse .accordion-content ul {
+		text-align: end;
+		padding: 0 !important;
+	}
+	.freecourse .accordion-content ul li {
+		width: 100%;
 	}
 	.freecourse .course-roadmap .container-fluid {
 		width: 95%;
