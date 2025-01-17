@@ -1716,7 +1716,7 @@ a:hover {
 	width: 65%;
 	height: max-content;
 	display: flex;
-	justify-content: space-between !important;
+	justify-content: space-evenly !important;
 	margin-bottom: -20px !important;
 }
 
