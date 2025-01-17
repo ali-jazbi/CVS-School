@@ -1381,21 +1381,25 @@
 												class="filter-btn1 me-2"
 												data-filter="all">
 												<i></i>همه
+												<span class="filter-icon">👇🏻</span>
 											</button>
 											<button
 												class="filter-btn1 me-2"
 												data-filter="beginner">
 												<i></i>دانش فنی
+												<span class="filter-icon">👇🏻</span>
 											</button>
 											<button
 												class="filter-btn1 me-2"
 												data-filter="intermediate">
 												<i></i>تولید محتوا
+												<span class="filter-icon">👇🏻</span>
 											</button>
 											<button
 												class="filter-btn1 me-2"
 												data-filter="advance">
 												<i></i>شبکه و نرم افزار
+												<span class="filter-icon">👇🏻</span>
 											</button>
 										</div>
 									</div>
@@ -2037,19 +2041,19 @@
 									filterButtons.forEach((button) => {
 										button.addEventListener('click', function () {
 											const filter = this.getAttribute('data-filter');
-											const iconElement = this.querySelector('i');
+											const iconElement = this.querySelector('.filter-icon');
 
 											if (filter !== activeFilter) {
 												// غیرفعال کردن دکمه قبلی
 												filterButtons.forEach((btn) => {
 													btn.classList.remove('active');
-													const btnIcon = btn.querySelector('i');
-													if (btnIcon) btnIcon.classList.remove('animation-active');
+													const btnIcon = btn.querySelector('.filter-icon');
+													if (btnIcon) btnIcon.style.display = 'none';
 												});
 
 												// فعال کردن دکمه جدید
 												this.classList.add('active');
-												iconElement.classList.add('animation-active');
+												if (iconElement) iconElement.style.display = 'inline-block';
 												activeFilter = filter;
 
 												// فیلتر کردن کارت‌های دوره
@@ -2072,8 +2076,8 @@
 									// فعال کردن دکمه "همه" به صورت پیش‌فرض
 									const defaultButton = filterButtons[0];
 									defaultButton.classList.add('active');
-									const defaultIcon = defaultButton.querySelector('i');
-									if (defaultIcon) defaultIcon.classList.add('animation-active');
+									const defaultIcon = defaultButton.querySelector('.filter-icon');
+									if (defaultIcon) defaultIcon.style.display = 'inline-block';
 								});
 							</script>
 							<script>

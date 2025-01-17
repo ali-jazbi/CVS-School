@@ -1804,6 +1804,26 @@ a:hover {
 			0 0 0 80px rgba(255, 255, 255, 0);
 	}
 }
+.filter-icon {
+	display: none;
+	margin-right: 5px;
+	transition: transform 0.3s ease;
+}
+
+.filter-btn1.active .filter-icon {
+	display: inline-block;
+	animation: pointDown 1.6s ease infinite;
+}
+
+@keyframes pointDown {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(3px);
+	}
+}
 .freecourse .container-fluid:nth-child(2) {
 	width: 80%;
 }
