@@ -776,9 +776,12 @@
 										class="position-relative d-flex justify-content-end align-items-center">
 										<div class="action-buttons">
 											<button
-												onclick="toggleBookmark(this)"
-												class="btn btn-light action-btn shadow-sm bookmark-btn">
-												<i class="bi bi-suit-heart"></i>
+												onclick="toggleLike(this)"
+												class="btn btn-light action-btn shadow-sm bookmark-btn like-button">
+												<div class="like-container">
+													<i class="far fa-heart"></i>
+													<span class="like-count">5 نفر لایک کردند</span>
+												</div>
 											</button>
 											<button
 												onclick="toggleBookmark(this)"
@@ -803,18 +806,44 @@
 					function toggleBookmark(button) {
 						const icon = button.querySelector('i');
 						if (icon.classList.contains('bi-bookmark-plus')) {
-							icon.classList.remove('bi-bookmark-plus');
-							icon.classList.add('bi-bookmark-check-fill');
+							icon.classList.replace('bi-bookmark-plus', 'bi-bookmark-check-fill');
 						} else if (icon.classList.contains('bi-bookmark-check-fill')) {
-							icon.classList.remove('bi-bookmark-check-fill');
-							icon.classList.add('bi-bookmark-plus');
-						} else if (icon.classList.contains('bi-suit-heart')) {
-							icon.classList.remove('bi-suit-heart');
-							icon.classList.add('bi-suit-heart-fill');
-						} else if (icon.classList.contains('bi-suit-heart-fill')) {
-							icon.classList.remove('bi-suit-heart-fill');
-							icon.classList.add('bi-suit-heart');
+							icon.classList.replace('bi-bookmark-check-fill', 'bi-bookmark-plus');
 						}
+					}
+					function toggleLike(button) {
+						button.classList.toggle('liked');
+						const icon = button.querySelector('i');
+						const likeCount = button.querySelector('.like-count');
+
+						if (button.classList.contains('liked')) {
+							icon.classList.replace('far', 'fas');
+							icon.style.color = '#ff0000'; // تغییر رنگ به قرمز
+							updateLikeCount(likeCount, 1);
+						} else {
+							icon.classList.replace('fas', 'far');
+							icon.style.color = ''; // برگشت به رنگ پیش‌فرض
+							updateLikeCount(likeCount, -1);
+						}
+
+						animateLikeCount(likeCount);
+					}
+
+					function updateLikeCount(element, change) {
+						let count = parseInt(element.textContent);
+						count += change;
+						element.textContent = `${count} نفر لایک کردند`;
+					}
+
+					function animateLikeCount(element) {
+						element.style.transition = 'all 0.4s';
+						element.style.opacity = '1';
+						element.style.visibility = 'visible';
+
+						setTimeout(() => {
+							element.style.opacity = '0';
+							element.style.visibility = 'hidden';
+						}, 1000);
 					}
 				</script>
 				<div
@@ -1025,43 +1054,43 @@
 										<button
 											id="accordion-button-1"
 											aria-expanded="true">
-											<span class="accordion-title"
-												><i class="fab fa-viadeo ps-2"></i>تولید محتوا</span
-											>
 											<span
 												class="icon"
 												aria-hidden="true"></span>
+											<span class="accordion-title"
+												><i class="fab fa-viadeo ps-2"></i>تولید محتوا</span
+											>
 										</button>
 										<div class="accordion-content">
 											<ul>
 												<li>
-													<a href="#"> Pre-K through grade 2 (Khan Kids) </a>
+													<a href="#">پودمان اول</a>
 												</li>
 												<li>
-													<a href="#"> Early math review </a>
+													<a href="#">پودمان دوم</a>
 												</li>
 												<li>
-													<a href="#"> 2nd grade </a>
+													<a href="#">پودمان سوم</a>
 												</li>
 												<li>
-													<a href="#"> 3rd grade </a>
+													<a href="#">پودمان چهارم</a>
 												</li>
 												<li>
-													<a href="#"> 4rd grade </a>
+													<a href="#">پودمان پنجم</a>
 												</li>
 											</ul>
 											<ul>
 												<li>
-													<a href="#"> 5rd grade </a>
+													<a href="#">آموزش</a>
 												</li>
 												<li>
-													<a href="#"> 6rd grade </a>
+													<a href="#">امتحانات</a>
 												</li>
 												<li>
-													<a href="#"> 7rd grade </a>
+													<a href="#">جزوه درسی</a>
 												</li>
 												<li>
-													<a href="#"> 8rd grade </a>
+													<a href="#">فیلم آموزشی</a>
 												</li>
 												<li>
 													<a
@@ -1077,42 +1106,43 @@
 										<button
 											id="accordion-button-3"
 											aria-expanded="true">
-											<span class="accordion-title"
-												><i class="fab fa-codiepie ps-2"></i>سی شارپ</span
-											><span
+											<span
 												class="icon"
 												aria-hidden="true"></span>
+											<span class="accordion-title"
+												><i class="fab fa-codiepie ps-2"></i>سی شارپ</span
+											>
 										</button>
 										<div class="accordion-content">
 											<ul>
 												<li>
-													<a href="#"> Pre-K through grade 2 (Khan Kids) </a>
+													<a href="#">پودمان اول</a>
 												</li>
 												<li>
-													<a href="#"> Early math review </a>
+													<a href="#">پودمان دوم</a>
 												</li>
 												<li>
-													<a href="#"> 2nd grade </a>
+													<a href="#">پودمان سوم</a>
 												</li>
 												<li>
-													<a href="#"> 3rd grade </a>
+													<a href="#">پودمان چهارم</a>
 												</li>
 												<li>
-													<a href="#"> 4rd grade </a>
+													<a href="#">پودمان پنجم</a>
 												</li>
 											</ul>
 											<ul>
 												<li>
-													<a href="#"> 5rd grade </a>
+													<a href="#">آموزش</a>
 												</li>
 												<li>
-													<a href="#"> 6rd grade </a>
+													<a href="#">امتحانات</a>
 												</li>
 												<li>
-													<a href="#"> 7rd grade </a>
+													<a href="#">جزوه درسی</a>
 												</li>
 												<li>
-													<a href="#"> 8rd grade </a>
+													<a href="#">فیلم آموزشی</a>
 												</li>
 												<li>
 													<a
@@ -1143,33 +1173,33 @@
 										<div class="accordion-content">
 											<ul>
 												<li>
-													<a href="#"> Pre-K through grade 2 (Khan Kids) </a>
+													<a href="#">پودمان اول</a>
 												</li>
 												<li>
-													<a href="#"> Early math review </a>
+													<a href="#">پودمان دوم</a>
 												</li>
 												<li>
-													<a href="#"> 2nd grade </a>
+													<a href="#">پودمان سوم</a>
 												</li>
 												<li>
-													<a href="#"> 3rd grade </a>
+													<a href="#">پودمان چهارم</a>
 												</li>
 												<li>
-													<a href="#"> 4rd grade </a>
+													<a href="#">پودمان پنجم</a>
 												</li>
 											</ul>
 											<ul>
 												<li>
-													<a href="#"> 5rd grade </a>
+													<a href="#">آموزش</a>
 												</li>
 												<li>
-													<a href="#"> 6rd grade </a>
+													<a href="#">امتحانات</a>
 												</li>
 												<li>
-													<a href="#"> 7rd grade </a>
+													<a href="#">جزوه درسی</a>
 												</li>
 												<li>
-													<a href="#"> 8rd grade </a>
+													<a href="#">فیلم آموزشی</a>
 												</li>
 												<li>
 													<a
@@ -1194,33 +1224,33 @@
 										<div class="accordion-content">
 											<ul>
 												<li>
-													<a href="#"> Pre-K through grade 2 (Khan Kids) </a>
+													<a href="#">پودمان اول</a>
 												</li>
 												<li>
-													<a href="#"> Early math review </a>
+													<a href="#">پودمان دوم</a>
 												</li>
 												<li>
-													<a href="#"> 2nd grade </a>
+													<a href="#">پودمان سوم</a>
 												</li>
 												<li>
-													<a href="#"> 3rd grade </a>
+													<a href="#">پودمان چهارم</a>
 												</li>
 												<li>
-													<a href="#"> 4rd grade </a>
+													<a href="#">پودمان پنجم</a>
 												</li>
 											</ul>
 											<ul>
 												<li>
-													<a href="#"> 5rd grade </a>
+													<a href="#">آموزش</a>
 												</li>
 												<li>
-													<a href="#"> 6rd grade </a>
+													<a href="#">امتحانات</a>
 												</li>
 												<li>
-													<a href="#"> 7rd grade </a>
+													<a href="#">جزوه درسی</a>
 												</li>
 												<li>
-													<a href="#"> 8rd grade </a>
+													<a href="#">فیلم آموزشی</a>
 												</li>
 												<li>
 													<a

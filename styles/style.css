@@ -1671,18 +1671,95 @@ a:hover {
 }
 .freecourse .accordion-content {
 	width: 90% !important;
+	flex-direction: row-reverse;
 }
 .freecourse .accordion button[aria-expanded='true'] + .accordion-content {
 	max-height: 17rem;
 }
 .freecourse .accordion-content ul {
 	width: 50% !important;
+	display: flex;
+	flex-direction: column;
+	align-items: end;
 }
 .freecourse .accordion-content ul:last-child li:last-child {
 	white-space: nowrap;
 }
 .freecourse .accordion-content ul:last-child li:last-child i {
 	font-size: 1rem !important;
+}
+.freecourse .accordion button {
+	text-align: right;
+}
+.freecourse .accordion button .icon {
+	left: 0;
+	top: 40px;
+}
+.action-buttons button:first-child:hover {
+	background-color: transparent !important;
+}
+.freecourse .accordion button .icon::before {
+	right: 5px;
+}
+.action-btn button:first-child {
+	background-color: red !important;
+}
+.like-button {
+	cursor: pointer;
+	color: #777;
+	background: none;
+	border: none;
+	font-size: 16px;
+	transition: all 0.3s ease;
+	border-radius: 20px;
+	outline: none;
+}
+
+.like-button:hover,
+.like-button:active {
+	background-color: transparent !important;
+	outline: none !important;
+	border: none !important;
+}
+.like-button i {
+	color: rgb(231, 231, 231);
+}
+.like-button.liked i {
+	color: #ff0000;
+}
+.like-count {
+	display: inline-block;
+	position: absolute;
+	top: -35px;
+	right: 50%;
+	transform: translateX(50%);
+	background-color: #fff;
+	border: 1px solid #e0e0e0;
+	padding: 3px 20px;
+	border-radius: 12px;
+	font-size: 12px;
+	color: #555;
+	white-space: nowrap;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.like-container {
+	position: relative;
+	display: inline-block;
+}
+@keyframes likeAnimation {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
 @media (max-width: 1024px) {
 	.freecourse .course-roadmap {

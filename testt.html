@@ -5,279 +5,88 @@
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Like Button</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 		<style>
-			.mega-menu-link {
-				border-bottom: 1px solid #c6c6c67d !important;
-				transition: all ease-in-out 0.2s;
-				width: 80% !important;
-				height: 40px;
-				font-size: 13px !important;
-				display: flex;
-				align-items: center;
-			}
-			.mega-menu-link .c {
-				height: max-content;
-			}
-			.mega-menu-link .c input {
-				position: absolute;
-				left: 0;
-				top: 0;
-				height: 100%;
-				width: 100%;
-				opacity: 0;
-				visibility: hidden;
-			}
-			.mega-menu-link .c h1 {
-				font-size: 1em;
+			.like-container {
 				position: relative;
-				margin: 0;
-			}
-			.mega-menu-link .c label::after {
-				content: '';
 				display: inline-block;
-				border: 4px solid transparent;
-				border-right: 6px solid rgb(14, 14, 14);
-				margin-right: 8px;
-				transition: all 0.3s ease;
 			}
-			.mega-menu-link .c label {
-				cursor: pointer;
-				position: relative;
-				display: flex;
-				align-items: center;
-				padding: 0.5em;
-			}
-			.mega-menu-link .c div.p {
-				max-height: 0;
-				overflow: hidden;
-				transition: max-height 0.3s ease-in-out;
-				background-color: white;
-				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+			.like-count {
 				position: absolute;
-				width: 100%;
+				top: -25px;
+				left: 50%;
+				transform: translateX(-50%);
+				background-color: rgba(0, 0, 0, 0.7);
+				color: white;
+				padding: 2px 8px;
+				border-radius: 12px;
+				font-size: 12px;
+				opacity: 0;
+				transition: opacity 0.3s;
 			}
-			.mega-menu-link .c div.p ul {
-				margin: 0;
-				padding: 0;
-				list-style-type: none;
-			}
-			.mega-menu-link .c div.p ul li {
-				margin-bottom: 2px;
-				transition: all 0.2s ease;
-				height: 40px;
-			}
-			.mega-menu-link .c div.p ul li:hover {
-				background-color: #f3f3f3;
-			}
-			.mega-menu-link .c div.p ul li a {
-				width: 100%;
-				color: #05b3b3;
-				text-decoration: none;
-				transition: all 0.2s ease;
-				cursor: pointer;
-				height: auto !important;
-				padding-right: 10px;
-				font-size: 10px !important;
-			}
-			.mega-menu-link .c div.p ul li a:hover {
-				color: #008545;
-			}
-			.mega-menu-link .c input:checked ~ h1 label {
-				color: #05b3b3 !important;
-			}
-			.mega-menu-link .c input:checked ~ h1 label::after {
-				transform: rotate(-90deg);
-				border-right: 6px solid #05b3b3;
-				margin-right: 8px;
-			}
-			.mega-menu-link .c input:checked ~ h1 ~ div.p {
-				max-height: 200px;
-			}
-			.mega-menu-link .c a {
-				color: #05b3b3;
-				text-decoration: none;
-				transition: color 0.2s ease;
-				cursor: pointer;
-			}
-			.mega-menu-link .c a:hover {
-				color: #05b3b3;
-			}
-			.mega-menu-link:hover {
-				color: #008545 !important;
-				border-color: #05b3b3 !important;
-				color: #05b3b3 !important;
-			}
-
-			.mega-menu-section h6 {
-				color: #008545;
-				font-weight: 600;
-				margin-bottom: 1rem !important;
-				font-size: 14px;
-			}
-			/* Default image */
-			.mega-menu-img {
-				background-image: url('https://itspectrumsolutions.com/wp-content/uploads/2024/04/1_pE2fOVDikEUwiQJlh4ggzg.jpeg');
+			.like-count.show {
+				opacity: 1;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="mega-menu">
-			<div class="row mega-section">
-				<div class="col-8 p-4">
-					<div class="row">
-						<div class="col-4 mega-menu-section">
-							<h6>برنامه نویسی</h6>
-							<div class="d-flex flex-column web-section">
-								<a
-									href="#"
-									class="mega-menu-link text-decoration-none text-dark mb-2"
-									>فرانت اند</a
-								>
-								<a
-									href="./js.html"
-									class="mega-menu-link text-decoration-none text-dark mb-2"
-									>بک اند</a
-								>
-								<a
-									href="./ai.html"
-									class="mega-menu-link text-decoration-none text-dark mb-2 position-relative">
-									هوش مصنوعی
-									<span class="free-badge position-absolute">
-										<div class="badge-container">
-											<div class="glow"></div>
-											<div class="badge">
-												<div class="text">رایگان</div>
-											</div>
-										</div>
-									</span>
-								</a>
-							</div>
-						</div>
-						<div class="col-4 mega-menu-section">
-							<h6>مشاوره کنکور</h6>
-							<div class="d-flex flex-column apps-section">
-								<a
-									href="#"
-									class="mega-menu-link text-decoration-none text-dark mb-2"
-									>دهم</a
-								>
-								<a
-									href="#"
-									class="mega-menu-link text-decoration-none text-dark mb-2"
-									>یازدهم</a
-								>
-								<a
-									href="#"
-									class="mega-menu-link text-decoration-none text-dark mb-2"
-									>دوازدهم</a
-								>
-							</div>
-						</div>
-						<div class="col-4 mega-menu-section">
-							<h6>دروس هنرستان</h6>
-							<div class="d-flex flex-column school-section">
-								<div
-									class="mega-menu-link text-decoration-none text-dark mb-2 position-relative">
-									<div class="c">
-										<input
-											type="checkbox"
-											id="faq-1" />
-										<h1><label for="faq-1">دهم</label></h1>
-										<div class="p">
-											<ul>
-												<li><a href="#">سی شارپ</a></li>
-												<li><a href="#">تولید محتوا</a></li>
-												<li><a href="#">شبکه و نرم افزار</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<script>
-									document.addEventListener('DOMContentLoaded', function () {
-										const accordions = document.querySelectorAll('.mega-menu-link .c');
-
-										document.addEventListener('click', function (event) {
-											accordions.forEach((accordion) => {
-												const input = accordion.querySelector('input[type="checkbox"]');
-												const label = accordion.querySelector('label');
-
-												// اگر کلیک خارج از آکاردئون بود، آن را ببند
-												if (!accordion.contains(event.target) && input.checked) {
-													input.checked = false;
-												}
-
-												// اگر روی لیبل کلیک شد، فقط همان آکاردئون را باز کن و بقیه را ببند
-												if (event.target === label) {
-													accordions.forEach((otherAccordion) => {
-														if (otherAccordion !== accordion) {
-															otherAccordion.querySelector(
-																'input[type="checkbox"]'
-															).checked = false;
-														}
-													});
-												}
-											});
-										});
-									});
-								</script>
-								<a
-									href="#"
-									class="mega-menu-link text-decoration-none text-dark mb-2"
-									>یازدهم</a
-								>
-								<a
-									href="#"
-									class="mega-menu-link text-decoration-none text-dark mb-2"
-									>دوازدهم</a
-								>
-								<script>
-									document.addEventListener('DOMContentLoaded', function () {
-										const accordionToggles = document.querySelectorAll(
-											'.mega-accordion-toggle'
-										);
-
-										accordionToggles.forEach((toggle) => {
-											toggle.addEventListener('click', function () {
-												const accordion = this.closest('.mega-accordion');
-												const content = accordion.querySelector('.mega-accordion-content');
-												const icon = this.querySelector('.bi-chevron-down');
-
-												// Toggle active class
-												accordion.classList.toggle('active');
-
-												// Toggle content visibility
-												if (accordion.classList.contains('active')) {
-													content.style.display = 'flex';
-													icon.style.transform = 'rotate(180deg)';
-												} else {
-													content.style.display = 'none';
-													icon.style.transform = 'rotate(0deg)';
-												}
-
-												// Hide other menu items when accordion is open
-												const otherMenuItems = accordion.parentElement.querySelectorAll(
-													'.mega-menu-link:not(.mega-accordion)'
-												);
-												otherMenuItems.forEach((item) => {
-													item.style.display = accordion.classList.contains('active')
-														? 'none'
-														: 'block';
-												});
-											});
-										});
-									});
-								</script>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-4 p-0">
-					<div
-						id="menuImage"
-						class="mega-menu-img"></div>
-				</div>
+		<div class="container mt-5">
+			<div class="like-container">
+				<button
+					id="likeBtn"
+					class="btn btn-outline-secondary">
+					<i class="bi bi-heart"></i>
+				</button>
+				<span
+					id="likeCount"
+					class="like-count"></span>
 			</div>
 		</div>
+
+		<script>
+			const likeBtn = document.getElementById('likeBtn');
+			const likeCount = document.getElementById('likeCount');
+			let isLiked = false;
+			let likes = 0;
+
+			likeBtn.addEventListener('click', () => {
+				isLiked = !isLiked;
+				likes += isLiked ? 1 : -1;
+
+				updateLikeButton();
+				showLikeCount();
+			});
+
+			function updateLikeButton() {
+				if (isLiked) {
+					likeBtn.classList.remove('btn-outline-secondary');
+					likeBtn.classList.add('btn-danger');
+					likeBtn.querySelector('i').classList.remove('bi-heart');
+					likeBtn.querySelector('i').classList.add('bi-heart-fill');
+				} else {
+					likeBtn.classList.remove('btn-danger');
+					likeBtn.classList.add('btn-outline-secondary');
+					likeBtn.querySelector('i').classList.remove('bi-heart-fill');
+					likeBtn.querySelector('i').classList.add('bi-heart');
+				}
+			}
+
+			function showLikeCount() {
+				likeCount.textContent = `${likes} ${
+					likes === 1 ? 'نفر' : 'نفر'
+				} لایک کردند`;
+				likeCount.classList.add('show');
+
+				setTimeout(() => {
+					likeCount.classList.remove('show');
+				}, 2000);
+			}
+		</script>
 	</body>
 </html>
