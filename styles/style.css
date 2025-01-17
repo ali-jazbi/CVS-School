@@ -1015,7 +1015,7 @@ a:hover {
 
 .discount-button {
 	padding: 0.3rem 0.7rem;
-	background-color: #05b3b380;
+	background-color: #05b32e80;
 	color: white;
 	border: none;
 	border-radius: 0.5rem 0 0 0.5rem;
@@ -1026,7 +1026,7 @@ a:hover {
 }
 
 .discount-button:hover {
-	background-color: #048f8f;
+	background-color: #05b32e;
 }
 
 @media (max-width: 576px) {
