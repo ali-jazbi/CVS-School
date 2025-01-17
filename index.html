@@ -2189,40 +2189,43 @@
 			<!-- new Course Group -->
 			<section class="new-course-group">
 				<div class="container">
-					<div class="filter-buttons">
-						<button
-							class="filter-btn active"
-							data-filter="all">
-							همه
-						</button>
-						<button
-							class="filter-btn"
-							data-filter="branding">
-							برندسازی
-						</button>
-						<button
-							class="filter-btn"
-							data-filter="ui-ux">
-							طراحی UI/UX
-						</button>
-						<button
-							class="filter-btn"
-							data-filter="frontend">
-							فرانت‌اند
-						</button>
-						<button
-							class="filter-btn"
-							data-filter="backend">
-							بک‌اند
-						</button>
-						<button class="filter-btn">غیرفعال</button>
-						<button class="filter-btn">غیرفعال</button>
-						<button class="filter-btn">غیرفعال</button>
+					<div class="d-flex justify-content-center">
+						<div class="filter-buttons mb-5">
+							<button
+								class="filter-btn1 me-2"
+								data-filter="all">
+								<i></i>همه
+								<span class="filter-icon">👇🏻</span>
+							</button>
+							<button
+								class="filter-btn1 me-2"
+								data-filter="branding">
+								<i></i> برندسازی
+								<span class="filter-icon">👇🏻</span>
+							</button>
+							<button
+								class="filter-btn1 me-2"
+								data-filter="ui-ux">
+								<i></i>طراحی کاربری
+								<span class="filter-icon">👇🏻</span>
+							</button>
+							<button
+								class="filter-btn1 me-2"
+								data-filter="frontend">
+								<i></i>فرانت اند
+								<span class="filter-icon">👇🏻</span>
+							</button>
+							<button
+								class="filter-btn1 me-2"
+								data-filter="backend">
+								<i></i>بک اند
+								<span class="filter-icon">👇🏻</span>
+							</button>
+						</div>
 					</div>
-					<div class="accordion">
-						<div
-							class="accordion-item"
-							data-category="branding">
+
+					<div class="accordion mt-5">
+						<div class="accordion-item branding">
 							<a class="accordion-link">
 								<div class="flex">
 									<h3>برندسازی</h3>
@@ -2484,9 +2487,7 @@
 							</div>
 							<hr />
 						</div>
-						<div
-							class="accordion-item"
-							data-category="ui-ux">
+						<div class="accordion-item ui-ux">
 							<a class="accordion-link">
 								<div class="flex">
 									<h3>طراحی تجربه کاربری/رابط کاربری</h3>
@@ -2748,9 +2749,7 @@
 							</div>
 							<hr />
 						</div>
-						<div
-							class="accordion-item"
-							data-category="frontend">
+						<div class="accordion-item frontend">
 							<a class="accordion-link">
 								<div class="flex">
 									<h3>توسعه فرانت‌اند</h3>
@@ -3012,9 +3011,7 @@
 							</div>
 							<hr />
 						</div>
-						<div
-							class="accordion-item"
-							data-category="backend">
+						<div class="accordion-item backend">
 							<a class="accordion-link">
 								<div>
 									<h3>توسعه بک‌اند</h3>
@@ -3481,10 +3478,56 @@
 			</div>
 			<script>
 				document.addEventListener('DOMContentLoaded', function () {
+					const filterButtons = document.querySelectorAll(
+						'.filter-buttons .filter-btn1'
+					);
+					const courseCards = document.querySelectorAll('.accordion-item');
+					let activeFilter = 'all';
+
+					filterButtons.forEach((button) => {
+						button.addEventListener('click', function () {
+							const filter = this.getAttribute('data-filter');
+							const iconElement = this.querySelector('.filter-icon');
+
+							if (filter !== activeFilter) {
+								// غیرفعال کردن دکمه قبلی
+								filterButtons.forEach((btn) => {
+									btn.classList.remove('active');
+									const btnIcon = btn.querySelector('.filter-icon');
+									if (btnIcon) btnIcon.style.display = 'none';
+								});
+
+								// فعال کردن دکمه جدید
+								this.classList.add('active');
+								if (iconElement) iconElement.style.display = 'inline-block';
+								activeFilter = filter;
+
+								// فیلتر کردن کارت‌های دوره
+								courseCards.forEach((card) => {
+									if (activeFilter === 'all' || card.classList.contains(activeFilter)) {
+										card.style.display = 'block';
+									} else {
+										card.style.display = 'none';
+									}
+								});
+
+								console.log('Active filter:', activeFilter);
+							}
+						});
+					});
+
+					// فعال کردن دکمه "همه" به صورت پیش‌فرض
+					const defaultButton = filterButtons[0];
+					defaultButton.classList.add('active');
+					const defaultIcon = defaultButton.querySelector('.filter-icon');
+					if (defaultIcon) defaultIcon.style.display = 'inline-block';
+				});
+			</script>
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
 					const accordionLinks = document.querySelectorAll(
 						'.new-course-group .accordion-link'
 					);
-					const filterButtons = document.querySelectorAll('.filter-btn');
 					const accordionItems = document.querySelectorAll(
 						'.new-course-group .accordion-item'
 					);
@@ -3506,25 +3549,6 @@
 							if (!isActive) {
 								accordionItem.classList.add('active');
 							}
-						});
-					});
-					// Filter functionality
-					filterButtons.forEach((button) => {
-						button.addEventListener('click', () => {
-							const filter = button.getAttribute('data-filter');
-
-							// Update active button
-							filterButtons.forEach((btn) => btn.classList.remove('active'));
-							button.classList.add('active');
-
-							// Filter accordion items
-							accordionItems.forEach((item) => {
-								if (filter === 'all' || item.getAttribute('data-category') === filter) {
-									item.classList.remove('hidden');
-								} else {
-									item.classList.add('hidden');
-								}
-							});
 						});
 					});
 				});

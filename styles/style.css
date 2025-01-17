@@ -1621,35 +1621,6 @@ a:hover {
 		right: -45px !important;
 	}
 } */
-
-.filter-buttons {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	gap: 10px;
-	margin-bottom: 20px;
-}
-.filter-buttons .btn.active {
-	background-color: #007777 !important;
-	color: white !important;
-}
-.filter-btn {
-	background-color: #f0f0f0;
-	font-size: 0.9rem;
-	color: #333;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	padding: 0.25em 1em;
-	color: #005a5a;
-	border: none;
-	border-radius: 5px;
-	font-weight: bold;
-	transition: all 0.3s ease-in-out;
-	font-family: yekan-bakh-regular;
-	margin-bottom: -2px;
-	border-bottom: 5px solid transparent;
-	box-shadow: 0 4px 6px white;
-}
 @media (max-width: 768px) {
 	.filter-buttons {
 		width: 100%;
@@ -1741,14 +1712,15 @@ a:hover {
 .freecourse .container-fluid {
 	width: 70%;
 }
-.freecourse .filter-buttons {
+.filter-buttons {
+	width: 65%;
 	height: max-content;
 	display: flex;
-	justify-content: space-between !important;
+	justify-content: space-between;
 	margin-bottom: -20px !important;
 }
 
-.freecourse .filter-buttons .filter-btn1 {
+.filter-buttons .filter-btn1 {
 	margin-bottom: 10px;
 	margin: 0 !important;
 	outline: 0;
@@ -1772,21 +1744,21 @@ a:hover {
 	opacity: 0.9;
 	position: relative;
 }
-.freecourse .filter-buttons .filter-btn1 i {
+.filter-buttons .filter-btn1 i {
 	margin-right: -4px !important;
 }
-.freecourse .filter-buttons .filter-btn1:hover {
+.filter-buttons .filter-btn1:hover {
 	opacity: 1;
 }
 
-.freecourse .filter-buttons .animation-active {
+.filter-buttons .animation-active {
 	animation: ripple 1s linear infinite !important;
 	position: absolute;
 	top: 50% !important;
 	left: 50% !important;
 }
 
-.freecourse .filter-buttons .filter-btn1.active {
+.filter-buttons .filter-btn1.active {
 	opacity: 1 !important;
 	background: #037979 !important;
 	color: white;
