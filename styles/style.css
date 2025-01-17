@@ -1745,6 +1745,59 @@ a:hover {
 .freecourse .container-fluid {
 	width: 70%;
 }
+.freecourse .filter-buttons .filter-btn1 {
+	outline: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: #40b3a282;
+	min-width: 130px !important;
+	max-width: 130px !important;
+	height: 35px;
+	border: 0;
+	white-space: nowrap;
+	border-radius: 6px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+	color: #fff;
+	font-size: 13px;
+	text-align: center;
+	overflow: hidden;
+	cursor: pointer;
+	opacity: 0.9;
+	position: relative;
+}
+.freecourse .filter-buttons .filter-btn1 i{
+	margin-right: -4px !important;
+}
+.freecourse .filter-buttons .filter-btn1:hover {
+	opacity: 1;
+}
+
+.freecourse .filter-buttons .animation-active {
+	animation: ripple 1s linear infinite !important;
+	position: absolute;
+	top: 50% !important;
+	left: 50% !important;
+}
+
+.freecourse .filter-buttons .filter-btn1.active {
+	opacity: 1 !important;
+	background: #05b3b3 !important;
+}
+@keyframes ripple {
+	0% {
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1),
+			0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1),
+			0 0 0 60px rgba(255, 255, 255, 0.1);
+	}
+
+	100% {
+		box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1),
+			0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1),
+			0 0 0 80px rgba(255, 255, 255, 0);
+	}
+}
 .freecourse .container-fluid:nth-child(2) {
 	width: 80%;
 }

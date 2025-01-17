@@ -1382,24 +1382,24 @@
 									<div class="course-header d-flex flex-column mt-0 pt-0">
 										<div class="filter-buttons mb-0 pt-5">
 											<button
-												class="filter-btn me-2 mb-2 active"
+												class="filter-btn1 me-2 mb-2"
 												data-filter="all">
-												همه
+												<i></i>همه
 											</button>
 											<button
-												class="filter-btn me-2 mb-2"
+												class="filter-btn1 me-2 mb-2"
 												data-filter="beginner">
-												دانش فنی
+												<i></i>دانش فنی
 											</button>
 											<button
-												class="filter-btn me-2 mb-2"
+												class="filter-btn1 me-2 mb-2"
 												data-filter="intermediate">
-												تولید محتوا
+												<i></i>تولید محتوا
 											</button>
 											<button
-												class="filter-btn me-2 mb-2"
+												class="filter-btn1 me-2 mb-2"
 												data-filter="advance">
-												شبکه و نرم افزار
+												<i></i>شبکه و نرم افزار
 											</button>
 										</div>
 									</div>
@@ -1939,7 +1939,7 @@
 							<script>
 								document.addEventListener('DOMContentLoaded', function () {
 									const filterButtons = document.querySelectorAll(
-										'.filter-buttons button'
+										'.filter-buttons .filter-btn1'
 									);
 									const courseCards = document.querySelectorAll('.course-section');
 									let activeFilter = 'all';
@@ -1947,36 +1947,43 @@
 									filterButtons.forEach((button) => {
 										button.addEventListener('click', function () {
 											const filter = this.getAttribute('data-filter');
+											const iconElement = this.querySelector('i');
 
-											if (filter === activeFilter) {
-												// اگر دکمه فعلی کلیک شده، آن را غیرفعال کن
-												this.classList.remove('active');
-												activeFilter = 'all';
-											} else {
-												// در غیر این صورت، دکمه قبلی را غیرفعال و این دکمه را فعال کن
-												filterButtons.forEach((btn) => btn.classList.remove('active'));
+											if (filter !== activeFilter) {
+												// غیرفعال کردن دکمه قبلی
+												filterButtons.forEach((btn) => {
+													btn.classList.remove('active');
+													const btnIcon = btn.querySelector('i');
+													if (btnIcon) btnIcon.classList.remove('animation-active');
+												});
+
+												// فعال کردن دکمه جدید
 												this.classList.add('active');
+												iconElement.classList.add('animation-active');
 												activeFilter = filter;
+
+												// فیلتر کردن کارت‌های دوره
+												courseCards.forEach((card) => {
+													if (
+														activeFilter === 'all' ||
+														card.classList.contains(activeFilter)
+													) {
+														card.style.display = 'block';
+													} else {
+														card.style.display = 'none';
+													}
+												});
+
+												console.log('Active filter:', activeFilter);
 											}
-
-											// فیلتر کردن کارت‌های دوره
-											courseCards.forEach((card) => {
-												if (
-													activeFilter === 'all' ||
-													card.classList.contains(activeFilter)
-												) {
-													card.style.display = 'block';
-												} else {
-													card.style.display = 'none';
-												}
-											});
-
-											console.log('Active filter:', activeFilter);
 										});
 									});
 
 									// فعال کردن دکمه "همه" به صورت پیش‌فرض
-									filterButtons[0].classList.add('active');
+									const defaultButton = filterButtons[0];
+									defaultButton.classList.add('active');
+									const defaultIcon = defaultButton.querySelector('i');
+									if (defaultIcon) defaultIcon.classList.add('animation-active');
 								});
 							</script>
 							<script>
