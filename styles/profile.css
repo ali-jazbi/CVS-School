@@ -313,7 +313,7 @@
 	font-weight: 900;
 	position: relative;
 }
-.bg-free-acrive{
+.bg-free-acrive {
 	background-color: #cdffc8 !important;
 }
 .btn-group {
@@ -478,6 +478,53 @@
 }
 .modal button:last-child .fa-copy {
 	font-size: 12px;
+}
+/* Term Modal  */
+/* استایل‌های سفارشی برای مدال قوانین */
+.term-modal .modal-content {
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	overflow: hidden;
+}
+.term-modal .modal-header {
+	background: linear-gradient(135deg, #05b3b3, #099191);
+	color: #fff;
+	border-bottom: none;
+	padding: 1rem 1.5rem;
+}
+.term-modal .modal-header .btn-close {
+	filter: invert(1);
+}
+.term-modal .modal-body {
+	padding: 1.5rem;
+	line-height: 1.6;
+	font-size: 0.75rem;
+	background-color: #f9f9f9;
+}
+.term-modal .modal-body p {
+	text-align: justify;
+	padding-inline: 30px;
+	font-family: yekan-bakh-semiBold;
+	color: #4b4b4b;
+}
+.term-modal .modal-body a {
+	padding-inline: 10px;
+	font-size: 12px !important;
+}
+.term-modal .modal-footer {
+	background-color: #fff;
+	border-top: none;
+	padding: 1rem 1.5rem;
+}
+.term-modal .modal-footer .btn {
+	border-radius: 10px;
+	padding: 0.5rem 2rem;
+	font-weight: bold;
+}
+/* سفارشی‌سازی چک‌باکس */
+.term-modal .form-check-input:checked {
+	background-color: #099191;
+	border-color: #099191;
 }
 .myCourse {
 	max-height: 45vh; /* افزایش حداکثر ارتفاع */
