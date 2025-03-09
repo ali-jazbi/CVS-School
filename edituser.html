@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html
+	lang="fa"
+	dir="rtl">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1" />
+		<meta
+			name="author"
+			content="Ali Jazbi" />
+		<meta
+			http-equiv="cache-control"
+			content="no-cache" />
+		<meta
+			http-equiv="expires"
+			content="0" />
+		<meta
+			http-equiv="pragma"
+			content="no-cache" />
+		<link
+			rel="shortcut icon"
+			href="./icon/orange brown minimalist school logo (1).svg"
+			type="image/x-icon" />
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+			integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb"
+			crossorigin="anonymous" />
+		<!-- Bootstrap Icon -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+		<!-- Costomized Styles -->
+		<link
+			rel="stylesheet"
+			href="./styles/style.css" />
+		<link
+			rel="stylesheet"
+			href="./styles/offcanvas.css" />
+		<link
+			rel="stylesheet"
+			href="./styles/signup.css" />
+		<title>Edit User Info</title>
+	</head>
+	<body>
+		<main>
+			<!-- Navbar -->
+			<header>
+				<!-- Nav For PC -->
+				<nav class="navbar navbar-expand-lg bg-white d-none d-lg-block">
+					<div class="container d-flex justify-content-between">
+						<ul class="navbar-nav d-flex align-items-center">
+							<li class="nav-item me-5">
+								<a
+									class="nav-link active"
+									aria-current="page"
+									href="./index.html"
+									>خانه</a
+								>
+							</li>
+							<li class="nav-item me-5">
+								<a
+									class="nav-link"
+									href="./signup.html"
+									>ورود / ثبت نام</a
+								>
+							</li>
+							<li class="nav-item">
+								<div class="dropdown toggle">
+									<input
+										id="t1"
+										class="d-none"
+										type="checkbox" />
+									<label for="t1"
+										>دوره های آموزشی<i class="bi bi-caret-down-fill ms-2"></i
+									></label>
+									<div class="mega-menu">
+										<div class="row mega-section">
+											<div class="col-8 p-4">
+												<div class="row">
+													<div class="col-4 mega-menu-section">
+														<h6>برنامه نویسی</h6>
+														<div class="d-flex flex-column web-section">
+															<a
+																href="#"
+																class="mega-menu-link text-decoration-none text-dark mb-2"
+																>فرانت اند</a
+															>
+															<a
+																href="./js.html"
+																class="mega-menu-link text-decoration-none text-dark mb-2"
+																>بک اند</a
+															>
+															<a
+																href="./ai.html"
+																class="mega-menu-link text-decoration-none text-dark mb-2 position-relative">
+																هوش مصنوعی
+																<span class="free-badge position-absolute">
+																	<div class="badge-container">
+																		<div class="glow"></div>
+																		<div class="badge">
+																			<div class="text">رایگان</div>
+																		</div>
+																	</div>
+																</span>
+															</a>
+														</div>
+													</div>
+													<div class="col-4 mega-menu-section">
+														<h6>مشاوره کنکور</h6>
+														<div class="d-flex flex-column apps-section">
+															<a
+																href="#"
+																class="mega-menu-link text-decoration-none text-dark mb-2"
+																>دهم</a
+															>
+															<a
+																href="#"
+																class="mega-menu-link text-decoration-none text-dark mb-2"
+																>یازدهم</a
+															>
+															<a
+																href="#"
+																class="mega-menu-link text-decoration-none text-dark mb-2"
+																>دوازدهم</a
+															>
+														</div>
+													</div>
+													<div class="col-4 mega-menu-section">
+														<h6>دروس هنرستان</h6>
+														<div class="d-flex flex-column school-section">
+															<div
+																class="mega-menu-link text-decoration-none text-dark mb-2 position-relative">
+																<div class="c">
+																	<input
+																		type="checkbox"
+																		id="faq-1" />
+																	<h1><label for="faq-1">دهم</label></h1>
+																	<div class="p">
+																		<ul>
+																			<li><a href="#">سی شارپ</a></li>
+																			<li><a href="#">تولید محتوا</a></li>
+																			<li><a href="#">شبکه و نرم افزار</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+															<script>
+																document.addEventListener('DOMContentLoaded', function () {
+																	const accordions =
+																		document.querySelectorAll('.mega-menu-link .c');
+
+																	document.addEventListener('click', function (event) {
+																		accordions.forEach((accordion) => {
+																			const input = accordion.querySelector(
+																				'input[type="checkbox"]'
+																			);
+																			const label = accordion.querySelector('label');
+
+																			// اگر کلیک خارج از آکاردئون بود، آن را ببند
+																			if (!accordion.contains(event.target) && input.checked) {
+																				input.checked = false;
+																			}
+
+																			// اگر روی لیبل کلیک شد، فقط همان آکاردئون را باز کن و بقیه را ببند
+																			if (event.target === label) {
+																				accordions.forEach((otherAccordion) => {
+																					if (otherAccordion !== accordion) {
+																						otherAccordion.querySelector(
+																							'input[type="checkbox"]'
+																						).checked = false;
+																					}
+																				});
+																			}
+																		});
+																	});
+																});
+															</script>
+															<a
+																href="#"
+																class="mega-menu-link text-decoration-none text-dark mb-2"
+																>یازدهم</a
+															>
+															<a
+																href="#"
+																class="mega-menu-link text-decoration-none text-dark mb-2"
+																>دوازدهم</a
+															>
+															<script>
+																document.addEventListener('DOMContentLoaded', function () {
+																	const accordionToggles = document.querySelectorAll(
+																		'.mega-accordion-toggle'
+																	);
+
+																	accordionToggles.forEach((toggle) => {
+																		toggle.addEventListener('click', function () {
+																			const accordion = this.closest('.mega-accordion');
+																			const content = accordion.querySelector(
+																				'.mega-accordion-content'
+																			);
+																			const icon = this.querySelector('.bi-chevron-down');
+
+																			// Toggle active class
+																			accordion.classList.toggle('active');
+
+																			// Toggle content visibility
+																			if (accordion.classList.contains('active')) {
+																				content.style.display = 'flex';
+																				icon.style.transform = 'rotate(180deg)';
+																			} else {
+																				content.style.display = 'none';
+																				icon.style.transform = 'rotate(0deg)';
+																			}
+
+																			// Hide other menu items when accordion is open
+																			const otherMenuItems =
+																				accordion.parentElement.querySelectorAll(
+																					'.mega-menu-link:not(.mega-accordion)'
+																				);
+																			otherMenuItems.forEach((item) => {
+																				item.style.display = accordion.classList.contains('active')
+																					? 'none'
+																					: 'block';
+																			});
+																		});
+																	});
+																});
+															</script>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-4 p-0">
+												<div
+													id="menuImage"
+													class="mega-menu-img"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="d-flex justify-content-center">
+							<a
+								class="navbar-brand"
+								href="./index.html">
+								<img
+									class="me-5"
+									src="./icon/logo1.svg"
+									width="160"
+									alt="" />
+							</a>
+						</div>
+
+						<div class="d-flex align-items-center">
+							<div class="search-bar d-flex align-items-center">
+								<form class="form">
+									<button>
+										<svg
+											width="17"
+											height="16"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+											role="img"
+											aria-labelledby="search">
+											<path
+												d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+												stroke="currentColor"
+												stroke-width="1.333"
+												stroke-linecap="round"
+												stroke-linejoin="round"></path>
+										</svg>
+									</button>
+									<input
+										class="input"
+										placeholder="جستجو ..."
+										required=""
+										type="text" />
+									<button
+										class="reset"
+										type="reset">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											class="h-6 w-6"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke="currentColor"
+											stroke-width="2">
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												d="M6 18L18 6M6 6l12 12"></path>
+										</svg>
+									</button>
+								</form>
+							</div>
+							<a
+								class="nav-link ms-3 sh-card position-relative"
+								href="#"
+								data-bs-toggle="offcanvas"
+								data-bs-target="#cartOffcanvas"
+								aria-controls="cartOffcanvas">
+								<i class="fas fa-shopping-cart"></i>
+								<span
+									class="position-absolute top-0 start-100 translate-middle badge rounded-pill small-badge cartCount">
+								</span>
+							</a>
+						</div>
+					</div>
+				</nav>
+				<div
+					class="offcanvas offcanvas-start"
+					tabindex="-1"
+					id="cartOffcanvas"
+					aria-labelledby="cartOffcanvasLabel">
+					<div class="offcanvas-header">
+						<h5
+							class="offcanvas-title"
+							id="cartOffcanvasLabel">
+							سبد خرید
+						</h5>
+						<button
+							type="button"
+							class="btn-close text-reset"
+							data-bs-dismiss="offcanvas"
+							aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body">
+						<div id="cartItems">
+							<!-- محصولات به صورت داینامیک اینجا اضافه می‌شوند -->
+						</div>
+						<div class="mt-5">
+							<div class="d-flex justify-content-between align-items-center mb-2">
+								<span>جمع کل:</span>
+								<span
+									id="totalPrice"
+									class="fw-bold"
+									>0 تومان</span
+								>
+							</div>
+							<div class="mt-5 mb-3">
+								<div class="discount-form">
+									<input
+										type="text"
+										class="discount-input"
+										placeholder="کد تخفیف خود را وارد کنید"
+										aria-label="کد تخفیف" />
+									<button
+										class="discount-button"
+										type="button"
+										id="apply-discount">
+										اعمال
+									</button>
+								</div>
+							</div>
+							<div class="d-grid gap-2">
+								<button
+									class="btn btn-success"
+									id="checkoutBtn">
+									تسویه حساب
+								</button>
+								<button
+									id="clearCart"
+									class="btn btn-outline-secondary"
+									data-bs-dismiss="offcanvas">
+									ادامه خرید
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Nav For Mobile And Tablet -->
+				<nav class="nav-mobile d-lg-none">
+					<button
+						class="fs-1 d-flex align-items-center h-75 pt-2 ps-4 bg-transparent"
+						type="button"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#customOffcanvasMenu"
+						aria-controls="offcanvasExample">
+						<i class="bi bi-list pt-1"></i>
+					</button>
+					<a
+						class="navbar-brand pe-2"
+						href="./index.html">
+						<img
+							class="ms-2"
+							src="./icon/logo1.svg"
+							width="100"
+							alt="" />
+					</a>
+
+					<div class="d-flex pe-3">
+						<a
+							class="nav-link pt-1"
+							href="#"
+							data-bs-toggle="modal"
+							data-bs-target="#exampleModal">
+							<i class="bi bi-person fs-4"></i>
+						</a>
+						<a
+							class="nav-link ms-3 sh-card position-relative pt-1"
+							href="#"
+							data-bs-toggle="offcanvas"
+							data-bs-target="#cartOffcanvas"
+							aria-controls="cartOffcanvas">
+							<i class="bi bi-cart2"></i>
+
+							<span
+								class="position-absolute top-0 start-100 translate-middle badge rounded-pill small-badge cartCount">
+								0
+							</span>
+						</a>
+					</div>
+					<div
+						class="offcanvas offcanvas-start custom-offcanvas"
+						tabindex="-1"
+						id="customOffcanvasMenu">
+						<div class="offcanvas-header">
+							<div class="container">
+								<input
+									type="text"
+									name="text"
+									class="input"
+									required=""
+									placeholder="جستجو..."
+									id="searchInput" />
+								<div class="icon">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="ionicon"
+										viewBox="0 0 512 512">
+										<title>جستجو</title>
+										<path
+											d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"
+											fill="none"
+											stroke="currentColor"
+											stroke-miterlimit="10"
+											stroke-width="32"></path>
+										<path
+											fill="none"
+											stroke="currentColor"
+											stroke-linecap="round"
+											stroke-miterlimit="10"
+											stroke-width="32"
+											d="M338.29 338.29L448 448"></path>
+									</svg>
+								</div>
+								<div
+									class="clear-icon"
+									id="clearButton"
+									style="display: none">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="ionicon"
+										viewBox="0 0 512 512">
+										<title>بستن</title>
+										<path
+											d="M400 145.5L366.5 112 256 222.5 145.5 112 112 145.5 222.5 256 112 366.5 145.5 400 256 289.5 366.5 400 400 366.5 289.5 256 400 145.5z"
+											fill="currentColor"></path>
+									</svg>
+								</div>
+								<script>
+									const input = document.getElementById('searchInput');
+									const clearButton = document.getElementById('clearButton');
+
+									input.addEventListener('input', function () {
+										if (input.value.length > 0) {
+											clearButton.style.display = 'block';
+										} else {
+											clearButton.style.display = 'none';
+										}
+									});
+
+									clearButton.addEventListener('click', function () {
+										input.value = '';
+										clearButton.style.display = 'none';
+										input.focus();
+									});
+								</script>
+							</div>
+
+							<button
+								type="button"
+								class="btn-close"
+								data-bs-dismiss="offcanvas"
+								aria-label="Close"></button>
+						</div>
+						<div class="offcanvas-body">
+							<ul class="nav flex-column custom-main-menu">
+								<li class="nav-item mt-2">
+									<a
+										class="nav-link active custom-nav-link"
+										aria-current="page"
+										href="#">
+										<div class="d-flex align-items-center">
+											<i class="bi bi-house-door-fill fs-6"></i>صفحه اصلی
+										</div>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link custom-nav-link"
+										href="#"
+										data-submenu="customHtml">
+										<div class="d-flex align-items-center">
+											<i class="fab fa-html5 fs-6"></i>HTML
+										</div>
+										<i class="bi bi-chevron-left"></i>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link custom-nav-link"
+										href="#">
+										<div class="d-flex align-items-center">
+											<i class="fab fa-css3-alt fs-6"> </i>
+											CSS
+										</div>
+										<i class="bi bi-chevron-left"></i>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link custom-nav-link"
+										href="#">
+										<div class="d-flex align-items-center">
+											<i class="fab fa-bootstrap fs-6"> </i>
+											Bootstrap
+										</div>
+										<i class="bi bi-chevron-left"></i>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link custom-nav-link"
+										href="./js.html">
+										<div class="d-flex align-items-center">
+											<i class="fab fa-js-square fs-6"></i>
+											Javascript
+										</div>
+										<i class="bi bi-chevron-left"></i>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link custom-nav-link"
+										href="#">
+										<div class="d-flex align-items-center">
+											<i class="fab fa-php fs-6"></i>PHP
+										</div>
+										<i class="bi bi-chevron-left"></i>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link custom-nav-link"
+										href="#">
+										<div class="d-flex align-items-center">
+											<i class="fab fa-java fs-6"> </i>
+											Java
+										</div>
+										<i class="bi bi-chevron-left"></i>
+									</a>
+								</li>
+							</ul>
+							<div
+								class="custom-sub-menu"
+								id="customHtml">
+								<h6 class="custom-submenu-title mb-3">HTML</h6>
+								<ul class="nav flex-column custom-main-menu">
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#">
+											<i class="bi bi-book me-2"></i>مقدمه HTML
+										</a>
+									</li>
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-code-slash me-2"></i>تگ‌های HTML</a
+										>
+									</li>
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-input-cursor-text me-2"></i>فرم‌های HTML</a
+										>
+									</li>
+								</ul>
+								<button class="custom-back-to-main">
+									<i class="bi bi-arrow-right me-2"></i>بازگشت به منوی اصلی
+								</button>
+							</div>
+							<div
+								class="custom-sub-menu"
+								id="customCss">
+								<h6 class="mb-3">CSS</h6>
+								<ul class="nav flex-column">
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-palette me-2"></i>مقدمه CSS</a
+										>
+									</li>
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-magic me-2"></i>سلکتورها</a
+										>
+									</li>
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-film me-2"></i>انیمیشن‌ها</a
+										>
+									</li>
+								</ul>
+								<button class="custom-back-to-main">
+									<i class="bi bi-arrow-right me-2"></i>بازگشت به منوی اصلی
+								</button>
+							</div>
+							<div
+								class="custom-sub-menu"
+								id="customJs">
+								<h6 class="custom-submenu-title mb-3">JavaScript</h6>
+								<ul class="nav flex-column">
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-file-earmark-text me-2"></i>مقدمه JavaScript</a
+										>
+									</li>
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-diagram-2 me-2"></i>توابع</a
+										>
+									</li>
+									<li class="nav-item">
+										<a
+											class="nav-link custom-nav-link"
+											href="#"
+											><i class="bi bi-lightning me-2"></i>رویدادها</a
+										>
+									</li>
+								</ul>
+								<button class="custom-back-to-main">
+									<i class="bi bi-arrow-right me-2"></i>بازگشت به منوی اصلی
+								</button>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</header>
+			<!-- Main Section -->
+			<section>
+				<div class="register-form">
+					<div class="d-flex d-md-none justify-content-evenly switch-buttons">
+						<button class="btn signup-switch-btn">ثبت نام</button>
+					</div>
+					<div
+						class="overlay"
+						id="overlay">
+						<div
+							class="sign-in"
+							id="sign-in">
+							<h1>ویرایش اکانت</h1>
+							<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</p>
+						</div>
+					</div>
+					<div class="form py-1">
+						<div
+							class="sign-up"
+							id="sign-up-info">
+							<h1>ویرایش اطلاعات</h1>
+							<p class="small mt-3 text-secondary text-opacity-75">
+								لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+							</p>
+							<form id="sign-up-form">
+								<input
+									type="text"
+									placeholder="Previous Name" />
+								<input
+									type="tel"
+									placeholder="Previous Phone Number" />
+
+								<div class="password-input-wrapper">
+									<input
+										type="password"
+										id="sign-up-password"
+										placeholder="Previous Password" />
+									<span
+										class="password-toggle"
+										id="sign-up-password-toggle">
+										<svg
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round">
+											<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+											<circle
+												cx="12"
+												cy="12"
+												r="3"></circle>
+										</svg>
+									</span>
+								</div>
+								<div class="mb-3 w-100 d-flex flex-column align-items-center">
+									<input
+										type="file"
+										class="form-control d-none"
+										id="photoUpload"
+										accept="image/*" />
+									<label
+										for="photoUpload"
+										class="btn btn-outline-secondary"
+										style="width: 300px">
+										<span class="file-label">آپلود عکس جدید</span>
+										<span class="file-name"></span>
+									</label>
+									<div
+										id="imagePreview"
+										class="mt-3 shadow"
+										style="
+											max-width: 80% !important;
+											max-height: 80% !important;
+											overflow: hidden;
+											object-fit: contain;
+										">
+										<img
+											id="defaultImage"
+											src="https://coffective.com/wp-content/uploads/2018/06/default-featured-image.png.jpg"
+											alt="پیش‌فرض"
+											style="max-width: 100px; max-height: 100px" />
+									</div>
+								</div>
+
+								<script>
+									document.addEventListener('DOMContentLoaded', function () {
+										const photoUpload = document.getElementById('photoUpload');
+										const fileLabel = document.querySelector('.file-label');
+										const fileName = document.querySelector('.file-name');
+										const imagePreview = document.getElementById('imagePreview');
+										const defaultImageSrc = document.getElementById('defaultImage').src;
+
+										// مقدار فایل را قبل از باز شدن انتخابگر ریست می‌کنیم
+										document
+											.querySelector('label[for="photoUpload"]')
+											.addEventListener('click', function () {
+												photoUpload.value = '';
+											});
+
+										photoUpload.addEventListener('change', function () {
+											if (this.files && this.files.length > 0) {
+												const file = this.files[0];
+												fileName.textContent = file.name;
+												fileLabel.style.display = 'none';
+
+												const reader = new FileReader();
+												reader.onload = function (e) {
+													const img = document.createElement('img');
+													img.src = e.target.result;
+													img.style.maxWidth = '300px';
+													img.style.maxHeight = '100px';
+													img.style.minWidth = '300px';
+													img.style.minHeight = '100px';
+													imagePreview.innerHTML = '';
+													imagePreview.appendChild(img);
+												};
+												reader.readAsDataURL(file);
+											} else {
+												fileName.textContent = '';
+												fileLabel.style.display = 'inline';
+												imagePreview.innerHTML = `<img src="${defaultImageSrc}" alt="پیش‌فرض" style="max-width: 100px; max-height: 100px;">`;
+											}
+										});
+									});
+								</script>
+
+								<button class="control-button up mb-4">ویرایش</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- END Main Section -->
+			<!-- Footer Section  -->
+			<footer class="footer text-dark bg-light">
+				<div class="container px-3">
+					<div class="row">
+						<div class="col-12 col-lg-4 pt-3">
+							<h2>شروع مکالمه</h2>
+							<p class="w-75 lh-lg my-4">
+								هر دوره آموزشی با یک گفتگو آغاز می‌شود. ما خوشحال می شویم درباره نیازهای
+								شما صحبت کنیم. ما همچنین در صورت نیاز، افراد متخصص تیم را برای پشتیبانی
+								بهتر وارد گفتگو می کنیم.
+							</p>
+							<button class="custom-btn btn-2">ارتباط با پشتیبان</button>
+						</div>
+						<div
+							class="col-12 col-lg-4 d-none d-lg-flex justify-content-center align-items-center">
+							<img
+								src="./icon/logo.svg"
+								alt="" />
+						</div>
+						<div
+							class="col-12 col-lg-4 d-flex flex-column justify-content-center align-items-end">
+							<div class="contact-info w-75">
+								<p class="d-flex justify-content-between">
+									<strong>ایمیل:</strong>
+									<a
+										href="mailto:support@cvs-school.com"
+										class="text-white"
+										>support@cvs-school.com</a
+									>
+								</p>
+								<p class="my-3">
+									<strong>تلفن:</strong>
+									<a href="tel:09128431362"> 09128431362 </a>
+								</p>
+								<p><strong>آدرس:</strong>ایران تهران مرزداران</p>
+							</div>
+							<div
+								class="col-12 d-lg-none mt-4 justify-content-center align-items-center">
+								<img
+									src="./icon/logo.svg"
+									alt="" />
+							</div>
+							<!-- <div class="social-icons mt-5 w-75 d-flex justify-content-between">
+								<a href="#"><i class="fab fa-twitter"></i></a>
+								<a href="#"><i class="fab fa-facebook-f"></i></a>
+								<a href="#"><i class="fab fa-instagram"></i></a>
+								<a href="#"><i class="fab fa-linkedin-in"></i></a>
+							</div> -->
+							<div class="w-50 h-75">
+								<!-- <a
+									class="w-100"
+									referrerpolicy="origin"
+									target="_blank"
+									href="https://trustseal.enamad.ir/?id=2736624&Code=Umo9pKWoo9ZcrH6tT0MiMS2cJ7CCaLlO">
+									<img
+										width="100%"
+										height="100%"
+										referrerpolicy="origin"
+										src="https://trustseal.enamad.ir/logo.aspx?id=2736624&Code=Umo9pKWoo9ZcrH6tT0MiMS2cJ7CCaLlO"
+										alt=""
+										style="cursor: pointer"
+										code="Umo9pKWoo9ZcrH6tT0MiMS2cJ7CCaLlO" />
+								</a> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bg-footer"></div>
+			</footer>
+		</main>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"></script>
+		<script src="./plugins/jquery/jquery.min.js"></script>
+		<script src="./plugins/fontawesome/script.js"></script>
+		<script src="./scripts/register.js"></script>
+		<script src="./scripts/megamnu.js"></script>
+		<script src="./scripts/shopinng.js"></script>
+		<script src="./scripts/conversation.js"></script>
+		<script src="./scripts/offcanvas.js"></script>
+		<script>
+			window.si =
+				window.si ||
+				function () {
+					(window.siq = window.siq || []).push(arguments);
+				};
+		</script>
+		<script
+			defer
+			src="/_vercel/speed-insights/script.js"></script>
+	</body>
+</html>
